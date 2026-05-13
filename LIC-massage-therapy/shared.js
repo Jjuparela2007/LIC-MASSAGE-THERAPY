@@ -5,7 +5,7 @@
 const i18n = {
   es: {
     "nav.home":"Inicio","nav.services":"Servicios","nav.stretch":"Estiramiento",
-    "nav.about":"Sobre Mí","nav.testimonials":"Testimonios","nav.book":"Reservar","nav.contact":"Contacto",
+    "nav.about":"Sobre Raul","nav.testimonials":"Testimonios","nav.book":"Reservar","nav.contact":"Contacto",
     "hero.tag":"Centro de Terapia Muscular","hero.title1":"Restaura","hero.title2":"Tu Cuerpo",
     "hero.desc":"Bienvenido a Long Island City Massage Therapy, un espacio dedicado a aliviar el dolor, mejorar la movilidad y promover la salud a través del estiramiento terapéutico y el masaje profesional.  Soy Raúl Araque, terapeuta con licencia en el estado de Nueva York, enfocado en la educación del cuerpo y el bienestar integral.",
     "hero.cta1":"Reservar Cita","hero.cta2":"Ver Servicios",
