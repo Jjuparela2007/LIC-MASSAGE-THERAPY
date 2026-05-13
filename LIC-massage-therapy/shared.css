@@ -1590,31 +1590,7 @@ body.modal-open { overflow: hidden; }
   #toast.success { background: #2a6e3a; }
   #toast.error-toast { background: #c0392b; }
   #toast.info { background: #8a6a30; }
-    :root {
-    --gold:         #c9a84c;
-    --gold-light:   #e2c97e;
-    --bg-dark:      #ffffff;
-    --bg-card:      #ffffff;
-    --text-primary: #f0ede8;
-    --text-muted:   #888078;
-    --border:       #c9a84c26;
-    --font-display: 'Cormorant Garamond', Georgia, serif;
-    --font-body:    'DM Sans', sans-serif;
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg-dark);
-    color: var(--text-primary);
-    font-family: var(--font-body);
-    font-weight: 300;
-    line-height: 1.75;
-    font-size: 15px;
-    -webkit-font-smoothing: antialiased;
-  }
+  /* Variables y reset de política: heredados del :root global */
 
   /* ── TOP BAR ── */
   .topbar {
@@ -1650,14 +1626,19 @@ body.modal-open { overflow: hidden; }
   }
   .topbar-back:hover { opacity: .7; }
 
-  /* ── HERO ── */
-  .hero {
+  /* ── HERO (página de política) ── */
+  /* Nota: se usan selectores .topbar + .hero para no afectar el hero principal */
+  .topbar ~ .hero,
+  .topbar + .hero {
     padding: 7rem 3rem 4rem;
     max-width: 860px;
     margin: 0 auto;
     text-align: center;
+    display: block;
+    min-height: unset;
   }
-  .hero-tag {
+  .topbar ~ .hero .hero-tag,
+  .topbar + .hero .hero-tag {
     display: inline-block;
     font-size: .68rem;
     letter-spacing: .2em;
@@ -1667,21 +1648,30 @@ body.modal-open { overflow: hidden; }
     padding: .35rem .9rem;
     border-radius: 2px;
     margin-bottom: 1.8rem;
+    opacity: 1;
+    animation: none;
   }
-  .hero-title {
+  .topbar ~ .hero .hero-title,
+  .topbar + .hero .hero-title {
     font-family: var(--font-display);
     font-size: clamp(2.4rem, 5vw, 3.8rem);
     font-weight: 300;
     line-height: 1.12;
     margin-bottom: 1.2rem;
+    opacity: 1;
+    animation: none;
+    display: block;
   }
-  .hero-title em { font-style: italic; color: var(--gold-light); }
-  .hero-sub {
+  .topbar ~ .hero .hero-title em,
+  .topbar + .hero .hero-title em { font-style: italic; color: var(--gold-light); }
+  .topbar ~ .hero .hero-sub,
+  .topbar + .hero .hero-sub {
     font-size: .8rem;
     color: var(--text-muted);
     letter-spacing: .04em;
   }
-  .gold-line {
+  .topbar ~ .hero .gold-line,
+  .topbar + .hero .gold-line {
     width: 48px;
     height: 1px;
     background: var(--gold);
@@ -1873,7 +1863,8 @@ body.modal-open { overflow: hidden; }
 
   @media (max-width: 640px) {
     .topbar { padding: 1rem 1.4rem; }
-    .hero { padding: 5rem 1.4rem 3rem; }
+    .topbar ~ .hero,
+    .topbar + .hero { padding: 5rem 1.4rem 3rem; }
     .policy-wrap { padding: 0 1.2rem 5rem; }
     .policy-section { padding: 1.6rem 1.4rem; }
   }
@@ -2239,12 +2230,11 @@ body.modal-open { overflow: hidden; }
 }
 
 /* ── Valores ── */
-@media (max-width: 768px) {
-  .values-grid { grid-template-columns: 1fr; }
-}
-
 @media (max-width: 1100px) {
   .values-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .values-grid { grid-template-columns: 1fr; }
 }
 
 /* ── Botones principales en móvil ── */
