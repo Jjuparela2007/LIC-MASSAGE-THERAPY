@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIC Massage Therapy | Reservar Cita</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+
+
+<style>
+  /* ── Validation styles ── */
+  .form-input.error,
+  .form-select.error,
+  .form-textarea.error {
+    border-color: #c0392b !important;
+    background: rgba(192, 57, 43, 0.04);
+    animation: shake 0.35s ease;
+  }
+  .form-input.valid,
+  .form-select.valid,
+  .form-textarea.valid {
+    border-color: #2a6e3a !important;
+  }
+  @keyframes shake {
+    0%,100%{transform:translateX(0)}
+    25%{transform:translateX(-6px)}
+    75%{transform:translateX(6px)}
+  }
+  .field-error {
+    display: none;
+    font-size: .72rem;
+    color: #c0392b;
+    margin-top: .3rem;
+    letter-spacing: .01em;
+  }
+  .form-group.has-error .field-error { display: block; }
+
+  /* ── Privacy checkbox ── */
+  .privacy-row {
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.1rem;
+    background: rgba(180,150,100,.06);
+    border: 1px solid rgba(180,150,100,.18);
+    border-radius: 6px;
+  }
+  .privacy-checkbox {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: #8a6a30;
+    cursor: pointer;
+  }
+  .privacy-label {
+    font-size: .78rem;
+    color: var(--text-muted, #888);
+    line-height: 1.55;
+  }
+  .privacy-label a {
+    color: var(--gold, #b8963e);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .privacy-label strong { color: var(--text-primary, #111); }
+  .privacy-row.error {
+    border-color: #c0392b;
+    background: rgba(192,57,43,.04);
+    animation: shake .35s ease;
+  }
+
+  /* ── Submit states ── */
+  .form-submit { position: relative; transition: background .3s, opacity .3s; }
+  .form-submit:disabled { opacity: .7; cursor: not-allowed; }
+  .form-submit .spinner {
+    display: inline-block;
+    width: 14px; height: 14px;
+    border: 2px solid rgba(255,255,255,.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin .7s linear infinite;
+    vertical-align: middle;
+    margin-right: .5rem;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── Toast notification ── */
+  #toast {
+    position: fixed;
+    bottom: 2rem; right: 2rem;
+    min-width: 260px;
+    padding: 1rem 1.4rem;
+    border-radius: 8px;
+    font-family: var(--font-body, 'DM Sans', sans-serif);
+    font-size: .85rem;
+    color: #fff;
+    z-index: 9999;
+    transform: translateY(120%);
+    opacity: 0;
+    transition: transform .4s cubic-bezier(.22,1,.36,1), opacity .3s;
+    box-shadow: 0 8px 30px rgba(0,0,0,.18);
+  }
+  #toast.show { transform: translateY(0); opacity: 1; }
+  #toast.success { background: #2a6e3a; }
+  #toast.error-toast { background: #c0392b; }
+  #toast.info { background: #8a6a30; }
+
+  /* ── WhatsApp button ── */
+  .whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    width: 100%;
+    padding: .85rem 1rem;
+    margin-top: .75rem;
+    background: #25D366;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-family: var(--font-body, 'DM Sans', sans-serif);
+    font-size: .9rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background .2s, transform .15s;
+  }
+  .whatsapp-btn:hover { background: #1ebe5a; transform: translateY(-1px); }
+  .whatsapp-btn svg { flex-shrink: 0; }
+  .or-divider {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin: 1.1rem 0 .5rem;
+    color: var(--text-muted, #999);
+    font-size: .75rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+  .or-divider::before,.or-divider::after {
+    content:''; flex:1; height:1px;
+    background: rgba(180,150,100,.2);
+  }
+</style>
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <div class="section-tag reveal" data-i18n="book.tag">Reservar Cita</div>
+    <h1 class="page-hero-title reveal delay-1"><em data-i18n="book.title1">Tu bienestar</em> <strong data-i18n="book.title2">comienza hoy</strong></h1>
+    <p class="page-hero-sub reveal delay-2" data-i18n="book.desc">Agenda tu consulta inicial y recibe una evaluación postural y muscular completa sin costo adicional.</p>
+  </div>
+</section>
+
+<section class="booking-page">
+  <div class="section-container">
+    <div class="booking-inner">
+      <div class="booking-info">
+        <div class="section-tag reveal" data-i18n="book.infoTag">Información</div>
+        <h2 class="section-title reveal delay-1"><em data-i18n="book.infoTitle1">¿Qué esperar</em><br><strong data-i18n="book.infoTitle2">en tu primera visita?</strong></h2>
+        <div class="gold-line reveal delay-2"></div>
+        <div class="booking-steps reveal delay-2">
+          <div class="bstep">
+            <div class="bstep-num">01</div>
+            <div>
+              <div class="bstep-name" data-i18n="step1.name">Evaluación Inicial</div>
+              <p class="bstep-desc" data-i18n="step1.desc">Análisis postural y muscular completo para identificar áreas de tensión y patrones de movimiento.</p>
+            </div>
+          </div>
+          <div class="bstep">
+            <div class="bstep-num">02</div>
+            <div>
+              <div class="bstep-name" data-i18n="step2.name">Protocolo Personalizado</div>
+              <p class="bstep-desc" data-i18n="step2.desc">Diseño de un plan de tratamiento específico basado en tus objetivos y condición actual.</p>
+            </div>
+          </div>
+          <div class="bstep">
+            <div class="bstep-num">03</div>
+            <div>
+              <div class="bstep-name" data-i18n="step3.name">Primera Sesión</div>
+              <p class="bstep-desc" data-i18n="step3.desc">Aplicación del tratamiento seleccionado con seguimiento de resultados en tiempo real.</p>
+            </div>
+          </div>
+          <div class="bstep">
+            <div class="bstep-num">04</div>
+            <div>
+              <div class="bstep-name" data-i18n="step4.name">Plan de Seguimiento</div>
+              <p class="bstep-desc" data-i18n="step4.desc">Recomendaciones personalizadas para maximizar los resultados entre sesiones.</p>
+            </div>
+          </div>
+        </div>
+        <div class="booking-detail-list reveal delay-3">
+          <div class="booking-detail">
+            <div class="booking-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <span data-i18n="book.location">Nueva York — Long Island City</span>
+          </div>
+          <div class="booking-detail">
+            <div class="booking-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <span data-i18n="book.hours">Lun–Vie: 10am–7pm · Sáb: 10am–6pm</span>
+          </div>
+          <div class="booking-detail">
+            <div class="booking-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.4 1.14 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <span>718-478-1951</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ════════════ FORM ════════════ -->
+      <div class="booking-form reveal delay-2">
+        <div style="margin-bottom:2rem">
+          <div style="font-family:var(--font-display);font-size:1.6rem;font-weight:400;margin-bottom:.5rem;color:var(--text-primary)" data-i18n="form.title">Solicitar Cita</div>
+          <div style="font-size:.78rem;color:var(--text-muted)" data-i18n="form.subtitle">Responderemos en menos de 2 horas</div>
+        </div>
+
+        <div class="form-grid">
+          <!-- Nombre -->
+          <div class="form-group" id="fg-name">
+            <label class="form-label" data-i18n="form.name">Nombre completo <span style="color:#c0392b">*</span></label>
+            <input type="text" id="f-name" class="form-input" placeholder="Tu nombre" autocomplete="name">
+            <span class="field-error">Por favor ingresa tu nombre completo.</span>
+          </div>
+
+          <!-- Teléfono -->
+          <div class="form-group" id="fg-phone">
+            <label class="form-label" data-i18n="form.phone">Teléfono <span style="color:#c0392b">*</span></label>
+            <input type="tel" id="f-phone" class="form-input" placeholder="+1 718 000 0000" autocomplete="tel">
+            <span class="field-error">Ingresa un número de teléfono válido.</span>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group full" id="fg-email">
+            <label class="form-label" data-i18n="form.email">Correo electrónico <span style="color:#c0392b">*</span></label>
+            <input type="email" id="f-email" class="form-input" placeholder="tu@correo.com" autocomplete="email">
+            <span class="field-error">Ingresa un correo electrónico válido.</span>
+          </div>
+
+          <!-- Servicio -->
+          <div class="form-group full" id="fg-service">
+            <label class="form-label" data-i18n="form.service">Servicio <span style="color:#c0392b">*</span></label>
+            <select id="f-service" class="form-select form-input">
+              <option value="" data-i18n="form.servicePh">Seleccionar servicio</option>
+              <option value="Masaje Terapéutico">Masaje Relajante</option>
+              <option value="Masaje Deportivo">Masaje de presión profunda</option>
+              <option value="Terapia de Estiramiento">Relajación guiada</option>
+              <option value="Recuperación Muscular">Recuperación Muscular</option>
+              <option value="Liberación Miofascial">Liberación Miofascial</option>
+              <option value="Masaje Relajante">Masaje Relajante</option>
+            </select>
+            <span class="field-error">Por favor selecciona un servicio.</span>
+          </div>
+
+          <!-- Fecha -->
+          <div class="form-group" id="fg-date">
+            <label class="form-label" data-i18n="form.date">Fecha preferida <span style="color:#c0392b">*</span></label>
+            <input type="date" id="f-date" class="form-input">
+            <span class="field-error">Selecciona una fecha válida (no puede ser en el pasado).</span>
+          </div>
+
+          <!-- Horario -->
+          <div class="form-group" id="fg-time">
+            <label class="form-label" data-i18n="form.time">Hora preferida</label>
+
+            <input 
+              type="time" 
+              id="f-time" 
+              class="form-input form-select"
+            >
+          </div>
+
+          <!-- Mensaje -->
+          <div class="form-group full">
+            <label class="form-label" data-i18n="form.message">Mensaje (opcional)</label>
+            <textarea id="f-message" class="form-textarea form-input" placeholder="Cuéntanos sobre tu condición o área de tratamiento..."></textarea>
+          </div>
+        </div>
+
+        <!-- ── Privacy checkbox ── -->
+        <div class="privacy-row" id="privacy-row">
+          <input type="checkbox" id="f-privacy" class="privacy-checkbox">
+          <label class="privacy-label" for="f-privacy">
+            <strong>Campo obligatorio:</strong> He leído y acepto la
+            <a href="politica-privacidad.html" target="_blank" rel="noopener">Política de Privacidad y Tratamiento de Datos Personales</a>
+            de LIC Massage Therapy. Autorizo el uso de mis datos para gestionar mi reserva y recibir comunicaciones relacionadas con mi cita.
+          </label>
+        </div>
+
+        <!-- ── Submit via WhatsApp ── -->
+        <button class="form-submit" id="book-submit">Reservar Mi Cita →</button>
+
+      </div>
+      <!-- ════════════ / FORM ════════════ -->
+    </div>
+  </div>
+</section>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<script src="shared.js"></script>
+<script src="components.js"></script>
+<script>
+  // ══════════════════════════════════════════════
+  // CONFIG
+  // ══════════════════════════════════════════════
+  const WHATSAPP_NUMBER = '573138332309'; // sin +, sin espacios
+
+  // ── Page init ──
+  renderComponents('reservas');
+  initPage('reservas');
+
+  // ── Set today as min date ──
+  const dateInput = document.getElementById('f-date');
+  dateInput.min = new Date().toISOString().split('T')[0];
+
+  // ══════════════════════════════════════════════
+  // TOAST helper
+  // ══════════════════════════════════════════════
+  function showToast(msg, type = 'success', duration = 4000) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.className = `show ${type}`;
+    clearTimeout(t._timer);
+    t._timer = setTimeout(() => { t.className = ''; }, duration);
+  }
+
+  // ══════════════════════════════════════════════
+  // VALIDATION helpers
+  // ══════════════════════════════════════════════
+  function setFieldState(groupId, valid, inputEl) {
+    const group = document.getElementById(groupId);
+    if (!group) return;
+    group.classList.toggle('has-error', !valid);
+    inputEl.classList.toggle('error', !valid);
+    inputEl.classList.toggle('valid', valid);
+  }
+
+  function validateForm() {
+    let ok = true;
+    const lang = document.documentElement.lang || 'es';
+
+    // Nombre
+    const name = document.getElementById('f-name');
+    const nameOk = name.value.trim().length >= 2;
+    setFieldState('fg-name', nameOk, name);
+    if (!nameOk) ok = false;
+
+    // Teléfono — acepta formatos internacionales básicos
+    const phone = document.getElementById('f-phone');
+    const phoneOk = /^[\+]?[\d\s\-\(\)]{7,20}$/.test(phone.value.trim());
+    setFieldState('fg-phone', phoneOk, phone);
+    if (!phoneOk) ok = false;
+
+    // Email
+    const email = document.getElementById('f-email');
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+    setFieldState('fg-email', emailOk, email);
+    if (!emailOk) ok = false;
+
+    // Servicio
+    const service = document.getElementById('f-service');
+    const serviceOk = service.value !== '';
+    setFieldState('fg-service', serviceOk, service);
+    if (!serviceOk) ok = false;
+
+    // Fecha — debe ser hoy o futura
+    const dateVal = document.getElementById('f-date');
+    const today = new Date().toISOString().split('T')[0];
+    const dateOk = dateVal.value >= today;
+    setFieldState('fg-date', dateOk, dateVal);
+    if (!dateOk) ok = false;
+
+    // Privacy checkbox
+    const privacy = document.getElementById('f-privacy');
+    const privacyRow = document.getElementById('privacy-row');
+    const privacyOk = privacy.checked;
+    privacyRow.classList.toggle('error', !privacyOk);
+    if (!privacyOk) ok = false;
+
+    return ok;
+  }
+
+  // Clear error state on input
+  ['f-name','f-phone','f-email','f-service','f-date'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('input', () => {
+      el.classList.remove('error');
+      const group = el.closest('.form-group');
+      if (group) group.classList.remove('has-error');
+    });
+  });
+  document.getElementById('f-privacy').addEventListener('change', () => {
+    document.getElementById('privacy-row').classList.remove('error');
+  });
+
+  // ══════════════════════════════════════════════
+  // COLLECT form data
+  // ══════════════════════════════════════════════
+  function getFormData() {
+    return {
+      name:    document.getElementById('f-name').value.trim(),
+      phone:   document.getElementById('f-phone').value.trim(),
+      email:   document.getElementById('f-email').value.trim(),
+      service: document.getElementById('f-service').value,
+      date:    document.getElementById('f-date').value,
+      time:    document.getElementById('f-time').value,
+      message: document.getElementById('f-message').value.trim() || '—',
+    };
+  }
+
+  // ══════════════════════════════════════════════
+  // SUBMIT → WhatsApp
+  // ══════════════════════════════════════════════
+  document.getElementById('book-submit').addEventListener('click', function (e) {
+    e.preventDefault();
+    if (!validateForm()) {
+      showToast('⚠️ Revisa los campos marcados en rojo.', 'error-toast');
+      return;
+    }
+
+    const btn = this;
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span>Abriendo WhatsApp…';
+
+    const d = getFormData();
+
+    const msg =
+`Hola Lic massage therapy, espero que estén muy bien.
+
+Me gustaría agendar una cita
+
+Nombre: ${d.name}
+Teléfono: ${d.phone}
+Email: ${d.email}
+
+Servicio: ${d.service}
+Fecha preferida: ${d.date}
+Horario: ${d.time}
+
+${d.message && d.message !== '—' ? `Nota adicional:\n${d.message}` : ''}
+
+Quedo a la espera, Muchas gracias.`;
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+    setTimeout(() => {
+      btn.innerHTML = '✓ Abriendo WhatsApp';
+      btn.style.background = '#25D366';
+      showToast('✓ ¡Tu cita está lista! Se abrirá WhatsApp para enviarla.', 'success', 5000);
+      window.open(url, '_blank');
+      setTimeout(() => {
+        btn.innerHTML = 'Reservar Mi Cita →';
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3000);
+    }, 600);
+  });
+</script>
+</body>
+</html>

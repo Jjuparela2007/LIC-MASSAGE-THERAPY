@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIC Massage Therapy</title>
+<meta name="description" content="Centro de terapia muscular y masajes premium. Recuperación, bienestar y rendimiento deportivo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<!-- ─── SPLASH SCREEN ────────────────────────────────────────────────────── -->
+<div id="splashScreen" aria-hidden="true">
+  <div class="splash-inner">
+
+    <!-- Nombre de la marca -->
+    <div class="splash-brand">
+      <span class="splash-brand-name"> LIC MASSAGE THERAPY</span>
+    </div>
+
+    <!-- Barra de progreso -->
+    <div class="splash-progress-track">
+      <div class="splash-progress-bar" id="splashBar"></div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+/* ── Splash Screen ─────────────────────────────────────────────────────── */
+#splashScreen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #0d0d0d 0%, #141410 50%, #0a0a0a 100%);
+  opacity: 1;
+  transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: all;
+}
+#splashScreen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+.splash-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  animation: splashFadeIn 0.9s cubic-bezier(0.4, 0, 0.2, 1) both;
+  padding: 0 2rem;
+  text-align: center;
+}
+@keyframes splashFadeIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Ornamentos */
+.splash-ornament {
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(201,168,76,0.5), transparent);
+  opacity: 0.6;
+}
+.splash-ornament.top  { height: 60px; margin-bottom: 28px; }
+.splash-ornament.bottom { height: 40px; margin-top: 28px; }
+
+/* Logo SVG */
+.splash-logo-wrap {
+  position: relative;
+  margin-bottom: 22px;
+}
+.splash-logo-svg {
+  width: 90px;
+  height: 90px;
+  filter: drop-shadow(0 0 18px rgba(201,168,76,0.25));
+  animation: splashPulse 3s ease-in-out infinite;
+}
+@keyframes splashPulse {
+  0%, 100% { filter: drop-shadow(0 0 14px rgba(201,168,76,0.2)); }
+  50%       { filter: drop-shadow(0 0 28px rgba(201,168,76,0.45)); }
+}
+
+/* Nombre de marca */
+.splash-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+  letter-spacing: 0.08em;
+}
+.splash-brand-lic {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: #c9a84c;
+  letter-spacing: 0.18em;
+  line-height: 1;
+}
+.splash-brand-sep {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  color: rgba(201,168,76,0.4);
+  line-height: 1;
+}
+.splash-brand-name {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+  color: rgba(220, 210, 185, 0.85);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Eslogan */
+.splash-tagline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  color: rgba(201,168,76,0.55);
+  letter-spacing: 0.28em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Barra de progreso */
+.splash-progress-track {
+  width: 80px;
+  height: 1px;
+  background: rgba(201,168,76,0.15);
+  margin-top: 32px;
+  overflow: hidden;
+  border-radius: 1px;
+}
+.splash-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+  border-radius: 1px;
+  transition: width linear;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .splash-ornament.top  { height: 40px; margin-bottom: 20px; }
+  .splash-ornament.bottom { height: 28px; margin-top: 20px; }
+  .splash-logo-svg { width: 72px; height: 72px; }
+  .splash-brand { gap: 7px; }
+}
+</style>
+
+<script>
+(function () {
+  var splash   = document.getElementById('splashScreen');
+  var bar      = document.getElementById('splashBar');
+  var duration = 500; // ms total visible
+  var fadeTime = 750;  // ms fade-out (matches CSS)
+
+  /* Progreso animado */
+  var start = null;
+  function animateBar(ts) {
+    if (!start) start = ts;
+    var pct = Math.min(((ts - start) / duration) * 100, 100);
+    bar.style.width = pct + '%';
+    if (pct < 100) requestAnimationFrame(animateBar);
+  }
+  requestAnimationFrame(animateBar);
+
+  /* Ocultar splash */
+  function hideSplash() {
+    splash.classList.add('fade-out');
+    setTimeout(function () {
+      splash.style.display = 'none';
+    }, fadeTime + 10);
+  }
+
+  /* Disparar al mayor: duración mínima o carga de página */
+  var loaded   = false;
+  var timerDone = false;
+
+  function tryHide() {
+    if (loaded && timerDone) hideSplash();
+  }
+
+  setTimeout(function () {
+    timerDone = true;
+    tryHide();
+  }, duration);
+
+  if (document.readyState === 'complete') {
+    loaded = true;
+  } else {
+    window.addEventListener('load', function () {
+      loaded = true;
+      tryHide();
+    });
+  }
+})();
+</script>
+
+<!-- ─── HERO ─────────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-muscles"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-tag" data-i18n="hero.tag">Centro de Terapia Muscular</div>
+      <div class="hero-title"><em data-i18n="hero.title1">Restaura</em></div>
+      <div class="hero-title-line2" data-i18n="hero.title2">Tu Cuerpo</div>
+      <div class="hero-divider"></div>
+      <p class="hero-desc" data-i18n="hero.desc">Bienvenido a Long Island City (LIC) Massage Therapy. El lugar en la ciudad de New York para venir a estar libre de dolor, aprender cómo estirar para una salud óptima y relajarse en Long Island City. Mi nombre es Raul Araque. Soy un terapeuta de masaje con licencia del estado de Nueva York . Mi objetivo es ayudar y educar a las personas . Me especializo en masaje terapéutico y estiramiento aislado activo (AIS). </p>
+      <div class="hero-ctas">
+        <a href="reservas.html" class="btn-primary" data-i18n="hero.cta1">Reservar Cita</a>
+        <a href="servicios.html" class="btn-secondary" data-i18n="hero.cta2">Ver Servicios</a>
+      </div>
+    </div>
+    <div class="hero-visual floating">
+      <div class="hero-anatomy-frame">
+        <div class="hero-frame-border"></div>
+        <svg class="anatomy-main-svg" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="muscleGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#c9a84c" stop-opacity="0.3"/>
+            </linearGradient>
+          </defs>
+          <style>.m{fill:none;stroke:url(#muscleGrad);stroke-width:1.2;opacity:.75}.mi{fill:none;stroke:#c9a84c;stroke-width:.6;opacity:.45}.mf{fill:#c9a84c;opacity:.07}.ann{fill:#c9a84c;font-size:7px;font-family:Georgia,serif;opacity:.55}.al{stroke:#c9a84c;stroke-width:.4;opacity:.35;fill:none}</style>
+          <ellipse cx="200" cy="80" rx="55" ry="68" class="m"/>
+          <ellipse cx="200" cy="75" rx="38" ry="52" class="mi"/>
+          <path d="M165 120 Q155 135 158 155 Q160 165 170 170" class="m"/>
+          <path d="M235 120 Q245 135 242 155 Q240 165 230 170" class="m"/>
+          <path d="M175 145 Q170 155 172 175 L180 180" class="m"/>
+          <path d="M225 145 Q230 155 228 175 L220 180" class="m"/>
+          <path d="M185 148 Q200 158 215 148" class="mi"/>
+          <path d="M172 178 Q140 185 120 200 Q105 215 110 240 Q115 260 135 265 L175 270" class="m"/>
+          <path d="M228 178 Q260 185 280 200 Q295 215 290 240 Q285 260 265 265 L225 270" class="m"/>
+          <ellipse cx="155" cy="225" rx="40" ry="32" class="mf"/>
+          <ellipse cx="245" cy="225" rx="40" ry="32" class="mf"/>
+          <path d="M120 210 Q140 220 170 215 Q190 212 200 215" class="mi"/>
+          <path d="M280 210 Q260 220 230 215 Q210 212 200 215" class="mi"/>
+          <rect x="175" y="270" width="50" height="110" rx="10" class="m"/>
+          <path d="M175 290 L225 290" class="mi"/><path d="M175 310 L225 310" class="mi"/>
+          <path d="M175 330 L225 330" class="mi"/><path d="M175 350 L225 350" class="mi"/>
+          <path d="M200 270 L200 380" class="mi"/>
+          <path d="M175 275 Q150 300 145 340 Q142 365 155 385 L175 390" class="m"/>
+          <path d="M225 275 Q250 300 255 340 Q258 365 245 385 L225 390" class="m"/>
+          <ellipse cx="120" cy="195" rx="28" ry="20" transform="rotate(-15 120 195)" class="m"/>
+          <ellipse cx="280" cy="195" rx="28" ry="20" transform="rotate(15 280 195)" class="m"/>
+          <path d="M100 215 Q85 240 82 270 Q80 295 88 320 Q95 340 105 345" class="m"/>
+          <path d="M140 215 Q130 240 128 265 Q126 285 130 310" class="m"/>
+          <ellipse cx="110" cy="275" rx="20" ry="35" transform="rotate(-5 110 275)" class="mf"/>
+          <path d="M300 215 Q315 240 318 270 Q320 295 312 320 Q305 340 295 345" class="m"/>
+          <path d="M260 215 Q270 240 272 265 Q274 285 270 310" class="m"/>
+          <ellipse cx="290" cy="275" rx="20" ry="35" transform="rotate(5 290 275)" class="mf"/>
+          <path d="M88 320 Q75 355 78 385 Q80 405 90 415" class="m"/>
+          <path d="M105 345 Q100 370 98 390 Q97 405 103 415" class="m"/>
+          <path d="M312 320 Q325 355 322 385 Q320 405 310 415" class="m"/>
+          <path d="M295 345 Q300 370 302 390 Q303 405 297 415" class="m"/>
+          <ellipse cx="93" cy="435" rx="30" ry="22" class="m"/>
+          <ellipse cx="307" cy="435" rx="30" ry="22" class="m"/>
+          <path d="M80 456 Q72 490 75 520 L95 525" class="m"/>
+          <path d="M107 458 Q112 490 110 520 L92 525" class="m"/>
+          <path d="M320 456 Q328 490 325 520 L305 525" class="m"/>
+          <path d="M293 458 Q288 490 290 520 L308 525" class="m"/>
+          <ellipse cx="88" cy="490" rx="18" ry="32" class="mf"/>
+          <ellipse cx="312" cy="490" rx="18" ry="32" class="mf"/>
+          <line x1="145" y1="175" x2="80" y2="155" class="al"/><text x="12" y="158" class="ann">Trapecio</text>
+          <line x1="200" y1="295" x2="260" y2="265" class="al"/><text x="262" y="268" class="ann">Recto Abd.</text>
+          <line x1="155" y1="390" x2="80" y2="410" class="al"/><text x="8" y="413" class="ann">Isquiotibial</text>
+          <line x1="235" y1="435" x2="330" y2="420" class="al"/><text x="332" y="423" class="ann">Glúteo Med.</text>
+          <line x1="245" y1="545" x2="320" y2="535" class="al"/><text x="322" y="538" class="ann">Cuádriceps</text>
+          <line x1="20" y1="50" x2="20" y2="580" stroke="#c9a84c" stroke-width=".3" opacity=".15"/>
+          <line x1="380" y1="50" x2="380" y2="580" stroke="#c9a84c" stroke-width=".3" opacity=".15"/>
+          <line x1="20" y1="50" x2="380" y2="50" stroke="#c9a84c" stroke-width=".3" opacity=".15"/>
+          <line x1="20" y1="580" x2="380" y2="580" stroke="#c9a84c" stroke-width=".3" opacity=".15"/>
+          <path d="M20 50 L35 50 M20 50 L20 65" stroke="#c9a84c" stroke-width=".8" opacity=".5" fill="none"/>
+          <path d="M380 50 L365 50 M380 50 L380 65" stroke="#c9a84c" stroke-width=".8" opacity=".5" fill="none"/>
+          <path d="M20 580 L35 580 M20 580 L20 565" stroke="#c9a84c" stroke-width=".8" opacity=".5" fill="none"/>
+          <path d="M380 580 L365 580 M380 580 L380 565" stroke="#c9a84c" stroke-width=".8" opacity=".5" fill="none"/>
+          <text x="200" y="595" text-anchor="middle" fill="#c9a84c" font-size="6" font-family="Georgia,serif" opacity=".4" letter-spacing="3">ANATOMÍA MUSCULAR — VISTA ANTERIOR</text>
+        </svg>
+        <div class="floating-badge badge-br glass">
+          <div class="badge-label" data-i18n="badge.sessions">Sesiones</div>
+          <div class="badge-value">60 / 90 min</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PREVIEW SERVICES ──────────────────────────────────────────────────── -->
+
+
+<section class="home-services-preview">
+  <div class="section-container">
+    <div class="section-header center">
+      <div class="section-tag reveal" data-i18n="services.tag">Nuestros Servicios</div>
+      <h2 class="section-title reveal delay-1">
+        <em data-i18n="services.title1">Tratamientos</em>
+        <strong data-i18n="services.title2">Especializados</strong>
+      </h2>
+      <p class="section-sub reveal delay-2" data-i18n="services.subtitle">Cada tratamiento diseñado con base en evidencia científica y técnicas avanzadas.</p>
+    </div>
+
+    <div class="preview-grid" id="servicesGrid"></div>
+
+    <div class="center-cta reveal delay-3">
+      <a href="servicios.html" class="btn-primary" data-i18n="home.allServices">Ver Todos los Servicios</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TERAPIAS SECTION ───────────────────────────────────────────────────── -->
+<section class="terapias-section">
+  <div class="ts-inner">
+
+    <!-- Columna izquierda: imagen -->
+    <div class="ts-img-col reveal">
+      <div class="ts-img-frame">
+
+        <!-- ▸ Reemplaza src="" con la URL o ruta de tu foto -->
+        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Terapia muscular en LIC Massage Therapy" class="ts-img" id="tsImg">
+
+        <!-- Placeholder mientras no haya imagen -->
+        <div class="ts-img-placeholder" id="tsPlaceholder">
+          <div class="ts-ph-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" width="36" height="36">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <path d="M21 15l-5-5L5 21"/>
+            </svg>
+          </div>
+          <span>Agregar imagen</span>
+        </div>
+
+        <!-- Corners decorativos dorados -->
+        <div class="ts-corner tl"></div>
+        <div class="ts-corner br"></div>
+
+       
+
+      </div>
+    </div>
+
+    <!-- Columna derecha: contenido terapias -->
+    <div class="ts-content reveal delay-1">
+
+      <div class="section-tag" style="color:#c9a84c;border-color:rgba(201,168,76,0.3)">Nuestras Terapias</div>
+      <h2 class="ts-title">
+        <em>Técnicas que</em><br>
+        <strong>sanan de verdad</strong>
+      </h2>
+      <p class="ts-intro">Cada tratamiento está respaldado por evidencia clínica y adaptado a tu condición específica. Raul combina múltiples disciplinas para ofrecerte resultados reales y duraderos.</p>
+
+      <!-- Lista de terapias -->
+      <div class="ts-list">
+
+        <div class="ts-item">
+          <div class="ts-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="ts-item-body">
+            <div class="ts-item-name">Masaje Terapéutico</div>
+            <p class="ts-item-desc">Manipulación profunda de tejidos blandos que alivia el dolor crónico, libera nudos musculares y mejora la circulación sanguínea. Ideal para contracturas y tensiones acumuladas.</p>
+          </div>
+        </div>
+
+        <div class="ts-item">
+          <div class="ts-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div class="ts-item-body">
+            <div class="ts-item-name">Estiramiento Aislado Activo (AIS)</div>
+            <p class="ts-item-desc">Técnica desarrollada por Aaron Mattes que trabaja cada músculo de forma individual. Aumenta el rango de movimiento articular, corrige la postura y previene lesiones de forma progresiva.</p>
+          </div>
+        </div>
+
+        <div class="ts-item">
+          <div class="ts-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="ts-item-body">
+            <div class="ts-item-name">Liberación Miofascial</div>
+            <p class="ts-item-desc">Trabajo especializado sobre la fascia muscular para eliminar restricciones que generan dolor referido y limitan el movimiento. Especialmente efectiva en síndrome miofascial crónico.</p>
+          </div>
+        </div>
+
+        <div class="ts-item">
+          <div class="ts-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="ts-item-body">
+            <div class="ts-item-name">Recuperación Deportiva</div>
+            <p class="ts-item-desc">Protocolo pre y post competencia con técnicas combinadas de compresión, vibración y manipulación manual. Reduce la fatiga, acelera la regeneración muscular y optimiza el rendimiento.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="sobre-mi.html" class="ts-cta">
+        Ver sobre Raul
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── TABS CAROUSEL ─────────────────────────────────────────────────────── -->
+<section class="tabs-section">
+  <div class="section-container">
+
+    <div class="section-header center">
+      <div class="section-tag reveal">Por qué elegirnos</div>
+      <h2 class="section-title reveal delay-1">
+        <em>Experiencia</em> <strong>que transforma</strong>
+      </h2>
+    </div>
+
+    <!-- Tabs nav -->
+    <div class="tabs-nav reveal delay-1" role="tablist">
+      <button class="tab-btn active" role="tab" aria-selected="true"  data-tab="0" onclick="switchTab(0)">Beneficios</button>
+      <button class="tab-btn"        role="tab" aria-selected="false" data-tab="1" onclick="switchTab(1)">Testimonios</button>
+      <button class="tab-btn"        role="tab" aria-selected="false" data-tab="2" onclick="switchTab(2)">El Proceso</button>
+      <div class="tab-indicator" id="tabIndicator"></div>
+    </div>
+
+    <!-- Panels -->
+    <div class="tabs-panels">
+
+      <!-- Panel 0: Beneficios -->
+      <div class="tab-panel active" id="panel-0" role="tabpanel">
+        <div class="benefits-carousel" id="bCarousel">
+          <div class="bc-track" id="bcTrack">
+
+            <div class="bc-card">
+              <div class="bc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="32" height="32"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3 class="bc-title">Alivio del dolor crónico</h3>
+              <p class="bc-desc">Técnicas de presión profunda que llegan a las capas musculares más afectadas, disolviendo tensiones acumuladas que el reposo no puede resolver.</p>
+              <div class="bc-num">01</div>
+            </div>
+
+            <div class="bc-card">
+              <div class="bc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="32" height="32"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <h3 class="bc-title">Recuperación acelerada</h3>
+              <p class="bc-desc">Protocolos especializados pre y post competencia que reducen el tiempo de recuperación muscular hasta en un 40% comparado con el descanso pasivo.</p>
+              <div class="bc-num">02</div>
+            </div>
+
+            <div class="bc-card">
+              <div class="bc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="32" height="32"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <h3 class="bc-title">Flexibilidad y movilidad</h3>
+              <p class="bc-desc">El método AIS (Active Isolated Stretching) mejora el rango de movimiento articular de forma progresiva y segura, corrigiendo patrones posturales incorrectos.</p>
+              <div class="bc-num">03</div>
+            </div>
+
+            <div class="bc-card">
+              <div class="bc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="32" height="32"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <h3 class="bc-title">Bienestar mental</h3>
+              <p class="bc-desc">La relajación profunda activa el sistema nervioso parasimpático, reduciendo los niveles de cortisol y promoviendo un estado de calma duradera.</p>
+              <div class="bc-num">04</div>
+            </div>
+
+            <div class="bc-card">
+              <div class="bc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="32" height="32"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h3 class="bc-title">Atención personalizada</h3>
+              <p class="bc-desc">Cada sesión inicia con una evaluación funcional. No hay protocolos genéricos — cada plan de tratamiento se diseña exclusivamente para ti.</p>
+              <div class="bc-num">05</div>
+            </div>
+
+          </div><!-- /bc-track -->
+
+          <!-- Controles -->
+          <div class="bc-controls">
+            <button class="bc-arrow" id="bcPrev" onclick="bcSlide(-1)" aria-label="Anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+            <div class="bc-dots" id="bcDots"></div>
+            <button class="bc-arrow" id="bcNext" onclick="bcSlide(1)" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div><!-- /panel-0 -->
+
+      <!-- Panel 1: Testimonios -->
+      <div class="tab-panel" id="panel-1" role="tabpanel">
+        <div class="testimonials-grid">
+
+          <div class="testi-card featured">
+            <div class="testi-stars">★★★★★</div>
+            <blockquote class="testi-quote">"Llevaba dos años con dolor lumbar crónico. Después de cuatro sesiones con Raul, puedo hacer mi rutina de ejercicios sin molestias. No exagero cuando digo que me cambió la vida."</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">MR</div>
+              <div>
+                <div class="testi-name">María R.</div>
+                <div class="testi-role">Corredora amateur, 38 años</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <blockquote class="testi-quote">"El masaje deportivo pre-competencia mejoró notablemente mi rendimiento. Me sentí más ágil y con mayor rango de movimiento desde el primer día."</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">JL</div>
+              <div>
+                <div class="testi-name">Juan L.</div>
+                <div class="testi-role">Triatleta, 44 años</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <blockquote class="testi-quote">"Vine por tensión cervical y me fui con una rutina de estiramientos personalizada. Raul explica cada técnica con claridad. Un profesional excepcional."</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">SC</div>
+              <div>
+                <div class="testi-name">Sofia C.</div>
+                <div class="testi-role">Diseñadora gráfica, 31 años</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /panel-1 -->
+
+      <!-- Panel 2: El Proceso -->
+      <div class="tab-panel" id="panel-2" role="tabpanel">
+        <div class="process-steps">
+
+          <div class="ps-step">
+            <div class="ps-num">01</div>
+            <div class="ps-content">
+              <h3 class="ps-title">Evaluación inicial</h3>
+              <p class="ps-desc">Comenzamos con una conversación y evaluación funcional para entender tu historial, objetivos y áreas de tensión. Sin costo adicional en tu primera visita.</p>
+            </div>
+          </div>
+
+          <div class="ps-connector"></div>
+
+          <div class="ps-step">
+            <div class="ps-num">02</div>
+            <div class="ps-content">
+              <h3 class="ps-title">Plan personalizado</h3>
+              <p class="ps-desc">Diseñamos un protocolo de tratamiento específico para ti, combinando las técnicas más adecuadas según tus necesidades y objetivos.</p>
+            </div>
+          </div>
+
+          <div class="ps-connector"></div>
+
+          <div class="ps-step">
+            <div class="ps-num">03</div>
+            <div class="ps-content">
+              <h3 class="ps-title">Sesión terapéutica</h3>
+              <p class="ps-desc">Cada sesión de 60 a 90 minutos combina técnicas manuales, estiramiento asistido y educación para que puedas mantener los resultados en casa.</p>
+            </div>
+          </div>
+
+          <div class="ps-connector"></div>
+
+          <div class="ps-step">
+            <div class="ps-num">04</div>
+            <div class="ps-content">
+              <h3 class="ps-title">Seguimiento continuo</h3>
+              <p class="ps-desc">Ajustamos el plan en cada visita según tu evolución. El objetivo es que cada sesión sea mejor que la anterior y que avances hacia tu bienestar óptimo.</p>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /panel-2 -->
+
+    </div><!-- /tabs-panels -->
+  </div>
+</section>
+
+<!-- ─── SCRIPTS: Video + Tabs ─────────────────────────────────────────────── -->
+<script>
+/* ── Tabs ── */
+var tabBtns   = document.querySelectorAll('.tab-btn');
+var tabInd    = document.getElementById('tabIndicator');
+function switchTab(idx) {
+  tabBtns.forEach(function(b,i){
+    b.classList.toggle('active', i === idx);
+    b.setAttribute('aria-selected', i === idx);
+  });
+  document.querySelectorAll('.tab-panel').forEach(function(p,i){
+    p.classList.toggle('active', i === idx);
+  });
+  var active = tabBtns[idx];
+  tabInd.style.left  = active.offsetLeft + 'px';
+  tabInd.style.width = active.offsetWidth + 'px';
+  if (idx === 0) bcInit();
+}
+
+/* Init indicator */
+window.addEventListener('load', function() {
+  switchTab(0);
+});
+
+/* ── Benefits carousel ── */
+var bcPos   = 0;
+var bcTotal = 5;
+var bcVisible = 3;
+
+function bcGetVisible() {
+  return window.innerWidth <= 560 ? 1 : window.innerWidth <= 900 ? 2 : 3;
+}
+
+function bcInit() {
+  bcVisible = bcGetVisible();
+  var dotsEl = document.getElementById('bcDots');
+  var pages  = Math.ceil(bcTotal / bcVisible);
+  dotsEl.innerHTML = '';
+  for (var i = 0; i < pages; i++) {
+    var d = document.createElement('button');
+    d.className = 'bc-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Ir a página ' + (i+1));
+    d.setAttribute('data-page', i);
+    d.onclick = (function(pg){ return function(){ bcGoTo(pg); }; })(i);
+    dotsEl.appendChild(d);
+  }
+  bcGoTo(0);
+}
+
+function bcGoTo(page) {
+  bcVisible = bcGetVisible();
+  var pages  = Math.ceil(bcTotal / bcVisible);
+  page = Math.max(0, Math.min(page, pages - 1));
+  bcPos = page;
+  var cardW = document.querySelector('.bc-card');
+  if (!cardW) return;
+  var gap    = 19.2; // ~1.2rem
+  var shift  = page * bcVisible * (cardW.offsetWidth + gap);
+  document.getElementById('bcTrack').style.transform = 'translateX(-' + shift + 'px)';
+  document.querySelectorAll('.bc-dot').forEach(function(d, i) {
+    d.classList.toggle('active', i === page);
+  });
+  document.getElementById('bcPrev').disabled = page === 0;
+  document.getElementById('bcNext').disabled = page >= pages - 1;
+}
+
+function bcSlide(dir) {
+  bcGoTo(bcPos + dir);
+}
+
+window.addEventListener('resize', function() { bcInit(); });
+</script>
+
+<!-- ─── MODAL ─────────────────────────────────────────────────────────────── -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalName">
+  <div class="modal-box" id="modalBox">
+    <button class="modal-x" id="modalX" aria-label="Cerrar">✕</button>
+    <img class="modal-img" id="modalImg" src="" alt="">
+    <div class="modal-body">
+      <div class="modal-tag"  id="modalTag"></div>
+      <div class="modal-name" id="modalName"></div>
+      <div class="modal-divider"></div>
+      <div class="modal-duration" id="modalDuration"></div>
+      <div class="modal-desc"     id="modalDesc"></div>
+      <div class="modal-features" id="modalFeatures"></div>
+      <div class="modal-actions">
+        <button class="modal-book" onclick="window.location.href='reservas.html'">
+          Reservar esta sesión →
+        </button>
+        <button class="modal-close-btn" id="modalCloseBtn">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SCRIPT DE SERVICIOS ───────────────────────────────────────────────── -->
+<script>
+(function () {
+  /* ── Datos de servicios ─────────────────────────────────────────────── */
+  var SERVICES = [
+    {
+      num: "01",
+      tag: "Relajación",
+      nameKey: "s1.name",
+      name: "Masaje relajante",
+      duration: "30 min",
+      img: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=80&fit=crop",
+      descKey: "s1.desc",
+      desc: "Un masaje integral que combina la manipulación de los tejidos blandos para aliviar el estrés y la tensión, a la vez que mejora la circulación sanguínea y linfática. La presión es de ligera a media; su objetivo principal es la relajación. Puede incluir estiramientos activos suaves.",
+      features: ["Reduce estrés y ansiedad", "Mejora circulación sanguínea y linfática", "Presión ligera a media adaptable", "Incluye estiramientos activos suaves"],
+      short: "Un masaje integral que combina la manipulación de los tejidos blandos para aliviar el estrés y la tensión"
+    },
+    {
+      num: "02",
+      tag: "Terapéutico",
+      nameKey: "s2.name",
+      name: "Masaje de presión profunda",
+      duration: "30 min",
+      img: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80&fit=crop",
+      descKey: "s2.desc",
+      desc: "Diseñada para abordar afecciones o molestias específicas. Ideal para quienes buscan aliviar dolores causados por tensión muscular, sobreesfuerzo o traumatismos. Trabaja capas profundas del tejido muscular con técnica y precisión focalizada.",
+      features: ["Alivia dolor crónico y tensión profunda", "Ideal para lesiones por sobreesfuerzo", "Técnica de presión focalizada", "Resultados visibles desde la primera sesión"],
+      short: "Diseñada para abordar afecciones o molestias específicas. Ideal para quienes buscan aliviar dolores causados por tensión muscular"
+    },
+    {
+      num: "03",
+      tag: "Bienestar",
+      nameKey: "s3.name",
+      name: "Relajación guiada",
+      duration: "45 min",
+      img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80&fit=crop",
+      descKey: "s3.desc",
+      desc: "El objetivo es ayudarte a relajarte, respirar y visualizarte de una forma nueva y empoderadora. Reduce el nerviosismo, la ansiedad y la preocupación. Puede mejorar tu rendimiento en el trabajo, el deporte y la vida cotidiana.",
+      features: ["Reducción de nerviosismo y ansiedad", "Técnicas de respiración consciente", "Visualización guiada personalizada", "Mejora el rendimiento diario"],
+      short: "El objetivo es ayudarte a relajarte, respirar y visualizarte de una forma nueva y empoderadora"
+    }
+  ];
+
+  /* ── Renderizado de tarjetas ────────────────────────────────────────── */
+  var grid = document.getElementById('servicesGrid');
+  SERVICES.forEach(function (s, i) {
+    var card = document.createElement('div');
+    card.className = 'preview-card reveal';
+    card.style.cursor = 'pointer';
+    card.innerHTML =
+      '<img class="sp-card-img" src="' + s.img + '" alt="' + s.name + '" loading="lazy">' +
+      '<div style="padding:1rem 0 0">' +
+        '<div class="preview-num">' + s.num + '</div>' +
+        '<div class="preview-name" data-i18n="' + s.nameKey + '">' + s.name + '</div>' +
+        '<p class="preview-desc">' + s.short + '</p>' +
+        '<div class="sp-card-more">Más información →</div>' +
+      '</div>';
+    card.addEventListener('click', function () { openModal(i); });
+    grid.appendChild(card);
+  });
+
+  /* ── Modal ──────────────────────────────────────────────────────────── */
+  var overlay   = document.getElementById('modalOverlay');
+  var modalX    = document.getElementById('modalX');
+  var closeBtn  = document.getElementById('modalCloseBtn');
+
+  function openModal(i) {
+    var s = SERVICES[i];
+    document.getElementById('modalImg').src      = s.img;
+    document.getElementById('modalImg').alt      = s.name;
+    document.getElementById('modalTag').textContent      = s.tag;
+    document.getElementById('modalName').textContent     = s.name;
+    document.getElementById('modalDuration').textContent = '⏱ ' + s.duration;
+    document.getElementById('modalDesc').textContent     = s.desc;
+    document.getElementById('modalFeatures').innerHTML   =
+      s.features.map(function (f) { return '<div class="modal-feat">' + f + '</div>'; }).join('');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  modalX.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+})();
+</script>
+
+<script src="shared.js"></script>
+<script src="components.js"></script>
+<script>
+  renderComponents('index');
+  initPage('index');
+</script>
+</body>
+</html>

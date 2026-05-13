@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIC Massage Therapy | Servicios</title>
+<meta name="description" content="Descubre todos nuestros servicios de terapia muscular, masaje y recuperación.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+
+<style>
+/* ══════════════ MODAL OVERLAY ══════════════ */
+.svc-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(0,0,0,0);
+  backdrop-filter: blur(0px);
+  pointer-events: none;
+  transition: background .35s ease, backdrop-filter .35s ease;
+}
+.svc-modal-overlay.open {
+  background: rgba(0,0,0,.72);
+  backdrop-filter: blur(6px);
+  pointer-events: all;
+}
+
+/* ══════════════ MODAL BOX ══════════════ */
+.svc-modal {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--bg-card, #13110e);
+  border: 1px solid rgba(201,168,76,.22);
+  border-radius: 12px;
+  transform: translateY(28px) scale(.97);
+  opacity: 0;
+  transition: transform .38s cubic-bezier(.22,1,.36,1), opacity .3s ease;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(201,168,76,.3) transparent;
+}
+.svc-modal-overlay.open .svc-modal {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* ══════════════ MODAL IMAGE ══════════════ */
+.svc-modal-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 11px 11px 0 0;
+  display: block;
+}
+
+/* ══════════════ MODAL BODY ══════════════ */
+.svc-modal-body {
+  padding: 2rem 2rem 2.2rem;
+}
+
+.svc-modal-num {
+  font-family: var(--font-display, 'Cormorant Garamond', serif);
+  font-size: .75rem;
+  letter-spacing: .18em;
+  color: var(--gold, #c9a84c);
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+
+.svc-modal-title {
+  font-family: var(--font-display, 'Cormorant Garamond', serif);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--text-primary, #f0ede8);
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+}
+
+/* Meta row: duración + precio */
+.svc-modal-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.svc-modal-badge {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem .9rem;
+  border: 1px solid rgba(201,168,76,.25);
+  border-radius: 40px;
+  font-size: .78rem;
+  color: var(--gold, #c9a84c);
+  background: rgba(201,168,76,.07);
+}
+.svc-modal-badge svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Gold divider */
+.svc-modal-line {
+  width: 40px;
+  height: 1px;
+  background: var(--gold, #c9a84c);
+  margin-bottom: 1.2rem;
+}
+
+.svc-modal-desc {
+  font-size: .9rem;
+  line-height: 1.75;
+  color: var(--text-muted, #a09a8e);
+  margin-bottom: 1.5rem;
+}
+
+/* Feature list */
+.svc-modal-features {
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+  margin-bottom: 2rem;
+}
+.svc-modal-feature {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  font-size: .82rem;
+  color: var(--text-secondary, #c8c0b4);
+}
+.svc-modal-feature::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold, #c9a84c);
+  flex-shrink: 0;
+}
+
+/* CTA button */
+.svc-modal-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  width: 100%;
+  padding: .95rem 1.5rem;
+  background: var(--gold, #c9a84c);
+  color: #0d0b08;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: .88rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .2s, transform .15s;
+}
+.svc-modal-cta:hover {
+  background: #b8963e;
+  transform: translateY(-1px);
+}
+.svc-modal-cta svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* Close button */
+.svc-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.5);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+  transition: background .2s;
+  z-index: 10;
+}
+.svc-modal-close:hover { background: rgba(0,0,0,.75); }
+.svc-modal-close svg { width: 16px; height: 16px; }
+
+/* Prevent body scroll when modal open */
+body.modal-open { overflow: hidden; }
+
+/* Card button tweak — now opens modal */
+.service-card .service-link { cursor: pointer; }
+
+@media (max-width: 520px) {
+  .svc-modal-body { padding: 1.5rem 1.25rem 1.75rem; }
+  .svc-modal-title { font-size: 1.6rem; }
+  .svc-modal-img { height: 170px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <div class="section-tag reveal" data-i18n="services.tag">Nuestros Servicios</div>
+    <h1 class="page-hero-title reveal delay-1"><em data-i18n="services.title1">Tratamientos</em> <strong data-i18n="services.title2">Especializados</strong></h1>
+    <p class="page-hero-sub reveal delay-2" data-i18n="services.subtitle">Cada tratamiento está diseñado con base en evidencia científica y técnicas avanzadas de terapia corporal.</p>
+  </div>
+</section>
+
+<!-- ══════════════════ SERVICIOS ══════════════════ -->
+<section class="services-page">
+  <div class="section-container">
+    <div class="services-grid">
+
+      <!-- 01 · Masaje Terapéutico -->
+      <div class="service-card reveal">
+        <div class="service-duration">60 – 90 min</div>
+        <div class="service-card-num">01</div>
+
+        <!-- ▸ Reemplaza src="" con la URL de tu imagen -->
+        <div class="service-img-wrap">
+          <img src="https://plus.unsplash.com/premium_photo-1663012948067-0478e4f9d9c6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Masaje Terapéutico" loading="lazy">
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            Agregar imagen
+          </div>
+        </div>
+
+        <div class="service-name" data-i18n="s1.name">Masaje Terapéutico</div>
+        <p class="service-desc" data-i18n="s1.desc">Técnica de manipulación profunda de tejidos blandos para aliviar dolor crónico, tensiones musculares y mejorar la circulación.</p>
+        <div class="service-features">
+          <div class="sf-item" data-i18n="sf1.1">✓ Alivio de dolor crónico</div>
+          <div class="sf-item" data-i18n="sf1.2">✓ Mejora circulación</div>
+          <div class="sf-item" data-i18n="sf1.3">✓ Reducción de tensión</div>
+        </div>
+        <button class="service-link" onclick="openBooking('Masaje Terapéutico')">
+          Ver detalles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- 02 · Masaje Deportivo -->
+      <div class="service-card reveal delay-1">
+        <div class="service-duration">45 – 75 min</div>
+        <div class="service-card-num">02</div>
+
+        <div class="service-img-wrap">
+          <img src="https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Masaje Deportivo" loading="lazy">
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            Agregar imagen
+          </div>
+        </div>
+
+        <div class="service-name" data-i18n="s2.name">Masaje Deportivo</div>
+        <p class="service-desc" data-i18n="s2.desc">Protocolo especializado para atletas. Pre y post competencia. Optimiza el rendimiento y acelera la recuperación muscular.</p>
+        <div class="service-features">
+          <div class="sf-item" data-i18n="sf2.1">✓ Pre y post competencia</div>
+          <div class="sf-item" data-i18n="sf2.2">✓ Optimiza rendimiento</div>
+          <div class="sf-item" data-i18n="sf2.3">✓ Recuperación acelerada</div>
+        </div>
+        <button class="service-link" onclick="openBooking('Masaje Deportivo')">
+          Ver detalles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- 03 · Terapia de Estiramiento -->
+      <div class="service-card reveal delay-2">
+        <div class="service-duration">50 – 80 min</div>
+        <div class="service-card-num">03</div>
+
+        <div class="service-img-wrap">
+          <img src="https://images.unsplash.com/photo-1699523229212-c25a2fadeb12?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Terapia de Estiramiento" loading="lazy">
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            Agregar imagen
+          </div>
+        </div>
+
+        <div class="service-name" data-i18n="s3.name">Terapia de Estiramiento</div>
+        <p class="service-desc" data-i18n="s3.desc">Elongación asistida de grupos musculares específicos. Mejora la flexibilidad, postura y rango de movimiento articular.</p>
+        <div class="service-features">
+          <div class="sf-item" data-i18n="sf3.1">✓ Mejora flexibilidad</div>
+          <div class="sf-item" data-i18n="sf3.2">✓ Corrección postural</div>
+          <div class="sf-item" data-i18n="sf3.3">✓ Rango de movimiento</div>
+        </div>
+        <button class="service-link" onclick="openBooking('Terapia de Estiramiento')">
+          Ver detalles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- 04 · Recuperación Muscular -->
+      <div class="service-card reveal delay-1">
+        <div class="service-duration">60 min</div>
+        <div class="service-card-num">04</div>
+
+        <div class="service-img-wrap">
+          <img src="https://images.unsplash.com/photo-1770653927355-2ba81c1522df?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Recuperación Muscular" loading="lazy">
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            Agregar imagen
+          </div>
+        </div>
+
+        <div class="service-name" data-i18n="s4.name">Recuperación Muscular</div>
+        <p class="service-desc" data-i18n="s4.desc">Protocolo de recuperación activa mediante técnicas combinadas de compresión, vibración y manipulación manual profunda.</p>
+        <div class="service-features">
+          <div class="sf-item" data-i18n="sf4.1">✓ Recuperación activa</div>
+          <div class="sf-item" data-i18n="sf4.2">✓ Compresión terapéutica</div>
+          <div class="sf-item" data-i18n="sf4.3">✓ Manipulación profunda</div>
+        </div>
+        <button class="service-link" onclick="openBooking('Recuperación Muscular')">
+          Ver detalles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- 05 · Liberación Miofascial -->
+      <div class="service-card reveal delay-2">
+        <div class="service-duration">60 – 90 min</div>
+        <div class="service-card-num">05</div>
+
+        <div class="service-img-wrap">
+          <img src="https://laclinicasc.com/wp-content/uploads/2024/03/Myofascial-Release-Procedure.png" alt="Liberación Miofascial" loading="lazy">
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            Agregar imagen
+          </div>
+        </div>
+
+        <div class="service-name" data-i18n="s5.name">Liberación Miofascial</div>
+        <p class="service-desc" data-i18n="s5.desc">Técnica especializada para liberar restricciones en la fascia muscular. Ideal para dolor crónico y síndrome miofascial.</p>
+        <div class="service-features">
+          <div class="sf-item" data-i18n="sf5.1">✓ Liberación de fascia</div>
+          <div class="sf-item" data-i18n="sf5.2">✓ Dolor crónico</div>
+          <div class="sf-item" data-i18n="sf5.3">✓ Síndrome miofascial</div>
+        </div>
+        <button class="service-link" onclick="openBooking('Liberación Miofascial')">
+          Ver detalles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- 06 · Masaje Relajante -->
+      <div class="service-card reveal delay-3">
+        <div class="service-duration">60 – 90 min</div>
+        <div class="service-card-num">06</div>
+
+        <div class="service-img-wrap">
+          <img src="https://images.unsplash.com/photo-1649751295468-953038600bef?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Masaje Relajante" loading="lazy">
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            Agregar imagen
+          </div>
+        </div>
+
+        <div class="service-name" data-i18n="s6.name">Masaje Relajante</div>
+        <p class="service-desc" data-i18n="s6.desc">Experiencia sensorial completa con técnicas suecas y aceites esenciales premium. Reduce el estrés y restaura el equilibrio mental.</p>
+        <div class="service-features">
+          <div class="sf-item" data-i18n="sf6.1">✓ Reducción de estrés</div>
+          <div class="sf-item" data-i18n="sf6.2">✓ Aceites esenciales</div>
+          <div class="sf-item" data-i18n="sf6.3">✓ Equilibrio mental</div>
+        </div>
+        <button class="service-link" onclick="openBooking('Masaje Relajante')">
+          Ver detalles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ SHOWCASE DEL LUGAR ══════════════════ -->
+<section class="workspace-showcase">
+  <div class="section-container">
+
+    <!-- Encabezado -->
+    <div class="ws-header reveal">
+      <div class="section-tag">Nuestro Espacio</div>
+      <h2 class="ws-title"><em>Conoce</em> el lugar donde <strong>sucede la recuperación</strong></h2>
+      <p class="ws-intro">Un ambiente diseñado para que tu cuerpo y mente encuentren el descanso que merecen. Equipamiento profesional, ambiente controlado y atención completamente personalizada.</p>
+    </div>
+
+    <!-- Layout principal: video grande + columna de imágenes -->
+    <div class="ws-main reveal delay-1">
+
+      <!-- VIDEO principal -->
+      <div class="ws-video-wrap">
+        <!-- ▸ Opción A – video propio: reemplaza src con tu archivo -->
+        <video
+          src="img/14527942_2160_3840_24fps.mp4"
+          poster=""
+          playsinline
+          loop
+          muted
+          autoplay
+          class="ws-video"
+          id="wsVideo"
+        ></video>
+
+        <!-- ▸ Opción B – embed YouTube/Vimeo: descomenta y pega tu URL
+        <iframe
+          src="https://www.youtube.com/embed/TU_ID?autoplay=1&mute=1&loop=1&playlist=TU_ID&controls=0&rel=0"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          class="ws-video"
+          style="border:none;"
+        ></iframe>
+        -->
+
+        <!-- Placeholder mientras no haya video -->
+        <div class="ws-media-placeholder" id="wsVideoPlaceholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          <span>Agregar video del espacio</span>
+        </div>
+
+        <!-- Botón play/pausa sobre el video -->
+        <button class="ws-play-btn" id="wsPlayBtn" onclick="toggleVideo()" aria-label="Play/Pausa">
+          <svg id="wsPlayIcon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <svg id="wsPauseIcon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+
+        <!-- Texto flotante sobre el video -->
+        <div class="ws-video-caption">
+          <p class="ws-vc-text">Cada sesión es guiada por terapeutas certificados con más de 8 años de experiencia clínica.</p>
+        </div>
+      </div>
+
+      <!-- Columna de imágenes -->
+      <div class="ws-img-col">
+
+        <div class="ws-img-wrap tall">
+          <!-- ▸ Reemplaza src="" con tu imagen -->
+          <img src="img/pexels-caio-11075080.jpg" alt="Interior del consultorio" loading="lazy">
+          <div class="ws-media-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>Foto del consultorio</span>
+          </div>
+          <div class="ws-img-label">Consultorio principal</div>
+        </div>
+
+        <div class="ws-img-wrap short">
+          <img src="img/pexels-cansu-hangul-464804780-30483060.jpg" alt="Equipamiento profesional" loading="lazy">
+          <div class="ws-media-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>Foto del equipamiento</span>
+          </div>
+          <div class="ws-img-label">Equipamiento certificado</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Fila inferior: 3 imágenes pequeñas + texto estadísticas -->
+    <div class="ws-bottom reveal delay-2">
+
+      <div class="ws-img-wrap square">
+        <img src="img/pexels-babydov-7789609.jpg" alt="Camilla terapéutica" loading="lazy">
+        <div class="ws-media-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>Foto camilla</span>
+        </div>
+        <div class="ws-img-label">Camilla profesional</div>
+      </div>
+
+      <div class="ws-img-wrap square">
+        <img src="img/pexels-cristian-rojas-8459996.jpg" alt="Zona de recepción" loading="lazy">
+        <div class="ws-media-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>Foto recepción</span>
+        </div>
+        <div class="ws-img-label">Zona de recepción</div>
+      </div>
+
+      <div class="ws-img-wrap square">
+        <img src="img/pexels-cristian-rojas-8460229.jpg" alt="Área de recuperación" loading="lazy">
+        <div class="ws-media-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>Foto área de recuperación</span>
+        </div>
+        <div class="ws-img-label">Área de recuperación</div>
+      </div>
+
+      <!-- Bloque de estadísticas + CTA -->
+      <div class="ws-stats-block">
+        <div class="ws-stats">
+          <div class="ws-stat">
+            <span class="ws-stat-num">+500</span>
+            <span class="ws-stat-label">Pacientes atendidos</span>
+          </div>
+          <div class="ws-stat">
+            <span class="ws-stat-num">8+</span>
+            <span class="ws-stat-label">Años de experiencia</span>
+          </div>
+          <div class="ws-stat">
+            <span class="ws-stat-num">6</span>
+            <span class="ws-stat-label">Tratamientos especializados</span>
+          </div>
+        </div>
+  
+  
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ══════════════ MODAL ══════════════ -->
+<div class="svc-modal-overlay" id="svcOverlay" role="dialog" aria-modal="true" aria-labelledby="svcModalTitle">
+  <div class="svc-modal" id="svcModal">
+    <button class="svc-modal-close" id="svcClose" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <img class="svc-modal-img" id="svcModalImg" src="" alt="">
+    <div class="svc-modal-body">
+      <div class="svc-modal-num" id="svcModalNum"></div>
+      <div class="svc-modal-title" id="svcModalTitle"></div>
+      <div class="svc-modal-meta">
+        <div class="svc-modal-badge" id="svcModalDuration">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span></span>
+        </div>
+        <div class="svc-modal-badge" id="svcModalPrice">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          <span></span>
+        </div>
+      </div>
+      <div class="svc-modal-line"></div>
+      <p class="svc-modal-desc" id="svcModalDesc"></p>
+      <div class="svc-modal-features" id="svcModalFeatures"></div>
+      <a class="svc-modal-cta" id="svcModalCta" href="reservas.html" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Reservar este servicio
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ══════════════════════════════════════════════
+  // DATOS — declarado ANTES de shared.js/components.js
+  // para que openBooking sea global desde el inicio
+  // ══════════════════════════════════════════════
+  const SERVICES = {
+    'Masaje Terapéutico': {
+      num: '01',
+      duration: '60 – 90 min',
+      price: 'Desde $120',
+      img: 'https://plus.unsplash.com/premium_photo-1663012948067-0478e4f9d9c6?q=80&w=1170&auto=format&fit=crop',
+      desc: 'La técnica de manipulación profunda de tejidos blandos más completa de nuestro catálogo. Trabajamos capa por capa sobre músculo, tendón y fascia para liberar adherencias, restaurar la circulación local y reequilibrar el sistema nervioso autónomo. Indicado para pacientes con dolor crónico cervical, lumbar o de miembros, así como para quienes experimentan tensión muscular acumulada por estrés o posturas sostenidas.',
+      features: ['Alivio de dolor crónico cervical y lumbar','Mejora notable de la circulación sanguínea','Reducción de tensión muscular profunda','Reequilibrio del sistema nervioso','Trabajo sobre tendones y fascia'],
+      booking: 'Masaje Terapéutico'
+    },
+    'Masaje Deportivo': {
+      num: '02',
+      duration: '45 – 75 min',
+      price: 'Desde $110',
+      img: 'https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?q=80&w=1170&auto=format&fit=crop',
+      desc: 'Protocolo especializado diseñado para atletas de todos los niveles. Combinamos técnicas de effleurage, petrissage y compresión isquémica adaptadas a la fase del ciclo deportivo. Pre-competencia activa la musculatura y optimiza el rango articular; post-competencia elimina metabolitos, reduce la inflamación y acelera la regeneración tisular. Resultados medibles en rendimiento y tiempo de recuperación.',
+      features: ['Preparación muscular pre-competencia','Eliminación de metabolitos post-esfuerzo','Reducción de inflamación y DOMS','Optimización del rango de movimiento articular','Prevención de lesiones por sobreuso'],
+      booking: 'Masaje Deportivo'
+    },
+    'Terapia de Estiramiento': {
+      num: '03',
+      duration: '50 – 80 min',
+      price: 'Desde $100',
+      img: 'https://images.unsplash.com/photo-1699523229212-c25a2fadeb12?q=80&w=1169&auto=format&fit=crop',
+      desc: 'Elongación asistida de cadenas musculares mediante técnicas de PNF (Facilitación Neuromuscular Propioceptiva) y estiramiento estático progresivo. El terapeuta guía cada movimiento con precisión biomecánica, trabajando sobre grupos musculares específicos para restaurar la longitud óptima del músculo, mejorar la postura global y ampliar el rango de movimiento articular de forma segura y duradera.',
+      features: ['Aumento medible de flexibilidad muscular','Corrección de desequilibrios posturales','Ampliación del rango articular','Técnica PNF para resultados profundos','Prevención de contracturas y rigidez'],
+      booking: 'Terapia de Estiramiento'
+    },
+    'Recuperación Muscular': {
+      num: '04',
+      duration: '60 min',
+      price: 'Desde $115',
+      img: 'https://images.unsplash.com/photo-1770653927355-2ba81c1522df?q=80&w=1331&auto=format&fit=crop',
+      desc: 'Protocolo de recuperación activa que combina compresión neumática secuencial, vibración terapéutica de alta frecuencia y manipulación manual profunda. El objetivo es acelerar el clearance linfático y venoso, reducir la inflamación residual y restablecer el tono muscular óptimo tras esfuerzos intensos, lesiones o periodos de inmovilización. Ideal para deportistas en temporada o pacientes en rehabilitación.',
+      features: ['Compresión neumática secuencial','Vibración terapéutica de alta frecuencia','Estimulación del drenaje linfático','Rehabilitación de lesiones musculares','Reducción de inflamación residual'],
+      booking: 'Recuperación Muscular'
+    },
+    'Liberación Miofascial': {
+      num: '05',
+      duration: '60 – 90 min',
+      price: 'Desde $130',
+      img: 'https://laclinicasc.com/wp-content/uploads/2024/03/Myofascial-Release-Procedure.png',
+      desc: 'Técnica manual especializada para liberar restricciones y adherencias en la red fascial que envuelve y conecta cada estructura del cuerpo. A diferencia del masaje convencional, la liberación miofascial aplica presión sostenida y lenta que permite al tejido conectivo ceder de forma natural. Especialmente eficaz en síndrome miofascial, fibromialgia, dolor crónico difuso y secuelas de traumatismos o cirugías.',
+      features: ['Liberación de adherencias en la fascia profunda','Tratamiento del síndrome miofascial','Eficaz en fibromialgia y dolor difuso','Secuelas post-traumáticas o post-quirúrgicas','Presión sostenida de liberación progresiva'],
+      booking: 'Liberación Miofascial'
+    },
+    'Masaje Relajante': {
+      num: '06',
+      duration: '60 – 90 min',
+      price: 'Desde $95',
+      img: 'https://images.unsplash.com/photo-1649751295468-953038600bef?q=80&w=1170&auto=format&fit=crop',
+      desc: 'Experiencia sensorial completa basada en técnicas suecas clásicas con aceites esenciales premium seleccionados según tus necesidades (lavanda, eucalipto, bergamota, entre otros). Las maniobras de roce y amasamiento rítmico activan el sistema nervioso parasimpático, reducen el cortisol, alivian la tensión superficial y promueven un estado de calma profunda. Ideal para manejo del estrés y bienestar general.',
+      features: ['Técnicas suecas de effleurage rítmico','Aceites esenciales premium personalizados','Activación del sistema parasimpático','Reducción de cortisol y estrés crónico','Restauración del equilibrio mental y emocional'],
+      booking: 'Masaje Relajante'
+    },
+  };
+
+  // Función global — disponible para cualquier onclick inline
+  function openBooking(name) {
+    openModal(name);
+  }
+</script>
+
+<script src="shared.js"></script>
+<script src="components.js"></script>
+<script>
+  renderComponents('servicios');
+  initPage('servicios');
+
+  // ══════════════════════════════════════════════
+  // MODAL LOGIC
+  // ══════════════════════════════════════════════
+  const overlay  = document.getElementById('svcOverlay');
+  const closeBtn = document.getElementById('svcClose');
+
+  function openModal(name) {
+    const s = SERVICES[name];
+    if (!s) return;
+
+    document.getElementById('svcModalImg').src       = s.img;
+    document.getElementById('svcModalImg').alt       = name;
+    document.getElementById('svcModalNum').textContent   = s.num;
+    document.getElementById('svcModalTitle').textContent = name;
+    document.getElementById('svcModalDuration').querySelector('span').textContent = s.duration;
+    document.getElementById('svcModalPrice').querySelector('span').textContent    = s.price;
+    document.getElementById('svcModalDesc').textContent  = s.desc;
+
+    const featEl = document.getElementById('svcModalFeatures');
+    featEl.innerHTML = s.features.map(f =>
+      `<div class="svc-modal-feature">${f}</div>`
+    ).join('');
+
+    document.getElementById('svcModalCta').href = `reservas.html`;
+
+    overlay.classList.add('open');
+    document.body.classList.add('modal-open');
+    closeBtn.focus();
+  }
+
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.classList.remove('modal-open');
+  }
+
+  // Cerrar modal
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  // ── Event delegation: click en card O en botón abre el modal ──
+  document.querySelector('.services-grid').addEventListener('click', function(e) {
+    const card = e.target.closest('.service-card');
+    if (!card) return;
+    const nameEl = card.querySelector('.service-name');
+    if (nameEl) openModal(nameEl.textContent.trim());
+  });
+</script>
+</body>
+</html>
