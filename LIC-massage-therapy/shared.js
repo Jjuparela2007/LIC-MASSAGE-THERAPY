@@ -424,6 +424,25 @@ const i18n = {
     "ws.stat3.num":"6",
     "ws.stat3.label":"Tratamientos especializados",
 
+    // ── NUEVAS CLAVES — servicios.html · Sección Estudio ─────────────────────
+
+    // Slider — captions
+    "studio.slide1.title":"Sala de tratamiento",
+    "studio.slide1.desc":"Paredes de cal, luz cálida y lencería impecable — cada detalle preparado para ti.",
+    "studio.slide2.title":"Área de estiramiento",
+    "studio.slide2.desc":"Espacio amplio y equipado para técnicas AIS y trabajo de movilidad.",
+    "studio.slide3.title":"Ambiente privado",
+    "studio.slide3.desc":"Silencioso, confidencial y completamente dedicado a tu recuperación.",
+    "studio.slide4.title":"Long Island City, NY",
+    "studio.slide4.desc":"Ubicación accesible, a minutos del metro, en el corazón de Queens.",
+
+    // Texto derecho
+    "studio.eyebrow":"En el estudio",
+    "studio.heading":"Un espacio tranquilo y enfocado — diseñado para tu cuerpo.",
+    "studio.para1":"Las sesiones se realizan en un estudio privado y silencioso en Long Island City. Cada cita comienza con una breve conversación sobre qué te duele, qué está tenso y qué quieres volver a poder hacer. A partir de ahí, el trabajo es manual, preciso y adaptado a ti.",
+    "studio.para2":"Ya seas atleta, trabajador de oficina, te estés recuperando de una lesión o simplemente estés cansado de sentirte rígido — recibirás trato profesional, paciencia y cero juicios.",
+    "studio.cta":"Reserva tu primera sesión",
+
     // Modal de servicios
     "svc.modal.cta":"Reservar este servicio",
 
@@ -963,6 +982,25 @@ const i18n = {
     "ws.stat2.label":"Years of experience",
     "ws.stat3.num":"6",
     "ws.stat3.label":"Specialized treatments",
+
+    // ── NEW KEYS — servicios.html · Studio Section ───────────────────────────
+
+    // Slider — captions
+    "studio.slide1.title":"Treatment Room",
+    "studio.slide1.desc":"Lime-washed walls, warm lighting, and impeccable linens — every detail prepared for you.",
+    "studio.slide2.title":"Stretching Area",
+    "studio.slide2.desc":"Spacious, fully equipped space for AIS techniques and mobility work.",
+    "studio.slide3.title":"Private Setting",
+    "studio.slide3.desc":"Quiet, confidential, and completely dedicated to your recovery.",
+    "studio.slide4.title":"Long Island City, NY",
+    "studio.slide4.desc":"Convenient location, minutes from the subway, in the heart of Queens.",
+
+    // Right-side text
+    "studio.eyebrow":"In the studio",
+    "studio.heading":"A calm, focused space — designed for your body.",
+    "studio.para1":"Sessions take place in a private, quiet studio in Long Island City. Every appointment begins with a brief conversation about what hurts, what feels tight, and what you want to be able to do again. From there, the work is hands-on, precise, and adapted to you.",
+    "studio.para2":"Whether you're an athlete, an office worker, recovering from an injury, or simply tired of feeling stiff — you'll receive professional care, patience, and zero judgment.",
+    "studio.cta":"Book your first session",
 
     // Service modal
     "svc.modal.cta":"Book this service",
