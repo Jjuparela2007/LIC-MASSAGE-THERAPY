@@ -424,6 +424,21 @@ const i18n = {
     "ws.stat3.num":"6",
     "ws.stat3.label":"Tratamientos especializados",
 
+    // ── NUEVAS CLAVES — servicios.html · Política de Cancelación ────────────
+    "cancel.tag":"Política de Cancelación",
+    "cancel.title1":"Política",
+    "cancel.title2":"de Cancelación",
+    "cancel.intro":"Entendemos que imprevistos pueden ocurrir en la vida de todos. Las siguientes políticas están diseñadas para ser efectivas y justas con todos nuestros clientes.",
+    "cancel.c1.title":"Cancelaciones",
+    "cancel.c1.desc":"Se requiere aviso con 24 horas de anticipación para cancelar una cita. Esto permite que otra persona pueda aprovechar el horario disponible.",
+    "cancel.c1.rule":"Sin aviso de 24h se cobrará el valor completo de la sesión, pagadero en 24h. Recibirás una factura por correo electrónico; pago con tarjeta de crédito.",
+    "cancel.c2.title":"No-Show",
+    "cancel.c2.desc":"Quien olvide o decida no asistir a su cita sin previo aviso será considerado \"no-show\" y se le cobrará el valor completo de la sesión perdida.",
+    "cancel.c2.rule":"Cargo completo pagadero en 24h tras la cita perdida. Se enviará factura por correo; pago con tarjeta de crédito.",
+    "cancel.c3.title":"Llegadas Tarde",
+    "cancel.c3.desc":"Si llegas tarde, tu sesión podrá acortarse para no afectar a los clientes siguientes. El terapeuta determinará si hay tiempo suficiente para iniciar el tratamiento.",
+    "cancel.c3.rule":"Independientemente del tiempo de tratamiento dado, se cobrará el valor completo de la sesión. Por favor, llega puntual.",
+
     // ── NUEVAS CLAVES — servicios.html · Sección Estudio ─────────────────────
 
     // Slider — captions
@@ -463,21 +478,6 @@ const i18n = {
     "terapia3.desc":"Trabajo especializado sobre la fascia muscular para eliminar restricciones que generan dolor referido y limitan el movimiento. Especialmente efectiva en síndrome miofascial crónico.",
     "terapia4.name":"Recuperación Deportiva",
     "terapia4.desc":"Protocolo pre y post competencia con técnicas combinadas de compresión, vibración y manipulación manual. Reduce la fatiga, acelera la regeneración muscular y optimiza el rendimiento.",
-
-    // Terapias section (sección de 4 beneficios — index.html)
-    "ts.tag":"Beneficios AIS",
-    "ts.title1":"4 beneficios",
-    "ts.title2":"que cambian tu vida",
-    "ts.intro":"A diferencia del estiramiento estático, la terapia AIS produce mejoras duraderas y medibles en cómo tu cuerpo se mueve y se siente.",
-    "ts.item1.name":"Reduce el dolor",
-    "ts.item1.desc":"Aborda la tensión crónica y el dolor muscular con técnicas de estiramiento asistido precisas.",
-    "ts.item2.name":"Aumenta la flexibilidad",
-    "ts.item2.desc":"Amplía progresivamente tu rango de movimiento de un modo que el estiramiento pasivo no logra.",
-    "ts.item3.name":"Mejora el rendimiento",
-    "ts.item3.desc":"Los atletas notan ganancias medibles en velocidad, potencia y agilidad tras sesiones constantes.",
-    "ts.item4.name":"Previene lesiones",
-    "ts.item4.desc":"Corrige desequilibrios musculares antes de que se conviertan en problemas dolorosos.",
-    "ts.cta":"Conozca su terapeuta",
 
     // Tabs section
     "tabs.tag":"Por qué elegirnos",
@@ -581,7 +581,7 @@ const i18n = {
   },
   en: {
     "nav.home":"Home","nav.services":"Services","nav.stretch":"Stretching",
-    "nav.about":"About Raul","nav.testimonials":"Testimonials","nav.contact":"Contact","nav.book":"Book Now",
+    "nav.about":"About","nav.testimonials":"Testimonials","nav.contact":"Contact","nav.book":"Book Now",
     "hero.tag":"Therapeutic Massage and Active Isolated Stretching · LIC","hero.title1":"Move Better.","hero.title2":"Feel Stronger.",
     "hero.desc":"Welcome to Long Island City Massage Therapy, a space dedicated to relieving pain, improving mobility, and promoting health through therapeutic stretching and professional massage. I’m Raúl Araque, a licensed massage therapist in the state of New York, focused on body education and holistic wellness.",
     "hero.cta1":"Book Appointment","hero.cta2":"View Services",
@@ -998,6 +998,21 @@ const i18n = {
     "ws.stat3.num":"6",
     "ws.stat3.label":"Specialized treatments",
 
+    // ── NEW KEYS — servicios.html · Cancellation Policy ─────────────────────
+    "cancel.tag":"Cancellation Policy",
+    "cancel.title1":"Cancellation",
+    "cancel.title2":"Policy",
+    "cancel.intro":"We understand that unanticipated events happen occasionally in everyone's life. The following policies are put in place to be effective and fair to all clients.",
+    "cancel.c1.title":"Cancellations",
+    "cancel.c1.desc":"24-hour advance notice is required when cancelling an appointment. This allows the opportunity for someone else to schedule an appointment.",
+    "cancel.c1.rule":"Without 24h notice, the full session amount will be charged and must be paid within 24h. You will be invoiced via email and may pay by credit card.",
+    "cancel.c2.title":"No-Show",
+    "cancel.c2.desc":"Anyone who forgets or consciously chooses to forgo their appointment for whatever reason will be considered a \"no-show\" and charged in full for their missed session.",
+    "cancel.c2.rule":"Full charge due within 24h of the missed appointment. You will be invoiced via email and may pay by credit card.",
+    "cancel.c3.title":"Late Arrivals",
+    "cancel.c3.desc":"If you arrive late, your session may be shortened to accommodate others. Your therapist will determine whether there is enough time remaining to begin a treatment.",
+    "cancel.c3.rule":"Regardless of the treatment time given, you are responsible for the full session. Out of respect for your therapist and other clients, please arrive on time.",
+
     // ── NEW KEYS — servicios.html · Studio Section ───────────────────────────
 
     // Slider — captions
@@ -1037,21 +1052,6 @@ const i18n = {
     "terapia3.desc":"Specialized work on the muscle fascia to eliminate restrictions that cause referred pain and limit movement. Particularly effective for chronic myofascial syndrome.",
     "terapia4.name":"Sports Recovery",
     "terapia4.desc":"Pre and post-competition protocol using combined techniques of compression, vibration, and manual manipulation. Reduces fatigue, accelerates muscle regeneration, and optimizes performance.",
-
-    // Terapias section (4 benefits section — index.html)
-    "ts.tag":"AIS Benefits",
-    "ts.title1":"4 benefits",
-    "ts.title2":"that change your life",
-    "ts.intro":"Unlike static stretching, AIS therapy produces lasting, measurable improvements in how your body moves and feels.",
-    "ts.item1.name":"Reduces pain",
-    "ts.item1.desc":"Addresses chronic tension and muscle pain with precise assisted stretching techniques.",
-    "ts.item2.name":"Increases flexibility",
-    "ts.item2.desc":"Progressively expands your range of motion in ways passive stretching cannot achieve.",
-    "ts.item3.name":"Improves performance",
-    "ts.item3.desc":"Athletes notice measurable gains in speed, power, and agility after consistent sessions.",
-    "ts.item4.name":"Prevents injuries",
-    "ts.item4.desc":"Corrects muscle imbalances before they become painful problems.",
-    "ts.cta":"Meet your therapist",
 
     // Tabs section
     "tabs.tag":"Why choose us",
