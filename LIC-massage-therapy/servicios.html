@@ -15,9 +15,9 @@
 <section class="page-hero">
   <div class="page-hero-bg"></div>
   <div class="page-hero-content">
-    <div class="section-tag reveal" data-i18n="services.tag">Nuestros Servicios</div>
-    <h1 class="page-hero-title reveal delay-1"><em data-i18n="services.title1">Tratamientos</em> <strong data-i18n="services.title2">Especializados</strong></h1>
-    <p class="page-hero-sub reveal delay-2" data-i18n="services.subtitle">Cada tratamiento está diseñado con base en evidencia científica y técnicas avanzadas de terapia corporal.</p>
+    <div class="section-tag reveal" data-i18n="services.tag"></div>
+    <h1 class="page-hero-title reveal delay-1"><em data-i18n="services.title1"></em> <strong data-i18n="services.title2"></strong></h1>
+    <p class="page-hero-sub reveal delay-2" data-i18n="services.subtitle"></p>
   </div>
 </section>
 
@@ -28,102 +28,151 @@
 
       <!-- 01 · Masaje Terapéutico -->
       <div class="service-card reveal">
-        <div class="service-duration">30 min - 60 min –  90 min</div>
+        <div class="service-duration">60 – 90 min</div>
         <div class="service-card-num">01</div>
 
-        <!-- ▸ Reemplaza src="" con la URL de tu imagen -->
         <div class="service-img-wrap">
           <img src="https://plus.unsplash.com/premium_photo-1663012948067-0478e4f9d9c6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Masaje Terapéutico" loading="lazy">
           <div class="img-placeholder">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            Agregar imagen
+            <span data-i18n="ws.imgPlaceholderOffice"></span>
           </div>
         </div>
 
-        <div class="service-name" data-i18n="s1.name">Masaje Relajante</div>
-        <p class="service-desc" data-i18n="s1.desc"> Un masaje integral que combina la manipulación de los tejidos blandos para aliviar el estrés y la tensión, a la vez que mejora la circulación sanguínea y linfática. La presión aplicada es de ligera a media. Su principal objetivo es la relajación. El masaje sueco es una introducción ideal a la tranquilidad y los beneficios de la masoterapia. Puede incluir estiramientos activos aislados suaves.</p>
+        <div class="service-name" data-i18n="s1.name"></div>
+        <p class="service-desc" data-i18n="s1.desc"></p>
         <div class="service-features">
-          <div class="sf-item" data-i18n="sf1.1">✓ Alivio de dolor crónico</div>
-          <div class="sf-item" data-i18n="sf1.2">✓ Mejora circulación</div>
-          <div class="sf-item" data-i18n="sf1.3">✓ Reducción de tensión</div>
+          <div class="sf-item" data-i18n="sf1.1"></div>
+          <div class="sf-item" data-i18n="sf1.2"></div>
+          <div class="sf-item" data-i18n="sf1.3"></div>
         </div>
-        <button class="service-link" onclick="openBooking('Masaje Relajante')">
-          <span>Ver tratamiento</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <button class="service-link" onclick="openBooking('Masaje Terapéutico')">
+          <span data-i18n="service.cta"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
       </div>
 
       <!-- 02 · Masaje Deportivo -->
       <div class="service-card reveal delay-1">
-        <div class="service-duration">30 min – 60 min - 90 min</div>
+        <div class="service-duration">45 – 75 min</div>
         <div class="service-card-num">02</div>
 
         <div class="service-img-wrap">
           <img src="https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Masaje Deportivo" loading="lazy">
           <div class="img-placeholder">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            Agregar imagen
+            <span data-i18n="ws.imgPlaceholderEquip"></span>
           </div>
         </div>
 
-        <div class="service-name" data-i18n="s2.name">Masaje de presión profunda</div>
-        <p class="service-desc" data-i18n="s2.desc">Protocolo especializado para atletas. Pre y post competencia. Optimiza el rendimiento y acelera la recuperación muscular.</p>
+        <div class="service-name" data-i18n="s2.name"></div>
+        <p class="service-desc" data-i18n="s2.desc"></p>
         <div class="service-features">
-          <div class="sf-item" data-i18n="sf2.1">✓ Pre y post competencia</div>
-          <div class="sf-item" data-i18n="sf2.2">✓ Optimiza rendimiento</div>
-          <div class="sf-item" data-i18n="sf2.3">✓ Recuperación acelerada</div>
+          <div class="sf-item" data-i18n="sf2.1"></div>
+          <div class="sf-item" data-i18n="sf2.2"></div>
+          <div class="sf-item" data-i18n="sf2.3"></div>
         </div>
-        <button class="service-link" onclick="openBooking('Masaje de sesion profunda')">
-          <span>Ver tratamiento</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <button class="service-link" onclick="openBooking('Masaje Deportivo')">
+          <span data-i18n="service.cta"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
       </div>
 
       <!-- 03 · Terapia de Estiramiento -->
       <div class="service-card reveal delay-2">
-        <div class="service-duration">  45 min</div>
+        <div class="service-duration">50 – 80 min</div>
         <div class="service-card-num">03</div>
 
         <div class="service-img-wrap">
           <img src="https://images.unsplash.com/photo-1699523229212-c25a2fadeb12?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Terapia de Estiramiento" loading="lazy">
           <div class="img-placeholder">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            Agregar imagen
+            <span data-i18n="ws.imgPlaceholderBed"></span>
           </div>
         </div>
 
-        <div class="service-name" data-i18n="s3.name">Relajacion Guiada</div>
-        <p class="service-desc" data-i18n="s3.desc">El objetivo de esta sesión es ayudarte a relajarte, respirar y visualizarte de una forma nueva y empoderadora. Busca reducir el nerviosismo, la ansiedad y la preocupación. Puede mejorar tu rendimiento en el trabajo, en el deporte y en la vida cotidiana. Está dirigida a quienes desean cambiar malos hábitos y a quienes buscan bajar de peso, entre otras cosas. Te llevarás herramientas útiles para el día a día. Las sesiones de relajación guiada y visualización son utilizadas por atletas profesionales, líderes empresariales y actores para relajarse y alcanzar sus metas. Estarás en una camilla de masaje, completamente vestido/a.</p>
+        <div class="service-name" data-i18n="s3.name"></div>
+        <p class="service-desc" data-i18n="s3.desc"></p>
         <div class="service-features">
-          <div class="sf-item" data-i18n="sf3.1">✓ Mejora flexibilidad</div>
-          <div class="sf-item" data-i18n="sf3.2">✓ Corrección postural</div>
-          <div class="sf-item" data-i18n="sf3.3">✓ Rango de movimiento</div>
+          <div class="sf-item" data-i18n="sf3.1"></div>
+          <div class="sf-item" data-i18n="sf3.2"></div>
+          <div class="sf-item" data-i18n="sf3.3"></div>
         </div>
-        <button class="service-link" onclick="openBooking('Sesion de relajacion guiada')">
-          <span>Ver tratamiento</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <button class="service-link" onclick="openBooking('Terapia de Estiramiento')">
+          <span data-i18n="service.cta"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
       </div>
 
-      <!-- 04 ·  ¿Como dar masaje a tu pareja?-->
+      <!-- 04 · Recuperación Muscular -->
       <div class="service-card reveal delay-1">
-        <div class="service-duration">90 min</div>
+        <div class="service-duration">60 min</div>
         <div class="service-card-num">04</div>
 
         <div class="service-img-wrap">
           <img src="https://images.unsplash.com/photo-1770653927355-2ba81c1522df?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Recuperación Muscular" loading="lazy">
           <div class="img-placeholder">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            Agregar imagen
+            <span data-i18n="ws.imgPlaceholderRecovery"></span>
           </div>
         </div>
 
-        <div class="service-name" data-i18n="s4.name">¿Como dar masaje a tu pareja?</div>
-        <p class="service-desc" data-i18n="s4.desc">¿Tu pareja siempre te pide que le alivieses el dolor de cuello, hombros o espalda, y después de cinco minutos no tienes ni idea de qué hacer? ¿Siempre has querido darle a tu pareja un masaje relajante y reconfortante? Si es así, ¡esto es para ti! Esta sesión relajante de hora y media incorpora las mejores técnicas que te guiarán para que puedas darle a tu pareja el mejor masaje, el más sanador y tranquilo. Durante esta sesión relajante también aprenderás qué hacer y qué no hacer, dónde y cómo aplicar la presión correctamente, para no lastimarte ni lastimar a tu pareja. La mitad del tiempo guiaré a una persona mientras la otra está en la camilla, y la otra mitad guiaré a la otra persona. Esta sesión está diseñada para enseñarte cómo trabajar con tu pareja o familia, no es una sesión avanzada. Será relajante y divertida. Está abierta a cualquier pareja. Por favor, envía un correo electrónico si tienes preguntas.</p>
+        <div class="service-name" data-i18n="s4.name"></div>
+        <p class="service-desc" data-i18n="s4.desc"></p>
         <div class="service-features">
-          <div class="sf-item" data-i18n="sf4.1">✓ Recuperación activa</div>
-          <div class="sf-item" data-i18n="sf4.2">✓ Compresión terapéutica</div>
-          <div class="sf-item" data-i18n="sf4.3">✓ Manipulación profunda</div>
+          <div class="sf-item" data-i18n="sf4.1"></div>
+          <div class="sf-item" data-i18n="sf4.2"></div>
+          <div class="sf-item" data-i18n="sf4.3"></div>
         </div>
-        <button class="service-link" onclick="openBooking('¿Como dar masaje a tu pareja?')">
-          <span>Ver tratamiento</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <button class="service-link" onclick="openBooking('Recuperación Muscular')">
+          <span data-i18n="service.cta"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- 05 · Liberación Miofascial -->
+      <div class="service-card reveal delay-2">
+        <div class="service-duration">60 – 90 min</div>
+        <div class="service-card-num">05</div>
+
+        <div class="service-img-wrap">
+          <img src="https://laclinicasc.com/wp-content/uploads/2024/03/Myofascial-Release-Procedure.png" alt="Liberación Miofascial" loading="lazy">
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <span data-i18n="ws.imgPlaceholderOffice"></span>
+          </div>
+        </div>
+
+        <div class="service-name" data-i18n="s5.name"></div>
+        <p class="service-desc" data-i18n="s5.desc"></p>
+        <div class="service-features">
+          <div class="sf-item" data-i18n="sf5.1"></div>
+          <div class="sf-item" data-i18n="sf5.2"></div>
+          <div class="sf-item" data-i18n="sf5.3"></div>
+        </div>
+        <button class="service-link" onclick="openBooking('Liberación Miofascial')">
+          <span data-i18n="service.cta"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- 06 · Masaje Relajante -->
+      <div class="service-card reveal delay-3">
+        <div class="service-duration">60 – 90 min</div>
+        <div class="service-card-num">06</div>
+
+        <div class="service-img-wrap">
+          <img src="https://images.unsplash.com/photo-1649751295468-953038600bef?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Masaje Relajante" loading="lazy">
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <span data-i18n="ws.imgPlaceholderEquip"></span>
+          </div>
+        </div>
+
+        <div class="service-name" data-i18n="s6.name"></div>
+        <p class="service-desc" data-i18n="s6.desc"></p>
+        <div class="service-features">
+          <div class="sf-item" data-i18n="sf6.1"></div>
+          <div class="sf-item" data-i18n="sf6.2"></div>
+          <div class="sf-item" data-i18n="sf6.3"></div>
+        </div>
+        <button class="service-link" onclick="openBooking('Masaje Relajante')">
+          <span data-i18n="service.cta"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
       </div>
 
@@ -137,9 +186,11 @@
 
     <!-- Encabezado -->
     <div class="ws-header reveal">
-      <div class="section-tag">Nuestro Espacio</div>
-      <h2 class="ws-title"><em>Conoce</em> el lugar donde <strong>sucede la recuperación</strong></h2>
-      <p class="ws-intro">Un ambiente diseñado para que tu cuerpo y mente encuentren el descanso que merecen. Equipamiento profesional, ambiente controlado y atención completamente personalizada.</p>
+      <div class="section-tag" data-i18n="ws.tag"></div>
+      <h2 class="ws-title">
+        <em data-i18n="ws.title1"></em> <span data-i18n="ws.title2"></span> <strong data-i18n="ws.title3"></strong>
+      </h2>
+      <p class="ws-intro" data-i18n="ws.intro"></p>
     </div>
 
     <!-- Layout principal: video grande + columna de imágenes -->
@@ -159,17 +210,34 @@
           id="wsVideo"
         ></video>
 
+        <!-- ▸ Opción B – embed YouTube/Vimeo: descomenta y pega tu URL
+        <iframe
+          src="https://www.youtube.com/embed/TU_ID?autoplay=1&mute=1&loop=1&playlist=TU_ID&controls=0&rel=0"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          class="ws-video"
+          style="border:none;"
+        ></iframe>
+        -->
+
         <!-- Placeholder mientras no haya video -->
         <div class="ws-media-placeholder" id="wsVideoPlaceholder">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
             <polygon points="5 3 19 12 5 21 5 3"/>
           </svg>
-          <span>Agregar video del espacio</span>
+          <span data-i18n="ws.videoPlaceholder"></span>
         </div>
+
+        <!-- Botón play/pausa sobre el video -->
+        <button class="ws-play-btn" id="wsPlayBtn" onclick="toggleVideo()" aria-label="Play/Pausa">
+          <svg id="wsPlayIcon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <svg id="wsPauseIcon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
 
         <!-- Texto flotante sobre el video -->
         <div class="ws-video-caption">
-          <p class="ws-vc-text">Cada sesión es guiada por terapeutas certificados con más de 8 años de experiencia clínica.</p>
+          <p class="ws-vc-text" data-i18n="ws.videoCaption"></p>
         </div>
       </div>
 
@@ -181,40 +249,75 @@
           <img src="img/pexels-caio-11075080.jpg" alt="Interior del consultorio" loading="lazy">
           <div class="ws-media-placeholder">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            <span>Foto del consultorio</span>
+            <span data-i18n="ws.imgPlaceholderOffice"></span>
           </div>
-          <div class="ws-img-label"></div>
+          <div class="ws-img-label" data-i18n="ws.label.office"></div>
+        </div>
+
+        <div class="ws-img-wrap short">
+          <img src="img/pexels-cansu-hangul-464804780-30483060.jpg" alt="Equipamiento profesional" loading="lazy">
+          <div class="ws-media-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span data-i18n="ws.imgPlaceholderEquip"></span>
+          </div>
+          <div class="ws-img-label" data-i18n="ws.label.equip"></div>
         </div>
 
       </div>
     </div>
 
     <!-- Fila inferior: 3 imágenes pequeñas + texto estadísticas -->
-    <div class="ws-bottom reveal delay-2">    
+    <div class="ws-bottom reveal delay-2">
+
+      <div class="ws-img-wrap square">
+        <img src="img/pexels-babydov-7789609.jpg" alt="Camilla terapéutica" loading="lazy">
+        <div class="ws-media-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span data-i18n="ws.imgPlaceholderBed"></span>
+        </div>
+        <div class="ws-img-label" data-i18n="ws.label.bed"></div>
+      </div>
+
+      <div class="ws-img-wrap square">
+        <img src="img/pexels-cristian-rojas-8459996.jpg" alt="Zona de recepción" loading="lazy">
+        <div class="ws-media-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span data-i18n="ws.imgPlaceholderReception"></span>
+        </div>
+        <div class="ws-img-label" data-i18n="ws.label.reception"></div>
+      </div>
+
+      <div class="ws-img-wrap square">
+        <img src="img/pexels-cristian-rojas-8460229.jpg" alt="Área de recuperación" loading="lazy">
+        <div class="ws-media-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span data-i18n="ws.imgPlaceholderRecovery"></span>
+        </div>
+        <div class="ws-img-label" data-i18n="ws.label.recovery"></div>
+      </div>
 
       <!-- Bloque de estadísticas + CTA -->
       <div class="ws-stats-block">
         <div class="ws-stats">
           <div class="ws-stat">
-            <span class="ws-stat-num">+500</span>
-            <span class="ws-stat-label">Pacientes atendidos</span>
+            <span class="ws-stat-num" data-i18n="ws.stat1.num"></span>
+            <span class="ws-stat-label" data-i18n="ws.stat1.label"></span>
           </div>
           <div class="ws-stat">
-            <span class="ws-stat-num">8+</span>
-            <span class="ws-stat-label">Años de experiencia</span>
+            <span class="ws-stat-num" data-i18n="ws.stat2.num"></span>
+            <span class="ws-stat-label" data-i18n="ws.stat2.label"></span>
           </div>
           <div class="ws-stat">
-            <span class="ws-stat-num">6</span>
-            <span class="ws-stat-label">Tratamientos especializados</span>
+            <span class="ws-stat-num" data-i18n="ws.stat3.num"></span>
+            <span class="ws-stat-label" data-i18n="ws.stat3.label"></span>
           </div>
         </div>
-  
-  
       </div>
 
     </div>
   </div>
 </section>
+
 <!-- ══════════════ MODAL ══════════════ -->
 <div class="svc-modal-overlay" id="svcOverlay" role="dialog" aria-modal="true" aria-labelledby="svcModalTitle">
   <div class="svc-modal" id="svcModal">
@@ -240,7 +343,7 @@
       <div class="svc-modal-features" id="svcModalFeatures"></div>
       <a class="svc-modal-cta" id="svcModalCta" href="reservas.html" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Reservar este servicio
+        <span data-i18n="svc.modal.cta"></span>
       </a>
     </div>
   </div>
@@ -252,41 +355,59 @@
   // para que openBooking sea global desde el inicio
   // ══════════════════════════════════════════════
   const SERVICES = {
-    'Masaje Relajante': {
+    'Masaje Terapéutico': {
       num: '01',
-      duration: '30 min – 60 min - 90 min',
-      price: 'Desde $80 hasta $165',
+      duration: '60 – 90 min',
+      price: 'Desde $120',
       img: 'https://plus.unsplash.com/premium_photo-1663012948067-0478e4f9d9c6?q=80&w=1170&auto=format&fit=crop',
-      desc: 'Un masaje integral que combina la manipulación de los tejidos blandos para aliviar el estrés y la tensión, a la vez que mejora la circulación sanguínea y linfática. La presión es de ligera a media; su objetivo principal es la relajación. Puede incluir estiramientos activos suaves.',
+      desc: 'La técnica de manipulación profunda de tejidos blandos más completa de nuestro catálogo. Trabajamos capa por capa sobre músculo, tendón y fascia para liberar adherencias, restaurar la circulación local y reequilibrar el sistema nervioso autónomo. Indicado para pacientes con dolor crónico cervical, lumbar o de miembros, así como para quienes experimentan tensión muscular acumulada por estrés o posturas sostenidas.',
       features: ['Alivio de dolor crónico cervical y lumbar','Mejora notable de la circulación sanguínea','Reducción de tensión muscular profunda','Reequilibrio del sistema nervioso','Trabajo sobre tendones y fascia'],
-      booking: 'Masaje Relajante'
+      booking: 'Masaje Terapéutico'
     },
-    'Masaje de sesion profunda': {
+    'Masaje Deportivo': {
       num: '02',
-      duration: '30min – 60 min - 90min',
-      price: 'Desde $90 hasta $190',
+      duration: '45 – 75 min',
+      price: 'Desde $110',
       img: 'https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?q=80&w=1170&auto=format&fit=crop',
-      desc: 'Diseñada para abordar afecciones o molestias específicas, esta sesión es ideal para quienes buscan aliviar dolores y molestias corporales causados ​​por tensión muscular, sobreesfuerzo muscular o traumatismos. También es beneficiosa para atletas, antes y después de competiciones, para combatir la fatiga, reducir la inflamación, disminuir la tensión muscular, promover la flexibilidad y prevenir lesiones. Para quienes sufren desgarros musculares, esguinces, compresión nerviosa o dolor crónico de espalda u hombro, este tratamiento resulta sumamente eficaz. Puede incluir estiramientos activos aislados.',
+      desc: 'Protocolo especializado diseñado para atletas de todos los niveles. Combinamos técnicas de effleurage, petrissage y compresión isquémica adaptadas a la fase del ciclo deportivo. Pre-competencia activa la musculatura y optimiza el rango articular; post-competencia elimina metabolitos, reduce la inflamación y acelera la regeneración tisular. Resultados medibles en rendimiento y tiempo de recuperación.',
       features: ['Preparación muscular pre-competencia','Eliminación de metabolitos post-esfuerzo','Reducción de inflamación y DOMS','Optimización del rango de movimiento articular','Prevención de lesiones por sobreuso'],
-      booking: 'Masaje de sesion profunda'
+      booking: 'Masaje Deportivo'
     },
-    'Sesion de relajacion guiada': {
+    'Terapia de Estiramiento': {
       num: '03',
-      duration: '45 min',
-      price: '$70',
+      duration: '50 – 80 min',
+      price: 'Desde $100',
       img: 'https://images.unsplash.com/photo-1699523229212-c25a2fadeb12?q=80&w=1169&auto=format&fit=crop',
-      desc: 'El objetivo de esta sesión es ayudarte a relajarte, respirar y visualizarte de una forma nueva y empoderadora. Busca reducir el nerviosismo, la ansiedad y la preocupación. Puede mejorar tu rendimiento en el trabajo, en el deporte y en la vida cotidiana. Está dirigida a quienes desean cambiar malos hábitos y a quienes buscan bajar de peso, entre otras cosas. Te llevarás herramientas útiles para el día a día. Las sesiones de relajación guiada y visualización son utilizadas por atletas profesionales, líderes empresariales y actores para relajarse y alcanzar sus metas. Estarás en una camilla de masaje, completamente vestido/a.',
+      desc: 'Elongación asistida de cadenas musculares mediante técnicas de PNF (Facilitación Neuromuscular Propioceptiva) y estiramiento estático progresivo. El terapeuta guía cada movimiento con precisión biomecánica, trabajando sobre grupos musculares específicos para restaurar la longitud óptima del músculo, mejorar la postura global y ampliar el rango de movimiento articular de forma segura y duradera.',
       features: ['Aumento medible de flexibilidad muscular','Corrección de desequilibrios posturales','Ampliación del rango articular','Técnica PNF para resultados profundos','Prevención de contracturas y rigidez'],
-      booking: 'Sesion de relajacion guiada'
+      booking: 'Terapia de Estiramiento'
     },
-    '¿Como dar masaje a tu pareja?': {
+    'Recuperación Muscular': {
       num: '04',
-      duration: '90 min',
-      price: '$205',
+      duration: '60 min',
+      price: 'Desde $115',
       img: 'https://images.unsplash.com/photo-1770653927355-2ba81c1522df?q=80&w=1331&auto=format&fit=crop',
-      desc: '¿Tu pareja siempre te pide que le alivieses el dolor de cuello, hombros o espalda, y después de cinco minutos no tienes ni idea de qué hacer? ¿Siempre has querido darle a tu pareja un masaje relajante y reconfortante? Si es así, ¡esto es para ti! Esta sesión relajante de hora y media incorpora las mejores técnicas que te guiarán para que puedas darle a tu pareja el mejor masaje, el más sanador y tranquilo. Durante esta sesión relajante también aprenderás qué hacer y qué no hacer, dónde y cómo aplicar la presión correctamente, para no lastimarte ni lastimar a tu pareja. La mitad del tiempo guiaré a una persona mientras la otra está en la camilla, y la otra mitad guiaré a la otra persona. Esta sesión está diseñada para enseñarte cómo trabajar con tu pareja o familia, no es una sesión avanzada. Será relajante y divertida. Está abierta a cualquier pareja. Por favor, envía un correo electrónico si tienes preguntas.',
+      desc: 'Protocolo de recuperación activa que combina compresión neumática secuencial, vibración terapéutica de alta frecuencia y manipulación manual profunda. El objetivo es acelerar el clearance linfático y venoso, reducir la inflamación residual y restablecer el tono muscular óptimo tras esfuerzos intensos, lesiones o periodos de inmovilización. Ideal para deportistas en temporada o pacientes en rehabilitación.',
       features: ['Compresión neumática secuencial','Vibración terapéutica de alta frecuencia','Estimulación del drenaje linfático','Rehabilitación de lesiones musculares','Reducción de inflamación residual'],
-      booking: '¿Como dar masaje a tu pareja?'
+      booking: 'Recuperación Muscular'
+    },
+    'Liberación Miofascial': {
+      num: '05',
+      duration: '60 – 90 min',
+      price: 'Desde $130',
+      img: 'https://laclinicasc.com/wp-content/uploads/2024/03/Myofascial-Release-Procedure.png',
+      desc: 'Técnica manual especializada para liberar restricciones y adherencias en la red fascial que envuelve y conecta cada estructura del cuerpo. A diferencia del masaje convencional, la liberación miofascial aplica presión sostenida y lenta que permite al tejido conectivo ceder de forma natural. Especialmente eficaz en síndrome miofascial, fibromialgia, dolor crónico difuso y secuelas de traumatismos o cirugías.',
+      features: ['Liberación de adherencias en la fascia profunda','Tratamiento del síndrome miofascial','Eficaz en fibromialgia y dolor difuso','Secuelas post-traumáticas o post-quirúrgicas','Presión sostenida de liberación progresiva'],
+      booking: 'Liberación Miofascial'
+    },
+    'Masaje Relajante': {
+      num: '06',
+      duration: '60 – 90 min',
+      price: 'Desde $95',
+      img: 'https://images.unsplash.com/photo-1649751295468-953038600bef?q=80&w=1170&auto=format&fit=crop',
+      desc: 'Experiencia sensorial completa basada en técnicas suecas clásicas con aceites esenciales premium seleccionados según tus necesidades (lavanda, eucalipto, bergamota, entre otros). Las maniobras de roce y amasamiento rítmico activan el sistema nervioso parasimpático, reducen el cortisol, alivian la tensión superficial y promueven un estado de calma profunda. Ideal para manejo del estrés y bienestar general.',
+      features: ['Técnicas suecas de effleurage rítmico','Aceites esenciales premium personalizados','Activación del sistema parasimpático','Reducción de cortisol y estrés crónico','Restauración del equilibrio mental y emocional'],
+      booking: 'Masaje Relajante'
     },
   };
 
