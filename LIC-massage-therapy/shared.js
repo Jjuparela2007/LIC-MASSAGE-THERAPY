@@ -490,21 +490,6 @@ const i18n = {
     // Service cards (dynamic — «Más información» link)
     "card.more":"Más información →",
 
-    // ── Sección Terapias (index.html) ─────────────────────────────────────────
-    "ts.tag":"Beneficios",
-    "ts.title1":"4 beneficios",
-    "ts.title2":"que cambian tu vida",
-    "ts.intro":"A diferencia del estiramiento estático, la terapia AIS produce mejoras duraderas y medibles en cómo tu cuerpo se mueve y se siente.",
-    "ts.item1.name":"Reduce el dolor",
-    "ts.item1.desc":"Aborda la tensión crónica y el dolor muscular con técnicas de estiramiento asistido precisas.",
-    "ts.item2.name":"Aumenta la flexibilidad",
-    "ts.item2.desc":"Amplía progresivamente tu rango de movimiento de un modo que el estiramiento pasivo no logra.",
-    "ts.item3.name":"Mejora el rendimiento",
-    "ts.item3.desc":"Los atletas notan ganancias medibles en velocidad, potencia y agilidad tras sesiones constantes.",
-    "ts.item4.name":"Previene lesiones",
-    "ts.item4.desc":"Corrige desequilibrios musculares antes de que se conviertan en problemas dolorosos.",
-    "ts.cta":"Conozca su terapeuta",
-
     // ── Script de servicios (index.html — tarjetas y modal dinámico) ──────────
     "s1.tag":"Relajación","s2.tag":"Terapéutico","s3.tag":"Bienestar",
     "s1.duration":"30 min","s2.duration":"30 min","s3.duration":"45 min",
@@ -516,7 +501,33 @@ const i18n = {
     "s3.feat1":"Reducción de nerviosismo y ansiedad","s3.feat2":"Técnicas de respiración consciente","s3.feat3":"Visualización guiada personalizada","s3.feat4":"Mejora el rendimiento diario",
     "sp.moreInfo":"Más información →",
     "sp.book":"Reservar esta sesión →",
-    "sp.close":"Cerrar"
+    "sp.close":"Cerrar",
+
+    // ── sobre-mi.html ─────────────────────────────────────────────────────────
+
+    // Sección Certificaciones — encabezado
+    "certs.tag":"Credenciales Verificadas",
+    "certs.title1":"Certificaciones y licencias",
+    "certs.title2":"Profesionales",
+    "certs.subtitle":"La formación y las licencias profesionales de Raul reflejan años de dedicación al trabajo corporal terapéutico, la terapia de masaje y las técnicas de Estiramiento Activo Aislado.",
+
+    // Cert cards
+    "certcard1.name":"Terapeuta de Masaje Licenciado en el Estado de Nueva York",
+    "certcard1.org":"Licencia desde 2003 · Emitido por The University of the State of New York · Departamento de Educación",
+    "certcard2.name":"Estiramiento Activo Aislado — Seminario Avanzado",
+    "certcard2.org":"Certificado de finalización · 32 horas · Emitido por Aaron L. Mattes, LMT, RKT",
+    "certcard3.name":"Seminario de Estiramiento Activo Aislado",
+    "certcard3.org":"Certificado de finalización · 32 horas · Emitido por Aaron L. Mattes, LMT, RKT",
+    "certcard4.name":"Seminario de Estiramiento Activo Aislado",
+    "certcard4.org":"Certificado de finalización · 32 horas · Emitido por Aaron L. Mattes, LMT, RKT",
+
+    // Sección Athletic
+    "athletic.tag":"Trayectoria atlética",
+    "athletic.title":"Practico lo que enseño.",
+    "athletic.desc":"Los deportes de resistencia me han enseñado lo que realmente cuesta mantener un cuerpo fuerte, móvil y resiliente — década tras década. Llevo esa experiencia vivida a cada sesión.",
+    "athletic.metric1":"Maratones de NYC",
+    "athletic.metric2":"Carreras Half-Ironman",
+    "athletic.metric3":"Aguas abiertas de 5.85 millas"
   },
   en: {
     "nav.home":"Home","nav.services":"Services","nav.stretch":"Stretching",
@@ -1003,21 +1014,6 @@ const i18n = {
     // Service cards
     "card.more":"More info →",
 
-    // ── Terapias section (index.html) ─────────────────────────────────────────
-    "ts.tag":"Benefits",
-    "ts.title1":"4 benefits",
-    "ts.title2":"that change your life",
-    "ts.intro":"Unlike static stretching, AIS therapy produces lasting, measurable improvements in how your body moves and feels.",
-    "ts.item1.name":"Reduces pain",
-    "ts.item1.desc":"Addresses chronic tension and muscle pain with precise assisted stretching techniques.",
-    "ts.item2.name":"Increases flexibility",
-    "ts.item2.desc":"Progressively expands your range of motion in ways passive stretching simply cannot.",
-    "ts.item3.name":"Improves performance",
-    "ts.item3.desc":"Athletes notice measurable gains in speed, power, and agility after consistent sessions.",
-    "ts.item4.name":"Prevents injuries",
-    "ts.item4.desc":"Corrects muscle imbalances before they turn into painful problems.",
-    "ts.cta":"Meet your therapist",
-
     // ── Service script (index.html — dynamic cards and modal) ────────────────
     "s1.tag":"Relaxation","s2.tag":"Therapeutic","s3.tag":"Wellness",
     "s1.duration":"30 min","s2.duration":"30 min","s3.duration":"45 min",
@@ -1029,7 +1025,33 @@ const i18n = {
     "s3.feat1":"Reduction of nervousness and anxiety","s3.feat2":"Conscious breathing techniques","s3.feat3":"Personalized guided visualization","s3.feat4":"Improves daily performance",
     "sp.moreInfo":"More info →",
     "sp.book":"Book this session →",
-    "sp.close":"Close"
+    "sp.close":"Close",
+
+    // ── sobre-mi.html ─────────────────────────────────────────────────────────
+
+    // Certifications section header
+    "certs.tag":"Verified Credentials",
+    "certs.title1":"Certifications and licenses",
+    "certs.title2":"Professional",
+    "certs.subtitle":"Raul's professional training and licenses reflect years of dedication to therapeutic bodywork, massage therapy, and Active Isolated Stretching techniques.",
+
+    // Cert cards
+    "certcard1.name":"Licensed Massage Therapist in the State of New York",
+    "certcard1.org":"Licensed since 2003 · Issued by The University of the State of New York · Department of Education",
+    "certcard2.name":"Active Isolated Stretching — Advanced Seminar",
+    "certcard2.org":"Certificate of completion · 32 hours · Issued by Aaron L. Mattes, LMT, RKT",
+    "certcard3.name":"Active Isolated Stretching Seminar",
+    "certcard3.org":"Certificate of completion · 32 hours · Issued by Aaron L. Mattes, LMT, RKT",
+    "certcard4.name":"Active Isolated Stretching Seminar",
+    "certcard4.org":"Certificate of completion · 32 hours · Issued by Aaron L. Mattes, LMT, RKT",
+
+    // Athletic section
+    "athletic.tag":"Athletic background",
+    "athletic.title":"I practice what I teach.",
+    "athletic.desc":"Endurance sports have taught me what it truly takes to keep a body strong, mobile, and resilient — decade after decade. I bring that lived experience into every session.",
+    "athletic.metric1":"NYC Marathons",
+    "athletic.metric2":"Half-Ironman Races",
+    "athletic.metric3":"Open-water swims of 5.85 miles"
   }
 };
  
