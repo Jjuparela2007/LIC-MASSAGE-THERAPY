@@ -1,9 +1,4 @@
-/* ─── KINESYS COMPONENTS.JS ─────────────────────────────────────────────────
-   Módulo de componentes reutilizables.
-   Uso: renderComponents({ page: 'index' })
-   El parámetro `page` debe coincidir con el nombre del archivo HTML sin extensión.
-   Ejemplo: index.html → 'index', servicios.html → 'servicios'
-────────────────────────────────────────────────────────────────────────────── */
+
 
 (function () {
 
@@ -11,7 +6,7 @@
   const NAV_LINKS = [
     { href: 'index.html',      key: 'nav.home',         page: 'index'      },
     { href: 'servicios.html',  key: 'nav.services',     page: 'servicios'  },
-    { href: 'sobre-mi.html',   key: 'nav.about',        page: 'sobre Raul'   },
+    { href: 'sobre-mi.html',   key: 'nav.about',        page: 'Sobre Raul'   },
     { href: 'testimonios.html',key: 'nav.testimonials', page: 'testimonios'},
     { href: 'reservas.html',   key: 'nav.book',         page: 'reserva'   },
   ];
