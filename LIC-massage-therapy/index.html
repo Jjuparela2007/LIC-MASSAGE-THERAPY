@@ -79,91 +79,28 @@
 </script>
 
 <!-- ─── HERO ─────────────────────────────────────────────────────────────── -->
+<!--
+  IMAGEN DE FONDO HERO:
+  Reemplaza "img/hero-bg.jpg" con la ruta de tu foto.
+  Recomendado: imagen horizontal, mínimo 1600×900 px, sujeto enfocado
+  hacia la derecha del encuadre para no tapar el texto.
+-->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-muscles"></div>
+  <div class="hero-bg" style="--hero-img: url('img/hero.png')"></div>
   <div class="hero-content">
     <div class="hero-text">
-      <div class="hero-tag" data-i18n="hero.tag">Centro de Terapia Muscular</div>
-      <div class="hero-title"><em data-i18n="hero.title1">Restaura</em></div>
-      <div class="hero-title-line2" data-i18n="hero.title2">Tu Cuerpo</div>
+      <div class="hero-tag" data-i18n="hero.tag"></div>
+      <div class="hero-title"><em data-i18n="hero.title1"></em></div>
+      <div class="hero-title-line2" data-i18n="hero.title2"></div>
       <div class="hero-divider"></div>
-      <p class="hero-desc" data-i18n="hero.desc">Bienvenido a Long Island City (LIC) Massage Therapy. El lugar en la ciudad de New York para venir a estar libre de dolor, aprender cómo estirar para una salud óptima y relajarse en Long Island City. Mi nombre es Raul Araque. Soy un terapeuta de masaje con licencia del estado de Nueva York . Mi objetivo es ayudar y educar a las personas . Me especializo en masaje terapéutico y estiramiento aislado activo (AIS). </p>
+      <p class="hero-desc" data-i18n="hero.desc"></p>
       <div class="hero-ctas">
         <a href="reservas.html" class="btn-primary" data-i18n="hero.cta1">Reservar Cita</a>
         <a href="servicios.html" class="btn-secondary" data-i18n="hero.cta2">Ver Servicios</a>
       </div>
     </div>
     <div class="hero-visual floating">
-      <div class="hero-anatomy-frame">
-        <div class="hero-frame-border"></div>
-        <svg class="anatomy-main-svg" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="muscleGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.9"/>
-              <stop offset="100%" stop-color="#c9a84c" stop-opacity="0.3"/>
-            </linearGradient>
-          </defs>
-          <style>.m{fill:none;stroke:url(#muscleGrad);stroke-width:1.2;opacity:.75}.mi{fill:none;stroke:#c9a84c;stroke-width:.6;opacity:.45}.mf{fill:#c9a84c;opacity:.07}.ann{fill:#c9a84c;font-size:7px;font-family:Georgia,serif;opacity:.55}.al{stroke:#c9a84c;stroke-width:.4;opacity:.35;fill:none}</style>
-          <ellipse cx="200" cy="80" rx="55" ry="68" class="m"/>
-          <ellipse cx="200" cy="75" rx="38" ry="52" class="mi"/>
-          <path d="M165 120 Q155 135 158 155 Q160 165 170 170" class="m"/>
-          <path d="M235 120 Q245 135 242 155 Q240 165 230 170" class="m"/>
-          <path d="M175 145 Q170 155 172 175 L180 180" class="m"/>
-          <path d="M225 145 Q230 155 228 175 L220 180" class="m"/>
-          <path d="M185 148 Q200 158 215 148" class="mi"/>
-          <path d="M172 178 Q140 185 120 200 Q105 215 110 240 Q115 260 135 265 L175 270" class="m"/>
-          <path d="M228 178 Q260 185 280 200 Q295 215 290 240 Q285 260 265 265 L225 270" class="m"/>
-          <ellipse cx="155" cy="225" rx="40" ry="32" class="mf"/>
-          <ellipse cx="245" cy="225" rx="40" ry="32" class="mf"/>
-          <path d="M120 210 Q140 220 170 215 Q190 212 200 215" class="mi"/>
-          <path d="M280 210 Q260 220 230 215 Q210 212 200 215" class="mi"/>
-          <rect x="175" y="270" width="50" height="110" rx="10" class="m"/>
-          <path d="M175 290 L225 290" class="mi"/><path d="M175 310 L225 310" class="mi"/>
-          <path d="M175 330 L225 330" class="mi"/><path d="M175 350 L225 350" class="mi"/>
-          <path d="M200 270 L200 380" class="mi"/>
-          <path d="M175 275 Q150 300 145 340 Q142 365 155 385 L175 390" class="m"/>
-          <path d="M225 275 Q250 300 255 340 Q258 365 245 385 L225 390" class="m"/>
-          <ellipse cx="120" cy="195" rx="28" ry="20" transform="rotate(-15 120 195)" class="m"/>
-          <ellipse cx="280" cy="195" rx="28" ry="20" transform="rotate(15 280 195)" class="m"/>
-          <path d="M100 215 Q85 240 82 270 Q80 295 88 320 Q95 340 105 345" class="m"/>
-          <path d="M140 215 Q130 240 128 265 Q126 285 130 310" class="m"/>
-          <ellipse cx="110" cy="275" rx="20" ry="35" transform="rotate(-5 110 275)" class="mf"/>
-          <path d="M300 215 Q315 240 318 270 Q320 295 312 320 Q305 340 295 345" class="m"/>
-          <path d="M260 215 Q270 240 272 265 Q274 285 270 310" class="m"/>
-          <ellipse cx="290" cy="275" rx="20" ry="35" transform="rotate(5 290 275)" class="mf"/>
-          <path d="M88 320 Q75 355 78 385 Q80 405 90 415" class="m"/>
-          <path d="M105 345 Q100 370 98 390 Q97 405 103 415" class="m"/>
-          <path d="M312 320 Q325 355 322 385 Q320 405 310 415" class="m"/>
-          <path d="M295 345 Q300 370 302 390 Q303 405 297 415" class="m"/>
-          <ellipse cx="93" cy="435" rx="30" ry="22" class="m"/>
-          <ellipse cx="307" cy="435" rx="30" ry="22" class="m"/>
-          <path d="M80 456 Q72 490 75 520 L95 525" class="m"/>
-          <path d="M107 458 Q112 490 110 520 L92 525" class="m"/>
-          <path d="M320 456 Q328 490 325 520 L305 525" class="m"/>
-          <path d="M293 458 Q288 490 290 520 L308 525" class="m"/>
-          <ellipse cx="88" cy="490" rx="18" ry="32" class="mf"/>
-          <ellipse cx="312" cy="490" rx="18" ry="32" class="mf"/>
-          <line x1="145" y1="175" x2="80" y2="155" class="al"/><text x="12" y="158" class="ann">Trapecio</text>
-          <line x1="200" y1="295" x2="260" y2="265" class="al"/><text x="262" y="268" class="ann">Recto Abd.</text>
-          <line x1="155" y1="390" x2="80" y2="410" class="al"/><text x="8" y="413" class="ann">Isquiotibial</text>
-          <line x1="235" y1="435" x2="330" y2="420" class="al"/><text x="332" y="423" class="ann">Glúteo Med.</text>
-          <line x1="245" y1="545" x2="320" y2="535" class="al"/><text x="322" y="538" class="ann">Cuádriceps</text>
-          <line x1="20" y1="50" x2="20" y2="580" stroke="#c9a84c" stroke-width=".3" opacity=".15"/>
-          <line x1="380" y1="50" x2="380" y2="580" stroke="#c9a84c" stroke-width=".3" opacity=".15"/>
-          <line x1="20" y1="50" x2="380" y2="50" stroke="#c9a84c" stroke-width=".3" opacity=".15"/>
-          <line x1="20" y1="580" x2="380" y2="580" stroke="#c9a84c" stroke-width=".3" opacity=".15"/>
-          <path d="M20 50 L35 50 M20 50 L20 65" stroke="#c9a84c" stroke-width=".8" opacity=".5" fill="none"/>
-          <path d="M380 50 L365 50 M380 50 L380 65" stroke="#c9a84c" stroke-width=".8" opacity=".5" fill="none"/>
-          <path d="M20 580 L35 580 M20 580 L20 565" stroke="#c9a84c" stroke-width=".8" opacity=".5" fill="none"/>
-          <path d="M380 580 L365 580 M380 580 L380 565" stroke="#c9a84c" stroke-width=".8" opacity=".5" fill="none"/>
-          <text x="200" y="595" text-anchor="middle" fill="#c9a84c" font-size="6" font-family="Georgia,serif" opacity=".4" letter-spacing="3">ANATOMÍA MUSCULAR — VISTA ANTERIOR</text>
-        </svg>
-        <div class="floating-badge badge-br glass">
-          <div class="badge-label" data-i18n="badge.sessions">Sesiones</div>
-          <div class="badge-value">60 / 90 min</div>
-        </div>
-      </div>
+      
     </div>
   </div>
 </section>
@@ -570,7 +507,7 @@ window.addEventListener('resize', function() { bcInit(); });
       tag: "Relajación",
       nameKey: "s1.name",
       name: "Masaje relajante",
-      duration: "30 min - 60 min - 90 min",
+      duration: "30 min",
       img: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=80&fit=crop",
       descKey: "s1.desc",
       desc: "Un masaje integral que combina la manipulación de los tejidos blandos para aliviar el estrés y la tensión, a la vez que mejora la circulación sanguínea y linfática. La presión es de ligera a media; su objetivo principal es la relajación. Puede incluir estiramientos activos suaves.",
@@ -582,7 +519,7 @@ window.addEventListener('resize', function() { bcInit(); });
       tag: "Terapéutico",
       nameKey: "s2.name",
       name: "Masaje de presión profunda",
-      duration: "30 min - 60 min - 90 min",
+      duration: "30 min",
       img: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80&fit=crop",
       descKey: "s2.desc",
       desc: "Diseñada para abordar afecciones o molestias específicas. Ideal para quienes buscan aliviar dolores causados por tensión muscular, sobreesfuerzo o traumatismos. Trabaja capas profundas del tejido muscular con técnica y precisión focalizada.",
@@ -659,4 +596,4 @@ window.addEventListener('resize', function() { bcInit(); });
   initPage('index');
 </script>
 </body>
-</html> 
+</html>

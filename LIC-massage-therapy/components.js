@@ -80,7 +80,7 @@
   </ul>
   <div class="mobile-lang-row">
     ${langToggleHTML('mob')}
-    <button class="theme-btn" onclick="toggleTheme()"><span class="theme-icon">◐</span></button>
+
   </div>`;
     return div;
   }
@@ -104,9 +104,7 @@
   </ul>
   <div class="nav-actions">
     ${langToggleHTML()}
-    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()">
-      <span class="theme-icon" id="theme-icon">◐</span>
-    </button>
+   
     <a href="contacto.html" class="btn-nav${currentPage === 'contacto' ? ' active-page' : ''}" data-i18n="nav.contact">Contactanos</a>
   </div>
   <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>`;
