@@ -283,7 +283,7 @@ const i18n = {
     // Sección Certificaciones
     "certs.tag":"Certificaciones",
     "certs.title1":"Formación",
-    "certs.title2":"& Credenciales",
+    "certs.title2":"& Credenciales Certificadas",
     "certs.subtitle":"Cada certificación representa cientos de horas de práctica clínica supervisada y estudio avanzado.",
     "certs.imgPh":"Foto certificación",
     "certs.c1.title":"Terapia Manual Ortopédica",

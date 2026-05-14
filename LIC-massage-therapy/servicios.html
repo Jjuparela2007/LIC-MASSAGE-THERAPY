@@ -104,81 +104,256 @@
     </div>
   </div>
 </section>
+<section class="studio-section">
+  <div class="studio-inner">
 
-<!-- ══════════════════ SHOWCASE DEL LUGAR ══════════════════ -->
-<section class="workspace-showcase">
-  <div class="section-container">
+    <!-- LEFT: Slider -->
+    <div class="studio-slider-wrap">
+      <div class="studio-slider" id="studioSlider">
 
-    <!-- Encabezado -->
-    <div class="ws-header reveal">
-      <div class="section-tag" data-i18n="ws.tag"></div>
-      <h2 class="ws-title">
-        <em data-i18n="ws.title1"></em> <span data-i18n="ws.title2"></span> <strong data-i18n="ws.title3"></strong>
-      </h2>
-      <p class="ws-intro" data-i18n="ws.intro"></p>
-    </div>
-
-    <!-- ══ CARRUSEL ══ -->
-    <div class="ws-carousel reveal delay-1" id="wsCarousel">
-      <div class="ws-carousel-track" id="wsCarouselTrack">
-
-        <div class="ws-slide">
-          <img src="img/1.jpg" alt="Consultorio principal" loading="lazy">
-          <div class="ws-slide-label">Consultorio principal</div>
+        <div class="studio-slide active">
+          <img src="img/1.jpg" alt="Sala de tratamiento" class="studio-slide-img">
+          <div class="studio-caption">
+            <div class="studio-caption-title">Sala de tratamiento</div>
+            <div class="studio-caption-desc">Paredes de cal, luz cálida y lencería impecable — cada detalle preparado para ti.</div>
+          </div>
         </div>
 
-        <div class="ws-slide">
-          <img src="img/2.jpg" alt="Equipamiento profesional" loading="lazy">
-          <div class="ws-slide-label">Equipamiento certificado</div>
+        <div class="studio-slide">
+          <img src="img/2.jpg" alt="Área de estiramiento" class="studio-slide-img">
+          <div class="studio-caption">
+            <div class="studio-caption-title">Área de estiramiento</div>
+            <div class="studio-caption-desc">Espacio amplio y equipado para técnicas AIS y trabajo de movilidad.</div>
+          </div>
         </div>
 
-        <div class="ws-slide">
-          <img src="img/3.jpg" alt="Camilla terapéutica" loading="lazy">
-          <div class="ws-slide-label">Camilla profesional</div>
+        <div class="studio-slide">
+          <img src="img/3.jpg" alt="Ambiente privado" class="studio-slide-img">
+          <div class="studio-caption">
+            <div class="studio-caption-title">Ambiente privado</div>
+            <div class="studio-caption-desc">Silencioso, confidencial y completamente dedicado a tu recuperación.</div>
+          </div>
         </div>
 
-        <div class="ws-slide">
-          <img src="img/4.jpg" alt="Zona de recepción" loading="lazy">
-          <div class="ws-slide-label">Zona de recepción</div>
+        <div class="studio-slide">
+          <img src="img/4.jpg" alt="Long Island City" class="studio-slide-img">
+          <div class="studio-caption">
+            <div class="studio-caption-title">Long Island City, NY</div>
+            <div class="studio-caption-desc">Ubicación accesible, a minutos del metro, en el corazón de Queens.</div>
+          </div>
         </div>
-
 
       </div>
 
-      <!-- Controles -->
-      <button class="ws-carousel-btn ws-carousel-prev" id="wsCarouselPrev" aria-label="Anterior">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-      </button>
-      <button class="ws-carousel-btn ws-carousel-next" id="wsCarouselNext" aria-label="Siguiente">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-      </button>
+      <!-- Nav arrows -->
+      <button class="studio-arrow prev" id="studioPrev" aria-label="Anterior">&#8592;</button>
+      <button class="studio-arrow next" id="studioNext" aria-label="Siguiente">&#8594;</button>
 
       <!-- Dots -->
-      <div class="ws-carousel-dots" id="wsCarouselDots"></div>
+      <div class="studio-dots" id="studioDots">
+        <span class="studio-dot active"></span>
+        <span class="studio-dot"></span>
+        <span class="studio-dot"></span>
+        <span class="studio-dot"></span>
+      </div>
     </div>
 
-    <!-- Estadísticas -->
-    <div class="ws-bottom reveal delay-2" style="grid-template-columns:1fr;justify-items:center;">
-      <div class="ws-stats-block" style="width:100%;">
-        <div class="ws-stats">
-          <div class="ws-stat">
-            <span class="ws-stat-num" data-i18n="ws.stat1.num"></span>
-            <span class="ws-stat-label" data-i18n="ws.stat1.label"></span>
-          </div>
-          <div class="ws-stat">
-            <span class="ws-stat-num" data-i18n="ws.stat2.num"></span>
-            <span class="ws-stat-label" data-i18n="ws.stat2.label"></span>
-          </div>
-          <div class="ws-stat">
-            <span class="ws-stat-num" data-i18n="ws.stat3.num"></span>
-            <span class="ws-stat-label" data-i18n="ws.stat3.label"></span>
-          </div>
-        </div>
-      </div>
+    <!-- RIGHT: Text -->
+    <div class="studio-text">
+      <div class="studio-eyebrow">En el estudio</div>
+      <h2 class="studio-heading">Un espacio tranquilo y enfocado — diseñado para tu cuerpo.</h2>
+      <p class="studio-para">Las sesiones se realizan en un estudio privado y silencioso en Long Island City. Cada cita comienza con una breve conversación sobre qué te duele, qué está tenso y qué quieres volver a poder hacer. A partir de ahí, el trabajo es manual, preciso y adaptado a ti.</p>
+      <p class="studio-para">Ya seas atleta, trabajador de oficina, te estés recuperando de una lesión o simplemente estés cansado de sentirte rígido — recibirás trato profesional, paciencia y cero juicios.</p>
+      <a href="reservas.html" class="studio-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Reserva tu primera sesión
+      </a>
     </div>
 
   </div>
 </section>
+<style>
+/* ── Studio Section ── */
+.studio-section {
+  background: #D6EDE5;
+  padding: 72px 24px;
+}
+
+.studio-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* ── Slider ── */
+.studio-slider-wrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 52px rgba(0,0,0,0.14);
+  aspect-ratio: 3/4;
+  max-height: 580px;
+}
+
+.studio-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.studio-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.55s ease;
+  pointer-events: none;
+}
+
+.studio-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.studio-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Caption overlay */
+.studio-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 24px 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
+  color: #fff;
+}
+
+.studio-caption-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.studio-caption-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
+}
+
+/* Arrows */
+.studio-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.92);
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.18);
+  transition: background 0.2s, transform 0.2s;
+  color: #1a1a1a;
+  z-index: 2;
+}
+
+.studio-arrow:hover { background: #fff; transform: translateY(-50%) scale(1.08); }
+.studio-arrow.prev { left: 14px; }
+.studio-arrow.next { right: 14px; }
+
+/* Dots */
+.studio-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 7px;
+  z-index: 2;
+}
+
+.studio-dot {
+  width: 28px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.4);
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.studio-dot.active { background: #fff; }
+
+/* ── Text side ── */
+.studio-eyebrow {
+  display: inline-block;
+  background: #e8e4de;
+  color: #555;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.studio-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.7rem, 2.6vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: #1a1a1a;
+  margin: 0 0 22px;
+}
+
+.studio-para {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #444;
+  margin: 0 0 16px;
+}
+
+.studio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  background: #1e5f5f;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.studio-btn:hover { background: #174d4d; transform: translateY(-1px); }
+
+/* Responsive */
+@media (max-width: 820px) {
+  .studio-inner { grid-template-columns: 1fr; gap: 36px; }
+  .studio-slider-wrap { max-height: 400px; aspect-ratio: 4/3; }
+}
+</style>
+
+
 
 <!-- ══════════════ MODAL ══════════════ -->
 <div class="svc-modal-overlay" id="svcOverlay" role="dialog" aria-modal="true" aria-labelledby="svcModalTitle">

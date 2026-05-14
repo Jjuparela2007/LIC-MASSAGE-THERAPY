@@ -24,111 +24,160 @@
 
 
 <style>
-/* ── Athletic Background Card ── */
-.athletic-hero {
-  padding: 48px 24px;
-  background: #D6EDE5;
-  display: flex;
-  justify-content: center;
+
+
+/* ── CERTS SECTION ─────────────────────────────────────────── */
+.certs-section {
+  background-color: #e8f0ee; /* menta suave, coherente con el header */
+  padding: 100px 0 120px;
+}
+
+.certs-section .section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Header central (ya tienes estilos generales, estos refuerzan) */
+.certs-section .section-header.center {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.certs-section .section-tag {
+  display: inline-flex;
   align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #2d6b63;
+  margin-bottom: 16px;
 }
 
-.athletic-card {
-  display: flex;
-  max-width: 1060px;
-  width: 100%;
-  border-radius: 14px;
+.certs-section .section-tag::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: #2d6b63;
+}
+
+.certs-section .section-title {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.1;
+  color: #1a3830;
+  margin-bottom: 20px;
+}
+
+.certs-section .section-title em {
+  font-style: italic;
+  font-weight: 400;
+  color: #2d6b63;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.certs-section .section-title strong {
+  font-weight: 800;
+  color: #1a3830;
+}
+
+.certs-section .section-sub {
+  font-size: 1rem;
+  color: #4a6b64;
+  line-height: 1.7;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* ── GALLERY GRID ──────────────────────────────────────────── */
+.certs-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .certs-gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 540px) {
+  .certs-gallery { grid-template-columns: 1fr; }
+}
+
+/* ── CERT CARD ─────────────────────────────────────────────── */
+.cert-card {
+  background: #D6EDE5;;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 20px 56px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 12px rgba(26, 56, 48, 0.07);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* Photo half */
-.athletic-photo {
-  flex: 0 0 44%;
+.cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(26, 56, 48, 0.14);
+}
+
+/* Imagen */
+.cert-card-img-wrap {
   position: relative;
-  min-height: 360px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
 }
 
-.athletic-img {
+.cert-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
-  display: block;
+  transition: transform 0.5s ease;
 }
 
-/* Content half */
-.athletic-content {
-  flex: 1;
-  background: #1e5f5f;
-  padding: 48px 48px 48px 52px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 18px;
-  color: #fff;
+.cert-card:hover .cert-card-img {
+  transform: scale(1.06);
 }
 
-/* Tag */
-.athletic-tag {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  color: #c9a84c;
-  font-family: 'DM Sans', sans-serif;
+
+
+.cert-card:hover .cert-card-overlay {
+  opacity: 1;
+}
+
+
+
+
+/* Body de la card */
+.cert-card-body {
+  padding: 20px 22px 22px;
+  border-top: 1px solid #e2ece9;
+}
+
+.cert-card-num {
   font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-.athletic-trophy { stroke: #c9a84c; flex-shrink: 0; }
-
-/* Title */
-.athletic-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.75rem, 2.8vw, 2.5rem);
   font-weight: 700;
-  line-height: 1.1;
-  color: #fff;
-  margin: 0;
+  letter-spacing: 0.18em;
+  color: #2d6b63;
+  margin-bottom: 8px;
+  font-family: monospace;
 }
 
-/* Description */
-.athletic-desc {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14.5px;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.78);
-  margin: 0;
-  max-width: 440px;
-}
-
-/* Metrics grid */
-.athletic-metrics {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px 28px;
-  margin-top: 6px;
-}
-
-.athletic-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+.cert-card-name {
+  font-size: 0.95rem;
   font-weight: 700;
-  color: #fff;
-  line-height: 1;
+  color: #1a3830;
+  line-height: 1.35;
+  margin-bottom: 5px;
 }
 
-.athletic-label {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
-  margin-top: 3px;
+.cert-card-org {
+  font-size: 0.8rem;
+  color: #6a9990;
+  letter-spacing: 0.04em;
+  font-style: italic;
 }
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -138,6 +187,12 @@
   .athletic-metrics { gap: 14px 18px; }
 }
 </style>
+<script>
+const observer = new IntersectionObserver(
+  (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); }),
+  { threshold: 0.15 }
+);
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));</script>
 
 <section class="about-page">
   <div class="section-container">
@@ -241,11 +296,11 @@
   <div class="section-container">
 
     <div class="section-header center">
-      <div class="section-tag reveal">Credenciales</div>
+      <div class="section-tag reveal">Credenciales Verificadas</div>
       <h2 class="section-title reveal delay-1">
-        <em>Certificaciones</em> <strong>Profesionales</strong>
+        <em>Certificaciones y licencias </em> <strong>Profesionales</strong>
       </h2>
-      <p class="section-sub reveal delay-2">Formación continua respaldada por los organismos más exigentes del sector.</p>
+      <p class="section-sub reveal delay-2">La formación y las licencias profesionales de Raul reflejan años de dedicación al trabajo corporal terapéutico, la terapia de masaje y las técnicas de Estiramiento Activo Aislado.</p>
     </div>
 
     <div class="certs-gallery">
@@ -261,8 +316,8 @@
         </div>
         <div class="cert-card-body">
           <div class="cert-card-num">01</div>
-          <div class="cert-card-name">Terapia Manual Ortopédica</div>
-          <div class="cert-card-org">IFOMPT</div>
+          <div class="cert-card-name">Terapeuta de Masaje Licenciado en el Estado de Nueva York</div>
+          <div class="cert-card-org">Licencia desde 2003 · Emitido por The University of the State of New York · Departamento de Educación</div>
         </div>
       </div>
 
@@ -271,14 +326,14 @@
           <img src="img/AIS-certificate-Jan15.jpg" alt="Certificación 2" loading="lazy" class="cert-card-img">
           <div class="cert-card-overlay">
             <div class="cert-card-zoom">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+              
             </div>
           </div>
         </div>
         <div class="cert-card-body">
           <div class="cert-card-num">02</div>
-          <div class="cert-card-name">Liberación Miofascial</div>
-          <div class="cert-card-org">ART Certified</div>
+          <div class="cert-card-name">Estiramiento Activo Aislado — Seminario Avanzado</div>
+          <div class="cert-card-org">Certificado de finalización · 32 horas · Emitido por Aaron L. Mattes, LMT, RKT</div>
         </div>
       </div>
 
@@ -293,8 +348,8 @@
         </div>
         <div class="cert-card-body">
           <div class="cert-card-num">03</div>
-          <div class="cert-card-name">Medicina Deportiva</div>
-          <div class="cert-card-org">Federación Colombiana</div>
+          <div class="cert-card-name">Seminario de Estiramiento Activo Aislado</div>
+          <div class="cert-card-org">Certificado de finalización · 32 horas · Emitido por Aaron L. Mattes, LMT, RKT</div>
         </div>
       </div>
 
@@ -309,8 +364,8 @@
         </div>
         <div class="cert-card-body">
           <div class="cert-card-num">04</div>
-          <div class="cert-card-name">Rehabilitación Deportiva</div>
-          <div class="cert-card-org">Universidad Nacional</div>
+          <div class="cert-card-name">Seminario de Estiramiento Activo Aislado</div>
+          <div class="cert-card-org">Certificado de finalización · 32 horas · Emitido por Aaron L. Mattes, LMT, RKT</div>
         </div>
       </div>
 
@@ -322,7 +377,7 @@
 
     <!-- LEFT: Photo -->
     <div class="athletic-photo">
-      <img src="img/raul.jpg" alt="Raul Araque" class="athletic-img">
+      <img src="img/deporte.png" alt="Raul Araque" class="athletic-img">
     </div>
 
     <!-- RIGHT: Content -->
@@ -335,37 +390,239 @@
           <path d="M12 18v3"/>
           <path d="M9 21h6"/>
         </svg>
-        <span>ATHLETIC BACKGROUND</span>
+        <span>Trayectoria atlética</span>
       </div>
 
-      <h2 class="athletic-title">I practice what I&nbsp;teach.</h2>
+      <h2 class="athletic-title">Practico lo que enseño.</h2>
 
       <p class="athletic-desc">
-        Endurance sports have taught me what it really takes to keep a body strong, mobile, and resilient — decade after decade. I bring that lived experience into every session.
-      </p>
+Los deportes de resistencia me han enseñado lo que realmente cuesta mantener un cuerpo fuerte, móvil y resiliente — década tras década. Llevo esa experiencia vivida a cada sesión.
+
+</p>
 
       <div class="athletic-metrics">
         <div class="athletic-metric">
           <div class="athletic-num">9</div>
-          <div class="athletic-label">NYC MARATHONS</div>
+          <div class="athletic-label">Maratones de NYC</div>
         </div>
         <div class="athletic-metric">
           <div class="athletic-num">3</div>
-          <div class="athletic-label">HALF-IRONMAN RACES</div>
+          <div class="athletic-label">Carreras Half-Ironman</div>
         </div>
         <div class="athletic-metric">
           <div class="athletic-num">2</div>
-          <div class="athletic-label">5.85-MILE OPEN-WATER SWIMS</div>
+          <div class="athletic-label">Aguas abiertas de 5.85 millas</div>
         </div>
-        <div class="athletic-metric">
-          <div class="athletic-num">10+</div>
-          <div class="athletic-label">OLYMPIC TRIATHLONS</div>
-        </div>
+        
       </div>
     </div>
 
   </div>
 </section>
+<style>
+  /* ── ATHLETIC HERO SECTION ─────────────────────────────────── */
+.athletic-hero {
+  background-color: #f0f5f3;
+  padding: 100px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ── CARD CONTAINER ────────────────────────────────────────── */
+.athletic-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1100px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 48px rgba(26, 56, 48, 0.10);
+}
+
+/* ── LEFT: PHOTO ───────────────────────────────────────────── */
+.athletic-photo {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.athletic-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.athletic-card:hover .athletic-img {
+  transform: scale(1.03);
+}
+
+/* Subtle gradient overlay on photo edge */
+.athletic-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    transparent 70%,
+    rgba(255, 255, 255, 0.18) 100%
+  );
+  pointer-events: none;
+}
+
+/* ── RIGHT: CONTENT ────────────────────────────────────────── */
+.athletic-content {
+  padding: 56px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  background: #ffffff;
+}
+
+/* Tag */
+.athletic-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2d6b63;
+  background: #e4f0ec;
+  border: 1px solid #c2ddd6;
+  padding: 6px 14px;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+.athletic-trophy {
+  color: #2d6b63;
+  flex-shrink: 0;
+}
+
+/* Title */
+.athletic-title {
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  font-weight: 800;
+  color: #1a3830;
+  line-height: 1.15;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Description */
+.athletic-desc {
+  font-size: 1rem;
+  color: #4a6b64;
+  line-height: 1.75;
+  margin: 0;
+  max-width: 480px;
+}
+
+/* ── METRICS ROW ───────────────────────────────────────────── */
+.athletic-metrics {
+  display: flex;
+  gap: 0;
+  margin-top: 8px;
+  border-top: 1px solid #dceae6;
+  padding-top: 28px;
+}
+
+.athletic-metric {
+  flex: 1;
+  padding: 0 24px 0 0;
+  position: relative;
+}
+
+/* Vertical divider between metrics */
+.athletic-metric:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 4px;
+  height: 70%;
+  width: 1px;
+  background: #c8ddd8;
+}
+
+.athletic-num {
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  color: #1a3830;
+  line-height: 1;
+  margin-bottom: 6px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.athletic-label {
+  font-size: 0.78rem;
+  color: #6a9990;
+  line-height: 1.4;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .athletic-card {
+    grid-template-columns: 1fr;
+  }
+
+  .athletic-photo {
+    min-height: 340px;
+  }
+
+  .athletic-photo::after {
+    background: linear-gradient(
+      to bottom,
+      transparent 70%,
+      rgba(255, 255, 255, 0.18) 100%
+    );
+  }
+
+  .athletic-content {
+    padding: 40px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .athletic-hero {
+    padding: 60px 16px;
+  }
+
+  .athletic-content {
+    padding: 32px 24px;
+  }
+
+  .athletic-metrics {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .athletic-metric {
+    padding: 0;
+    border-bottom: 1px solid #dceae6;
+    padding-bottom: 16px;
+  }
+
+  .athletic-metric:not(:last-child)::after {
+    display: none;
+  }
+
+  .athletic-metric:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+</style>
  
 
  
@@ -471,74 +728,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      EN EL ESTUDIO — slider + texto
 ══════════════════════════════════════════════════════════════ -->
-<section class="studio-section">
-  <div class="studio-inner">
 
-    <!-- LEFT: Slider -->
-    <div class="studio-slider-wrap">
-      <div class="studio-slider" id="studioSlider">
-
-        <div class="studio-slide active">
-          <img src="img/1.jpg" alt="Sala de tratamiento" class="studio-slide-img">
-          <div class="studio-caption">
-            <div class="studio-caption-title">Sala de tratamiento</div>
-            <div class="studio-caption-desc">Paredes de cal, luz cálida y lencería impecable — cada detalle preparado para ti.</div>
-          </div>
-        </div>
-
-        <div class="studio-slide">
-          <img src="img/2.jpg" alt="Área de estiramiento" class="studio-slide-img">
-          <div class="studio-caption">
-            <div class="studio-caption-title">Área de estiramiento</div>
-            <div class="studio-caption-desc">Espacio amplio y equipado para técnicas AIS y trabajo de movilidad.</div>
-          </div>
-        </div>
-
-        <div class="studio-slide">
-          <img src="img/3.jpg" alt="Ambiente privado" class="studio-slide-img">
-          <div class="studio-caption">
-            <div class="studio-caption-title">Ambiente privado</div>
-            <div class="studio-caption-desc">Silencioso, confidencial y completamente dedicado a tu recuperación.</div>
-          </div>
-        </div>
-
-        <div class="studio-slide">
-          <img src="img/4.jpg" alt="Long Island City" class="studio-slide-img">
-          <div class="studio-caption">
-            <div class="studio-caption-title">Long Island City, NY</div>
-            <div class="studio-caption-desc">Ubicación accesible, a minutos del metro, en el corazón de Queens.</div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Nav arrows -->
-      <button class="studio-arrow prev" id="studioPrev" aria-label="Anterior">&#8592;</button>
-      <button class="studio-arrow next" id="studioNext" aria-label="Siguiente">&#8594;</button>
-
-      <!-- Dots -->
-      <div class="studio-dots" id="studioDots">
-        <span class="studio-dot active"></span>
-        <span class="studio-dot"></span>
-        <span class="studio-dot"></span>
-        <span class="studio-dot"></span>
-      </div>
-    </div>
-
-    <!-- RIGHT: Text -->
-    <div class="studio-text">
-      <div class="studio-eyebrow">En el estudio</div>
-      <h2 class="studio-heading">Un espacio tranquilo y enfocado — diseñado para tu cuerpo.</h2>
-      <p class="studio-para">Las sesiones se realizan en un estudio privado y silencioso en Long Island City. Cada cita comienza con una breve conversación sobre qué te duele, qué está tenso y qué quieres volver a poder hacer. A partir de ahí, el trabajo es manual, preciso y adaptado a ti.</p>
-      <p class="studio-para">Ya seas atleta, trabajador de oficina, te estés recuperando de una lesión o simplemente estés cansado de sentirte rígido — recibirás trato profesional, paciencia y cero juicios.</p>
-      <a href="reservas.html" class="studio-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-        Reserva tu primera sesión
-      </a>
-    </div>
-
-  </div>
-</section>
 
 <style>
 /* ── Studio Section ── */
@@ -751,96 +941,6 @@
 <!-- ══════════════════════════════════════════════════════════════
      CERTIFICACIONES — galería 4 imágenes
 ══════════════════════════════════════════════════════════════ -->
-
-
-<!-- ══════════════════════════════════════════════════════════════
-     ANTECEDENTES ATLÉTICOS
-══════════════════════════════════════════════════════════════ -->
-<section class="athletic-section" id="atletismo">
-  <div class="athletic-bg-blur"></div>
-  <div class="section-container">
-
-    <div class="section-header center">
-      <div class="section-tag reveal">Atleta</div>
-      <h2 class="section-title reveal delay-1">
-        <em>Antecedentes</em> <strong>Atléticos</strong>
-      </h2>
-      <p class="section-sub reveal delay-2">Comprender el cuerpo desde adentro: cada carrera, cada cruce de meta, cada límite superado informa cada tratamiento.</p>
-    </div>
-
-    <!-- descripción larga -->
-    <div class="athletic-intro reveal delay-2">
-      <p>Con una vida dedicada al movimiento, he completado nueve maratones de Nueva York, tres medias carreras Ironman, múltiples triatlones de distancia olímpica y dos travesías a nado de 9,4 km. Esta experiencia de primera mano en el rendimiento y la recuperación atlética me permite conectar con mis pacientes de una manera que va más allá de la técnica: entiendo el dolor, la fatiga, la presión de competir y el deseo de volver a moverse sin restricciones.</p>
-    </div>
-
-    <!-- línea de logros con animación stagger -->
-    <div class="athletic-stats reveal delay-3">
-      <div class="ath-stat">
-        <div class="ath-stat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" width="28" height="28"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-        </div>
-        <div class="ath-stat-num">9</div>
-        <div class="ath-stat-label">Maratones NY</div>
-      </div>
-      <div class="ath-stat-divider"></div>
-      <div class="ath-stat">
-        <div class="ath-stat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" width="28" height="28"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        </div>
-        <div class="ath-stat-num">3</div>
-        <div class="ath-stat-label">Medias Ironman</div>
-      </div>
-      <div class="ath-stat-divider"></div>
-      <div class="ath-stat">
-        <div class="ath-stat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" width="28" height="28"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
-        </div>
-        <div class="ath-stat-num">2</div>
-        <div class="ath-stat-label">Travesías 9.4 km</div>
-      </div>
-      <div class="ath-stat-divider"></div>
-      <div class="ath-stat">
-        <div class="ath-stat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" width="28" height="28"><path d="M12 22V12M12 12C12 12 7 9 5 5c4 1 7 4 7 7z"/><path d="M12 12c0 0 5-3 7-7-4 1-7 4-7 7z"/></svg>
-        </div>
-        <div class="ath-stat-num">10+</div>
-        <div class="ath-stat-label">Triatlones Olímpicos</div>
-      </div>
-    </div>
-
-    <!-- galería de fotos atléticas -->
-    <div class="athletic-gallery">
-
-      <div class="ath-img-item ath-big slide-left">
-        <img src="img/" alt="Maratón de Nueva York" loading="lazy">
-        <div class="ath-img-label">
-          <span class="ath-img-tag">Maratón NYC</span>
-          <span class="ath-img-year">2019</span>
-        </div>
-      </div>
-
-      <div class="ath-img-col">
-        <div class="ath-img-item slide-right">
-          <img src="img/atletismo2.jpg" alt="Triatlón Ironman" loading="lazy">
-          <div class="ath-img-label">
-            <span class="ath-img-tag">Ironman 70.3</span>
-            <span class="ath-img-year">2017</span>
-          </div>
-        </div>
-        <div class="ath-img-item slide-right" style="animation-delay:.15s">
-          <img src="img/atletismo3.jpg" alt="Natación en aguas abiertas" loading="lazy">
-          <div class="ath-img-label">
-            <span class="ath-img-tag">Aguas Abiertas</span>
-            <span class="ath-img-year">2015</span>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- /athletic-gallery -->
-
-  </div>
-</section>
-
 
 <section class="values-section">
   <div class="section-container">

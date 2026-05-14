@@ -450,11 +450,8 @@ body.light .btn-secondary { border-color: rgba(26,26,32,0.25); }
 .about-page { padding: 5rem 0 7rem; background: var(--bg-primary); }
 .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
 .about-visual { position: relative; }
-.about-accent-line { position: absolute; top: 2rem; left: -2rem; width: 3px; height: 60%; background: linear-gradient(to bottom, var(--gold), transparent); }
-.about-img-wrap { aspect-ratio: 3/4; position: relative; background: var(--bg-card); overflow: hidden; }
-.about-img-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, var(--bg-deep) 0%, var(--bg-card) 100%); display: flex; align-items: center; justify-content: center; position: relative; }
-.about-anatomy-svg { width: 70%; height: 70%; opacity: var(--anatomy-opacity); filter: drop-shadow(0 0 20px rgba(201,168,76,0.2)); }
-.about-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.4) 100%); }
+.about-accent-line { position: absolute; top: 2rem; left: -2rem; width: 3px; height: 60%;  }
+
 body.light .about-overlay { background: linear-gradient(to bottom, transparent 60%, rgba(232,228,219,0.5) 100%); }
 .about-badge-exp { position: absolute; bottom: -2rem; right: -2rem; width: 110px; height: 110px; background: var(--gold); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .badge-exp-num { font-family: 'Cormorant Garamond',serif; font-size: 2.3rem; font-weight: 600; color: #0a0a0c; line-height: 1; }
