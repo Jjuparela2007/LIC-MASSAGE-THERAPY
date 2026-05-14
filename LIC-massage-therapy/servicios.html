@@ -27,8 +27,8 @@
     <div class="services-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;" id="servicesGrid">
 
       <!-- 01 · Masaje Terapéutico -->
-      <div class="service-card reveal">
-        <div class="service-duration">60 – 90 min</div>
+      <div class="service-card reveal" data-service-key="s1">
+        <div class="service-duration" data-i18n="svc1.duration">60 – 90 min</div>
         <div class="service-card-num">01</div>
 
         <div class="service-img-wrap">
@@ -46,14 +46,14 @@
           <div class="sf-item" data-i18n="sf1.2"></div>
           <div class="sf-item" data-i18n="sf1.3"></div>
         </div>
-        <button class="service-link" onclick="openBooking('Masaje Terapéutico')">
-          <span>Ver tratamiento</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <button class="service-link" onclick="openBooking('s1')">
+          <span data-i18n="service.cta">Ver tratamiento</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
       </div>
 
       <!-- 02 · Masaje Deportivo -->
-      <div class="service-card reveal delay-1">
-        <div class="service-duration">45 – 75 min</div>
+      <div class="service-card reveal delay-1" data-service-key="s2">
+        <div class="service-duration" data-i18n="svc2.duration">45 – 75 min</div>
         <div class="service-card-num">02</div>
 
         <div class="service-img-wrap">
@@ -71,14 +71,14 @@
           <div class="sf-item" data-i18n="sf2.2"></div>
           <div class="sf-item" data-i18n="sf2.3"></div>
         </div>
-        <button class="service-link" onclick="openBooking('Masaje Deportivo')">
-          <span>Ver tratamiento</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <button class="service-link" onclick="openBooking('s2')">
+          <span data-i18n="service.cta">Ver tratamiento</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
       </div>
 
       <!-- 03 · Terapia de Estiramiento -->
-      <div class="service-card reveal delay-2">
-        <div class="service-duration">50 – 80 min</div>
+      <div class="service-card reveal delay-2" data-service-key="s3">
+        <div class="service-duration" data-i18n="svc3.duration">50 – 80 min</div>
         <div class="service-card-num">03</div>
 
         <div class="service-img-wrap">
@@ -96,8 +96,8 @@
           <div class="sf-item" data-i18n="sf3.2"></div>
           <div class="sf-item" data-i18n="sf3.3"></div>
         </div>
-        <button class="service-link" onclick="openBooking('Terapia de Estiramiento')">
-          <span>Ver tratamiento</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <button class="service-link" onclick="openBooking('s3')">
+          <span data-i18n="service.cta">Ver tratamiento</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
       </div>
 
@@ -114,32 +114,32 @@
         <div class="studio-slide active">
           <img src="img/j.png" alt="Sala de tratamiento" class="studio-slide-img">
           <div class="studio-caption">
-            <div class="studio-caption-title">Sala de tratamiento</div>
-            <div class="studio-caption-desc">Paredes de cal, luz cálida y lencería impecable — cada detalle preparado para ti.</div>
+            <div class="studio-caption-title" data-i18n="studio.slide1.title">Sala de tratamiento</div>
+            <div class="studio-caption-desc" data-i18n="studio.slide1.desc">Paredes de cal, luz cálida y lencería impecable — cada detalle preparado para ti.</div>
           </div>
         </div>
 
         <div class="studio-slide">
           <img src="img/jj.png" alt="Área de estiramiento" class="studio-slide-img">
           <div class="studio-caption">
-            <div class="studio-caption-title">Área de estiramiento</div>
-            <div class="studio-caption-desc">Espacio amplio y equipado para técnicas AIS y trabajo de movilidad.</div>
+            <div class="studio-caption-title" data-i18n="studio.slide2.title">Área de estiramiento</div>
+            <div class="studio-caption-desc" data-i18n="studio.slide2.desc">Espacio amplio y equipado para técnicas AIS y trabajo de movilidad.</div>
           </div>
         </div>
 
         <div class="studio-slide">
           <img src="img/jjj.png" alt="Ambiente privado" class="studio-slide-img">
           <div class="studio-caption">
-            <div class="studio-caption-title">Ambiente privado</div>
-            <div class="studio-caption-desc">Silencioso, confidencial y completamente dedicado a tu recuperación.</div>
+            <div class="studio-caption-title" data-i18n="studio.slide3.title">Ambiente privado</div>
+            <div class="studio-caption-desc" data-i18n="studio.slide3.desc">Silencioso, confidencial y completamente dedicado a tu recuperación.</div>
           </div>
         </div>
 
         <div class="studio-slide">
           <img src="img/jjjj.png" alt="Long Island City" class="studio-slide-img">
           <div class="studio-caption">
-            <div class="studio-caption-title">Long Island City, NY</div>
-            <div class="studio-caption-desc">Ubicación accesible, a minutos del metro, en el corazón de Queens.</div>
+            <div class="studio-caption-title" data-i18n="studio.slide4.title">Long Island City, NY</div>
+            <div class="studio-caption-desc" data-i18n="studio.slide4.desc">Ubicación accesible, a minutos del metro, en el corazón de Queens.</div>
           </div>
         </div>
 
@@ -160,13 +160,13 @@
 
     <!-- RIGHT: Text -->
     <div class="studio-text">
-      <div class="studio-eyebrow">En el estudio</div>
-      <h2 class="studio-heading">Un espacio tranquilo y enfocado — diseñado para tu cuerpo.</h2>
-      <p class="studio-para">Las sesiones se realizan en un estudio privado y silencioso en Long Island City. Cada cita comienza con una breve conversación sobre qué te duele, qué está tenso y qué quieres volver a poder hacer. A partir de ahí, el trabajo es manual, preciso y adaptado a ti.</p>
-      <p class="studio-para">Ya seas atleta, trabajador de oficina, te estés recuperando de una lesión o simplemente estés cansado de sentirte rígido — recibirás trato profesional, paciencia y cero juicios.</p>
+      <div class="studio-eyebrow" data-i18n="studio.eyebrow">En el estudio</div>
+      <h2 class="studio-heading" data-i18n="studio.heading">Un espacio tranquilo y enfocado — diseñado para tu cuerpo.</h2>
+      <p class="studio-para" data-i18n="studio.para1">Las sesiones se realizan en un estudio privado y silencioso en Long Island City. Cada cita comienza con una breve conversación sobre qué te duele, qué está tenso y qué quieres volver a poder hacer. A partir de ahí, el trabajo es manual, preciso y adaptado a ti.</p>
+      <p class="studio-para" data-i18n="studio.para2">Ya seas atleta, trabajador de oficina, te estés recuperando de una lesión o simplemente estés cansado de sentirte rígido — recibirás trato profesional, paciencia y cero juicios.</p>
       <a href="reservas.html" class="studio-btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-        Reserva tu primera sesión
+        <span data-i18n="studio.cta">Reserva tu primera sesión</span>
       </a>
     </div>
 
@@ -404,7 +404,7 @@
       <div class="svc-modal-features" id="svcModalFeatures"></div>
       <a class="svc-modal-cta" id="svcModalCta" href="reservas.html" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Reservar este servicio
+        <span data-i18n="svc.modal.cta">Reservar este servicio</span>
       </a>
     </div>
   </div>
@@ -412,44 +412,48 @@
 
 <script>
   // ══════════════════════════════════════════════
-  // DATOS — declarado ANTES de shared.js/components.js
-  // para que openBooking sea global desde el inicio
+  // DATOS — estructurados por clave i18n
   // ══════════════════════════════════════════════
-  const SERVICES = {
-    'Masaje Terapéutico': {
+  const SERVICE_KEYS = {
+    s1: {
       num: '01',
-      duration: '60 – 90 min',
-      price: 'Desde $120',
-      img: 'https://plus.unsplash.com/premium_photo-1663012948067-0478e4f9d9c6?q=80&w=1170&auto=format&fit=crop',
-      desc: 'La técnica de manipulación profunda de tejidos blandos más completa de nuestro catálogo. Trabajamos capa por capa sobre músculo, tendón y fascia para liberar adherencias, restaurar la circulación local y reequilibrar el sistema nervioso autónomo. Indicado para pacientes con dolor crónico cervical, lumbar o de miembros, así como para quienes experimentan tensión muscular acumulada por estrés o posturas sostenidas.',
-      features: ['Alivio de dolor crónico cervical y lumbar','Mejora notable de la circulación sanguínea','Reducción de tensión muscular profunda','Reequilibrio del sistema nervioso','Trabajo sobre tendones y fascia'],
-      booking: 'Masaje Terapéutico'
+      durationKey: 'svc1.duration',
+      priceKey:    'svc1.price',
+      nameKey:     's1.name',
+      descKey:     'svc1.fullDesc',
+      featKeys:    ['svc1.feat1','svc1.feat2','svc1.feat3','svc1.feat4','svc1.feat5'],
+      img: 'https://plus.unsplash.com/premium_photo-1663012948067-0478e4f9d9c6?q=80&w=1170&auto=format&fit=crop'
     },
-    'Masaje Deportivo': {
+    s2: {
       num: '02',
-      duration: '45 – 75 min',
-      price: 'Desde $110',
-      img: 'https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?q=80&w=1170&auto=format&fit=crop',
-      desc: 'Protocolo especializado diseñado para atletas de todos los niveles. Combinamos técnicas de effleurage, petrissage y compresión isquémica adaptadas a la fase del ciclo deportivo. Pre-competencia activa la musculatura y optimiza el rango articular; post-competencia elimina metabolitos, reduce la inflamación y acelera la regeneración tisular. Resultados medibles en rendimiento y tiempo de recuperación.',
-      features: ['Preparación muscular pre-competencia','Eliminación de metabolitos post-esfuerzo','Reducción de inflamación y DOMS','Optimización del rango de movimiento articular','Prevención de lesiones por sobreuso'],
-      booking: 'Masaje Deportivo'
+      durationKey: 'svc2.duration',
+      priceKey:    'svc2.price',
+      nameKey:     's2.name',
+      descKey:     'svc2.fullDesc',
+      featKeys:    ['svc2.feat1','svc2.feat2','svc2.feat3','svc2.feat4','svc2.feat5'],
+      img: 'https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?q=80&w=1170&auto=format&fit=crop'
     },
-    'Terapia de Estiramiento': {
+    s3: {
       num: '03',
-      duration: '50 – 80 min',
-      price: 'Desde $100',
-      img: 'https://images.unsplash.com/photo-1699523229212-c25a2fadeb12?q=80&w=1169&auto=format&fit=crop',
-      desc: 'Elongación asistida de cadenas musculares mediante técnicas de PNF (Facilitación Neuromuscular Propioceptiva) y estiramiento estático progresivo. El terapeuta guía cada movimiento con precisión biomecánica, trabajando sobre grupos musculares específicos para restaurar la longitud óptima del músculo, mejorar la postura global y ampliar el rango de movimiento articular de forma segura y duradera.',
-      features: ['Aumento medible de flexibilidad muscular','Corrección de desequilibrios posturales','Ampliación del rango articular','Técnica PNF para resultados profundos','Prevención de contracturas y rigidez'],
-      booking: 'Terapia de Estiramiento'
-    },
-
-    
+      durationKey: 'svc3.duration',
+      priceKey:    'svc3.price',
+      nameKey:     's3.name',
+      descKey:     'svc3.fullDesc',
+      featKeys:    ['svc3.feat1','svc3.feat2','svc3.feat3','svc3.feat4','svc3.feat5'],
+      img: 'https://images.unsplash.com/photo-1699523229212-c25a2fadeb12?q=80&w=1169&auto=format&fit=crop'
+    }
   };
 
-  // Función global — disponible para cualquier onclick inline
-  function openBooking(name) {
-    openModal(name);
+  function t(key) {
+    if (typeof i18n !== 'undefined' && typeof currentLang !== 'undefined') {
+      var dict = i18n[currentLang];
+      if (dict && dict[key] !== undefined) return dict[key];
+    }
+    return key;
+  }
+
+  function openBooking(key) {
+    openModal(key);
   }
 </script>
 
@@ -522,25 +526,29 @@
   // ══════════════════════════════════════════════
   const overlay  = document.getElementById('svcOverlay');
   const closeBtn = document.getElementById('svcClose');
+  let currentModalKey = null;
 
-  function openModal(name) {
-    const s = SERVICES[name];
+  function openModal(key) {
+    const s = SERVICE_KEYS[key];
     if (!s) return;
+    currentModalKey = key;
 
-    document.getElementById('svcModalImg').src       = s.img;
-    document.getElementById('svcModalImg').alt       = name;
-    document.getElementById('svcModalNum').textContent   = s.num;
-    document.getElementById('svcModalTitle').textContent = name;
-    document.getElementById('svcModalDuration').querySelector('span').textContent = s.duration;
-    document.getElementById('svcModalPrice').querySelector('span').textContent    = s.price;
-    document.getElementById('svcModalDesc').textContent  = s.desc;
+    document.getElementById('svcModalImg').src        = s.img;
+    document.getElementById('svcModalImg').alt        = t(s.nameKey);
+    document.getElementById('svcModalNum').textContent    = s.num;
+    document.getElementById('svcModalTitle').textContent  = t(s.nameKey);
+    document.getElementById('svcModalDuration').querySelector('span').textContent = t(s.durationKey);
+    document.getElementById('svcModalPrice').querySelector('span').textContent    = t(s.priceKey);
+    document.getElementById('svcModalDesc').textContent   = t(s.descKey);
 
     const featEl = document.getElementById('svcModalFeatures');
-    featEl.innerHTML = s.features.map(f =>
-      `<div class="svc-modal-feature">${f}</div>`
+    featEl.innerHTML = s.featKeys.map(k =>
+      `<div class="svc-modal-feature">${t(k)}</div>`
     ).join('');
 
-    document.getElementById('svcModalCta').href = `reservas.html`;
+    // Texto del botón CTA del modal
+    const ctaSpan = document.querySelector('#svcModalCta span[data-i18n]');
+    if (ctaSpan) ctaSpan.textContent = t('svc.modal.cta');
 
     overlay.classList.add('open');
     document.body.classList.add('modal-open');
@@ -550,6 +558,7 @@
   function closeModal() {
     overlay.classList.remove('open');
     document.body.classList.remove('modal-open');
+    currentModalKey = null;
   }
 
   // Cerrar modal
@@ -565,8 +574,13 @@
   document.querySelector('.services-grid').addEventListener('click', function(e) {
     const card = e.target.closest('.service-card');
     if (!card) return;
-    const nameEl = card.querySelector('.service-name');
-    if (nameEl) openModal(nameEl.textContent.trim());
+    const key = card.getAttribute('data-service-key');
+    if (key) openModal(key);
+  });
+
+  // ── Re-renderizar modal si está abierto al cambiar idioma ──
+  document.addEventListener('langChange', function() {
+    if (currentModalKey) openModal(currentModalKey);
   });
 </script>
 </body>

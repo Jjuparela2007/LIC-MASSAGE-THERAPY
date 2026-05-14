@@ -488,7 +488,50 @@ const i18n = {
     "modal.close":"Cerrar",
 
     // Service cards (dynamic — «Más información» link)
-    "card.more":"Más información →"
+    "card.more":"Más información →",
+
+    // ── Script de servicios (index.html — tarjetas y modal dinámico) ──────────
+    "s1.tag":"Relajación","s2.tag":"Terapéutico","s3.tag":"Bienestar",
+    "s1.duration":"30 min","s2.duration":"30 min","s3.duration":"45 min",
+    "s1.short":"Un masaje integral que combina la manipulación de los tejidos blandos para aliviar el estrés y la tensión",
+    "s2.short":"Diseñada para abordar afecciones o molestias específicas. Ideal para quienes buscan aliviar dolores causados por tensión muscular",
+    "s3.short":"El objetivo es ayudarte a relajarte, respirar y visualizarte de una forma nueva y empoderadora",
+    "s1.feat1":"Reduce estrés y ansiedad","s1.feat2":"Mejora circulación sanguínea y linfática","s1.feat3":"Presión ligera a media adaptable","s1.feat4":"Incluye estiramientos activos suaves",
+    "s2.feat1":"Alivia dolor crónico y tensión profunda","s2.feat2":"Ideal para lesiones por sobreesfuerzo","s2.feat3":"Técnica de presión focalizada","s2.feat4":"Resultados visibles desde la primera sesión",
+    "s3.feat1":"Reducción de nerviosismo y ansiedad","s3.feat2":"Técnicas de respiración consciente","s3.feat3":"Visualización guiada personalizada","s3.feat4":"Mejora el rendimiento diario",
+    "sp.moreInfo":"Más información →",
+    "sp.book":"Reservar esta sesión →",
+    "sp.close":"Cerrar",
+
+    // ── servicios.html — cards, studio, modal completo ────────────────────────
+
+    // Duraciones y precios
+    "svc1.duration":"60 – 90 min","svc1.price":"Desde $120",
+    "svc2.duration":"45 – 75 min","svc2.price":"Desde $110",
+    "svc3.duration":"50 – 80 min","svc3.price":"Desde $100",
+
+    // Descripciones largas del modal
+    "svc1.fullDesc":"La técnica de manipulación profunda de tejidos blandos más completa de nuestro catálogo. Trabajamos capa por capa sobre músculo, tendón y fascia para liberar adherencias, restaurar la circulación local y reequilibrar el sistema nervioso autónomo. Indicado para pacientes con dolor crónico cervical, lumbar o de miembros, así como para quienes experimentan tensión muscular acumulada por estrés o posturas sostenidas.",
+    "svc2.fullDesc":"Protocolo especializado diseñado para atletas de todos los niveles. Combinamos técnicas de effleurage, petrissage y compresión isquémica adaptadas a la fase del ciclo deportivo. Pre-competencia activa la musculatura y optimiza el rango articular; post-competencia elimina metabolitos, reduce la inflamación y acelera la regeneración tisular. Resultados medibles en rendimiento y tiempo de recuperación.",
+    "svc3.fullDesc":"Elongación asistida de cadenas musculares mediante técnicas de PNF (Facilitación Neuromuscular Propioceptiva) y estiramiento estático progresivo. El terapeuta guía cada movimiento con precisión biomecánica, trabajando sobre grupos musculares específicos para restaurar la longitud óptima del músculo, mejorar la postura global y ampliar el rango de movimiento articular de forma segura y duradera.",
+
+    // Features del modal
+    "svc1.feat1":"Alivio de dolor crónico cervical y lumbar","svc1.feat2":"Mejora notable de la circulación sanguínea","svc1.feat3":"Reducción de tensión muscular profunda","svc1.feat4":"Reequilibrio del sistema nervioso","svc1.feat5":"Trabajo sobre tendones y fascia",
+    "svc2.feat1":"Preparación muscular pre-competencia","svc2.feat2":"Eliminación de metabolitos post-esfuerzo","svc2.feat3":"Reducción de inflamación y DOMS","svc2.feat4":"Optimización del rango de movimiento articular","svc2.feat5":"Prevención de lesiones por sobreuso",
+    "svc3.feat1":"Aumento medible de flexibilidad muscular","svc3.feat2":"Corrección de desequilibrios posturales","svc3.feat3":"Ampliación del rango articular","svc3.feat4":"Técnica PNF para resultados profundos","svc3.feat5":"Prevención de contracturas y rigidez",
+
+    // Sección Studio
+    "studio.eyebrow":"En el estudio",
+    "studio.heading":"Un espacio tranquilo y enfocado — diseñado para tu cuerpo.",
+    "studio.para1":"Las sesiones se realizan en un estudio privado y silencioso en Long Island City. Cada cita comienza con una breve conversación sobre qué te duele, qué está tenso y qué quieres volver a poder hacer. A partir de ahí, el trabajo es manual, preciso y adaptado a ti.",
+    "studio.para2":"Ya seas atleta, trabajador de oficina, te estés recuperando de una lesión o simplemente estés cansado de sentirte rígido — recibirás trato profesional, paciencia y cero juicios.",
+    "studio.cta":"Reserva tu primera sesión",
+
+    // Captions del slider studio
+    "studio.slide1.title":"Sala de tratamiento","studio.slide1.desc":"Paredes de cal, luz cálida y lencería impecable — cada detalle preparado para ti.",
+    "studio.slide2.title":"Área de estiramiento","studio.slide2.desc":"Espacio amplio y equipado para técnicas AIS y trabajo de movilidad.",
+    "studio.slide3.title":"Ambiente privado","studio.slide3.desc":"Silencioso, confidencial y completamente dedicado a tu recuperación.",
+    "studio.slide4.title":"Long Island City, NY","studio.slide4.desc":"Ubicación accesible, a minutos del metro, en el corazón de Queens."
   },
   en: {
     "nav.home":"Home","nav.services":"Services","nav.stretch":"Stretching",
@@ -973,7 +1016,50 @@ const i18n = {
     "modal.close":"Close",
 
     // Service cards
-    "card.more":"More info →"
+    "card.more":"More info →",
+
+    // ── Service script (index.html — dynamic cards and modal) ────────────────
+    "s1.tag":"Relaxation","s2.tag":"Therapeutic","s3.tag":"Wellness",
+    "s1.duration":"30 min","s2.duration":"30 min","s3.duration":"45 min",
+    "s1.short":"A comprehensive massage combining soft-tissue manipulation to relieve stress and tension",
+    "s2.short":"Designed to address specific conditions or discomfort. Ideal for those seeking relief from muscular tension",
+    "s3.short":"The goal is to help you relax, breathe, and visualize yourself in a new, empowering way",
+    "s1.feat1":"Reduces stress and anxiety","s1.feat2":"Improves blood and lymphatic circulation","s1.feat3":"Light to medium adaptable pressure","s1.feat4":"Includes gentle active stretching",
+    "s2.feat1":"Relieves chronic pain and deep tension","s2.feat2":"Ideal for overuse injuries","s2.feat3":"Focused pressure technique","s2.feat4":"Visible results from the first session",
+    "s3.feat1":"Reduction of nervousness and anxiety","s3.feat2":"Conscious breathing techniques","s3.feat3":"Personalized guided visualization","s3.feat4":"Improves daily performance",
+    "sp.moreInfo":"More info →",
+    "sp.book":"Book this session →",
+    "sp.close":"Close",
+
+    // ── servicios.html — cards, studio, full modal ────────────────────────────
+
+    // Durations and prices
+    "svc1.duration":"60 – 90 min","svc1.price":"From $120",
+    "svc2.duration":"45 – 75 min","svc2.price":"From $110",
+    "svc3.duration":"50 – 80 min","svc3.price":"From $100",
+
+    // Full modal descriptions
+    "svc1.fullDesc":"The most complete deep soft-tissue manipulation technique in our catalog. We work layer by layer on muscle, tendon, and fascia to release adhesions, restore local circulation, and rebalance the autonomic nervous system. Indicated for patients with chronic cervical, lumbar, or limb pain, as well as those experiencing stress- or posture-related accumulated muscle tension.",
+    "svc2.fullDesc":"Specialized protocol designed for athletes of all levels. We combine effleurage, petrissage, and ischemic compression techniques adapted to the phase of the sports cycle. Pre-competition activates the musculature and optimizes joint range; post-competition eliminates metabolites, reduces inflammation, and accelerates tissue regeneration. Measurable results in performance and recovery time.",
+    "svc3.fullDesc":"Assisted elongation of muscle chains using PNF (Proprioceptive Neuromuscular Facilitation) and progressive static stretching techniques. The therapist guides each movement with biomechanical precision, working on specific muscle groups to restore optimal muscle length, improve global posture, and safely and durably expand joint range of motion.",
+
+    // Modal features
+    "svc1.feat1":"Relief of chronic cervical and lumbar pain","svc1.feat2":"Notable improvement in blood circulation","svc1.feat3":"Reduction of deep muscle tension","svc1.feat4":"Rebalancing of the nervous system","svc1.feat5":"Work on tendons and fascia",
+    "svc2.feat1":"Pre-competition muscle preparation","svc2.feat2":"Elimination of post-exertion metabolites","svc2.feat3":"Reduction of inflammation and DOMS","svc2.feat4":"Optimization of joint range of motion","svc2.feat5":"Prevention of overuse injuries",
+    "svc3.feat1":"Measurable increase in muscle flexibility","svc3.feat2":"Correction of postural imbalances","svc3.feat3":"Expansion of joint range","svc3.feat4":"PNF technique for deep results","svc3.feat5":"Prevention of contractures and stiffness",
+
+    // Studio section
+    "studio.eyebrow":"In the studio",
+    "studio.heading":"A quiet, focused space — designed for your body.",
+    "studio.para1":"Sessions take place in a private, quiet studio in Long Island City. Every appointment begins with a brief conversation about what hurts, what feels tight, and what you want to be able to do again. From there, the work is hands-on, precise, and tailored to you.",
+    "studio.para2":"Whether you're an athlete, an office worker, recovering from an injury, or simply tired of feeling stiff — you'll receive professional care, patience, and zero judgment.",
+    "studio.cta":"Book your first session",
+
+    // Studio slider captions
+    "studio.slide1.title":"Treatment room","studio.slide1.desc":"Lime walls, warm light, and impeccable linens — every detail prepared for you.",
+    "studio.slide2.title":"Stretching area","studio.slide2.desc":"Spacious and fully equipped for AIS techniques and mobility work.",
+    "studio.slide3.title":"Private setting","studio.slide3.desc":"Quiet, confidential, and completely dedicated to your recovery.",
+    "studio.slide4.title":"Long Island City, NY","studio.slide4.desc":"Convenient location, minutes from the subway, in the heart of Queens."
   }
 };
  
@@ -1010,9 +1096,13 @@ function applyLang(lang) {
     const el = document.getElementById(id);
     if (el) el.classList.toggle('active', lang === 'en');
   });
+
+  // Notificar a scripts dinámicos que el idioma cambió
+  document.dispatchEvent(new CustomEvent('langChange', { detail: { lang: lang } }));
 }
  
 function setLang(lang) { applyLang(lang); }
+ 
  
 // ─── THEME ────────────────────────────────────────────────────────────────────
 let currentTheme = localStorage.getItem('kinesys-theme') || 'dark';

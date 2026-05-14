@@ -738,79 +738,85 @@ window.addEventListener('resize', function() { bcInit(); });
 <!-- ─── SCRIPT DE SERVICIOS ───────────────────────────────────────────────── -->
 <script>
 (function () {
-  /* ── Datos de servicios ─────────────────────────────────────────────── */
-  var SERVICES = [
+  /* ── Definición de servicios (solo claves, sin texto hardcodeado) ─── */
+  var SERVICE_KEYS = [
     {
       num: "01",
-      tag: "Relajación",
-      nameKey: "s1.name",
-      name: "Masaje relajante",
-      duration: "30 min",
       img: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=80&fit=crop",
-      descKey: "s1.desc",
-      desc: "Un masaje integral que combina la manipulación de los tejidos blandos para aliviar el estrés y la tensión, a la vez que mejora la circulación sanguínea y linfática. La presión es de ligera a media; su objetivo principal es la relajación. Puede incluir estiramientos activos suaves.",
-      features: ["Reduce estrés y ansiedad", "Mejora circulación sanguínea y linfática", "Presión ligera a media adaptable", "Incluye estiramientos activos suaves"],
-      short: "Un masaje integral que combina la manipulación de los tejidos blandos para aliviar el estrés y la tensión"
+      nameKey: "s1.name", tagKey: "s1.tag", shortKey: "s1.short",
+      descKey: "s1.desc", durationKey: "s1.duration",
+      featureKeys: ["s1.feat1","s1.feat2","s1.feat3","s1.feat4"]
     },
     {
       num: "02",
-      tag: "Terapéutico",
-      nameKey: "s2.name",
-      name: "Masaje de presión profunda",
-      duration: "30 min",
       img: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80&fit=crop",
-      descKey: "s2.desc",
-      desc: "Diseñada para abordar afecciones o molestias específicas. Ideal para quienes buscan aliviar dolores causados por tensión muscular, sobreesfuerzo o traumatismos. Trabaja capas profundas del tejido muscular con técnica y precisión focalizada.",
-      features: ["Alivia dolor crónico y tensión profunda", "Ideal para lesiones por sobreesfuerzo", "Técnica de presión focalizada", "Resultados visibles desde la primera sesión"],
-      short: "Diseñada para abordar afecciones o molestias específicas. Ideal para quienes buscan aliviar dolores causados por tensión muscular"
+      nameKey: "s2.name", tagKey: "s2.tag", shortKey: "s2.short",
+      descKey: "s2.desc", durationKey: "s2.duration",
+      featureKeys: ["s2.feat1","s2.feat2","s2.feat3","s2.feat4"]
     },
     {
       num: "03",
-      tag: "Bienestar",
-      nameKey: "s3.name",
-      name: "Relajación guiada",
-      duration: "45 min",
       img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80&fit=crop",
-      descKey: "s3.desc",
-      desc: "El objetivo es ayudarte a relajarte, respirar y visualizarte de una forma nueva y empoderadora. Reduce el nerviosismo, la ansiedad y la preocupación. Puede mejorar tu rendimiento en el trabajo, el deporte y la vida cotidiana.",
-      features: ["Reducción de nerviosismo y ansiedad", "Técnicas de respiración consciente", "Visualización guiada personalizada", "Mejora el rendimiento diario"],
-      short: "El objetivo es ayudarte a relajarte, respirar y visualizarte de una forma nueva y empoderadora"
+      nameKey: "s3.name", tagKey: "s3.tag", shortKey: "s3.short",
+      descKey: "s3.desc", durationKey: "s3.duration",
+      featureKeys: ["s3.feat1","s3.feat2","s3.feat3","s3.feat4"]
     }
   ];
 
-  /* ── Renderizado de tarjetas ────────────────────────────────────────── */
-  var grid = document.getElementById('servicesGrid');
-  SERVICES.forEach(function (s, i) {
-    var card = document.createElement('div');
-    card.className = 'preview-card reveal';
-    card.style.cursor = 'pointer';
-    card.innerHTML =
-      '<img class="sp-card-img" src="' + s.img + '" alt="' + s.name + '" loading="lazy">' +
-      '<div style="padding:1rem 0 0">' +
-        '<div class="preview-num">' + s.num + '</div>' +
-        '<div class="preview-name" data-i18n="' + s.nameKey + '">' + s.name + '</div>' +
-        '<p class="preview-desc">' + s.short + '</p>' +
-        '<div class="sp-card-more">Más información →</div>' +
-      '</div>';
-    card.addEventListener('click', function () { openModal(i); });
-    grid.appendChild(card);
-  });
+  var currentOpen = -1;
 
-  /* ── Modal ──────────────────────────────────────────────────────────── */
-  var overlay   = document.getElementById('modalOverlay');
-  var modalX    = document.getElementById('modalX');
-  var closeBtn  = document.getElementById('modalCloseBtn');
+  /* ── Helper: leer traducción del sistema i18n de shared.js ──────── */
+  function t(key) {
+    if (typeof i18n !== 'undefined' && typeof currentLang !== 'undefined') {
+      var dict = i18n[currentLang];
+      if (dict && dict[key] !== undefined) return dict[key];
+    }
+    return key;
+  }
+
+  /* ── Renderizar tarjetas ────────────────────────────────────────── */
+  var grid = document.getElementById('servicesGrid');
+
+  function renderCards() {
+    grid.innerHTML = '';
+    SERVICE_KEYS.forEach(function (s, i) {
+      var card = document.createElement('div');
+      card.className = 'preview-card reveal';
+      card.style.cursor = 'pointer';
+      card.innerHTML =
+        '<img class="sp-card-img" src="' + s.img + '" alt="' + t(s.nameKey) + '" loading="lazy">' +
+        '<div style="padding:1rem 0 0">' +
+          '<div class="preview-num">' + s.num + '</div>' +
+          '<div class="preview-name">' + t(s.nameKey) + '</div>' +
+          '<p class="preview-desc">' + t(s.shortKey) + '</p>' +
+          '<div class="sp-card-more">' + t('sp.moreInfo') + '</div>' +
+        '</div>';
+      card.addEventListener('click', function () { openModal(i); });
+      grid.appendChild(card);
+    });
+    // Re-observar los nuevos elementos para el scroll reveal
+    if (typeof initScrollReveal === 'function') initScrollReveal();
+  }
+
+  /* ── Modal ──────────────────────────────────────────────────────── */
+  var overlay  = document.getElementById('modalOverlay');
+  var modalX   = document.getElementById('modalX');
+  var closeBtn = document.getElementById('modalCloseBtn');
 
   function openModal(i) {
-    var s = SERVICES[i];
-    document.getElementById('modalImg').src      = s.img;
-    document.getElementById('modalImg').alt      = s.name;
-    document.getElementById('modalTag').textContent      = s.tag;
-    document.getElementById('modalName').textContent     = s.name;
-    document.getElementById('modalDuration').textContent = '⏱ ' + s.duration;
-    document.getElementById('modalDesc').textContent     = s.desc;
-    document.getElementById('modalFeatures').innerHTML   =
-      s.features.map(function (f) { return '<div class="modal-feat">' + f + '</div>'; }).join('');
+    currentOpen = i;
+    var s = SERVICE_KEYS[i];
+    document.getElementById('modalImg').src               = s.img;
+    document.getElementById('modalImg').alt               = t(s.nameKey);
+    document.getElementById('modalTag').textContent       = t(s.tagKey);
+    document.getElementById('modalName').textContent      = t(s.nameKey);
+    document.getElementById('modalDuration').textContent  = '⏱ ' + t(s.durationKey);
+    document.getElementById('modalDesc').textContent      = t(s.descKey);
+    document.getElementById('modalFeatures').innerHTML    =
+      s.featureKeys.map(function (k) { return '<div class="modal-feat">' + t(k) + '</div>'; }).join('');
+    var bookBtn = document.querySelector('.modal-book');
+    if (bookBtn) bookBtn.textContent = t('sp.book');
+    if (closeBtn) closeBtn.textContent = t('sp.close');
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
@@ -818,12 +824,23 @@ window.addEventListener('resize', function() { bcInit(); });
   function closeModal() {
     overlay.classList.remove('open');
     document.body.style.overflow = '';
+    currentOpen = -1;
   }
 
   modalX.addEventListener('click', closeModal);
   closeBtn.addEventListener('click', closeModal);
   overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+  /* ── Re-renderizar cuando shared.js cambia el idioma ───────────── */
+  document.addEventListener('langChange', function () {
+    renderCards();
+    // Si el modal estaba abierto, actualizarlo también
+    if (currentOpen >= 0) openModal(currentOpen);
+  });
+
+  /* ── Render inicial ─────────────────────────────────────────────── */
+  renderCards();
 })();
 </script>
 
