@@ -7,30 +7,37 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
-
 </head>
 <body>
 
+<!-- ══════════════════ HERO ══════════════════ -->
 <section class="page-hero">
   <div class="page-hero-bg"></div>
   <div class="page-hero-content">
-    <div class="section-tag reveal" data-i18n="contact.tag">Contacto</div>
-    <h1 class="page-hero-title reveal delay-1"><em data-i18n="contact.title1">Hablemos</em></h1>
+    <div class="section-tag reveal" data-i18n="contact.tag"></div>
+    <h1 class="page-hero-title reveal delay-1">
+      <em data-i18n="contact.title1"></em>
+    </h1>
   </div>
 </section>
 
+<!-- ══════════════════ CONTACTO ══════════════════ -->
 <section class="contact-page">
   <div class="section-container">
     <div class="contact-inner">
 
       <!-- ── Información de contacto ── -->
       <div class="contact-info">
-        <div class="section-tag reveal" data-i18n="contact.infoTag">Información</div>
-        <h2 class="section-title reveal delay-1"><em data-i18n="contact.infoTitle1">Estamos</em> <strong data-i18n="contact.infoTitle2">aquí para ti</strong></h2>
+        <div class="section-tag reveal" data-i18n="contact.infoTag"></div>
+        <h2 class="section-title reveal delay-1">
+          <em data-i18n="contact.infoTitle1"></em> <strong data-i18n="contact.infoTitle2"></strong>
+        </h2>
         <div class="gold-line reveal delay-2"></div>
-        <p class="contact-desc reveal delay-2" data-i18n="contact.desc">No dudes en contactarnos para cualquier consulta, información sobre tratamientos o para programar tu primera cita de evaluación.</p>
+        <p class="contact-desc reveal delay-2" data-i18n="contact.desc"></p>
 
         <div class="contact-cards reveal delay-3">
+
+          <!-- Dirección -->
           <div class="contact-card">
             <div class="contact-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -39,11 +46,12 @@
               </svg>
             </div>
             <div>
-              <div class="contact-card-label" data-i18n="contact.address">Dirección</div>
-              <div class="contact-card-value" data-i18n="book.location">Nueva York — Long Island City</div>
+              <div class="contact-card-label" data-i18n="contact.address"></div>
+              <div class="contact-card-value" data-i18n="book.location"></div>
             </div>
           </div>
 
+          <!-- Horarios -->
           <div class="contact-card">
             <div class="contact-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -52,13 +60,14 @@
               </svg>
             </div>
             <div>
-              <div class="contact-card-label" data-i18n="contact.hours">Horarios</div>
-              <div class="contact-card-value">Lun–Vie: 10:00 am – 7:00 pm</div>
-              <div class="contact-card-value">Sábado: 10:00 am – 6:00 pm</div>
-              <div class="contact-card-value">Domingo: cerrado</div>
+              <div class="contact-card-label" data-i18n="contact.hours"></div>
+              <div class="contact-card-value" data-i18n="contact.hours.lv"></div>
+              <div class="contact-card-value" data-i18n="contact.hours.sat"></div>
+              <div class="contact-card-value" data-i18n="contact.hours.sun"></div>
             </div>
           </div>
 
+          <!-- Teléfono -->
           <div class="contact-card">
             <div class="contact-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -66,11 +75,12 @@
               </svg>
             </div>
             <div>
-              <div class="contact-card-label" data-i18n="contact.phone">Teléfono</div>
-              <div class="contact-card-value">718-478-1951</div>
+              <div class="contact-card-label" data-i18n="contact.phone"></div>
+              <div class="contact-card-value" data-i18n="book.phone"></div>
             </div>
           </div>
 
+          <!-- Email -->
           <div class="contact-card">
             <div class="contact-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -79,10 +89,11 @@
               </svg>
             </div>
             <div>
-              <div class="contact-card-label">Email</div>
-              <div class="contact-card-value">ra@licmassagetherapy.com</div>
+              <div class="contact-card-label" data-i18n="contact.email"></div>
+              <div class="contact-card-value" data-i18n="contact.emailVal"></div>
             </div>
           </div>
+
         </div>
       </div>
 
@@ -92,18 +103,18 @@
 
           <div style="margin-bottom:2rem">
             <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:400;margin-bottom:.5rem;color:var(--text-primary)"
-                 data-i18n="contact.formTitle">Envíanos un Mensaje</div>
+                 data-i18n="contact.formTitle"></div>
             <div style="font-size:.78rem;color:var(--text-muted)"
-                 data-i18n="form.subtitle">Responderemos en menos de 2 horas</div>
+                 data-i18n="form.subtitle"></div>
           </div>
 
           <div class="form-grid">
-            <input type="text"  class="form-input" id="cf-name"    placeholder="Tu nombre"               autocomplete="name">
-            <input type="tel"   class="form-input" id="cf-phone"   placeholder="+57 300 000 0000"         autocomplete="tel">
-            <input type="email" class="form-input" id="cf-email"   placeholder="tu@correo.com"            autocomplete="email">
-            <input type="text"  class="form-input" id="cf-subject" placeholder="¿En qué podemos ayudarte?">
+            <input type="text"  class="form-input" id="cf-name"    data-i18n-placeholder="contact.form.namePh"    autocomplete="name">
+            <input type="tel"   class="form-input" id="cf-phone"   data-i18n-placeholder="contact.form.phonePh"   autocomplete="tel">
+            <input type="email" class="form-input" id="cf-email"   data-i18n-placeholder="contact.form.emailPh"   autocomplete="email">
+            <input type="text"  class="form-input" id="cf-subject" data-i18n-placeholder="contact.form.subjectPh">
             <textarea class="form-textarea form-input" id="cf-message" rows="5"
-                      placeholder="Cuéntanos sobre tu condición..."
+                      data-i18n-placeholder="contact.form.messagePh"
                       style="grid-column:1/-1"></textarea>
           </div>
 
@@ -146,22 +157,19 @@
               </svg>
             </span>
             <span style="font-size:.78rem;line-height:1.55;color:var(--text-muted,#888);">
-              He leído y acepto la
+              <span data-i18n="contact.consent.pre"></span>
               <a href="politica-privacidad.html" target="_blank" rel="noopener"
-                 style="color:var(--gold,#c9a84c);text-decoration:underline;text-underline-offset:2px;">
-                 Política de Privacidad y Tratamiento de Datos Personales 
-              </a>
-              de LIC Massage Therapy. Entiendo que mis datos (nombre, teléfono, correo y mensaje)
-              serán utilizados <strong style="color:var(--text-primary,#f0ede8);">únicamente para responder
-              a mi consulta</strong> y no serán compartidos con terceros.
+                 style="color:var(--gold,#c9a84c);text-decoration:underline;text-underline-offset:2px;"
+                 data-i18n="contact.consent.link"></a>
+              <span data-i18n="contact.consent.post"></span>
+              <strong style="color:var(--text-primary,#f0ede8);" data-i18n="contact.consent.bold"></strong>
+              <span data-i18n="contact.consent.end"></span>
             </span>
           </label>
 
           <button class="form-submit" id="cf-submit" disabled
                   style="margin-top:1rem;opacity:.5;cursor:not-allowed;"
-                  data-i18n="contact.send">
-            Enviar Mensaje →
-          </button>
+                  data-i18n="contact.send"></button>
 
         </div>
       </div>
@@ -170,14 +178,15 @@
   </div>
 </section>
 
+<!-- ══════════════════ CTA STRIP ══════════════════ -->
 <section class="cta-strip">
   <div class="section-container">
     <div class="cta-strip-inner reveal">
       <div>
-        <div class="cta-strip-title" data-i18n="cta.title">¿Prefieres reservar directamente?</div>
-        <div class="cta-strip-sub"   data-i18n="cta.sub2">Agenda tu cita online en menos de 2 minutos.</div>
+        <div class="cta-strip-title" data-i18n="cta.title"></div>
+        <div class="cta-strip-sub"   data-i18n="cta.sub2"></div>
       </div>
-      <a href="reservas.html" class="btn-primary" data-i18n="nav.book">Reservar Ahora</a>
+      <a href="reservas.html" class="btn-primary" data-i18n="nav.book"></a>
     </div>
   </div>
 </section>
@@ -188,23 +197,29 @@
   renderComponents('contacto');
   initPage('contacto');
 
-  const WHATSAPP_NUMBER = '19294262161'; // sin +, sin espacios
+  const WHATSAPP_NUMBER = '573138332309'; // sin +, sin espacios
+
+  /* ── Helper i18n ── */
+  function t(key) {
+    const lang = document.documentElement.lang || 'es';
+    return (i18n[lang] && i18n[lang][key]) ? i18n[lang][key] : key;
+  }
 
   /* ── Referencias ── */
-  const btn      = document.getElementById('cf-submit');
-  const feedback = document.getElementById('cf-feedback');
-  const fName    = document.getElementById('cf-name');
-  const fPhone   = document.getElementById('cf-phone');
-  const fEmail   = document.getElementById('cf-email');
-  const fSubject = document.getElementById('cf-subject');
-  const fMsg     = document.getElementById('cf-message');
-  const fConsent = document.getElementById('cf-consent');
+  const btn           = document.getElementById('cf-submit');
+  const feedback      = document.getElementById('cf-feedback');
+  const fName         = document.getElementById('cf-name');
+  const fPhone        = document.getElementById('cf-phone');
+  const fEmail        = document.getElementById('cf-email');
+  const fSubject      = document.getElementById('cf-subject');
+  const fMsg          = document.getElementById('cf-message');
+  const fConsent      = document.getElementById('cf-consent');
   const fConsentCheck = document.getElementById('cf-consent-check');
-  const allFields = [fName, fPhone, fEmail, fSubject, fMsg];
+  const allFields     = [fName, fPhone, fEmail, fSubject, fMsg];
 
   /* ── Checkbox visual ── */
   fConsent.addEventListener('change', function() {
-    fConsent.style.background = fConsent.checked ? 'rgba(201,168,76,0.15)' : 'transparent';
+    fConsent.style.background   = fConsent.checked ? 'rgba(201,168,76,0.15)' : 'transparent';
     fConsentCheck.style.display = fConsent.checked ? 'block' : 'none';
     validateForm();
   });
@@ -229,15 +244,15 @@
     btn.style.cursor  = ok ? 'pointer' : 'not-allowed';
   }
 
-  allFields.forEach(f => f.addEventListener('input', validateForm));
+  allFields.forEach(function(f) { f.addEventListener('input', validateForm); });
   validateForm();
 
   /* ── Feedback visual ── */
   function showFeedback(msg, type) {
     const styles = {
-      success: { bg: 'rgba(42,110,58,0.15)',  border: '#2a6e3a', color: '#2a6e3a' },
-      error:   { bg: 'rgba(231,76,60,0.12)',  border: '#e74c3c', color: '#e74c3c' },
-      loading: { bg: 'rgba(201,168,76,0.10)', border: 'var(--gold)', color: 'var(--gold)' },
+      success: { bg: 'rgba(42,110,58,0.15)',  border: '#2a6e3a',          color: '#2a6e3a' },
+      error:   { bg: 'rgba(231,76,60,0.12)',  border: '#e74c3c',          color: '#e74c3c' },
+      loading: { bg: 'rgba(201,168,76,0.10)', border: 'var(--gold)',      color: 'var(--gold)' },
     };
     const s = styles[type];
     Object.assign(feedback.style, {
@@ -251,32 +266,28 @@
 
   /* ── Reset formulario ── */
   function resetForm() {
-    allFields.forEach(f => f.value = '');
-    fConsent.checked = false;
-    fConsent.style.background = 'transparent';
+    allFields.forEach(function(f) { f.value = ''; });
+    fConsent.checked            = false;
+    fConsent.style.background   = 'transparent';
     fConsentCheck.style.display = 'none';
-    btn.textContent      = 'Enviar Mensaje →';
-    btn.style.background = '';
+    btn.textContent             = t('contact.btn.reset');
+    btn.style.background        = '';
     validateForm();
-    setTimeout(() => { feedback.style.display = 'none'; }, 6000);
+    setTimeout(function() { feedback.style.display = 'none'; }, 6000);
   }
 
-  /* ── Mensaje para WhatsApp ── */
+  /* ── Mensaje para WhatsApp (i18n-aware) ── */
   function buildWhatsAppMsg(name, phone, email, subject, message) {
-  return encodeURIComponent(
-`Hola Lic massage therapy, mi nombre es ${name}.
-
-Me gustaría comunicarme con ustedes acerca de: ${subject}.
-
-${message}
-
-Pueden contactarme a través de:
-${phone}
-${email}
-
-Feliz dia.`
-  );
-}
+    return encodeURIComponent(
+      t('contact.wa.greeting') + ' ' + name + '.\n\n' +
+      t('contact.wa.intent') + ' ' + subject + '.\n\n' +
+      message + '\n\n' +
+      t('contact.wa.contact') + '\n' +
+      phone + '\n' +
+      email + '\n\n' +
+      t('contact.wa.closing')
+    );
+  }
 
   /* ── Envío ── */
   btn.addEventListener('click', function(e) {
@@ -288,31 +299,21 @@ Feliz dia.`
     const email   = fEmail.value.trim();
     const subject = fSubject.value.trim();
     const message = fMsg.value.trim();
-    const lang    = document.documentElement.lang || 'es';
 
     /* Estado: cargando */
     btn.disabled      = true;
     btn.style.opacity = '0.7';
-    btn.textContent   = lang === 'es' ? 'Abriendo WhatsApp…' : 'Opening WhatsApp…';
-    showFeedback(
-      lang === 'es' ? 'Preparando tu mensaje en WhatsApp…' : 'Preparing your WhatsApp message…',
-      'loading'
-    );
+    btn.textContent   = t('contact.submitting');
+    showFeedback(t('contact.feedback.loading'), 'loading');
 
     const waURL = 'https://wa.me/' + WHATSAPP_NUMBER +
                   '?text=' + buildWhatsAppMsg(name, phone, email, subject, message);
 
-    setTimeout(() => {
-      btn.textContent      = lang === 'es' ? '✓ Abriendo WhatsApp' : '✓ Opening WhatsApp';
+    setTimeout(function() {
+      btn.textContent      = t('contact.submitted');
       btn.style.background = '#2a6e3a';
       btn.style.opacity    = '1';
-      showFeedback(
-        lang === 'es'
-          ? '✓ Tu mensaje está listo. Se abrirá WhatsApp para enviarlo.'
-          : '✓ Your message is ready. WhatsApp will open to send it.',
-        'success'
-      );
-
+      showFeedback(t('contact.feedback.success'), 'success');
       window.open(waURL, '_blank', 'noopener,noreferrer');
       setTimeout(resetForm, 3000);
     }, 600);
