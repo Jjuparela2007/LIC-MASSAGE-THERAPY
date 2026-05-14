@@ -464,6 +464,21 @@ const i18n = {
     "terapia4.name":"Recuperación Deportiva",
     "terapia4.desc":"Protocolo pre y post competencia con técnicas combinadas de compresión, vibración y manipulación manual. Reduce la fatiga, acelera la regeneración muscular y optimiza el rendimiento.",
 
+    // Terapias section (sección de 4 beneficios — index.html)
+    "ts.tag":"Beneficios AIS",
+    "ts.title1":"4 beneficios",
+    "ts.title2":"que cambian tu vida",
+    "ts.intro":"A diferencia del estiramiento estático, la terapia AIS produce mejoras duraderas y medibles en cómo tu cuerpo se mueve y se siente.",
+    "ts.item1.name":"Reduce el dolor",
+    "ts.item1.desc":"Aborda la tensión crónica y el dolor muscular con técnicas de estiramiento asistido precisas.",
+    "ts.item2.name":"Aumenta la flexibilidad",
+    "ts.item2.desc":"Amplía progresivamente tu rango de movimiento de un modo que el estiramiento pasivo no logra.",
+    "ts.item3.name":"Mejora el rendimiento",
+    "ts.item3.desc":"Los atletas notan ganancias medibles en velocidad, potencia y agilidad tras sesiones constantes.",
+    "ts.item4.name":"Previene lesiones",
+    "ts.item4.desc":"Corrige desequilibrios musculares antes de que se conviertan en problemas dolorosos.",
+    "ts.cta":"Conozca su terapeuta",
+
     // Tabs section
     "tabs.tag":"Por qué elegirnos",
     "tabs.title1":"Experiencia",
@@ -1022,6 +1037,21 @@ const i18n = {
     "terapia3.desc":"Specialized work on the muscle fascia to eliminate restrictions that cause referred pain and limit movement. Particularly effective for chronic myofascial syndrome.",
     "terapia4.name":"Sports Recovery",
     "terapia4.desc":"Pre and post-competition protocol using combined techniques of compression, vibration, and manual manipulation. Reduces fatigue, accelerates muscle regeneration, and optimizes performance.",
+
+    // Terapias section (4 benefits section — index.html)
+    "ts.tag":"AIS Benefits",
+    "ts.title1":"4 benefits",
+    "ts.title2":"that change your life",
+    "ts.intro":"Unlike static stretching, AIS therapy produces lasting, measurable improvements in how your body moves and feels.",
+    "ts.item1.name":"Reduces pain",
+    "ts.item1.desc":"Addresses chronic tension and muscle pain with precise assisted stretching techniques.",
+    "ts.item2.name":"Increases flexibility",
+    "ts.item2.desc":"Progressively expands your range of motion in ways passive stretching cannot achieve.",
+    "ts.item3.name":"Improves performance",
+    "ts.item3.desc":"Athletes notice measurable gains in speed, power, and agility after consistent sessions.",
+    "ts.item4.name":"Prevents injuries",
+    "ts.item4.desc":"Corrects muscle imbalances before they become painful problems.",
+    "ts.cta":"Meet your therapist",
 
     // Tabs section
     "tabs.tag":"Why choose us",
