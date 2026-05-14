@@ -1050,11 +1050,11 @@ const i18n = {
     "page.title.reservas":"LIC Massage Therapy | Book",
     "page.title.contacto":"LIC Massage Therapy | Contact",
 
-    's1.name': 'Relaxing Massage',
-    'svc1.duration': '60 min',
-    'svc1.price': '$120,000 COP',
+    's1.name': 'Relaxation Massage',
+    'svc1.duration': '30 min - 60 min - 90 min',
+    'svc1.price': '$80 $120',
     'svc1.fullDesc':
-      'A comprehensive massage that combines soft tissue manipulation to relieve stress, muscle tension, and promote a deep sense of well-being.',
+      'An all-around massage and manipulation of soft tissue that relieves stress and tension, while enhancing blood and lymph circulation, pressure applied is lite to medium. The main purpose is relaxation.  Swedish massage is an ideal introduction to the peacefulness and benefits of massage therapy. It may include some lite Active Isolated stretching.',
     'svc1.feat1': 'Reduces stress and anxiety',
     'svc1.feat2': 'Relieves muscle tension',
     'svc1.feat3': 'Improves blood circulation',
@@ -1062,11 +1062,11 @@ const i18n = {
     'svc1.feat5': 'Supports overall wellness',
 
     // ===== SERVICE 2 =====
-    's2.name': 'Deep Tissue Massage',
-    'svc2.duration': '75 min',
-    'svc2.price': '$150,000 COP',
+    's2.name': 'Deep Pressure Massage',
+    'svc2.duration': '30 min - 60 min - 90 min',
+    'svc2.price': '$90 $140 $190',
     'svc2.fullDesc':
-      'Designed to address specific discomfort and muscle pain caused by built-up tension. Ideal for people with tight muscles or chronic pain.',
+      'Designed to focus on specific conditions or areas of discomfort. This session is good for anybody looking to relieve body aches and pains caused by muscle tension, muscle over used, and/or a trauma, and athletes, before and after events, to drain away fatigue, to relieve swelling, to reduce muscle tension, to promote flexibility and to prevent injuries.  For those with muscle tears, sprains, nerve impingements , and chronic back or shoulder pain, this treatment is extremely effective. It may include Active Isolated stretching.',
     'svc2.feat1': 'Releases deep muscle knots',
     'svc2.feat2': 'Reduces muscle pain',
     'svc2.feat3': 'Improves mobility',
@@ -1076,9 +1076,9 @@ const i18n = {
     // ===== SERVICE 3 =====
     's3.name': 'Guided Relaxation',
     'svc3.duration': '45 min',
-    'svc3.price': '$90,000 COP',
+    'svc3.price': '$70',
     'svc3.fullDesc':
-      'An experience focused on helping you relax, breathe mindfully, and visualize yourself in a new, positive, and empowering way.',
+      'The focus of this session is to get you to relax, breathe and visualize yourself in a new and empowering way. It is aimed at helping you be less nervous and anxious and worry less. It can help you with your performance at work, in sports and in everyday life. It’s for those wanting to change bad habits and those wanting to lose weight, among other things. You will leave with tools that will help you on a daily basis. Guided relaxation and visualization sessions are being used by professional athletes, corporate leaders and actors to help them be more relaxed and achieve their goals. You will be on a massage table, fully dressed.',
     'svc3.feat1': 'Reduces mental stress',
     'svc3.feat2': 'Improves mindful breathing',
     'svc3.feat3': 'Enhances mental clarity',
