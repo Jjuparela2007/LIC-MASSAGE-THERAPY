@@ -35,7 +35,7 @@
 .certs-section .section-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 clamp(16px, 3vw, 40px);
 }
 
 /* Header central (ya tienes estilos generales, estos refuerzan) */
@@ -843,6 +843,13 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));</scrip
 @media (max-width: 820px) {
   .studio-inner { grid-template-columns: 1fr; gap: 36px; }
   .studio-slider-wrap { max-height: 400px; aspect-ratio: 4/3; }
+}
+@media (max-width: 480px) {
+  .studio-section { padding: 48px 16px; }
+  .studio-inner { gap: 24px; }
+  .studio-slider-wrap { max-height: 280px; aspect-ratio: 1/1; }
+  .studio-heading { font-size: 1.45rem; }
+  .studio-para { font-size: 14px; }
 }
 </style>
 

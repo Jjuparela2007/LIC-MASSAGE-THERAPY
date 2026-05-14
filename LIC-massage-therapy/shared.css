@@ -375,7 +375,7 @@ body.light .btn-secondary { border-color: rgba(26,26,32,0.25); }
 .page-hero { min-height: 38vh; position: relative; display: flex; align-items: center; overflow: hidden; padding-top: 80px; }
 .page-hero-bg { position: absolute; inset: 0; background: var(--bg-page-hero); }
 .page-hero-bg::after { content: ''; position: absolute; inset: 0; background: var(--page-hero-overlay); }
-.page-hero-content { position: relative; z-index: 2; max-width: 1380px; margin: 0 auto; padding: 4rem; }
+.page-hero-content { position: relative; z-index: 2; max-width: 1380px; margin: 0 auto; padding: 4rem; max-width: 100%; box-sizing: border-box; }
 .page-hero-title { font-family: 'Cormorant Garamond',serif; font-size: clamp(2.8rem,5vw,4.5rem); font-weight: 300; line-height: 1.05; color: var(--text-primary); margin-top: 1rem; }
 .page-hero-sub { font-size: 1rem; color: var(--text-secondary); max-width: 520px; line-height: 1.7; margin-top: 1.25rem; font-weight: 300; }
 .page-hero-stats { display: flex; gap: 3rem; margin-top: 2.5rem; }
@@ -449,7 +449,7 @@ body.light .btn-secondary { border-color: rgba(26,26,32,0.25); }
 /* ─── ABOUT ─────────────────────────────────────────────────────────────── */
 .about-page { padding: 5rem 0 7rem; background: var(--bg-primary); }
 .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-.about-visual { position: relative; }
+.about-visual { position: relative; overflow: hidden; max-width: 100%; }
 .about-accent-line { position: absolute; top: 2rem; left: -2rem; width: 3px; height: 60%;  }
 
 body.light .about-overlay { background: linear-gradient(to bottom, transparent 60%, rgba(232,228,219,0.5) 100%); }
@@ -462,9 +462,15 @@ body.light .about-overlay { background: linear-gradient(to bottom, transparent 6
 .about-certs { display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 2.5rem; }
 .cert-item { display: flex; align-items: center; gap: 1rem; font-size: 0.8rem; color: var(--text-secondary); }
 .cert-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
-.about-metrics { display: flex; gap: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+.about-metrics { display: flex; gap: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border); flex-wrap: wrap; }
 .metric-num { font-family: 'Cormorant Garamond',serif; font-size: 2rem; color: var(--gold); font-weight: 600; }
 .metric-label { font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.2rem; }
+/* Imagen de la sección about */
+.about-img-wrap { position: relative; overflow: hidden; border-radius: 8px; }
+.about-img { width: 100%; max-width: 100%; height: auto; display: block; object-fit: cover; }
+.about-overlay { position: absolute; inset: 0; pointer-events: none; }
+/* Textos largos: prevenir desbordamiento */
+.about-bio, .about-role, .cert-item span { overflow-wrap: break-word; word-break: break-word; }
 
 /* ─── VALUES ─────────────────────────────────────────────────────────────── */
 .values-section { padding: 5rem 0 7rem; background: var(--bg-deep); }
@@ -695,6 +701,7 @@ footer { background: var(--bg-footer); border-top: 1px solid var(--cta-border); 
   .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
   .cta-strip-inner { flex-direction: column; text-align: center; }
   .page-hero { min-height: 32vh; }
+  .page-hero-content { padding: 2.5rem 1.5rem; }
   .page-hero-stats { gap: 2rem; }
   .values-grid { grid-template-columns: 1fr; }
 }
@@ -2296,3 +2303,122 @@ body.modal-open { overflow: hidden; }
 
 /* Desactiva el ::before original cuando hay imagen real */
 .hero-bg.has-image::before { display: none; }
+
+/* ══════════════════════════════════════════════════════════════
+   CORRECCIONES RESPONSIVAS GLOBALES
+   Previenen overflow de imágenes y textos en móvil
+══════════════════════════════════════════════════════════════ */
+
+/* Regla de seguridad: ninguna imagen se sale de su contenedor */
+img { max-width: 100%; height: auto; }
+
+/* Textos largos no desbordan */
+p, h1, h2, h3, h4, h5, h6, span, div, li {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* bio-pull-quote en móvil pequeño */
+@media (max-width: 480px) {
+  .bio-pull-quote {
+    font-size: 0.95rem;
+    padding-left: 0.9rem;
+  }
+}
+
+/* Studio section — ajustes para móvil pequeño */
+@media (max-width: 480px) {
+  .studio-section {
+    padding: 48px 16px;
+  }
+  .studio-inner {
+    gap: 24px;
+  }
+  .studio-slider-wrap {
+    max-height: 300px;
+    aspect-ratio: 1/1;
+  }
+  .studio-heading {
+    font-size: 1.5rem;
+  }
+}
+
+/* Athletic hero — padding lateral en móvil muy pequeño */
+@media (max-width: 390px) {
+  .athletic-hero {
+    padding: 48px 12px;
+  }
+  .athletic-content {
+    padding: 28px 18px;
+  }
+  .athletic-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Certs section (sobre-mi inline) — padding en móvil */
+@media (max-width: 768px) {
+  .certs-section .section-container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 480px) {
+  .certs-section .section-container {
+    padding: 0 16px;
+  }
+  .certs-section {
+    padding: 64px 0 80px;
+  }
+}
+
+/* About page — columna única en móvil: imagen no desborda */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 3rem 0 5rem;
+  }
+  .about-inner {
+    gap: 2.5rem;
+  }
+  .about-visual {
+    max-width: 100%;
+  }
+  .about-img-wrap {
+    max-width: 100%;
+  }
+  .about-img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-name {
+    font-size: 1.6rem;
+  }
+  .about-metrics {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-inner {
+    gap: 2rem;
+  }
+  .about-metrics {
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+  .metric-item {
+    min-width: 80px;
+  }
+  .about-certs {
+    margin-bottom: 2rem;
+  }
+  .cert-item {
+    font-size: 0.75rem;
+  }
+}
+
+/* section-container — padding mínimo en pantallas muy pequeñas */
+@media (max-width: 390px) {
+  .section-container {
+    padding: 0 1rem;
+  }
+}
