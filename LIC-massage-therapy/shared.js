@@ -503,31 +503,47 @@ const i18n = {
     "sp.book":"Reservar esta sesión →",
     "sp.close":"Cerrar",
 
-    // ── sobre-mi.html ─────────────────────────────────────────────────────────
+    // ── Títulos de página (para <title> dinámico) ─────────────────────────────
+    "page.title.index":"LIC Massage Therapy",
+    "page.title.servicios":"LIC Massage Therapy | Servicios",
+    "page.title.sobre-mi":"LIC Massage Therapy | Sobre Mí",
+    "page.title.reservas":"LIC Massage Therapy | Reservar",
+    "page.title.contacto":"LIC Massage Therapy | Contacto",
 
-    // Sección Certificaciones — encabezado
-    "certs.tag":"Credenciales Verificadas",
-    "certs.title1":"Certificaciones y licencias",
-    "certs.title2":"Profesionales",
-    "certs.subtitle":"La formación y las licencias profesionales de Raul reflejan años de dedicación al trabajo corporal terapéutico, la terapia de masaje y las técnicas de Estiramiento Activo Aislado.",
+    's1.name': 'Masaje Relajante',
+    'svc1.duration': '60 min',
+    'svc1.price': '$120.000 COP',
+    'svc1.fullDesc':
+      'Un masaje integral que combina la manipulación de los tejidos blandos para aliviar el estrés, la tensión muscular y promover una profunda sensación de bienestar.',
+    'svc1.feat1': 'Reduce el estrés y la ansiedad',
+    'svc1.feat2': 'Alivia la tensión muscular',
+    'svc1.feat3': 'Mejora la circulación sanguínea',
+    'svc1.feat4': 'Favorece el descanso y la relajación',
+    'svc1.feat5': 'Promueve el bienestar general',
 
-    // Cert cards
-    "certcard1.name":"Terapeuta de Masaje Licenciado en el Estado de Nueva York",
-    "certcard1.org":"Licencia desde 2003 · Emitido por The University of the State of New York · Departamento de Educación",
-    "certcard2.name":"Estiramiento Activo Aislado — Seminario Avanzado",
-    "certcard2.org":"Certificado de finalización · 32 horas · Emitido por Aaron L. Mattes, LMT, RKT",
-    "certcard3.name":"Seminario de Estiramiento Activo Aislado",
-    "certcard3.org":"Certificado de finalización · 32 horas · Emitido por Aaron L. Mattes, LMT, RKT",
-    "certcard4.name":"Seminario de Estiramiento Activo Aislado",
-    "certcard4.org":"Certificado de finalización · 32 horas · Emitido por Aaron L. Mattes, LMT, RKT",
+    // ===== SERVICE 2 =====
+    's2.name': 'Masaje de Presión Profunda',
+    'svc2.duration': '75 min',
+    'svc2.price': '$150.000 COP',
+    'svc2.fullDesc':
+      'Diseñado para abordar molestias específicas y dolores musculares causados por tensión acumulada. Ideal para personas con contracturas o dolor crónico.',
+    'svc2.feat1': 'Libera contracturas profundas',
+    'svc2.feat2': 'Reduce dolores musculares',
+    'svc2.feat3': 'Mejora la movilidad',
+    'svc2.feat4': 'Disminuye la rigidez corporal',
+    'svc2.feat5': 'Acelera la recuperación muscular',
 
-    // Sección Athletic
-    "athletic.tag":"Trayectoria atlética",
-    "athletic.title":"Practico lo que enseño.",
-    "athletic.desc":"Los deportes de resistencia me han enseñado lo que realmente cuesta mantener un cuerpo fuerte, móvil y resiliente — década tras década. Llevo esa experiencia vivida a cada sesión.",
-    "athletic.metric1":"Maratones de NYC",
-    "athletic.metric2":"Carreras Half-Ironman",
-    "athletic.metric3":"Aguas abiertas de 5.85 millas"
+    // ===== SERVICE 3 =====
+    's3.name': 'Relajación Guiada',
+    'svc3.duration': '45 min',
+    'svc3.price': '$90.000 COP',
+    'svc3.fullDesc':
+      'Una experiencia enfocada en ayudarte a relajarte, respirar conscientemente y visualizarte de una manera nueva, positiva y empoderadora.',
+    'svc3.feat1': 'Reduce el estrés mental',
+    'svc3.feat2': 'Mejora la respiración consciente',
+    'svc3.feat3': 'Favorece la claridad mental',
+    'svc3.feat4': 'Fortalece la conexión interior',
+    'svc3.feat5': 'Promueve el equilibrio emocional',
   },
   en: {
     "nav.home":"Home","nav.services":"Services","nav.stretch":"Stretching",
@@ -1027,31 +1043,47 @@ const i18n = {
     "sp.book":"Book this session →",
     "sp.close":"Close",
 
-    // ── sobre-mi.html ─────────────────────────────────────────────────────────
+    // ── Page titles (for dynamic <title>) ────────────────────────────────────
+    "page.title.index":"LIC Massage Therapy",
+    "page.title.servicios":"LIC Massage Therapy | Services",
+    "page.title.sobre-mi":"LIC Massage Therapy | About",
+    "page.title.reservas":"LIC Massage Therapy | Book",
+    "page.title.contacto":"LIC Massage Therapy | Contact",
 
-    // Certifications section header
-    "certs.tag":"Verified Credentials",
-    "certs.title1":"Certifications and licenses",
-    "certs.title2":"Professional",
-    "certs.subtitle":"Raul's professional training and licenses reflect years of dedication to therapeutic bodywork, massage therapy, and Active Isolated Stretching techniques.",
+    's1.name': 'Relaxing Massage',
+    'svc1.duration': '60 min',
+    'svc1.price': '$120,000 COP',
+    'svc1.fullDesc':
+      'A comprehensive massage that combines soft tissue manipulation to relieve stress, muscle tension, and promote a deep sense of well-being.',
+    'svc1.feat1': 'Reduces stress and anxiety',
+    'svc1.feat2': 'Relieves muscle tension',
+    'svc1.feat3': 'Improves blood circulation',
+    'svc1.feat4': 'Promotes rest and relaxation',
+    'svc1.feat5': 'Supports overall wellness',
 
-    // Cert cards
-    "certcard1.name":"Licensed Massage Therapist in the State of New York",
-    "certcard1.org":"Licensed since 2003 · Issued by The University of the State of New York · Department of Education",
-    "certcard2.name":"Active Isolated Stretching — Advanced Seminar",
-    "certcard2.org":"Certificate of completion · 32 hours · Issued by Aaron L. Mattes, LMT, RKT",
-    "certcard3.name":"Active Isolated Stretching Seminar",
-    "certcard3.org":"Certificate of completion · 32 hours · Issued by Aaron L. Mattes, LMT, RKT",
-    "certcard4.name":"Active Isolated Stretching Seminar",
-    "certcard4.org":"Certificate of completion · 32 hours · Issued by Aaron L. Mattes, LMT, RKT",
+    // ===== SERVICE 2 =====
+    's2.name': 'Deep Tissue Massage',
+    'svc2.duration': '75 min',
+    'svc2.price': '$150,000 COP',
+    'svc2.fullDesc':
+      'Designed to address specific discomfort and muscle pain caused by built-up tension. Ideal for people with tight muscles or chronic pain.',
+    'svc2.feat1': 'Releases deep muscle knots',
+    'svc2.feat2': 'Reduces muscle pain',
+    'svc2.feat3': 'Improves mobility',
+    'svc2.feat4': 'Decreases body stiffness',
+    'svc2.feat5': 'Speeds up muscle recovery',
 
-    // Athletic section
-    "athletic.tag":"Athletic background",
-    "athletic.title":"I practice what I teach.",
-    "athletic.desc":"Endurance sports have taught me what it truly takes to keep a body strong, mobile, and resilient — decade after decade. I bring that lived experience into every session.",
-    "athletic.metric1":"NYC Marathons",
-    "athletic.metric2":"Half-Ironman Races",
-    "athletic.metric3":"Open-water swims of 5.85 miles"
+    // ===== SERVICE 3 =====
+    's3.name': 'Guided Relaxation',
+    'svc3.duration': '45 min',
+    'svc3.price': '$90,000 COP',
+    'svc3.fullDesc':
+      'An experience focused on helping you relax, breathe mindfully, and visualize yourself in a new, positive, and empowering way.',
+    'svc3.feat1': 'Reduces mental stress',
+    'svc3.feat2': 'Improves mindful breathing',
+    'svc3.feat3': 'Enhances mental clarity',
+    'svc3.feat4': 'Strengthens inner connection',
+    'svc3.feat5': 'Promotes emotional balance',
   }
 };
  
@@ -1074,6 +1106,18 @@ function applyLang(lang) {
     const key = opt.getAttribute('data-i18n');
     if (i18n[lang][key] !== undefined) opt.textContent = i18n[lang][key];
   });
+
+  // Actualizar alt de imágenes con data-alt-i18n
+  document.querySelectorAll('[data-alt-i18n]').forEach(el => {
+    const key = el.getAttribute('data-alt-i18n');
+    if (i18n[lang][key] !== undefined) el.alt = i18n[lang][key];
+  });
+
+  // Actualizar <title> de la página si existe clave page.title
+  const pageTitleKey = document.documentElement.getAttribute('data-page-title');
+  if (pageTitleKey && i18n[lang][pageTitleKey] !== undefined) {
+    document.title = i18n[lang][pageTitleKey];
+  }
  
   // Update all lang buttons
   ['btn-es','btn-en','mob-btn-es','mob-btn-en'].forEach(id => {
