@@ -5,7 +5,7 @@ const i18n = {
   es: {
     "nav.home":"Inicio","nav.services":"Servicios","nav.stretch":"Estiramiento",
     "nav.about":"Sobre Raul","nav.testimonials":"Testimonios","nav.book":"Reservar","nav.contact":"Contacto",
-    "hero.tag":"Masaje Terapéutico y Estiramiento Activo Aislado · LIC","hero.title1":"Restaura","hero.title2":"Tu Cuerpo",
+    "hero.tag":"Masaje Terapéutico y Estiramiento Activo Aislado · LIC","hero.title1":"Muévete Mejor.","hero.title2":"Siéntete Más Fuerte.",
     "hero.desc":"Bienvenido a Long Island City Massage Therapy, un espacio dedicado a aliviar el dolor, mejorar la movilidad y promover la salud a través del estiramiento terapéutico y el masaje profesional.  Soy Raúl Araque, terapeuta con licencia en el estado de Nueva York, enfocado en la educación del cuerpo y el bienestar integral.",
     "hero.cta1":"Reservar Cita","hero.cta2":"Ver Servicios",
     "hero.stat1":"Años de experiencia","hero.stat2":"Pacientes tratados","hero.stat3":"Satisfacción",
@@ -479,8 +479,8 @@ const i18n = {
   en: {
     "nav.home":"Home","nav.services":"Services","nav.stretch":"Stretching",
     "nav.about":"About","nav.testimonials":"Testimonials","nav.contact":"Contact","nav.book":"Book Now",
-    "hero.tag":"Muscle Therapy Center","hero.title1":"Restore","hero.title2":"Your Body",
-    "hero.desc":"Precision muscle therapy for athletes and those seeking optimal wellness. Science, technique, and premium care in every session.",
+    "hero.tag":"Therapeutic Massage and Active Isolated Stretching · LIC","hero.title1":"Move Better.","hero.title2":"Feel Stronger.",
+    "hero.desc":"Welcome to Long Island City Massage Therapy, a space dedicated to relieving pain, improving mobility, and promoting health through therapeutic stretching and professional massage. I’m Raúl Araque, a licensed massage therapist in the state of New York, focused on body education and holistic wellness.",
     "hero.cta1":"Book Appointment","hero.cta2":"View Services",
     "hero.stat1":"Years of experience","hero.stat2":"Patients treated","hero.stat3":"Satisfaction",
     "badge.specialty":"Specialty","badge.specialtyVal":"Sports","badge.sessions":"Sessions",
