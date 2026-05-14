@@ -168,8 +168,8 @@ body, nav, .service-card, .testimonial-card-full, .preview-card, .value-card, .c
 
 /* CUSTOM CURSOR */
 .cursor { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; }
-.cursor-dot { width: 8px; height: 8px; background: var(--black); border-radius: 50%; position: absolute; transform: translate(-50%,-50%); }
-.cursor-ring { width: 40px; height: 40px; border: 1px solid rgba(0, 0, 0, 0.45); border-radius: 50%; position: absolute; transform: translate(-50%,-50%); transition: all .15s ease-out; }
+.cursor-dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; position: absolute; transform: translate(-50%,-50%); }
+.cursor-ring { width: 40px; height: 40px; border: 1px solid rgba(31,96,111,0.45); border-radius: 50%; position: absolute; transform: translate(-50%,-50%); transition: all .15s ease-out; }
 
 /* ─── MOBILE MENU ───────────────────────────────────────────────────────────── */
 .mobile-menu {
@@ -301,6 +301,13 @@ nav.scrolled, nav.scrolled-static {
   content: ''; position: absolute; inset: 0;
   background: radial-gradient(ellipse 60% 80% at 70% 50%, rgba(255,255,255,0.05) 0%, transparent 60%),
     radial-gradient(ellipse 40% 60% at 30% 50%, rgba(255,255,255,0.03) 0%, transparent 50%);
+}
+.hero-muscles {
+  position: absolute; inset: 0; z-index: 0;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 900'%3E%3Cdefs%3E%3Cstyle%3E.l%7Bfill:none;stroke:%23ffffff;stroke-width:0.8%7D%3C/style%3E%3C/defs%3E%3Cellipse cx='400' cy='180' rx='90' ry='110' class='l'/%3E%3Cellipse cx='400' cy='180' rx='60' ry='80' class='l'/%3E%3Crect x='340' y='280' width='120' height='160' rx='20' class='l'/%3E%3Cpath d='M340 290 Q310 350 300 440 Q290 500 310 550' class='l'/%3E%3Cpath d='M460 290 Q490 350 500 440 Q510 500 490 550' class='l'/%3E%3Cpath d='M350 440 Q340 500 330 580 Q320 640 340 700' class='l'/%3E%3Cpath d='M450 440 Q460 500 470 580 Q480 640 460 700' class='l'/%3E%3C/svg%3E");
+  background-size: 60%; background-position: center; background-repeat: no-repeat;
+  will-change: transform;
 }
 .hero-content {
   position: relative; z-index: 2;
