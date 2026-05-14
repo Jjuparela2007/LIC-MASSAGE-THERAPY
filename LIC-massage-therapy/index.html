@@ -662,6 +662,11 @@ function switchTab(idx) {
 /* Init indicator */
 window.addEventListener('load', function() {
   switchTab(0);
+  /* Re-aplicar idioma DESPUÉS de que load haya generado los elementos dinámicos
+     (dots del carousel, indicador de tabs, etc.) */
+  if (typeof applyLang === 'function' && typeof currentLang !== 'undefined') {
+    applyLang(currentLang);
+  }
 });
 
 /* ── Benefits carousel ── */
@@ -673,6 +678,15 @@ function bcGetVisible() {
   return window.innerWidth <= 560 ? 1 : window.innerWidth <= 900 ? 2 : 3;
 }
 
+/* Helper para leer traducciones (disponible tras cargar shared.js) */
+function bcT(key, fallback) {
+  if (typeof i18n !== 'undefined' && typeof currentLang !== 'undefined') {
+    var val = i18n[currentLang] && i18n[currentLang][key];
+    if (val !== undefined) return val;
+  }
+  return fallback || key;
+}
+
 function bcInit() {
   bcVisible = bcGetVisible();
   var dotsEl = document.getElementById('bcDots');
@@ -681,12 +695,32 @@ function bcInit() {
   for (var i = 0; i < pages; i++) {
     var d = document.createElement('button');
     d.className = 'bc-dot' + (i === 0 ? ' active' : '');
-    d.setAttribute('aria-label', 'Ir a página ' + (i+1));
+    /* FIX: aria-label traducido según idioma activo */
+    d.setAttribute('aria-label', bcT('bc.page', 'Page') + ' ' + (i+1));
     d.setAttribute('data-page', i);
     d.onclick = (function(pg){ return function(){ bcGoTo(pg); }; })(i);
     dotsEl.appendChild(d);
   }
+  /* FIX: re-aplicar traducciones a las tarjetas estáticas del carousel */
+  bcApplyLang();
   bcGoTo(0);
+}
+
+/* Re-aplica las traducciones i18n a todos los elementos [data-i18n] dentro
+   del panel de beneficios, para cuando el idioma cambia sin re-renderizar el HTML */
+function bcApplyLang() {
+  if (typeof i18n === 'undefined' || typeof currentLang === 'undefined') return;
+  var panel = document.getElementById('panel-0');
+  if (!panel) return;
+  panel.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
+    var val = i18n[currentLang] && i18n[currentLang][key];
+    if (val !== undefined) el.textContent = val;
+  });
+  /* También actualizar aria-labels de los dots ya creados */
+  document.querySelectorAll('.bc-dot').forEach(function(d, i) {
+    d.setAttribute('aria-label', bcT('bc.page', 'Page') + ' ' + (i+1));
+  });
 }
 
 function bcGoTo(page) {
@@ -711,6 +745,11 @@ function bcSlide(dir) {
 }
 
 window.addEventListener('resize', function() { bcInit(); });
+
+/* FIX: escuchar cambio de idioma para re-traducir la sección de beneficios */
+document.addEventListener('langChange', function() {
+  bcApplyLang();
+});
 </script>
 
 <!-- ─── MODAL ─────────────────────────────────────────────────────────────── -->
