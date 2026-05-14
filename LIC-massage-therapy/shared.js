@@ -76,6 +76,20 @@ const i18n = {
     "footer.links":"Servicios","footer.nav":"Páginas","footer.contact":"Contacto",
     "footer.copy":"© 2025 LIC MASSAGE THERAPY. Todos los derechos reservados.","footer.privacy":"Privacidad","footer.terms":"Términos",
 
+    
+    
+    "ais.badge": "Raúl Araque, Terapeuta",
+    "ais.eyebrow": "El Método",
+    "ais.heading": "Estiramiento Activo Aislado",
+    "ais.paragraph1": "Desarrollado por el kinesiólogo Aaron L. Mattes, el AIS es un protocolo de estiramiento validado científicamente que aísla músculos individuales sosteniendo cada estiramiento solo 1.5–2 segundos, evitando el reflejo de protección que limita el estiramiento tradicional.",
+    "ais.paragraph2": "Este enfoque permite que el músculo se alargue de verdad, aumenta la circulación al tejido y produce cambios neurológicos duraderos que mejoran la postura, reducen el dolor y elevan la capacidad atlética.",
+    "ais.list1": "Apunta con precisión a grupos musculares específicos",
+    "ais.list2": "Evita el reflejo miotático de estiramiento (regla de los 2 segundos)",
+    "ais.list3": "Aumenta la circulación y oxigenación local",
+    "ais.list4": "Produce mejoras neurológicas duraderas en flexibilidad",
+    "ais.button": "Agenda tu primera sesión",
+  
+    
     // ── NUEVAS CLAVES — contacto.html ────────────────────────────────────────
 
     // Horarios detallados (card de contacto)
@@ -550,6 +564,17 @@ const i18n = {
     "footer.links":"Services","footer.nav":"Pages","footer.contact":"Contact",
     "footer.copy":"© LIC MASSAGE THERAPY. All rights reserved.","footer.privacy":"Privacy","footer.terms":"Terms",
 
+    "ais.badge": "Raul Araque, Therapist",
+    "ais.eyebrow": "The Method",
+    "ais.heading": "Active Isolated Stretching",
+    "ais.paragraph1": "Developed by kinesiologist Aaron L. Mattes, AIS is a scientifically validated stretching protocol that isolates individual muscles, holding each stretch for only 1.5–2 seconds to avoid the protective reflex that limits traditional stretching.",
+    "ais.paragraph2": "This approach allows the muscle to lengthen effectively, increases circulation to the tissue, and creates lasting neurological changes that improve posture, reduce pain, and enhance athletic performance.",
+    "ais.list1": "Precisely targets specific muscle groups",
+    "ais.list2": "Avoids the stretch reflex (2-second rule)",
+    "ais.list3": "Increases local circulation and oxygenation",
+    "ais.list4": "Produces lasting neurological improvements in flexibility",
+    "ais.button": "Schedule Your First Session",
+    
     // ── NEW KEYS — contacto.html ──────────────────────────────────────────────
 
     // Detailed hours
