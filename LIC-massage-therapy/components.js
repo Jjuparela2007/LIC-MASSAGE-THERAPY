@@ -1,5 +1,3 @@
-
-
 (function () {
 
   /* ── Configuración de navegación ──────────────────────────────────────── */
@@ -71,11 +69,9 @@
   <button class="mobile-menu-close" onclick="toggleMenu()">✕</button>
   <ul class="nav-links-mobile">
     ${links}
-    <li><a href="reservas.html" data-i18n="nav.book">Reservar</a></li>
   </ul>
   <div class="mobile-lang-row">
     ${langToggleHTML('mob')}
-
   </div>`;
     return div;
   }
