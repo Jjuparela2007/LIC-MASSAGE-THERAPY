@@ -2258,3 +2258,29 @@ body.modal-open { overflow: hidden; }
   .bm-field select,
   .bm-field textarea { font-size: 16px; }
 }
+/* ── HERO BG CON IMAGEN ────────────────────────────────────── */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  /* Degradado de derecha (imagen visible) → izquierda (oscuro para legibilidad del texto) */
+  background-blend-mode: normal;
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to left,
+    rgba(232, 245, 241, 0.0)   0%,    /* derecha — imagen limpia */
+    rgba(232, 245, 241, 0.55)  38%,   /* transición suave */
+    rgba(232, 245, 241, 0.88)  62%,   /* izquierda — casi sólido */
+    rgba(232, 245, 241, 1.0)   100%   /* izquierda — sólido, texto legible */
+  );
+}
+
+/* Desactiva el ::before original cuando hay imagen real */
+.hero-bg.has-image::before { display: none; }
