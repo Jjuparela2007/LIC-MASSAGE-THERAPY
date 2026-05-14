@@ -103,105 +103,171 @@
 }
 
 /* LIGHT MODE */
+/* ============================================================
+   LIC MASSAGE THERAPY — SISTEMA DE COLORES PREMIUM
+   Estética: Wellness Spa · Verde Terapéutico · Lujo Natural
+   Inspirado en la imagen de referencia
+   ============================================================ */
+
+/*
+  PALETA BASE EXTRAÍDA DE LA REFERENCIA
+  ──────────────────────────────────────
+  Fondo principal:   #e8f5f1  (verde menta pálido / seafoam)
+  Texto principal:   #0d2e2e  (verde bosque profundo / casi negro)
+  Acento primario:   #2a6e6e  (teal terapéutico)
+  Acento CTA:        #1f5c5c  (teal profundo para botones)
+  Crema/neutro:      #f4f9f8  (blanco verdoso, fondos secundarios)
+  Borde sutil:       rgba(42,110,110,0.18)
+  Texto secundario:  #3a5c5a
+  Texto apagado:     #7a9c9a
+*/
+
 body.light {
-  --bg-primary: #f5f3ee;
-  --bg-deep: #eeebe4;
-  --bg-nav: rgba(245,243,238,0.95);
-  --bg-card: #ffffff;
-  --bg-card-hover: #f8f6f2;
-  --bg-form: rgba(255,255,255,0.8);
-  --bg-glass: rgba(255,255,255,0.7);
-  --bg-page-hero: linear-gradient(135deg, #e8e4db 0%, #ddd8ce 50%, #e4e0d7 100%);
-  --bg-cta: #1c1f2e;
-  --bg-footer: #1c1f2e;
-  --border: rgba(201,168,76,0.3);
-  --border-card: rgba(201,168,76,0.2);
-  --border-focus: rgba(201,168,76,0.7);
-  --text-primary: #1a1a20;
-  --text-secondary: #3a3835;
-  --text-muted: #6a6560;
-  --text-faint: #c0bdb8;
-  --gold: #a07828;
-  --gold-soft: rgba(160,120,40,0.15);
-  --gold-light: #c9a84c;
-  --electric: #2a5fa8;
-  --nav-link: #4a4845;
-  --nav-link-hover: #a07828;
-  --muscles-opacity: 0.07;
-  --anatomy-opacity: 0.25;
-  --page-hero-overlay: rgba(232,228,219,0.5);
-  --scrollbar-bg: #f5f3ee;
-  --input-bg: #ffffff;
-  --input-color: #1a1a20;
-  --shadow-card: 0 4px 20px rgba(0,0,0,0.08);
-  --shadow-gold: 0 8px 30px rgba(160,120,40,0.2);
-  --noise-opacity: 0.15;
-  --cta-border: rgba(201,168,76,0.3);
-  --service-num-color: rgba(160,120,40,0.15);
-  --service-num-hover: rgba(160,120,40,0.4);
-  /* Bio/section palette */
-  --dark: #f5f3ee;
-  --dark2: #1a1612;
-  --cream: #faf7f4;
-  --cream2: #f0ebe3;
-  --bio-text: #555;
-  --bio-card-bg: #ffffff;
-  --bio-card-border: rgba(201,168,76,0.2);
-  --bio-img-bg: #ddd6ca;
-  --bio-heading-color: #1a1612;
-  --bio-para-color: #555;
-  --bio-inst-bg: #ffffff;
-  --bio-inst-name: #1a1612;
-  --tray-content-bg: #ffffff;
-  --tray-content-border: #ece7e0;
-  --tray-dot-bg: #faf7f4;
-  --tray-desc-color: #666;
-  --cert-card-bg: #1a1612;
-  --ws-section-bg: #f5f1ec;
-  --ws-stats-bg: #1a1612;
-  --ws-title-color: #1a1612;
-  --ws-intro-color: #666;
-  --terapias-bg: #0f0d0a;
-  --tab-section-bg: #faf7f4;
-  --tab-nav-border: #ddd6cc;
-  --tab-btn-color: #999;
-  --tab-btn-active: #1a1612;
-  --tab-indicator-bg: #1a1612;
-  --bc-card-bg: #ffffff;
-  --bc-card-border: #ece7e0;
-  --bc-title-color: #1a1612;
-  --bc-desc-color: #666;
-  --bc-num-color: #f0ebe4;
-  --bc-arrow-bg: #ffffff;
-  --bc-arrow-border: #d6cfc6;
-  --bc-arrow-color: #1a1612;
-  --bc-arrow-hover-bg: #1a1612;
-  --bc-arrow-hover-color: #ffffff;
-  --bc-dot-bg: #d6cfc6;
-  --bc-dot-active: #1a1612;
-  --testi-card-bg: #ffffff;
-  --testi-card-border: #ece7e0;
-  --testi-quote-color: #333;
-  --testi-name-color: #1a1612;
-  --testi-role-color: #999;
-  --ps-card-bg: #ffffff;
-  --ps-card-border: #ece7e0;
-  --ps-title-color: #1a1612;
-  --ps-desc-color: #666;
-  --booking-modal-bg: #faf7f4;
-  --booking-modal-color: #1a1612;
-  --bm-field-label-color: #666;
-  --bm-input-bg: #ffffff;
-  --bm-input-color: #1a1612;
-  --bm-input-border: #d6cfc6;
-  --bm-input-focus: #9a7f5e;
-  --bm-submit-bg: #1a1612;
-  --bm-submit-color: #faf7f4;
-  --bm-submit-hover: #9a7f5e;
-  --bm-service-color: #9a7f5e;
-  --bm-success-color: #444;
-  --form-valid: #2ecc71;
-  --form-invalid: #e74c3c;
+
+  /* ── FONDOS ─────────────────────────────────────────── */
+  --bg-primary:        #e8f5f1;              /* seafoam pálido — fondo global */
+  --bg-deep:           #d8ede8;              /* seafoam más profundo */
+  --bg-nav:            rgba(232,245,241,0.96);
+  --bg-card:           #f4faf8;              /* blanco verdoso suave */
+  --bg-card-hover:     #edf6f3;
+  --bg-form:           rgba(244,250,248,0.85);
+  --bg-glass:          rgba(232,245,241,0.72);
+  --bg-page-hero:      linear-gradient(135deg, #daeee8 0%, #cde8e1 50%, #d6ece6 100%);
+  --bg-cta:            #0d2e2e;              /* verde bosque profundo */
+  --bg-footer:         #0d2e2e;
+
+  /* ── BORDES ─────────────────────────────────────────── */
+  --border:            rgba(42,110,110,0.22);
+  --border-card:       rgba(42,110,110,0.14);
+  --border-focus:      rgba(42,110,110,0.60);
+
+  /* ── TIPOGRAFÍA ─────────────────────────────────────── */
+  --text-primary:      #0d2e2e;              /* verde bosque / casi negro */
+  --text-secondary:    #1e4a48;
+  --text-muted:        #4a7472;
+  --text-faint:        #9dbdba;
+
+  /* ── ACENTO PRINCIPAL (reemplaza "gold") ────────────── */
+  /* Teal terapéutico — el color del botón "RESERVAR CITA" */
+  --gold:              #2a6e6e;
+  --gold-soft:         rgba(42,110,110,0.12);
+  --gold-light:        #4a9494;
+  --electric:          #1a5050;             /* teal profundo para énfasis */
+
+  /* ── NAVEGACIÓN ─────────────────────────────────────── */
+  --nav-link:          #2a4a48;
+  --nav-link-hover:    #2a6e6e;
+
+  /* ── OVERLAYS / OPACIDADES ──────────────────────────── */
+  --muscles-opacity:   0.05;
+  --anatomy-opacity:   0.18;
+  --page-hero-overlay: rgba(218,238,232,0.55);
+  --noise-opacity:     0.10;
+
+  /* ── SCROLLBAR ──────────────────────────────────────── */
+  --scrollbar-bg:      #daeee8;
+
+  /* ── INPUTS ─────────────────────────────────────────── */
+  --input-bg:          #f4faf8;
+  --input-color:       #0d2e2e;
+
+  /* ── SOMBRAS ─────────────────────────────────────────── */
+  --shadow-card:       0 4px 24px rgba(13,46,46,0.08);
+  --shadow-gold:       0 8px 32px rgba(42,110,110,0.18);
+
+  /* ── CTA / FOOTER ───────────────────────────────────── */
+  --cta-border:        rgba(42,110,110,0.28);
+
+  /* ── SERVICIOS ──────────────────────────────────────── */
+  --service-num-color: rgba(42,110,110,0.12);
+  --service-num-hover: rgba(42,110,110,0.35);
+
+  /* ══════════════════════════════════════════════════════
+     SECCIÓN BIO / PALETA DE SECCIONES
+     ══════════════════════════════════════════════════════ */
+  --dark:              #e8f5f1;
+  --dark2:             #0d2e2e;
+  --cream:             #f4faf8;
+  --cream2:            #e8f0ee;
+
+  --bio-text:          #3a6260;
+  --bio-card-bg:       #f4faf8;
+  --bio-card-border:   rgba(42,110,110,0.16);
+  --bio-img-bg:        #c8e2de;
+  --bio-heading-color: #0d2e2e;
+  --bio-para-color:    #3a6260;
+  --bio-inst-bg:       #f4faf8;
+  --bio-inst-name:     #0d2e2e;
+
+  /* ── TRAY ───────────────────────────────────────────── */
+  --tray-content-bg:   #f4faf8;
+  --tray-content-border: #d4e8e4;
+  --tray-dot-bg:       #e8f5f1;
+  --tray-desc-color:   #4a7472;
+
+  /* ── CERTIFICACIONES ────────────────────────────────── */
+  --cert-card-bg:      #0d2e2e;
+
+  /* ── WORKSHOPS ──────────────────────────────────────── */
+  --ws-section-bg:     #daeee8;
+  --ws-stats-bg:       #0d2e2e;
+  --ws-title-color:    #0d2e2e;
+  --ws-intro-color:    #4a7472;
+
+  /* ── TERAPIAS ───────────────────────────────────────── */
+  --terapias-bg:       #071e1e;
+
+  /* ── TABS ───────────────────────────────────────────── */
+  --tab-section-bg:    #f4faf8;
+  --tab-nav-border:    #b8d8d4;
+  --tab-btn-color:     #7a9c9a;
+  --tab-btn-active:    #0d2e2e;
+  --tab-indicator-bg:  #0d2e2e;
+
+  /* ── BEFORE/AFTER CARDS ─────────────────────────────── */
+  --bc-card-bg:        #f4faf8;
+  --bc-card-border:    #d4e8e4;
+  --bc-title-color:    #0d2e2e;
+  --bc-desc-color:     #4a7472;
+  --bc-num-color:      #daeee8;
+  --bc-arrow-bg:       #f4faf8;
+  --bc-arrow-border:   #b8d4d0;
+  --bc-arrow-color:    #0d2e2e;
+  --bc-arrow-hover-bg: #0d2e2e;
+  --bc-arrow-hover-color: #e8f5f1;
+  --bc-dot-bg:         #b8d4d0;
+  --bc-dot-active:     #0d2e2e;
+
+  /* ── TESTIMONIOS ────────────────────────────────────── */
+  --testi-card-bg:     #f4faf8;
+  --testi-card-border: #d4e8e4;
+  --testi-quote-color: #1e4a48;
+  --testi-name-color:  #0d2e2e;
+  --testi-role-color:  #7a9c9a;
+
+  /* ── PROBLEM/SOLUTION CARDS ─────────────────────────── */
+  --ps-card-bg:        #f4faf8;
+  --ps-card-border:    #d4e8e4;
+  --ps-title-color:    #0d2e2e;
+  --ps-desc-color:     #4a7472;
+
+  /* ── MODAL DE RESERVA ───────────────────────────────── */
+  --booking-modal-bg:  #f4faf8;
+  --booking-modal-color: #0d2e2e;
+  --bm-field-label-color: #4a7472;
+  --bm-input-bg:       #ffffff;
+  --bm-input-color:    #0d2e2e;
+  --bm-input-border:   #b8d4d0;
+  --bm-input-focus:    #2a6e6e;
+  --bm-submit-bg:      #1f5c5c;       /* teal profundo — igual al botón CTA */
+  --bm-submit-color:   #e8f5f1;
+  --bm-submit-hover:   #2a6e6e;
+  --bm-service-color:  #2a6e6e;
+  --bm-success-color:  #1e4a48;
+
+  /* ── VALIDACIÓN DE FORMULARIOS ──────────────────────── */
+  --form-valid:        #2a9e72;       /* verde esmeralda suave */
+  --form-invalid:      #c0463a;
 }
 
 /* TRANSITIONS */
@@ -1868,7 +1934,7 @@ body.modal-open { overflow: hidden; }
     .policy-wrap { padding: 0 1.2rem 5rem; }
     .policy-section { padding: 1.6rem 1.4rem; }
   }
-  /* ── Splash Screen ─────────────────────────────────────────────────────── */
+/* ── Splash Screen ─────────────────────────────────────────────────────── */
 #splashScreen {
   position: fixed;
   inset: 0;
@@ -1876,7 +1942,7 @@ body.modal-open { overflow: hidden; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(160deg, #0d0d0d 0%, #141410 50%, #0a0a0a 100%);
+  background: linear-gradient(160deg, #071e1e 0%, #0d2e2e 50%, #071a1a 100%);
   opacity: 1;
   transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: all;
@@ -1902,10 +1968,10 @@ body.modal-open { overflow: hidden; }
 /* Ornamentos */
 .splash-ornament {
   width: 1px;
-  background: linear-gradient(to bottom, transparent, rgba(201,168,76,0.5), transparent);
-  opacity: 0.6;
+  background: linear-gradient(to bottom, transparent, rgba(74,148,148,0.55), transparent);
+  opacity: 0.7;
 }
-.splash-ornament.top  { height: 60px; margin-bottom: 28px; }
+.splash-ornament.top    { height: 60px; margin-bottom: 28px; }
 .splash-ornament.bottom { height: 40px; margin-top: 28px; }
 
 /* Logo SVG */
@@ -1916,12 +1982,12 @@ body.modal-open { overflow: hidden; }
 .splash-logo-svg {
   width: 90px;
   height: 90px;
-  filter: drop-shadow(0 0 18px rgba(201,168,76,0.25));
+  filter: drop-shadow(0 0 18px rgba(42,110,110,0.35));
   animation: splashPulse 3s ease-in-out infinite;
 }
 @keyframes splashPulse {
-  0%, 100% { filter: drop-shadow(0 0 14px rgba(201,168,76,0.2)); }
-  50%       { filter: drop-shadow(0 0 28px rgba(201,168,76,0.45)); }
+  0%, 100% { filter: drop-shadow(0 0 14px rgba(42,110,110,0.25)); }
+  50%       { filter: drop-shadow(0 0 30px rgba(74,148,148,0.55)); }
 }
 
 /* Nombre de marca */
@@ -1936,21 +2002,21 @@ body.modal-open { overflow: hidden; }
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 300;
   font-size: clamp(2rem, 6vw, 3rem);
-  color: #c9a84c;
+  color: #4a9494;
   letter-spacing: 0.18em;
   line-height: 1;
 }
 .splash-brand-sep {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 1.1rem;
-  color: rgba(201,168,76,0.4);
+  color: rgba(74,148,148,0.4);
   line-height: 1;
 }
 .splash-brand-name {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
   font-size: clamp(0.85rem, 2.5vw, 1.1rem);
-  color: rgba(220, 210, 185, 0.85);
+  color: rgba(200,226,222,0.85);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   line-height: 1;
@@ -1962,7 +2028,7 @@ body.modal-open { overflow: hidden; }
   font-style: italic;
   font-weight: 300;
   font-size: clamp(0.75rem, 2vw, 0.9rem);
-  color: rgba(201,168,76,0.55);
+  color: rgba(74,148,148,0.60);
   letter-spacing: 0.28em;
   margin: 0;
   text-transform: uppercase;
@@ -1972,7 +2038,7 @@ body.modal-open { overflow: hidden; }
 .splash-progress-track {
   width: 80px;
   height: 1px;
-  background: rgba(201,168,76,0.15);
+  background: rgba(42,110,110,0.18);
   margin-top: 32px;
   overflow: hidden;
   border-radius: 1px;
@@ -1980,14 +2046,14 @@ body.modal-open { overflow: hidden; }
 .splash-progress-bar {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+  background: linear-gradient(90deg, transparent, #4a9494, transparent);
   border-radius: 1px;
   transition: width linear;
 }
 
 /* Responsive */
 @media (max-width: 480px) {
-  .splash-ornament.top  { height: 40px; margin-bottom: 20px; }
+  .splash-ornament.top    { height: 40px; margin-bottom: 20px; }
   .splash-ornament.bottom { height: 28px; margin-top: 20px; }
   .splash-logo-svg { width: 72px; height: 72px; }
   .splash-brand { gap: 7px; }
