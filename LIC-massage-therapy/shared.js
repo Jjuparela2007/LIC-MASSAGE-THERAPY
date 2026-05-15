@@ -541,7 +541,7 @@ const i18n = {
 
     // ── Script de servicios (index.html — tarjetas y modal dinámico) ──────────
     "s1.tag":"Relajación","s2.tag":"Terapéutico","s3.tag":"Bienestar",
-    "s1.duration":"30 min","s2.duration":"30 min","s3.duration":"45 min",
+    "s1.duration":"30 min - 60 min - 90 min","s2.duration":"30 min - 60 min - 90 min","s3.duration":"45 min",
     "s1.short":"Un masaje integral que combina la manipulación de los tejidos blandos para aliviar el estrés y la tensión",
     "s2.short":"Diseñada para abordar afecciones o molestias específicas. Ideal para quienes buscan aliviar dolores causados por tensión muscular",
     "s3.short":"El objetivo es ayudarte a relajarte, respirar y visualizarte de una forma nueva y empoderadora",
@@ -561,7 +561,7 @@ const i18n = {
 
     's1.name': 'Masaje Relajante',
     'svc1.duration': '60 min',
-    'svc1.price': '$120 USD',
+    'svc1.price': ' 80 - 130 - 165 USD',
     'svc1.fullDesc':
       'Un masaje integral que combina la manipulación de los tejidos blandos para aliviar el estrés, la tensión muscular y promover una profunda sensación de bienestar.',
     'svc1.feat1': 'Reduce el estrés y la ansiedad',
@@ -573,7 +573,7 @@ const i18n = {
     // ===== SERVICE 2 =====
     's2.name': 'Masaje de Presión Profunda',
     'svc2.duration': '75 min',
-    'svc2.price': '$150 USD',
+    'svc2.price': '90 - 140 - 190 USD',
     'svc2.fullDesc':
       'Diseñado para abordar molestias específicas y dolores musculares causados por tensión acumulada. Ideal para personas con contracturas o dolor crónico.',
     'svc2.feat1': 'Libera contracturas profundas',
@@ -585,7 +585,7 @@ const i18n = {
     // ===== SERVICE 3 =====
     's3.name': 'Relajación Guiada',
     'svc3.duration': '45 min',
-    'svc3.price': '$90 USD',
+    'svc3.price': '70 USD',
     'svc3.fullDesc':
       'Una experiencia enfocada en ayudarte a relajarte, respirar conscientemente y visualizarte de una manera nueva, positiva y empoderadora.',
     'svc3.feat1': 'Reduce el estrés mental',
@@ -597,7 +597,7 @@ const i18n = {
     // ===== SERVICE 4 — Cómo dar un masaje a tu pareja =====
     's4.name': 'Cómo dar un masaje a tu pareja',
     'svc4.duration': '90 min',
-    'svc4.price': '$205 USD',
+    'svc4.price': '205 USD',
     'svc4.fullDesc':
       '¿Tu pareja siempre te pide que le alivieses el dolor de cuello, hombros o espalda, y después de cinco minutos no tienes ni idea de qué hacer? ¿Siempre has querido darle a tu pareja un masaje relajante y reconfortante? Si es así, ¡esto es para ti! Esta sesión relajante de hora y media incorpora las mejores técnicas que te guiarán para que puedas darle a tu pareja el mejor masaje, el más sanador y tranquilo. Durante esta sesión relajante también aprenderás qué hacer y qué no hacer, dónde y cómo aplicar la presión correctamente, para no lastimarte ni lastimar a tu pareja. La mitad del tiempo guiaré a una persona mientras la otra está en la camilla, y la otra mitad guiaré a la otra persona. Esta sesión está diseñada para enseñarte cómo trabajar con tu pareja o familia, no es una sesión avanzada. Será relajante y divertida. Está abierta a cualquier pareja. Por favor, envía un correo electrónico si tienes preguntas.',
     'svc4.feat1': 'Técnicas guiadas paso a paso',
@@ -608,8 +608,8 @@ const i18n = {
 
     // ===== SERVICE 5 — Masaje Express de Cuello y Hombros =====
     's5.name': 'Masaje Express de Cuello y Hombros',
-    'svc5.duration': '30 min USD',
-    'svc5.price': '$75',
+    'svc5.duration': '30 min',
+    'svc5.price': '75 USD',
     'svc5.fullDesc':
       '¿Trabajas frente a una computadora varias horas al día y sientes el cuello y los hombros tensos como piedra? Esta sesión express está diseñada específicamente para liberar la tensión acumulada en la zona cervical, trapecios y hombros — las áreas más castigadas por el estrés y las malas posturas. En 30 minutos precisos aplicaremos técnicas de presión profunda, liberación miofascial y movimientos de movilización cervical que te dejarán con una sensación inmediata de alivio y ligereza. Perfecto para quienes tienen poco tiempo pero necesitan resultados concretos. Sin cambiarse de ropa: puedes realizarlo en silla o en camilla.',
     'svc5.feat1': 'Alivia tensión cervical y trapecios',
@@ -1154,7 +1154,7 @@ const i18n = {
 
     // ── Service script (index.html — dynamic cards and modal) ────────────────
     "s1.tag":"Relaxation","s2.tag":"Therapeutic","s3.tag":"Wellness",
-    "s1.duration":"30 min","s2.duration":"30 min","s3.duration":"45 min",
+    "s1.duration":"30 min- 60 min -90 min","s2.duration":"30 min -60 min- 90 min","s3.duration":"45 min",
     "s1.short":"A comprehensive massage combining soft-tissue manipulation to relieve stress and tension",
     "s2.short":"Designed to address specific conditions or discomfort. Ideal for those seeking relief from muscular tension",
     "s3.short":"The goal is to help you relax, breathe, and visualize yourself in a new, empowering way",
@@ -1174,7 +1174,7 @@ const i18n = {
 
     's1.name': 'Relaxation Massage',
     'svc1.duration': '30 min - 60 min - 90 min',
-    'svc1.price': '$80 $120',
+    'svc1.price': '80 130 165 USD',
     'svc1.fullDesc':
       'An all-around massage and manipulation of soft tissue that relieves stress and tension, while enhancing blood and lymph circulation, pressure applied is lite to medium. The main purpose is relaxation.  Swedish massage is an ideal introduction to the peacefulness and benefits of massage therapy. It may include some lite Active Isolated stretching.',
     'svc1.feat1': 'Reduces stress and anxiety',
@@ -1186,7 +1186,7 @@ const i18n = {
     // ===== SERVICE 2 =====
     's2.name': 'Deep Pressure Massage',
     'svc2.duration': '30 min - 60 min - 90 min',
-    'svc2.price': '$90 $140 $190',
+    'svc2.price': '90 140 190 USD',
     'svc2.fullDesc':
       'Designed to focus on specific conditions or areas of discomfort. This session is good for anybody looking to relieve body aches and pains caused by muscle tension, muscle over used, and/or a trauma, and athletes, before and after events, to drain away fatigue, to relieve swelling, to reduce muscle tension, to promote flexibility and to prevent injuries.  For those with muscle tears, sprains, nerve impingements , and chronic back or shoulder pain, this treatment is extremely effective. It may include Active Isolated stretching.',
     'svc2.feat1': 'Releases deep muscle knots',
@@ -1198,7 +1198,7 @@ const i18n = {
     // ===== SERVICE 3 =====
     's3.name': 'Guided Relaxation',
     'svc3.duration': '45 min',
-    'svc3.price': '$70',
+    'svc3.price': '70 USD',
     'svc3.fullDesc':
       'The focus of this session is to get you to relax, breathe and visualize yourself in a new and empowering way. It is aimed at helping you be less nervous and anxious and worry less. It can help you with your performance at work, in sports and in everyday life. It’s for those wanting to change bad habits and those wanting to lose weight, among other things. You will leave with tools that will help you on a daily basis. Guided relaxation and visualization sessions are being used by professional athletes, corporate leaders and actors to help them be more relaxed and achieve their goals. You will be on a massage table, fully dressed.',
     'svc3.feat1': 'Reduces mental stress',
@@ -1219,17 +1219,6 @@ const i18n = {
     'svc4.feat4': 'Open to any type of couple',
     'svc4.feat5': 'No prior experience needed',
 
-    // ===== SERVICE 5 — Express Neck & Shoulder Massage =====
-    's5.name': 'Express Neck & Shoulder Massage',
-    'svc5.duration': '30 min',
-    'svc5.price': '$75',
-    'svc5.fullDesc':
-      'Do you spend hours in front of a computer and feel your neck and shoulders as tight as a rock? This express session is specifically designed to release accumulated tension in the cervical area, trapezius, and shoulders — the areas most affected by stress and poor posture. In 30 precise minutes we will apply deep pressure techniques, myofascial release, and cervical mobilization movements that will leave you with an immediate sense of relief and lightness. Perfect for those with limited time who need real results. No need to change clothes: can be performed in a chair or on the table.',
-    'svc5.feat1': 'Relieves cervical and trapezius tension',
-    'svc5.feat2': 'No need to undress',
-    'svc5.feat3': 'Immediate results in 30 min',
-    'svc5.feat4': 'Ideal for office workers',
-    'svc5.feat5': 'Myofascial release and deep pressure',
   }
 };
  
