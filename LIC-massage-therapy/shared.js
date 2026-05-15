@@ -74,7 +74,7 @@ const i18n = {
     "time.morning":"Mañana (7am–12pm)","time.afternoon":"Tarde (12pm–5pm)","time.evening":"Noche (5pm–8pm)",
     "footer.tagline":"Terapia muscular personalizada enfocada en bienestar, alivio y recuperación física en Nueva York",
     "footer.links":"Servicios","footer.nav":"Páginas","footer.contact":"Contacto",
-    "footer.copy":"© 2025 LIC MASSAGE THERAPY. Todos los derechos reservados.","footer.privacy":"Privacidad","footer.terms":"Términos",
+    "footer.copy":"© 2026 LIC MASSAGE THERAPY. Todos los derechos reservados.","footer.privacy":"Privacidad","footer.terms":"Términos",
 
     
     
@@ -143,8 +143,8 @@ const i18n = {
     "pp.s01.title":"Introducción y Compromiso",
     "pp.s01.p1":"LIC Massage Therapy (nosotros, nuestro o el negocio) opera en Long Island City, Queens, New York. Nos comprometemos a proteger la privacidad de cada cliente y visitante de nuestro sitio web licmassagetherapy.com de conformidad con las leyes aplicables del Estado de Nueva York y la legislación federal de los Estados Unidos.",
     "pp.s01.p2":"Esta Política de Privacidad describe qué información recopilamos, cómo la usamos, con quién la compartimos y cuáles son sus derechos. Al usar nuestro sitio web o completar cualquier formulario de contacto, usted acepta las prácticas descritas en este documento.",
-    "pp.s01.highlight":"Última actualización: Mayo 2025. Esta política puede actualizarse periódicamente. Le recomendamos revisarla cada vez que interactúe con nosotros.",
-    "pp.s01.highlightDate":"Mayo 2025",
+    "pp.s01.highlight":"Última actualización: Mayo 2026. Esta política puede actualizarse periódicamente. Le recomendamos revisarla cada vez que interactúe con nosotros.",
+    "pp.s01.highlightDate":"Mayo 2026",
 
     // Sección 02 — Información que recopilamos
     "pp.s02.title":"Información que Recopilamos",
@@ -561,7 +561,7 @@ const i18n = {
 
     's1.name': 'Masaje Relajante',
     'svc1.duration': '60 min',
-    'svc1.price': '$120.000 COP',
+    'svc1.price': '$120 USD',
     'svc1.fullDesc':
       'Un masaje integral que combina la manipulación de los tejidos blandos para aliviar el estrés, la tensión muscular y promover una profunda sensación de bienestar.',
     'svc1.feat1': 'Reduce el estrés y la ansiedad',
@@ -573,7 +573,7 @@ const i18n = {
     // ===== SERVICE 2 =====
     's2.name': 'Masaje de Presión Profunda',
     'svc2.duration': '75 min',
-    'svc2.price': '$150.000 COP',
+    'svc2.price': '$150 USD',
     'svc2.fullDesc':
       'Diseñado para abordar molestias específicas y dolores musculares causados por tensión acumulada. Ideal para personas con contracturas o dolor crónico.',
     'svc2.feat1': 'Libera contracturas profundas',
@@ -585,7 +585,7 @@ const i18n = {
     // ===== SERVICE 3 =====
     's3.name': 'Relajación Guiada',
     'svc3.duration': '45 min',
-    'svc3.price': '$90.000 COP',
+    'svc3.price': '$90 USD',
     'svc3.fullDesc':
       'Una experiencia enfocada en ayudarte a relajarte, respirar conscientemente y visualizarte de una manera nueva, positiva y empoderadora.',
     'svc3.feat1': 'Reduce el estrés mental',
@@ -597,7 +597,7 @@ const i18n = {
     // ===== SERVICE 4 — Cómo dar un masaje a tu pareja =====
     's4.name': 'Cómo dar un masaje a tu pareja',
     'svc4.duration': '90 min',
-    'svc4.price': '$205',
+    'svc4.price': '$205 USD',
     'svc4.fullDesc':
       '¿Tu pareja siempre te pide que le alivieses el dolor de cuello, hombros o espalda, y después de cinco minutos no tienes ni idea de qué hacer? ¿Siempre has querido darle a tu pareja un masaje relajante y reconfortante? Si es así, ¡esto es para ti! Esta sesión relajante de hora y media incorpora las mejores técnicas que te guiarán para que puedas darle a tu pareja el mejor masaje, el más sanador y tranquilo. Durante esta sesión relajante también aprenderás qué hacer y qué no hacer, dónde y cómo aplicar la presión correctamente, para no lastimarte ni lastimar a tu pareja. La mitad del tiempo guiaré a una persona mientras la otra está en la camilla, y la otra mitad guiaré a la otra persona. Esta sesión está diseñada para enseñarte cómo trabajar con tu pareja o familia, no es una sesión avanzada. Será relajante y divertida. Está abierta a cualquier pareja. Por favor, envía un correo electrónico si tienes preguntas.',
     'svc4.feat1': 'Técnicas guiadas paso a paso',
@@ -608,7 +608,7 @@ const i18n = {
 
     // ===== SERVICE 5 — Masaje Express de Cuello y Hombros =====
     's5.name': 'Masaje Express de Cuello y Hombros',
-    'svc5.duration': '30 min',
+    'svc5.duration': '30 min USD',
     'svc5.price': '$75',
     'svc5.fullDesc':
       '¿Trabajas frente a una computadora varias horas al día y sientes el cuello y los hombros tensos como piedra? Esta sesión express está diseñada específicamente para liberar la tensión acumulada en la zona cervical, trapecios y hombros — las áreas más castigadas por el estrés y las malas posturas. En 30 minutos precisos aplicaremos técnicas de presión profunda, liberación miofascial y movimientos de movilización cervical que te dejarán con una sensación inmediata de alivio y ligereza. Perfecto para quienes tienen poco tiempo pero necesitan resultados concretos. Sin cambiarse de ropa: puedes realizarlo en silla o en camilla.',
@@ -756,8 +756,8 @@ const i18n = {
     "pp.s01.title":"Introduction and Commitment",
     "pp.s01.p1":"LIC Massage Therapy (we, our or the business) operates in Long Island City, Queens, New York. We are committed to protecting the privacy of every client and visitor to our website licmassagetherapy.com in accordance with applicable laws of the State of New York and federal legislation of the United States.",
     "pp.s01.p2":"This Privacy Policy describes what information we collect, how we use it, who we share it with, and what your rights are. By using our website or completing any contact form, you agree to the practices described in this document.",
-    "pp.s01.highlight":"Last updated: May 2025. This policy may be updated periodically. We recommend reviewing it each time you interact with us.",
-    "pp.s01.highlightDate":"May 2025",
+    "pp.s01.highlight":"Last updated: May 2026. This policy may be updated periodically. We recommend reviewing it each time you interact with us.",
+    "pp.s01.highlightDate":"May 2026",
 
     // Section 02 — Information collected
     "pp.s02.title":"Information We Collect",

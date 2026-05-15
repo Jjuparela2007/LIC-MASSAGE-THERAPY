@@ -147,7 +147,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy" data-i18n="footer.copy">© 2025 LIC MASSAGE THERAPY. Todos los derechos reservados.</div>
+    <div class="footer-copy" data-i18n="footer.copy">© 2026 LIC MASSAGE THERAPY. Todos los derechos reservados.</div>
     <div class="footer-legal">
       <a href="politica-privacidad.html" data-i18n="footer.privacy">Privacidad</a>
       <a href="politica-privacidad.html" data-i18n="footer.terms">Términos</a>
