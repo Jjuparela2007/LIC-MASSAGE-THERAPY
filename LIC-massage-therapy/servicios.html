@@ -101,11 +101,34 @@
         </button>
       </div>
 
+      <!-- 04 · Cómo dar un masaje a tu pareja -->
+      <div class="service-card reveal delay-1" data-service-key="s4">
+        <div class="service-duration" data-i18n="svc4.duration">90 min</div>
+        <div class="service-card-num">04</div>
+
+        <div class="service-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=1170&auto=format&fit=crop" alt="Cómo dar un masaje a tu pareja" data-alt-i18n="s4.name" loading="lazy">
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <span data-i18n="ws.imgPlaceholderOffice"></span>
+          </div>
+        </div>
+
+        <div class="service-name" data-i18n="s4.name">Cómo dar un masaje a tu pareja</div>
+        <p class="service-desc" data-i18n="svc4.fullDesc"></p>
+        <div class="service-features">
+          <div class="sf-item" data-i18n="svc4.feat1"></div>
+          <div class="sf-item" data-i18n="svc4.feat2"></div>
+          <div class="sf-item" data-i18n="svc4.feat3"></div>
+        </div>
+        <button class="service-link" onclick="openBooking('s4')">
+          <span data-i18n="service.cta">Ver tratamiento</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
     </div>
   </div>
 </section>
-
-<!-- ══════════════════ POLÍTICA DE CANCELACIÓN ══════════════════ -->
 
 
 <section class="studio-section">
@@ -635,7 +658,17 @@
       descKey:     'svc3.fullDesc',
       featKeys:    ['svc3.feat1','svc3.feat2','svc3.feat3','svc3.feat4','svc3.feat5'],
       img: 'https://images.unsplash.com/photo-1699523229212-c25a2fadeb12?q=80&w=1169&auto=format&fit=crop'
-    }
+    },
+    s4: {
+      num: '04',
+      durationKey: 'svc4.duration',
+      priceKey:    'svc4.price',
+      nameKey:     's4.name',
+      descKey:     'svc4.fullDesc',
+      featKeys:    ['svc4.feat1','svc4.feat2','svc4.feat3','svc4.feat4','svc4.feat5'],
+      img: 'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=1170&auto=format&fit=crop'
+    },
+  
   };
 
   function t(key) {

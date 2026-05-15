@@ -593,6 +593,30 @@ const i18n = {
     'svc3.feat3': 'Favorece la claridad mental',
     'svc3.feat4': 'Fortalece la conexión interior',
     'svc3.feat5': 'Promueve el equilibrio emocional',
+
+    // ===== SERVICE 4 — Cómo dar un masaje a tu pareja =====
+    's4.name': 'Cómo dar un masaje a tu pareja',
+    'svc4.duration': '90 min',
+    'svc4.price': '$205',
+    'svc4.fullDesc':
+      '¿Tu pareja siempre te pide que le alivieses el dolor de cuello, hombros o espalda, y después de cinco minutos no tienes ni idea de qué hacer? ¿Siempre has querido darle a tu pareja un masaje relajante y reconfortante? Si es así, ¡esto es para ti! Esta sesión relajante de hora y media incorpora las mejores técnicas que te guiarán para que puedas darle a tu pareja el mejor masaje, el más sanador y tranquilo. Durante esta sesión relajante también aprenderás qué hacer y qué no hacer, dónde y cómo aplicar la presión correctamente, para no lastimarte ni lastimar a tu pareja. La mitad del tiempo guiaré a una persona mientras la otra está en la camilla, y la otra mitad guiaré a la otra persona. Esta sesión está diseñada para enseñarte cómo trabajar con tu pareja o familia, no es una sesión avanzada. Será relajante y divertida. Está abierta a cualquier pareja. Por favor, envía un correo electrónico si tienes preguntas.',
+    'svc4.feat1': 'Técnicas guiadas paso a paso',
+    'svc4.feat2': 'Aprende dónde y cómo aplicar presión',
+    'svc4.feat3': 'Sesión relajante para ambos',
+    'svc4.feat4': 'Ideal para cualquier tipo de pareja',
+    'svc4.feat5': 'Sin experiencia previa necesaria',
+
+    // ===== SERVICE 5 — Masaje Express de Cuello y Hombros =====
+    's5.name': 'Masaje Express de Cuello y Hombros',
+    'svc5.duration': '30 min',
+    'svc5.price': '$75',
+    'svc5.fullDesc':
+      '¿Trabajas frente a una computadora varias horas al día y sientes el cuello y los hombros tensos como piedra? Esta sesión express está diseñada específicamente para liberar la tensión acumulada en la zona cervical, trapecios y hombros — las áreas más castigadas por el estrés y las malas posturas. En 30 minutos precisos aplicaremos técnicas de presión profunda, liberación miofascial y movimientos de movilización cervical que te dejarán con una sensación inmediata de alivio y ligereza. Perfecto para quienes tienen poco tiempo pero necesitan resultados concretos. Sin cambiarse de ropa: puedes realizarlo en silla o en camilla.',
+    'svc5.feat1': 'Alivia tensión cervical y trapecios',
+    'svc5.feat2': 'Sin necesidad de desvestirse',
+    'svc5.feat3': 'Resultados inmediatos en 30 min',
+    'svc5.feat4': 'Ideal para trabajadores de oficina',
+    'svc5.feat5': 'Liberación miofascial y presión profunda',
   },
   en: {
     "nav.home":"Home","nav.services":"Services","nav.stretch":"Stretching",
@@ -1182,6 +1206,30 @@ const i18n = {
     'svc3.feat3': 'Enhances mental clarity',
     'svc3.feat4': 'Strengthens inner connection',
     'svc3.feat5': 'Promotes emotional balance',
+
+    // ===== SERVICE 4 — How to give your partner a massage =====
+    's4.name': 'How to Give Your Partner a Massage',
+    'svc4.duration': '90 min',
+    'svc4.price': '$205',
+    'svc4.fullDesc':
+      "Does your partner always ask you to relieve their neck, shoulder or back pain, and after five minutes you have no idea what to do? Have you always wanted to give your partner a relaxing and comforting massage? If so, this is for you! This relaxing hour-and-a-half session incorporates the best techniques to guide you so you can give your partner the best, most healing and calming massage possible. During this relaxing session you will also learn the do's and don'ts, where and how to apply pressure correctly, so you don't hurt yourself or your partner. Half the time I will guide one person while the other is on the table, and the other half I will guide the other person. This session is designed to teach you how to work on your partner or family — it is not an advanced session. It will be relaxing and fun. Open to any couple. Please email if you have any questions.",
+    'svc4.feat1': 'Step-by-step guided techniques',
+    'svc4.feat2': 'Learn where and how to apply pressure',
+    'svc4.feat3': 'Relaxing session for both partners',
+    'svc4.feat4': 'Open to any type of couple',
+    'svc4.feat5': 'No prior experience needed',
+
+    // ===== SERVICE 5 — Express Neck & Shoulder Massage =====
+    's5.name': 'Express Neck & Shoulder Massage',
+    'svc5.duration': '30 min',
+    'svc5.price': '$75',
+    'svc5.fullDesc':
+      'Do you spend hours in front of a computer and feel your neck and shoulders as tight as a rock? This express session is specifically designed to release accumulated tension in the cervical area, trapezius, and shoulders — the areas most affected by stress and poor posture. In 30 precise minutes we will apply deep pressure techniques, myofascial release, and cervical mobilization movements that will leave you with an immediate sense of relief and lightness. Perfect for those with limited time who need real results. No need to change clothes: can be performed in a chair or on the table.',
+    'svc5.feat1': 'Relieves cervical and trapezius tension',
+    'svc5.feat2': 'No need to undress',
+    'svc5.feat3': 'Immediate results in 30 min',
+    'svc5.feat4': 'Ideal for office workers',
+    'svc5.feat5': 'Myofascial release and deep pressure',
   }
 };
  
