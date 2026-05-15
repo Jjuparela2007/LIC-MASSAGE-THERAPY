@@ -72,7 +72,7 @@ const i18n = {
     "form.date":"Fecha preferida","form.time":"Horario preferido","form.message":"Mensaje (opcional)","form.messagePh":"Cuéntanos sobre tu condición o área de tratamiento...",
     "form.submit":"Reservar Mi Cita →",
     "time.morning":"Mañana (7am–12pm)","time.afternoon":"Tarde (12pm–5pm)","time.evening":"Noche (5pm–8pm)",
-    "footer.tagline":"Centro de excelencia en terapia muscular y bienestar corporal premium en Bogotá.",
+    "footer.tagline":"Terapia muscular personalizada enfocada en bienestar, alivio y recuperación física en Nueva York",
     "footer.links":"Servicios","footer.nav":"Páginas","footer.contact":"Contacto",
     "footer.copy":"© 2025 LIC MASSAGE THERAPY. Todos los derechos reservados.","footer.privacy":"Privacidad","footer.terms":"Términos",
 
@@ -664,7 +664,7 @@ const i18n = {
     "form.date":"Preferred date","form.time":"Preferred time","form.message":"Message (optional)","form.messagePh":"Tell us about your condition or treatment area...",
     "form.submit":"Book My Appointment →",
     "time.morning":"Morning (7am–12pm)","time.afternoon":"Afternoon (12pm–5pm)","time.evening":"Evening (5pm–8pm)",
-    "footer.tagline":"Center of excellence in muscle therapy and premium body wellness in Bogotá.",
+    "footer.tagline":"Personalized muscle therapy focused on wellness, relief, and physical recovery in New York.",
     "footer.links":"Services","footer.nav":"Pages","footer.contact":"Contact",
     "footer.copy":"© LIC MASSAGE THERAPY. All rights reserved.","footer.privacy":"Privacy","footer.terms":"Terms",
 
