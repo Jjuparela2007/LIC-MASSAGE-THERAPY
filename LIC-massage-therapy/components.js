@@ -89,7 +89,22 @@
     if (!isHome) nav.className = 'scrolled-static';
 
     nav.innerHTML = `
-  <a href="index.html" class="nav-logo"><div class="nav-logo-symbol">K</div>LIC MASSAGE THERAPY</a>
+  <a href="index.html" class="nav-logo">
+    <svg class="nav-logo-svg" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="21" cy="21" r="21" fill="url(#navLogoGrad)"/>
+      <text x="21" y="26" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="700" letter-spacing="1.5" fill="#ffffff">LMT</text>
+      <defs>
+        <linearGradient id="navLogoGrad" x1="0" y1="0" x2="42" y2="42" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#2c6e6a"/>
+          <stop offset="100%" stop-color="#1a4a47"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <span class="nav-logo-text">
+      <span class="nav-logo-title">LIC MASSAGE</span>
+      <span class="nav-logo-sub">THERAPY</span>
+    </span>
+  </a>
   <ul class="nav-links">
     ${links}
   </ul>
@@ -117,7 +132,22 @@
     footer.innerHTML = `
   <div class="footer-main">
     <div class="footer-brand">
-      <a href="index.html" class="footer-logo">LIC MASSAGE THERAPY</a>
+      <a href="index.html" class="footer-logo">
+        <svg class="footer-logo-svg" width="36" height="36" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="21" cy="21" r="21" fill="url(#footerLogoGrad)"/>
+          <text x="21" y="26" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="700" letter-spacing="1.5" fill="#ffffff">LMT</text>
+          <defs>
+            <linearGradient id="footerLogoGrad" x1="0" y1="0" x2="42" y2="42" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#2c6e6a"/>
+              <stop offset="100%" stop-color="#1a4a47"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="footer-logo-text">
+          <span class="footer-logo-title">LIC MASSAGE</span>
+          <span class="footer-logo-sub">THERAPY</span>
+        </span>
+      </a>
       <p class="footer-tagline" data-i18n="footer.tagline">Centro de excelencia en terapia muscular y bienestar corporal premium.</p>
       <div class="social-links">
         <a href="https://www.instagram.com/licmassagetherapy?igsh=MXJyMDU5M2h0NHpudA%3D%3D" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">${ICONS.instagram}</a>
