@@ -102,11 +102,11 @@ const i18n = {
     "contact.emailVal":"ra@licmassagetherapy.com",
 
     // Placeholders del formulario de contacto
-    "contact.form.namePh":"Tu nombre",
-    "contact.form.phonePh":"+57 300 000 0000",
-    "contact.form.emailPh":"tu@correo.com",
-    "contact.form.subjectPh":"¿En qué podemos ayudarte?",
-    "contact.form.messagePh":"Cuéntanos sobre tu condición...",
+    "contact.form.namePh":"Ej: María García",
+    "contact.form.phonePh":"Ej: +1 718 555 0000",
+    "contact.form.emailPh":"Ej: maria@correo.com",
+    "contact.form.subjectPh":"Ej: Consulta sobre masaje terapéutico",
+    "contact.form.messagePh":"Ej: Tengo dolor en la zona lumbar desde hace 3 semanas y me gustaría agendar una sesión de evaluación…",
 
     // Consentimiento de privacidad (contacto)
     "contact.consent.pre":"He leído y acepto la",
@@ -715,11 +715,11 @@ const i18n = {
     "contact.emailVal":"ra@licmassagetherapy.com",
 
     // Contact form placeholders
-    "contact.form.namePh":"Your name",
-    "contact.form.phonePh":"+1 718 000 0000",
-    "contact.form.emailPh":"you@email.com",
-    "contact.form.subjectPh":"How can we help you?",
-    "contact.form.messagePh":"Tell us about your condition...",
+    "contact.form.namePh":"E.g. Maria Garcia",
+    "contact.form.phonePh":"E.g. +1 718 555 0000",
+    "contact.form.emailPh":"E.g. maria@email.com",
+    "contact.form.subjectPh":"E.g. Inquiry about therapeutic massage",
+    "contact.form.messagePh":"E.g. I've had lower back pain for 3 weeks and would like to schedule an evaluation session…",
 
     // Privacy consent (contact)
     "contact.consent.pre":"I have read and accept the",
@@ -1233,6 +1233,7 @@ const i18n = {
 "athletic.metric1": "NYC Marathons",
 "athletic.metric2": "Half-Ironman Races",
 "athletic.metric3": "5.85-mile Open Water Swims",
+
   }
 };
  
@@ -1249,6 +1250,10 @@ function applyLang(lang) {
   });
   document.querySelectorAll('[data-placeholder]').forEach(el => {
     const key = el.getAttribute('data-placeholder');
+    if (i18n[lang][key] !== undefined) el.placeholder = i18n[lang][key];
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
     if (i18n[lang][key] !== undefined) el.placeholder = i18n[lang][key];
   });
   document.querySelectorAll('option[data-i18n]').forEach(opt => {
