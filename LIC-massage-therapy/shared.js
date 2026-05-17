@@ -1219,6 +1219,20 @@ const i18n = {
     'svc4.feat4': 'Open to any type of couple',
     'svc4.feat5': 'No prior experience needed',
 
+    "certcard1.name": "Licensed Massage Therapist in the State of New York",
+"certcard1.org": "Licensed since 2003 · Issued by The University of the State of New York · Education Department",
+"certcard2.name": "Active Isolated Stretching — Advanced Seminar",
+"certcard2.org": "Certificate of completion · 32 hours · Issued by Aaron L. Mattes, LMT, RKT",
+"certcard3.name": "Active Isolated Stretching Seminar",
+"certcard3.org": "Certificate of completion · 32 hours · Issued by Aaron L. Mattes, LMT, RKT",
+"certcard4.name": "Active Isolated Stretching Seminar",
+"certcard4.org": "Certificate of completion · 32 hours · Issued by Aaron L. Mattes, LMT, RKT",
+"athletic.tag": "Athletic Background",
+"athletic.title": "I practice what I teach.",
+"athletic.desc": "Endurance sports have taught me what it truly takes to keep a body strong, mobile, and resilient — decade after decade. I bring that lived experience to every session.",
+"athletic.metric1": "NYC Marathons",
+"athletic.metric2": "Half-Ironman Races",
+"athletic.metric3": "5.85-mile Open Water Swims",
   }
 };
  
