@@ -60,7 +60,7 @@ const i18n = {
     "contact.formTitle":"Envíanos un Mensaje","contact.send":"Enviar Mensaje →","contact.subject":"Asunto","contact.subjectPh":"¿En qué podemos ayudarte?",
     "book.tag":"Reservar Cita","book.title1":"Tu bienestar","book.title2":"comienza hoy",
     "book.desc":"Agenda tu consulta inicial y recibe una evaluación postural y muscular completa sin costo adicional.",
-    "book.location":"Nueva York — Long Island City","book.hours":"Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: Cerrado",
+    "book.location":"12-17 Jackson Ave, Long Island City, NY 11101, Estados Unidos","book.hours":"Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: Cerrado",
     "book.infoTag":"Información","book.infoTitle1":"¿Qué esperar","book.infoTitle2":"en tu primera visita?",
     "step1.name":"Evaluación Inicial","step1.desc":"Análisis postural y muscular completo para identificar áreas de tensión y patrones de movimiento.",
     "step2.name":"Protocolo Personalizado","step2.desc":"Diseño de un plan de tratamiento específico basado en tus objetivos y condición actual.",
@@ -214,7 +214,7 @@ const i18n = {
     "pp.s06.li5":"Recibir sus datos en un formato estructurado y de uso común.",
     "pp.s06.li6bold":"Retirar el consentimiento:",
     "pp.s06.li6":"En cualquier momento, sin afectar la legalidad del tratamiento previo.",
-    "pp.s06.highlight":"Para ejercer cualquiera de estos derechos, contáctenos en ra@licmassagetherapy.com o al teléfono 718-478-1951. Responderemos en un plazo máximo de 30 días.",
+    "pp.s06.highlight":"Para ejercer cualquiera de estos derechos, contáctenos en ra@licmassagetherapy.com o al teléfono +1 718-478-1951. Responderemos en un plazo máximo de 30 días.",
     "pp.s06.highlightDays":"30 días",
 
     // Sección 07 — Cookies
@@ -239,7 +239,7 @@ const i18n = {
     "pp.s10.li2bold":"Dirección:",
     "pp.s10.li2val":"Long Island New York, NY",
     "pp.s10.li3bold":"Teléfono:",
-    "pp.s10.li3val":"718-478-1951",
+    "pp.s10.li3val":"+1 718-478-1951",
     "pp.s10.li4bold":"Email:",
     "pp.s10.li5bold":"Horario de atención:",
     "pp.s10.li5val":"Lun–Vie 10 am–7 pm · Sáb 10 am–6 pm · Dom cerrado",
@@ -273,7 +273,7 @@ const i18n = {
     "privacy.consent":"de LIC Massage Therapy. Autorizo el uso de mis datos para gestionar mi reserva y recibir comunicaciones relacionadas con mi cita.",
 
     // Teléfono de contacto
-    "book.phone":"718-478-1951",
+    "book.phone":"+1 718-478-1951",
 
     // Estados del botón de envío
     "form.submitting":"Abriendo WhatsApp…",
@@ -676,7 +676,7 @@ const i18n = {
     "contact.formTitle":"Send Us a Message","contact.send":"Send Message →","contact.subject":"Subject","contact.subjectPh":"How can we help you?",
     "book.tag":"Book Appointment","book.title1":"Your wellness","book.title2":"starts today",
     "book.desc":"Schedule your initial consultation and receive a complete postural and muscular assessment at no extra cost.",
-    "book.location":"Nueva York — Long Island City","book.hours":"Mon–Fri: 7am–8pm · Sat: 8am–4pm",
+    "book.location":"12-17 Jackson Ave, Long Island City, NY 11101, Estados Unidos","book.hours":"Mon–Fri: 7am–8pm · Sat: 8am–4pm",
     "book.infoTag":"Information","book.infoTitle1":"What to expect","book.infoTitle2":"on your first visit?",
     "step1.name":"Initial Assessment","step1.desc":"Complete postural and muscular analysis to identify tension areas and movement patterns.",
     "step2.name":"Personalized Protocol","step2.desc":"Design of a specific treatment plan based on your goals and current condition.",
@@ -827,7 +827,7 @@ const i18n = {
     "pp.s06.li5":"Receive your data in a structured, commonly used format.",
     "pp.s06.li6bold":"Withdraw consent:",
     "pp.s06.li6":"At any time, without affecting the lawfulness of prior processing.",
-    "pp.s06.highlight":"To exercise any of these rights, contact us at ra@licmassagetherapy.com or by phone at 718-478-1951. We will respond within a maximum of 30 days.",
+    "pp.s06.highlight":"To exercise any of these rights, contact us at ra@licmassagetherapy.com or by phone at +1 718-478-1951. We will respond within a maximum of 30 days.",
     "pp.s06.highlightDays":"30 days",
 
     // Section 07 — Cookies
@@ -852,7 +852,7 @@ const i18n = {
     "pp.s10.li2bold":"Address:",
     "pp.s10.li2val":"Long Island New York, NY",
     "pp.s10.li3bold":"Phone:",
-    "pp.s10.li3val":"718-478-1951",
+    "pp.s10.li3val":"+1 718-478-1951",
     "pp.s10.li4bold":"Email:",
     "pp.s10.li5bold":"Office hours:",
     "pp.s10.li5val":"Mon–Fri 10 am–7 pm · Sat 10 am–6 pm · Sun closed",
@@ -886,7 +886,7 @@ const i18n = {
     "privacy.consent":"of LIC Massage Therapy. I authorize the use of my data to manage my booking and receive communications related to my appointment.",
 
     // Contact phone
-    "book.phone":"718-478-1951",
+    "book.phone":"+1 718-478-1951",
 
     // Submit button states
     "form.submitting":"Opening WhatsApp…",

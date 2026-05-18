@@ -170,7 +170,7 @@
     <div>
       <div class="footer-col-title" data-i18n="footer.contact">Contacto</div>
       <div class="footer-contact-items">
-        <div class="footer-contact-item">${ICONS.location}<span data-i18n="book.location"> Nueva York — Long Island City</span></div>
+        <div class="footer-contact-item">${ICONS.location}<span data-i18n="book.location"> 12-17 Jackson Ave, Long Island City, NY 11101, Estados Unidos</span></div>
         <div class="footer-contact-item">${ICONS.clock}<span data-i18n="book.hours">Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: Cerrado</span></div>
         <div class="footer-contact-item">${ICONS.email}<span>ra@licmassagetherapy.com</span></div>
       </div>
