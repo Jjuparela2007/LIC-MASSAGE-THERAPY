@@ -482,15 +482,126 @@ body.light .about-overlay { background: linear-gradient(to bottom, transparent 6
 .value-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.65; }
 
 /* ─── TESTIMONIALS PAGE ─────────────────────────────────────────────────── */
+/* ─── TESTIMONIALS PAGE ─────────────────────────────────────────────── */
+
 .testimonials-page {
   overflow: hidden;
   padding: 100px 0;
   background: var(--bg-deep);
 }
-.testimonials-wrapper { display: flex; flex-direction: column; gap: 30px; }
-.testimonial-track { display: flex; gap: 24px; width: max-content; }
-.track-right { animation: scrollRight 35s linear infinite; }
-.track-left  { animation: scrollLeft 35s linear infinite; }
+
+.testimonials-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.testimonial-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+}
+
+.track-right {
+  animation: scrollRight 35s linear infinite;
+}
+
+.track-left {
+  animation: scrollLeft 35s linear infinite;
+}
+
+/* ANIMACIONES */
+@keyframes scrollRight {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0%); }
+}
+
+@keyframes scrollLeft {
+  from { transform: translateX(0%); }
+  to { transform: translateX(-50%); }
+}
+
+/* ─── CARD ─────────────────────────────────────────────── */
+
+.testimonial-card-full {
+  width: 420px;
+  min-width: 420px;
+  background: var(--bg-card);
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card-full:hover {
+  transform: translateY(-6px);
+}
+
+/* ─── QUOTE (MEJORADO) ─────────────────────────────────── */
+
+.testimonial-quote {
+  font-size: 3rem;
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  opacity: 0.06;
+  font-weight: bold;
+}
+
+/* ─── STARS ─────────────────────────────────────────────── */
+
+.testimonial-stars {
+  color: var(--gold);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* ─── TEXT ─────────────────────────────────────────────── */
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* ─── AUTHOR SECTION (ARREGLADO) ───────────────────────── */
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.testimonial-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #2e7d6b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  flex-shrink: 0;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.testimonial-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2d2a;
+}
+
+/* opcional si tienes role */
+.testimonial-role {
+  font-size: 0.8rem;
+  color: gray;
+}
 
 @keyframes scrollRight {
   from { transform: translateX(-50%); }
@@ -1209,7 +1320,7 @@ footer { background: var(--bg-footer); border-top: 1px solid var(--cta-border); 
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: #2a9e72;
+  background: #2e7d6b;
   color: #fff;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.85rem;
