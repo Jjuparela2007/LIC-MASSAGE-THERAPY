@@ -124,10 +124,179 @@
     const footer = document.createElement('footer');
     footer.id = 'footer';
     footer.innerHTML = `
+  <style>
+    #footer {
+      background: #0a2828;
+      padding: 72px 0 0;
+      color: rgba(255,255,255,0.65);
+    }
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: start;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 64px 64px;
+      gap: 40px;
+    }
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 28px;
+    }
+    .footer-col-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .footer-col-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .footer-col-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.38);
+      margin-bottom: 22px;
+    }
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+    .footer-links a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14.5px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.62);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: #fff; }
+    .footer-contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+    }
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.62);
+      text-align: left;
+    }
+    .footer-contact-item svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      opacity: 0.5;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      text-decoration: none;
+    }
+    .footer-logo-svg { flex-shrink: 0; }
+    .footer-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .footer-logo-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      color: #fff;
+    }
+    .footer-logo-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      color: rgba(255,255,255,0.5);
+      margin-top: 2px;
+    }
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+    .social-link {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .social-link:hover {
+      border-color: rgba(255,255,255,0.4);
+      color: #fff;
+      background: rgba(255,255,255,0.07);
+    }
+    .social-link svg { width: 15px; height: 15px; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 22px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-copy {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-legal { display: flex; gap: 24px; }
+    .footer-legal a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-legal a:hover { color: rgba(255,255,255,0.6); }
+    @media (max-width: 900px) {
+      .footer-main {
+        grid-template-columns: 1fr;
+        padding: 0 32px 48px;
+        gap: 40px;
+      }
+      .footer-col-center,
+      .footer-col-right { align-items: flex-start; text-align: left; }
+      .footer-contact-items { align-items: flex-start; }
+      .footer-bottom { padding: 22px 32px; flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
+
   <div class="footer-main">
+
+    <!-- LEFT: Brand + social -->
     <div class="footer-brand">
       <a href="index.html" class="footer-logo">
-        <svg class="footer-logo-svg" width="36" height="36" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="footer-logo-svg" width="40" height="40" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="21" cy="21" r="21" fill="url(#footerLogoGrad)"/>
           <text x="21" y="26" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="700" letter-spacing="1.5" fill="#ffffff">LMT</text>
           <defs>
@@ -142,28 +311,40 @@
           <span class="footer-logo-sub">THERAPY</span>
         </span>
       </a>
-    
       <div class="social-links">
         <a href="https://www.instagram.com/licmassagetherapy?igsh=MXJyMDU5M2h0NHpudA%3D%3D" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">${ICONS.instagram}</a>
         <a href="https://www.facebook.com/licmst?rdid=8ZIs4nAKwI0Xblo7&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Coq5x8tCq%2F#" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">${ICONS.facebook}</a>
         <a href="https://wa.me/13478375503" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">${ICONS.whatsapp}</a>
       </div>
     </div>
-    
-    <div>
+
+    <!-- CENTER: Pages -->
+    <div class="footer-col-center">
       <div class="footer-col-title" data-i18n="footer.nav">Páginas</div>
       <ul class="footer-links">
         ${pageLinks}
       </ul>
     </div>
-    <div>
+
+    <!-- RIGHT: Contact — centrado dentro de su columna -->
+    <div class="footer-col-right">
       <div class="footer-col-title" data-i18n="footer.contact">Contacto</div>
       <div class="footer-contact-items">
-        <div class="footer-contact-item">${ICONS.location}<span data-i18n="book.location"> 12-17 Jackson Ave, Long Island City, NY 11101, United States</span></div>
-        <div class="footer-contact-item">${ICONS.clock}<span data-i18n="book.hours">Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: Cerrado</span></div>
-        <div class="footer-contact-item">${ICONS.email}<span>ra@licmassagetherapy.com</span></div>
+        <div class="footer-contact-item">
+          ${ICONS.location}
+          <span data-i18n="book.location">12-17 Jackson Ave<br>Long Island City, NY 11101</span>
+        </div>
+        <div class="footer-contact-item">
+          ${ICONS.clock}
+          <span data-i18n="book.hours">Lun–Vie: 10am–7pm<br>Sáb: 10am–6pm · Dom: Cerrado</span>
+        </div>
+        <div class="footer-contact-item">
+          ${ICONS.email}
+          <span>ra@licmassagetherapy.com</span>
+        </div>
       </div>
     </div>
+
   </div>
   <div class="footer-bottom">
     <div class="footer-copy" data-i18n="footer.copy">© 2026 LIC MASSAGE THERAPY. Todos los derechos reservados.</div>
