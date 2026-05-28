@@ -226,7 +226,7 @@
 
       // Re-aplicar el idioma guardado sobre los nodos recién insertados
       if (typeof applyLang === 'function') {
-        applyLang(localStorage.getItem('kinesys-lang') || 'es');
+        applyLang(localStorage.getItem('kinesys-lang') || 'en');
       }
     }
 
