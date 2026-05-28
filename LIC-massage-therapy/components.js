@@ -142,7 +142,7 @@
           <span class="footer-logo-sub">THERAPY</span>
         </span>
       </a>
-      <p class="footer-tagline" data-i18n="footer.tagline">Centro de excelencia en terapia muscular y bienestar corporal premium.</p>
+    
       <div class="social-links">
         <a href="https://www.instagram.com/licmassagetherapy?igsh=MXJyMDU5M2h0NHpudA%3D%3D" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">${ICONS.instagram}</a>
         <a href="https://www.facebook.com/licmst?rdid=8ZIs4nAKwI0Xblo7&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Coq5x8tCq%2F#" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">${ICONS.facebook}</a>
@@ -150,12 +150,7 @@
       </div>
     </div>
     
-    <div>
-      <div class="footer-col-title" data-i18n="footer.nav">Páginas</div>
-      <ul class="footer-links">
-        ${pageLinks}
-      </ul>
-    </div>
+   
     <div>
       <div class="footer-col-title" data-i18n="footer.contact">Contacto</div>
       <div class="footer-contact-items">
