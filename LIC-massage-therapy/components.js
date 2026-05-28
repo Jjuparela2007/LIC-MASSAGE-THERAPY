@@ -3,29 +3,25 @@
   /* ── Configuración de navegación ──────────────────────────────────────── */
   const NAV_LINKS = [
     { href: 'index.html',      key: 'nav.home',         page: 'index'      },
-    { href: 'servicios.html',  key: 'nav.services',     page: 'servicios'  },
+    { href: 'masajes.html',    key: 'nav.masajes',      page: 'masajes'  },
+    { href: 'stretch.html',    key: 'nav.terapia',      page: 'terapia'  },
     { href: 'sobre-mi.html',   key: 'nav.about',        page: 'Sobre Raul'   },
     { href: 'testimonios.html',key: 'nav.testimonials', page: 'testimonios'},
     { href: 'reservas.html',   key: 'nav.book',         page: 'reserva'   },
+  
   ];
 
   /* ── Configuración del footer ─────────────────────────────────────────── */
-  const FOOTER_SERVICES = [
-    { href: 'servicios.html', key: 's1.name' },
-    { href: 'servicios.html', key: 's2.name' },
-    { href: 'servicios.html', key: 's3.name' },
-    { href: 'servicios.html', key: 's4.name' },
-    { href: 'servicios.html', key: 's5.name' },
-    { href: 'servicios.html', key: 's6.name' },
-  ];
+
 
   const FOOTER_PAGES = [
     { href: 'index.html',       key: 'nav.home'         },
-    { href: 'servicios.html',   key: 'nav.services'     },
+    { href: 'masajes.html',    key: 'nav.masajes',     },
+    { href: 'stretch.html',    key: 'nav.terapia',     },
     { href: 'sobre-mi.html',    key: 'nav.about'        },
     { href: 'testimonios.html', key: 'nav.testimonials' },
     { href: 'reservas.html',    key: 'nav.book'      },
-    { href: 'contacto.html',    key: 'nav.contact'         },
+
   ];
 
   /* ── Íconos SVG reutilizables ─────────────────────────────────────────── */
@@ -111,7 +107,7 @@
   <div class="nav-actions">
     ${langToggleHTML()}
    
-    <a href="contacto.html" class="btn-nav${currentPage === 'contacto' ? ' active-page' : ''}" data-i18n="nav.contact">Contactanos</a>
+  
   </div>
   <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>`;
     return nav;
@@ -119,9 +115,7 @@
 
   /* ── Componente: Footer ───────────────────────────────────────────────── */
   function renderFooter() {
-    const serviceLinks = FOOTER_SERVICES.map(s =>
-      `<li><a href="${s.href}" data-i18n="${s.key}">${s.key}</a></li>`
-    ).join('\n        ');
+   
 
     const pageLinks = FOOTER_PAGES.map(p =>
       `<li><a href="${p.href}" data-i18n="${p.key}">${p.key}</a></li>`
@@ -152,15 +146,10 @@
       <div class="social-links">
         <a href="https://www.instagram.com/licmassagetherapy?igsh=MXJyMDU5M2h0NHpudA%3D%3D" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">${ICONS.instagram}</a>
         <a href="https://www.facebook.com/licmst?rdid=8ZIs4nAKwI0Xblo7&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Coq5x8tCq%2F#" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">${ICONS.facebook}</a>
-        <a href="https://wa.me/19294262161" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">${ICONS.whatsapp}</a>
+        <a href="https://wa.me/13478375503" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">${ICONS.whatsapp}</a>
       </div>
     </div>
-    <div>
-      <div class="footer-col-title" data-i18n="footer.links">Servicios</div>
-      <ul class="footer-links">
-        ${serviceLinks}
-      </ul>
-    </div>
+    
     <div>
       <div class="footer-col-title" data-i18n="footer.nav">Páginas</div>
       <ul class="footer-links">
@@ -170,7 +159,7 @@
     <div>
       <div class="footer-col-title" data-i18n="footer.contact">Contacto</div>
       <div class="footer-contact-items">
-        <div class="footer-contact-item">${ICONS.location}<span data-i18n="book.location"> 12-17 Jackson Ave, Long Island City, NY 11101, Estados Unidos</span></div>
+        <div class="footer-contact-item">${ICONS.location}<span data-i18n="book.location"> 12-17 Jackson Ave, Long Island City, NY 11101, United States</span></div>
         <div class="footer-contact-item">${ICONS.clock}<span data-i18n="book.hours">Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: Cerrado</span></div>
         <div class="footer-contact-item">${ICONS.email}<span>ra@licmassagetherapy.com</span></div>
       </div>
