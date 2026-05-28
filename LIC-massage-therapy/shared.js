@@ -36,7 +36,7 @@ const i18n = {
     "cert.1":"Certificación en Terapia Manual Ortopédica – IFOMPT","cert.2":"Especialista en Medicina Deportiva – Federación Colombiana",
     "cert.3":"Técnicas Avanzadas de Liberación Miofascial – ART Certified","cert.4":"Kinesiotaping Terapéutico – Nivel Avanzado",
     "cert.5":"Terapia de Puntos Gatillo – Certificado Internacional","cert.6":"Rehabilitación Deportiva – Universidad Nacional",
-    "metric.patients":"Maratones de Nueva York","metric.certs":"Medios Ironman (Half-Ironman)","metric.sessions":"En práctica desde",
+  
     "values.tag":"Mi Filosofía","values.title1":"Principios","values.title2":"de Tratamiento",
     "v1.name":"Evaluación Integral","v1.desc":"Cada paciente recibe una evaluación postural y muscular completa antes de iniciar cualquier tratamiento.",
     "v2.name":"Evidencia Científica","v2.desc":"Todas las técnicas aplicadas están respaldadas por investigación clínica y biomecánica actual.",
@@ -668,7 +668,7 @@ const i18n = {
     "cert.1":"Orthopedic Manual Therapy Certification – IFOMPT","cert.2":"Sports Medicine Specialist – Colombian Federation",
     "cert.3":"Advanced Myofascial Release Techniques – ART Certified","cert.4":"Therapeutic Kinesiotaping – Advanced Level",
     "cert.5":"Trigger Point Therapy – International Certificate","cert.6":"Sports Rehabilitation – National University",
-    "metric.patients":"NYC Marathons","metric.certs":"Half-Ironman Races","metric.sessions":"In Practice Since",
+ 
     "values.tag":"My Philosophy","values.title1":"Treatment","values.title2":"Principles",
     "v1.name":"Comprehensive Assessment","v1.desc":"Each patient receives a complete postural and muscular evaluation before starting any treatment.",
     "v2.name":"Scientific Evidence","v2.desc":"All techniques applied are backed by current clinical and biomechanical research.",
