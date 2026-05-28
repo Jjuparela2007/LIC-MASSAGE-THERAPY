@@ -150,7 +150,12 @@
       </div>
     </div>
     
-   
+    <div>
+      <div class="footer-col-title" data-i18n="footer.nav">Páginas</div>
+      <ul class="footer-links">
+        ${pageLinks}
+      </ul>
+    </div>
     <div>
       <div class="footer-col-title" data-i18n="footer.contact">Contacto</div>
       <div class="footer-contact-items">
