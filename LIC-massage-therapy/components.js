@@ -154,8 +154,8 @@
     .footer-col-right {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
+      align-items: flex-end;
+      text-align: right;
     }
     .footer-col-title {
       font-family: 'DM Sans', sans-serif;
@@ -187,7 +187,7 @@
       display: flex;
       flex-direction: column;
       gap: 14px;
-      align-items: center;
+      align-items: flex-end;
     }
     .footer-contact-item {
       display: flex;
@@ -197,7 +197,7 @@
       font-size: 13.5px;
       line-height: 1.55;
       color: rgba(255,255,255,0.62);
-      text-align: left;
+      text-align: right;
     }
     .footer-contact-item svg {
       width: 15px;
@@ -287,6 +287,7 @@
       .footer-col-center,
       .footer-col-right { align-items: flex-start; text-align: left; }
       .footer-contact-items { align-items: flex-start; }
+      .footer-contact-item { text-align: left; }
       .footer-bottom { padding: 22px 32px; flex-direction: column; gap: 10px; text-align: center; }
     }
   </style>
