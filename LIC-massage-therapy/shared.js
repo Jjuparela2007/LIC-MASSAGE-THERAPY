@@ -624,9 +624,32 @@ const i18n = {
 
     "gal-tag":"Masajes","gal-title-line":"cada masaje","gal-title-line1":"una obra",
     "vid.title1":"Raúl te explica","vid.title2":"cómo funciona la terapia","vid.desc":"Descubre el proceso, la técnica y lo que puedes esperar en tu primera sesión.",
-    
+    "why.tag":         "Por qué el trabajo corporal",
+"why.title1":      "La Ciencia",
+"why.title2":      "Detrás del Trabajo",
+"why.lead":        "Los expertos estiman que las principales causas de lesiones son la fatiga, el exceso de tensión muscular y la falta de flexibilidad. Más del noventa por ciento de las enfermedades están relacionadas con el estrés. Y quizás nada nos envejece más rápido, interna y externamente, que el estrés elevado.",
+"why.sub":         "El trabajo corporal y el Estiramiento Activo Aislado pueden ayudarte a mantener la salud y el bienestar general, y/o facilitar el proceso de recuperación de algunas lesiones, como desgarros musculares o esguinces. El masaje puede aumentar la circulación, promover la relajación, reducir el estrés y aliviar el dolor estimulando la liberación de endorfinas — los analgésicos naturales del cuerpo.",
+
+"why.card1.desc":  "Puede aliviar el dolor lumbar y mejorar el rango de movimiento, así como reducir el dolor asociado con las cefaleas tensionales y la disfunción de la ATM.",
+
+"why.card2.desc":  "Aborda el dolor causado por mala postura, escoliosis y lesiones por esfuerzo repetitivo, como el codo de tenista o golfista — reduciendo la tensión acumulada en el cuerpo.",
+
+"why.card3.desc":  "El masaje sueco y de tejido profundo puede fortalecer el sistema inmunológico estimulando el flujo linfático — el sistema de defensa natural del cuerpo.",
+"why.quote":       "El masaje sueco y de tejido profundo puede aliviar el dolor lumbar y mejorar el rango de movimiento, reducir el dolor asociado con la cefalea tensional, la disfunción de la articulación temporomandibular (ATM), la mala postura o la escoliosis, y las lesiones por esfuerzo repetitivo en músculos y tendones — y puede mejorar la inmunidad estimulando el flujo linfático, el sistema de defensa natural del cuerpo.",
   },
   en: {
+    "why.tag":         "Why Bodywork",
+"why.title1":      "The Science",
+"why.title2":      "Behind the Work",
+"why.lead":        "Experts estimate that the main causes of injuries are fatigue, excess muscle tension and lack of flexibility. Upwards of ninety percent of disease is stress-related. And perhaps nothing ages us faster, internally and externally, than high stress.",
+"why.sub":         "Bodywork and Active Isolated Stretching can help you support general health and well-being and/or facilitate the healing process of some injuries, such as muscle tears or sprains. Massage can increase circulation, promote relaxation, reduce stress, and reduce pain by stimulating the release of endorphins — the body's natural painkillers.",
+
+"why.card1.desc":  "Can alleviate low-back pain and improve range of motion, and reduce pain associated with tension headaches and TMJ dysfunction.",
+
+"why.card2.desc":  "Addresses pain from poor posture, scoliosis, and repetitive stress injuries such as tennis or golf elbow — reducing tension held in the body.",
+
+"why.card3.desc":  "Swedish and deep tissue massage can enhance immunity by stimulating lymph flow — the body's natural defense system.",
+"why.quote":       "Swedish and deep tissue massage can help alleviate low-back pain and improve range of motion, reduce pain associated with tension headache, temporomandibular joint (TMJ) dysfunction, poor posture or scoliosis, and repetitive stress injuries to muscles and tendons — and can enhance immunity by stimulating lymph flow, the body's natural defense system.",
 
     "vid.title1":"Raúl walks you through it”","vid.title2":"How the therapy works","vid.desc":"Discover the process, the technique, and what you can expect during your first session.",
 
