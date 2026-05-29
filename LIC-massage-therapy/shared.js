@@ -247,7 +247,7 @@ const i18n = {
     "pp.s10.li5val":"Lun–Vie 10 am–7 pm · Sáb 10 am–6 pm · Dom cerrado",
 
     // Botón volver y footer
-    "pp.backBtn":"Volver al Formulario",
+    "pp.backBtn":"Volver",
     "pp.footer":"© 2026 LIC Massage Therapy — Long Island City, New York",
 
     // ── NUEVAS CLAVES — reservas.html ────────────────────────────────────────
@@ -902,7 +902,7 @@ const i18n = {
     "pp.s10.li5val":"Mon–Fri 10 am–7 pm · Sat 10 am–6 pm · Sun closed",
 
     // Back button and footer
-    "pp.backBtn":"Back to Form",
+    "pp.backBtn":"Back",
     "pp.footer":"© 2026 LIC Massage Therapy — Long Island City, New York",
 
     // ── NEW KEYS — reservas.html ──────────────────────────────────────────────
