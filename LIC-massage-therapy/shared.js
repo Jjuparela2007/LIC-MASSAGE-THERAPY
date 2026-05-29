@@ -623,9 +623,12 @@ const i18n = {
     "book.cta.heading":"Reserva tu sesión","book.cta.sub":"Te respondo en menos de 24 h","book.cta.btn":"Reservar Ahora","book.chip.hours":"Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: Cerrado","book.chip.location": "12-17 Jackson Ave, Long Island City, NY 11101, Estados Unidos",
 
     "gal-tag":"Masajes","gal-title-line":"cada masaje","gal-title-line1":"una obra",
+    "vid.title1":"Raúl te explica","vid.title2":"cómo funciona la terapia","vid.desc":"Descubre el proceso, la técnica y lo que puedes esperar en tu primera sesión.",
     
   },
   en: {
+
+    "vid.title1":"Raúl walks you through it”","vid.title2":"How the therapy works","vid.desc":"Discover the process, the technique, and what you can expect during your first session.",
 
 "gal-tag":"Massage","gal-title-line":"Every massage is","gal-title-line1":"a work of art.",
 

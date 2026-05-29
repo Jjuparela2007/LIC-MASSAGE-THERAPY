@@ -208,6 +208,114 @@
 
 
 
+<!-- ─── VIDEO SECTION ─────────────────────────────────────────────────────── -->
+<section class="video-section">
+  <div class="video-section-inner">
+
+    <div class="section-header center reveal">
+      <h2 class="section-title">
+        <em data-i18n="vid.title1"></em><br>
+        <strong data-i18n="vid.title2"></strong>
+      </h2>
+      <p class="vid-subtitle" data-i18n="vid.desc"></p>
+    </div>
+
+    <div class="vid-frame-wrap reveal delay-1">
+      <!-- ▸ Reemplaza VIDEO_ID por el ID de YouTube de Raúl (ej: dQw4w9WgXcQ) -->
+      <div class="vid-frame">
+        <iframe
+          id="raulVideo"
+          src="https://youtu.be/NqPpJBXRQvk?si=Fmeh1Ra-hTlhvHh2"
+          title="Raúl explica cómo hacer una terapia"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <!-- Corners decorativos -->
+      <div class="vid-corner tl"></div>
+      <div class="vid-corner br"></div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* ── VIDEO SECTION ─────────────────────────────────── */
+.video-section {
+  background: #0a0a0a;
+  padding: 6rem 1.5rem;
+  position: relative;
+}
+
+.video-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(180,145,90,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.video-section-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.vid-subtitle {
+  color: rgba(255,255,255,0.55);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  max-width: 520px;
+  margin: 0.75rem auto 0;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.vid-frame-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+}
+
+.vid-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.55);
+}
+
+.vid-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Corners dorados igual que ts-corner */
+.vid-corner {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-color: rgba(180,145,90,0.7);
+  border-style: solid;
+  pointer-events: none;
+  z-index: 2;
+}
+.vid-corner.tl { top: -8px;  left: -8px;  border-width: 2px 0 0 2px; }
+.vid-corner.br { bottom: -8px; right: -8px; border-width: 0 2px 2px 0; }
+
+@media (max-width: 600px) {
+  .video-section { padding: 4rem 1rem; }
+}
+</style>
+
 <!-- ─── TABS CAROUSEL ─────────────────────────────────────────────────────── -->
 <section class="tabs-section">
   <div class="section-container">
