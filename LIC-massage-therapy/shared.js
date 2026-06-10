@@ -644,13 +644,13 @@ const i18n = {
 "pr.badge": "Más populares",
 
 // Pricing — tarjeta 30 min
-"pr.c1.title": "30 min - 90 min",
+"pr.c1.title": "30 - 60 - 90 min",
 "pr.c1.label": "Masaje relajante",
 "pr.c1.desc": "Un masaje integral que combina la manipulación de los tejidos blandos para aliviar el estrés y la tensión, a la vez que mejora la circulación sanguínea y linfática. La presión aplicada es de ligera a media. Su principal objetivo es la relajación. ",
 "pr.c1.cta": "Reserva  30 min",
 
 // Pricing — tarjeta 60 min
-"pr.c2.title": "30 min - 90 min",
+"pr.c2.title": "30 - 60 - 90 min",
 "pr.c2.label": "Masaje de presión profunda",
 "pr.c2.desc": "Diseñada para abordar afecciones o molestias específicas, esta sesión es ideal para quienes buscan aliviar dolores y molestias corporales causados ​​por tensión muscular",
 "pr.c2.cta": "Reserva  60 min",
