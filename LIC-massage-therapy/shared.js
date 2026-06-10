@@ -678,7 +678,7 @@ const i18n = {
     /* ── ENGLISH (en) ─────────────────────────────────────── */
 
 // Pricing — header
-"pr.title": " pricing ",
+"pr.title": " Pricing ",
 "pr.sub": "Pricing is based on session length, not session type. Choose your duration and Raúl will tailor the work (stretching, massage, or a combination) to what your body needs that day.",
 "pr.badge": "Most popular",
 
