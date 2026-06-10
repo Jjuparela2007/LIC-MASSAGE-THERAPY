@@ -644,21 +644,21 @@ const i18n = {
 "pr.badge": "Más populares",
 
 // Pricing — tarjeta 30 min
-"pr.c1.title": "30 minutos",
-"pr.c1.label": "Reinicio rápido",
-"pr.c1.desc": "Alivio localizado en una zona específica: cuello, zona lumbar o cadera tensa. Ideal para usar entre sesiones completas.",
+"pr.c1.title": "30 min - 90 min",
+"pr.c1.label": "Masaje relajante",
+"pr.c1.desc": "Un masaje integral que combina la manipulación de los tejidos blandos para aliviar el estrés y la tensión, a la vez que mejora la circulación sanguínea y linfática. La presión aplicada es de ligera a media. Su principal objetivo es la relajación. ",
 "pr.c1.cta": "Reserva  30 min",
 
 // Pricing — tarjeta 60 min
-"pr.c2.title": "60 minutos",
-"pr.c2.label": "Sesión de firmas",
-"pr.c2.desc": "Nuestra sesión más solicitada. Trabajo de cuerpo completo con atención específica a las zonas que usted traiga.",
+"pr.c2.title": "30 min - 90 min",
+"pr.c2.label": "Masaje de presión profunda",
+"pr.c2.desc": "Diseñada para abordar afecciones o molestias específicas, esta sesión es ideal para quienes buscan aliviar dolores y molestias corporales causados ​​por tensión muscular",
 "pr.c2.cta": "Reserva  60 min",
 
 // Pricing — tarjeta 90 min
-"pr.c3.title": "90 minutos",
-"pr.c3.label": "Trabajo profundo",
-"pr.c3.desc": "Evaluación corporal completa y seguimiento detallado de la tensión crónica, los objetivos de movilidad o la recuperación posterior a una lesión.",
+"pr.c3.title": "30 min - 90 min",
+"pr.c3.label": "Cómo dar un masaje a tu pareja",
+"pr.c3.desc": "¿Tu pareja siempre te pide que le alivieses el dolor de cuello, hombros o espalda, y después de cinco minutos no tienes ni idea de qué hacer? ¿Siempre has querido darle a tu pareja un masaje relajante y reconfortante? Si es así, ¡esto es para ti!",
 "pr.c3.cta": "Reservar  90 min",
 
 // Pricing — sesiones especializadas
@@ -683,21 +683,21 @@ const i18n = {
 "pr.badge": "Most popular",
 
 // Pricing — 30 min card
-"pr.c1.title": "30 minutes",
-"pr.c1.label": "Quick reset",
-"pr.c1.desc": "Targeted relief for one specific area: neck, lower back, or a tight hip. Ideal between full sessions.",
+"pr.c1.title": " 30 min - 90 min",
+"pr.c1.label": "Relaxation Massage",
+"pr.c1.desc": "An all-around massage and manipulation of soft tissue that relieves stress and tension, while enhancing blood and lymph circulation, pressure applied is lite to medium. The main purpose is relaxation.",
 "pr.c1.cta": "Book  30 min",
 
 // Pricing — 60 min card
-"pr.c2.title": "60 minutes",
-"pr.c2.label": "Signature session",
-"pr.c2.desc": "Our most requested session. Full-body work with focused attention on the areas you bring in.",
+"pr.c2.title": "30 min - 90 min",
+"pr.c2.label": "Deep Pressure Massage",
+"pr.c2.desc": "Designed to focus on specific conditions or areas of discomfort. This session is good for anybody looking to relieve body aches and pains caused by muscle tension.",
 "pr.c2.cta": "Book  60 min",
 
 // Pricing — 90 min card
-"pr.c3.title": "90 minutes",
-"pr.c3.label": "Deep work",
-"pr.c3.desc": "A complete body assessment with detailed follow-up on chronic tension, mobility goals, or post-injury recovery.",
+"pr.c3.title": "90 min",
+"pr.c3.label": "How To Massage Your Partner",
+"pr.c3.desc": "Does your partner always ask you to soothe away their neck, shoulder or back pain, and after five minutes you have no idea what to do? Have you always wanted to give your partner a relaxing, soothing massage? If so, this is for you!",
 "pr.c3.cta": "Book  90 min",
 
 // Pricing — specialized sessions
