@@ -683,13 +683,13 @@ const i18n = {
 "pr.badge": "Most popular",
 
 // Pricing — 30 min card
-"pr.c1.title": " 30 min - 90 min",
+"pr.c1.title": " 30 - 60 - 90 min",
 "pr.c1.label": "Relaxation Massage",
 "pr.c1.desc": "An all-around massage and manipulation of soft tissue that relieves stress and tension, while enhancing blood and lymph circulation, pressure applied is lite to medium. The main purpose is relaxation.",
 "pr.c1.cta": "Book  30 min",
 
 // Pricing — 60 min card
-"pr.c2.title": "30 min - 90 min",
+"pr.c2.title": "30 - 60 - 90 min",
 "pr.c2.label": "Deep Pressure Massage",
 "pr.c2.desc": "Designed to focus on specific conditions or areas of discomfort. This session is good for anybody looking to relieve body aches and pains caused by muscle tension.",
 "pr.c2.cta": "Book  60 min",
