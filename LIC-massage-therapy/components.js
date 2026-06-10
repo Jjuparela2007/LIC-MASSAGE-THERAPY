@@ -534,11 +534,11 @@
   const EMAIL_TEXT = {
     es: {
       subject: 'Consulta de cita — LIC Massage Therapy',
-      body: 'Hola Raul,\n\nMe gustaría obtener más información para reservar una sesión.\n\nNombre:\nTeléfono:\nFecha y hora preferida:\nTipo de masaje de interés:\n\nGracias,'
+      body: 'Hola Raul,\n\nMe gustaría obtener más información para reservar una sesión.\n\nNombre:\nTeléfono:\nTipo de masaje de interés:\n\nGracias,'
     },
     en: {
       subject: 'Appointment Inquiry — LIC Massage Therapy',
-      body: 'Hi Raul,\n\nI would like more information about booking a session.\n\nName:\nPhone:\nPreferred date and time:\nType of massage I\'m interested in:\n\nThank you,'
+      body: 'Hi Raul,\n\nI would like more information about booking a session.\n\nName:\nPhone:\nType of massage I\'m interested in:\n\nThank you,'
     }
   };
 
