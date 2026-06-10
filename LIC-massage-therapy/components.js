@@ -32,6 +32,8 @@
     instagram:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>`,
     facebook: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>`,
     whatsapp: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>`,
+    flagES: `<svg viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="24" height="16" fill="#c60b1e"/><rect y="4" width="24" height="8" fill="#ffc400"/></svg>`,
+    flagUS: `<svg viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><g fill="#b22234"><rect width="24" height="1.23"/><rect y="2.46" width="24" height="1.23"/><rect y="4.92" width="24" height="1.23"/><rect y="7.38" width="24" height="1.23"/><rect y="9.85" width="24" height="1.23"/><rect y="12.31" width="24" height="1.23"/><rect y="14.77" width="24" height="1.23"/></g><rect width="10.4" height="8.62" fill="#3c3b6e"/></svg>`,
   };
 
   /* ── Helpers ──────────────────────────────────────────────────────────── */
@@ -46,9 +48,88 @@
     const esId = prefix ? `${prefix}-btn-es` : 'btn-es';
     const enId = prefix ? `${prefix}-btn-en` : 'btn-en';
     return `<div class="lang-toggle">
-      <button class="lang-btn" id="${esId}" onclick="setLang('es')">ES</button>
-      <button class="lang-btn" id="${enId}" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" id="${esId}" onclick="setLang('es')" aria-label="Español">
+        <span class="lang-flag">${ICONS.flagES}</span>
+        <span class="lang-code">ES</span>
+      </button>
+      <button class="lang-btn" id="${enId}" onclick="setLang('en')" aria-label="English">
+        <span class="lang-flag">${ICONS.flagUS}</span>
+        <span class="lang-code">EN</span>
+      </button>
     </div>`;
+  }
+
+  /* Estilos del toggle de idioma — se inyectan una sola vez */
+  function injectLangStyles() {
+    if (document.getElementById('lang-toggle-styles')) return;
+    const style = document.createElement('style');
+    style.id = 'lang-toggle-styles';
+    style.textContent = `
+      .lang-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        background: rgba(0,0,0,0.04);
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 999px;
+        padding: 3px;
+      }
+      .lang-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        padding: 5px 11px;
+        border-radius: 999px;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 12.5px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        color: rgba(0,0,0,0.55);
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        line-height: 1;
+      }
+      .lang-btn .lang-flag {
+        display: inline-flex;
+        width: 20px;
+        height: 14px;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+        flex-shrink: 0;
+      }
+      .lang-btn .lang-flag svg { width: 100%; height: 100%; display: block; }
+      .lang-btn:hover { color: rgba(0,0,0,0.85); }
+      .lang-btn.active {
+        background: #1F606F;
+        color: #fff;
+        box-shadow: 0 1px 3px rgba(31,96,111,0.35);
+      }
+      .lang-btn.active .lang-flag { box-shadow: 0 0 0 1px rgba(255,255,255,0.4); }
+
+      /* Móvil: dentro del menú las banderas se ven más grandes */
+      .mobile-lang-row .lang-toggle {
+        background: rgba(0,0,0,0.05);
+        padding: 4px;
+      }
+      .mobile-lang-row .lang-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+      .mobile-lang-row .lang-btn .lang-flag {
+        width: 24px;
+        height: 17px;
+      }
+
+      /* Pantallas muy estrechas: solo banderas en la navbar */
+      @media (max-width: 380px) {
+        #navbar .lang-btn .lang-code { display: none; }
+        #navbar .lang-btn { padding: 6px 8px; }
+      }
+    `;
+    document.head.appendChild(style);
   }
 
   /* ── Componente: Mobile Menu ──────────────────────────────────────────── */
@@ -394,6 +475,9 @@
 
       // Evitar doble inserción (útil en hot-reload)
       if (document.getElementById('navbar')) return;
+
+      // Inyectar estilos del toggle de idioma una sola vez
+      injectLangStyles();
 
       // Prepend: cursor → mobileMenu → navbar (en ese orden al inicio del body)
       const firstChild = body.firstChild;
