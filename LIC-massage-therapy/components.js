@@ -3,12 +3,18 @@
   /* ── Configuración de navegación ──────────────────────────────────────── */
   const NAV_LINKS = [
     { href: 'index.html',      key: 'nav.home',         page: 'index'      },
+    { href: 'sobre-mi.html',   key: 'nav.about',        page: 'Sobre Raul'   },
     { href: 'masajes.html',    key: 'nav.masajes',      page: 'masajes'  },
     { href: 'stretch.html',    key: 'nav.terapia',      page: 'terapia'  },
-    { href: 'sobre-mi.html',   key: 'nav.about',        page: 'Sobre Raul'   },
     { href: 'testimonios.html',key: 'nav.testimonials', page: 'testimonios'},
     { href: 'reservas.html',   key: 'nav.book',         page: 'reserva'   },
   
+  ];
+
+  /* ── Enlaces que SOLO aparecen en el menú móvil (no en la navbar) ──────── */
+  const MOBILE_EXTRA_LINKS = [
+    { href: 'politica-privacidad.html',  key: 'nav.privacy', page: 'privacidad',  fallback: 'Políticas'   },
+
   ];
 
   /* ── Configuración del footer ─────────────────────────────────────────── */
@@ -134,6 +140,19 @@
       @media (max-width: 900px) {
         #navbar .nav-actions { display: none; }
       }
+
+      /* Enlaces extra del menú móvil (políticas / cancelación) */
+      .mobile-extra-divider {
+        height: 1px;
+        background: rgba(0,0,0,0.1);
+        margin: 14px 0;
+        list-style: none;
+      }
+      .mobile-extra-link {
+        font-size: 0.92em;
+        opacity: 0.7;
+      }
+      .mobile-extra-link.active { opacity: 1; }
     `;
     document.head.appendChild(style);
   }
@@ -145,6 +164,11 @@
       return `<li><a href="${link.href}"${active} data-i18n="${link.key}">${link.key}</a></li>`;
     }).join('\n    ');
 
+    const extraLinks = MOBILE_EXTRA_LINKS.map(link => {
+      const active = link.page === currentPage ? ' active' : '';
+      return `<li><a href="${link.href}" class="mobile-extra-link${active}" data-i18n="${link.key}">${link.fallback}</a></li>`;
+    }).join('\n    ');
+
     const div = document.createElement('div');
     div.className = 'mobile-menu';
     div.id = 'mobileMenu';
@@ -152,6 +176,8 @@
   <button class="mobile-menu-close" onclick="toggleMenu()">✕</button>
   <ul class="nav-links-mobile">
     ${links}
+    <li class="mobile-extra-divider" aria-hidden="true"></li>
+    ${extraLinks}
   </ul>
   <div class="mobile-lang-row">
     ${langToggleHTML('mob')}
@@ -184,7 +210,7 @@
       </defs>
     </svg>
     <span class="nav-logo-text">
-      <span class="nav-logo-title">L.I.C MASSAGE</span>
+      <span class="nav-logo-title">LIC MASSAGE</span>
       <span class="nav-logo-sub">THERAPY</span>
     </span>
   </a>
@@ -401,14 +427,14 @@
           </defs>
         </svg>
         <span class="footer-logo-text">
-          <span class="footer-logo-title">L.I.C MASSAGE</span>
+          <span class="footer-logo-title">LIC MASSAGE</span>
           <span class="footer-logo-sub">THERAPY</span>
         </span>
       </a>
       <div class="social-links">
         <a href="https://www.instagram.com/licmassagetherapy?igsh=MXJyMDU5M2h0NHpudA%3D%3D" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">${ICONS.instagram}</a>
         <a href="https://www.facebook.com/licmst?rdid=8ZIs4nAKwI0Xblo7&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Coq5x8tCq%2F#" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">${ICONS.facebook}</a>
-        <a href="https://wa.me/17184781951" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">${ICONS.whatsapp}</a>
+        <a href="https://wa.me/13478375503" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">${ICONS.whatsapp}</a>
       </div>
     </div>
 

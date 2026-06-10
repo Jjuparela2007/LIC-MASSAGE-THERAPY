@@ -670,10 +670,17 @@ const i18n = {
 "pr.sp.cta": "Reservar",
 "pr.sp.cta2": "Reservar",
 
+
 // Pricing — nota final
 "pr.note": "Los precios incluyen tanto la relajación como la presión profunda. Los estiramientos activos aislados pueden incluirse en cualquier sesión sin coste adicional.",
+'nav.privacy': 'Privacidad',
   },
-  en: {
+  en: {// dentro de es:
+
+
+// dentro de en:
+'nav.privacy': 'Privacy',
+
 
     /* ── ENGLISH (en) ─────────────────────────────────────── */
 
