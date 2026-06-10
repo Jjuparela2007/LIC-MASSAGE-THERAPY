@@ -639,7 +639,7 @@ const i18n = {
 /* ── ESPAÑOL (es) ─────────────────────────────────────── */
 
 // Pricing — header
-"pr.title": "Precios de las sesiones según su duración",
+"pr.title": "Precios ",
 "pr.sub": "El precio se basa en la duración de la sesión, no en el tipo de sesión. Elige la duración y Raúl adaptará el trabajo (estiramientos, masaje o una combinación) a las necesidades de tu cuerpo ese día.",
 "pr.badge": "Más populares",
 
@@ -678,7 +678,7 @@ const i18n = {
     /* ── ENGLISH (en) ─────────────────────────────────────── */
 
 // Pricing — header
-"pr.title": "Session pricing by duration",
+"pr.title": " pricing ",
 "pr.sub": "Pricing is based on session length, not session type. Choose your duration and Raúl will tailor the work (stretching, massage, or a combination) to what your body needs that day.",
 "pr.badge": "Most popular",
 
