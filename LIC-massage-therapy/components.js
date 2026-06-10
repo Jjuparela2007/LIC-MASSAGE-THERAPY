@@ -34,7 +34,6 @@
     whatsapp: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>`,
     flagES: `<svg viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="24" height="16" fill="#c60b1e"/><rect y="4" width="24" height="8" fill="#ffc400"/></svg>`,
     flagUS: `<svg viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><g fill="#b22234"><rect width="24" height="1.23"/><rect y="2.46" width="24" height="1.23"/><rect y="4.92" width="24" height="1.23"/><rect y="7.38" width="24" height="1.23"/><rect y="9.85" width="24" height="1.23"/><rect y="12.31" width="24" height="1.23"/><rect y="14.77" width="24" height="1.23"/></g><rect width="10.4" height="8.62" fill="#3c3b6e"/></svg>`,
-    phone: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.63 2.63a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6.09 6.09l1.45-1.24a2 2 0 0 1 2.11-.45c.85.3 1.73.51 2.63.63A2 2 0 0 1 22 16.92z"/></svg>`,
   };
 
   /* ── Helpers ──────────────────────────────────────────────────────────── */
@@ -129,6 +128,11 @@
         #navbar .lang-btn .lang-code { display: none; }
         #navbar .lang-btn { padding: 6px 8px; }
       }
+
+      /* Móvil: ocultar el toggle de la navbar (se usa el del menú hamburguesa) */
+      @media (max-width: 900px) {
+        #navbar .nav-actions { display: none; }
+      }
     `;
     document.head.appendChild(style);
   }
@@ -179,7 +183,7 @@
       </defs>
     </svg>
     <span class="nav-logo-text">
-      <span class="nav-logo-title">L.I.C MASSAGE</span>
+      <span class="nav-logo-title">LIC MASSAGE</span>
       <span class="nav-logo-sub">THERAPY</span>
     </span>
   </a>
@@ -424,10 +428,6 @@
         <div class="footer-contact-item">
           ${ICONS.email}
           <span>ra@licmassagetherapy.com</span>
-        </div>
-        <div class="footer-contact-item">
-          ${ICONS.phone}
-          <span> +1 718-478-1951</span>
         </div>
       </div>
     </div>
