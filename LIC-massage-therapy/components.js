@@ -426,7 +426,7 @@
       <div class="footer-contact-items">
         <div class="footer-contact-item">
           ${ICONS.location}
-          <span data-i18n="book.location">12-17 Jackson Ave<br>Long Island City, NY 11101</span>
+          <a href="https://maps.google.com/?q=12-17+Jackson+Ave,+Long+Island+City,+NY+11101" target="_blank" rel="noopener noreferrer" class="footer-contact-link" data-i18n="book.location">12-17 Jackson Ave<br>Long Island City, NY 11101</a>
         </div>
         <div class="footer-contact-item">
           ${ICONS.clock}
@@ -534,11 +534,11 @@
   const EMAIL_TEXT = {
     es: {
       subject: 'Consulta de cita — LIC Massage Therapy',
-      body: 'Hola Raul,\n\nMe gustaría obtener más información para reservar una sesión.\n\nNombre:\nTeléfono:\nTipo de masaje de interés:\n\nGracias,'
+      body: 'Hola Raul,\n\nMe gustaría obtener más información para reservar una sesión.\n\nNombre:\nTeléfono:\nFecha y hora preferida:\nTipo de masaje de interés:\n\nGracias,'
     },
     en: {
       subject: 'Appointment Inquiry — LIC Massage Therapy',
-      body: 'Hi Raul,\n\nI would like more information about booking a session.\n\nName:\nPhone:\nType of massage I\'m interested in:\n\nThank you,'
+      body: 'Hi Raul,\n\nI would like more information about booking a session.\n\nName:\nPhone:\nPreferred date and time:\nType of massage I\'m interested in:\n\nThank you,'
     }
   };
 
