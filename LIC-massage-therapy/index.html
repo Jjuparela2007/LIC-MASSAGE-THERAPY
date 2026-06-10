@@ -263,10 +263,22 @@
   box-shadow: 0 6px 24px rgba(20, 51, 60, 0.05);
   display: flex;
   flex-direction: column;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.pricing-card:hover {
+  border-color: #1F606F;
+  box-shadow: 0 14px 40px rgba(31, 96, 111, 0.22);
+  transform: translateY(-4px);
 }
 
 .pricing-card.featured {
   border: 2px solid #1F606F;
+}
+
+.pricing-card.featured:hover {
+  box-shadow: 0 16px 44px rgba(31, 96, 111, 0.28);
+  transform: translateY(-4px);
 }
 
 .pricing-badge {
