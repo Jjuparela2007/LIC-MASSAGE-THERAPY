@@ -241,7 +241,7 @@ const i18n = {
     "pp.s10.li2bold":"Dirección:",
     "pp.s10.li2val":"Long Island New York, NY",
     "pp.s10.li3bold":"Teléfono:",
-    "pp.s10.li3val":"+1 (347) 837-5503",
+    "pp.s10.li3val":"+1 718-478-1951",
     "pp.s10.li4bold":"Email:",
     "pp.s10.li5bold":"Horario de atención:",
     "pp.s10.li5val":"Lun–Vie 10 am–7 pm · Sáb 10 am–6 pm · Dom cerrado",
@@ -275,7 +275,7 @@ const i18n = {
     "privacy.consent":"de LIC Massage Therapy. Autorizo el uso de mis datos para gestionar mi reserva y recibir comunicaciones relacionadas con mi cita.",
 
     // Teléfono de contacto
-    "book.phone":"+1 (347) 837-5503",
+    "book.phone":"+1 718-478-1951",
 
     // Estados del botón de envío
     "form.submitting":"Abriendo WhatsApp…",
@@ -896,7 +896,7 @@ const i18n = {
     "pp.s10.li2bold":"Address:",
     "pp.s10.li2val":"Long Island New York, NY",
     "pp.s10.li3bold":"Phone:",
-    "pp.s10.li3val":"+1 (347) 837-5503",
+    "pp.s10.li3val":"+1 718-478-1951",
     "pp.s10.li4bold":"Email:",
     "pp.s10.li5bold":"Office hours:",
     "pp.s10.li5val":"Mon–Fri 10 am–7 pm · Sat 10 am–6 pm · Sun closed",
@@ -930,7 +930,7 @@ const i18n = {
     "privacy.consent":"of LIC Massage Therapy. I authorize the use of my data to manage my booking and receive communications related to my appointment.",
 
     // Contact phone
-    "book.phone":"+1 (347) 837-5503",
+    "book.phone":"+1 718-478-1951",
 
     // Submit button states
     "form.submitting":"Opening WhatsApp…",
