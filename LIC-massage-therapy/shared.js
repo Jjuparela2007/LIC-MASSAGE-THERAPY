@@ -636,8 +636,81 @@ const i18n = {
 
 "why.card3.desc":  "El masaje sueco y de tejido profundo puede fortalecer el sistema inmunológico estimulando el flujo linfático — el sistema de defensa natural del cuerpo.",
 "why.quote":       "El masaje sueco y de tejido profundo puede aliviar el dolor lumbar y mejorar el rango de movimiento, reducir el dolor asociado con la cefalea tensional, la disfunción de la articulación temporomandibular (ATM), la mala postura o la escoliosis, y las lesiones por esfuerzo repetitivo en músculos y tendones — y puede mejorar la inmunidad estimulando el flujo linfático, el sistema de defensa natural del cuerpo.",
+/* ── ESPAÑOL (es) ─────────────────────────────────────── */
+
+// Pricing — header
+"pr.title": "Precios de las sesiones según su duración",
+"pr.sub": "El precio se basa en la duración de la sesión, no en el tipo de sesión. Elige la duración y Raúl adaptará el trabajo (estiramientos, masaje o una combinación) a las necesidades de tu cuerpo ese día.",
+"pr.badge": "Más populares",
+
+// Pricing — tarjeta 30 min
+"pr.c1.title": "30 minutos",
+"pr.c1.label": "Reinicio rápido",
+"pr.c1.desc": "Alivio localizado en una zona específica: cuello, zona lumbar o cadera tensa. Ideal para usar entre sesiones completas.",
+"pr.c1.cta": "Reserva  30 min",
+
+// Pricing — tarjeta 60 min
+"pr.c2.title": "60 minutos",
+"pr.c2.label": "Sesión de firmas",
+"pr.c2.desc": "Nuestra sesión más solicitada. Trabajo de cuerpo completo con atención específica a las zonas que usted traiga.",
+"pr.c2.cta": "Reserva  60 min",
+
+// Pricing — tarjeta 90 min
+"pr.c3.title": "90 minutos",
+"pr.c3.label": "Trabajo profundo",
+"pr.c3.desc": "Evaluación corporal completa y seguimiento detallado de la tensión crónica, los objetivos de movilidad o la recuperación posterior a una lesión.",
+"pr.c3.cta": "Reservar  90 min",
+
+// Pricing — sesiones especializadas
+"pr.sp.title": "Sesiones especializadas",
+"pr.sp1.name": "Coaching de masaje para parejas",
+"pr.sp1.time": "1,5 horas",
+"pr.sp2.name": "Sesión de relajación guiada",
+"pr.sp2.time": "45 minutos",
+"pr.sp.cta": "Reservar",
+"pr.sp.cta2": "Reservar",
+
+// Pricing — nota final
+"pr.note": "Los precios incluyen tanto la relajación como la presión profunda. Los estiramientos activos aislados pueden incluirse en cualquier sesión sin coste adicional.",
   },
   en: {
+
+    /* ── ENGLISH (en) ─────────────────────────────────────── */
+
+// Pricing — header
+"pr.title": "Session pricing by duration",
+"pr.sub": "Pricing is based on session length, not session type. Choose your duration and Raúl will tailor the work (stretching, massage, or a combination) to what your body needs that day.",
+"pr.badge": "Most popular",
+
+// Pricing — 30 min card
+"pr.c1.title": "30 minutes",
+"pr.c1.label": "Quick reset",
+"pr.c1.desc": "Targeted relief for one specific area: neck, lower back, or a tight hip. Ideal between full sessions.",
+"pr.c1.cta": "Book  30 min",
+
+// Pricing — 60 min card
+"pr.c2.title": "60 minutes",
+"pr.c2.label": "Signature session",
+"pr.c2.desc": "Our most requested session. Full-body work with focused attention on the areas you bring in.",
+"pr.c2.cta": "Book  60 min",
+
+// Pricing — 90 min card
+"pr.c3.title": "90 minutes",
+"pr.c3.label": "Deep work",
+"pr.c3.desc": "A complete body assessment with detailed follow-up on chronic tension, mobility goals, or post-injury recovery.",
+"pr.c3.cta": "Book  90 min",
+
+// Pricing — specialized sessions
+"pr.sp.title": "Specialized sessions",
+"pr.sp1.name": "Couples massage coaching",
+"pr.sp1.time": "1.5 hours",
+"pr.sp2.name": "Guided relaxation session",
+"pr.sp2.time": "45 minutes",
+"pr.sp.cta": "Book",
+"pr.sp.cta2": "Book",
+
+// Pricing — footer note
+"pr.note": "Pricing includes both relaxation and deep pressure. Standalone active stretching can be included in any session at no extra cost.",
     "why.tag":         "Why Bodywork",
 "why.title1":      "The Science",
 "why.title2":      "Behind the Work",
