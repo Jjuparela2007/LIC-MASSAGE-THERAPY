@@ -401,7 +401,7 @@
           </defs>
         </svg>
         <span class="footer-logo-text">
-          <span class="footer-logo-title">LIC MASSAGE</span>
+          <span class="footer-logo-title">L.I.C MASSAGE</span>
           <span class="footer-logo-sub">THERAPY</span>
         </span>
       </a>
