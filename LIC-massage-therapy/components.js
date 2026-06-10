@@ -178,7 +178,7 @@
       </defs>
     </svg>
     <span class="nav-logo-text">
-      <span class="nav-logo-title">LIC MASSAGE</span>
+      <span class="nav-logo-title">L.I.C MASSAGE</span>
       <span class="nav-logo-sub">THERAPY</span>
     </span>
   </a>
