@@ -438,7 +438,7 @@
         </div>
         <div class="footer-contact-item">
           ${ICONS.email}
-          <span>ra@licmassagetherapy.com</span>
+          <a href="mailto:ra@licmassagetherapy.com" class="footer-contact-link" id="footer-email-link">ra@licmassagetherapy.com</a>
         </div>
       </div>
     </div>
@@ -507,9 +507,18 @@
       body.insertBefore(renderFooter(), lastScript || null);
 
       // Re-aplicar el idioma guardado sobre los nodos recién insertados
+      const currentLang = localStorage.getItem('kinesys-lang') || 'en';
       if (typeof applyLang === 'function') {
-        applyLang(localStorage.getItem('kinesys-lang') || 'en');
+        applyLang(currentLang);
       }
+
+      // Construir el enlace de correo según el idioma activo
+      updateEmailLink(currentLang);
+      bindEmailClick();
+      window.addEventListener('langChange', function (e) {
+        const lang = (e && e.detail && e.detail.lang) || localStorage.getItem('kinesys-lang') || 'en';
+        updateEmailLink(lang);
+      });
     }
 
     // Si el DOM ya está listo, insertar de inmediato; si no, esperar.
@@ -519,5 +528,37 @@
       inject();
     }
   };
+
+  /* ── Email bilingüe del footer ───────────────────────────────────────── */
+  const EMAIL_ADDRESS = 'ra@licmassagetherapy.com';
+  const EMAIL_TEXT = {
+    es: {
+      subject: 'Consulta de cita — LIC Massage Therapy',
+      body: 'Hola Raul,\n\nMe gustaría obtener más información para reservar una sesión.\n\nNombre:\nTeléfono:\nFecha y hora preferida:\nTipo de masaje de interés:\n\nGracias,'
+    },
+    en: {
+      subject: 'Appointment Inquiry — LIC Massage Therapy',
+      body: 'Hi Raul,\n\nI would like more information about booking a session.\n\nName:\nPhone:\nPreferred date and time:\nType of massage I\'m interested in:\n\nThank you,'
+    }
+  };
+
+  function updateEmailLink(lang) {
+    const link = document.getElementById('footer-email-link');
+    if (!link) return;
+    const t = EMAIL_TEXT[lang] || EMAIL_TEXT.en;
+    const href = `mailto:${EMAIL_ADDRESS}?subject=${encodeURIComponent(t.subject)}&body=${encodeURIComponent(t.body)}`;
+    link.setAttribute('href', href);
+  }
+
+  /* Garantiza el idioma correcto incluso si langChange no se dispara:
+     reconstruye el mailto justo antes de abrir el cliente de correo. */
+  function bindEmailClick() {
+    const link = document.getElementById('footer-email-link');
+    if (!link) return;
+    link.addEventListener('click', function () {
+      const lang = localStorage.getItem('kinesys-lang') || 'en';
+      updateEmailLink(lang);
+    });
+  }
 
 })();
