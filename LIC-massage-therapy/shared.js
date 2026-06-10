@@ -644,20 +644,21 @@ const i18n = {
 "pr.badge": "Más populares",
 
 // Pricing — tarjeta 30 min
-"pr.c1.title": "",
-"pr.c1.label": "Masaje relajante",
+"pr.c1.title": "Masaje relajante",
+"pr.c1.label": "",
 "pr.c1.desc": "Un masaje integral que combina la manipulación de los tejidos blandos para aliviar el estrés y la tensión, a la vez que mejora la circulación sanguínea y linfática. La presión aplicada es de ligera a media. Su principal objetivo es la relajación. ",
 "pr.c1.cta": "Reserva  30 min",
 
 // Pricing — tarjeta 60 min
-"pr.c2.title": "",
-"pr.c2.label": "Masaje de presión profunda",
+"pr.c2.title2":"Sesion de estiramiento",
+"pr.c2.title": "Masaje de presión profunda",
+"pr.c2.label2": "Elegi tu duración",
 "pr.c2.desc": "Diseñada para abordar afecciones o molestias específicas, esta sesión es ideal para quienes buscan aliviar dolores y molestias corporales causados ​​por tensión muscular",
 "pr.c2.cta": "Reserva  60 min",
-
+"pr.c2.desc2": "Los expertos estiman que las tres principales causas de lesiones son  la fatiga ,  la tensión muscular excesiva  y  la falta de flexibilidad",
 // Pricing — tarjeta 90 min
-"pr.c3.title": "",
-"pr.c3.label": "Cómo dar un masaje a tu pareja",
+"pr.c3.title": "Cómo dar un masaje a tu pareja",
+"pr.c3.label": "",
 "pr.c3.desc": "¿Tu pareja siempre te pide que le alivieses el dolor de cuello, hombros o espalda, y después de cinco minutos no tienes ni idea de qué hacer? ¿Siempre has querido darle a tu pareja un masaje relajante y reconfortante? Si es así, ¡esto es para ti!",
 "pr.c3.cta": "Reservar  90 min",
 
@@ -677,33 +678,33 @@ const i18n = {
   },
   en: {// dentro de es:
 
-
+"pr.c2.desc2":"Experts estimate that the top three causes of injuries are fatigue, excess muscle tension and lack of flexibility.",
 // dentro de en:
 'nav.privacy': 'Privacy',
 
 
     /* ── ENGLISH (en) ─────────────────────────────────────── */
-
+"pr.c2.title2":"Stretching Session",
 // Pricing — header
 "pr.title": " PRICING ",
 "pr.sub": "Pricing is based on session length, not session type. Choose your duration and Raúl will tailor the work (stretching, massage, or a combination) to what your body needs that day.",
 "pr.badge": "Most popular",
 
 // Pricing — 30 min card
-"pr.c1.title": " 30 - 60 - 90 min",
-"pr.c1.label": "Relaxation Massage",
+"pr.c1.title": " Relaxation Massage",
+"pr.c1.label": "",
 "pr.c1.desc": "An all-around massage and manipulation of soft tissue that relieves stress and tension, while enhancing blood and lymph circulation, pressure applied is lite to medium. The main purpose is relaxation.",
 "pr.c1.cta": "Book  30 min",
 
 // Pricing — 60 min card
-"pr.c2.title": "30 - 60 - 90 min",
-"pr.c2.label": "Deep Pressure Massage",
+"pr.c2.title": "Deep Pressure Massage",
+"pr.c2.label2": "Choose Your Session Length",
 "pr.c2.desc": "Designed to focus on specific conditions or areas of discomfort. This session is good for anybody looking to relieve body aches and pains caused by muscle tension.",
 "pr.c2.cta": "Book  60 min",
 
 // Pricing — 90 min card
-"pr.c3.title": "90 min",
-"pr.c3.label": "How To Massage Your Partner",
+"pr.c3.title": "How To Massage Your Partner",
+"pr.c3.label": "",
 "pr.c3.desc": "Does your partner always ask you to soothe away their neck, shoulder or back pain, and after five minutes you have no idea what to do? Have you always wanted to give your partner a relaxing, soothing massage? If so, this is for you!",
 "pr.c3.cta": "Book  90 min",
 
