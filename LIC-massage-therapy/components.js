@@ -194,7 +194,8 @@
 
     const nav = document.createElement('nav');
     nav.id = 'navbar';
-    if (!isHome) nav.className = 'scrolled-static';
+    /* Navbar permanente en modo claro sólido en todas las páginas (incl. home) */
+    nav.className = 'scrolled-static';
 
     nav.innerHTML = `
   <a href="index.html" class="nav-logo">
