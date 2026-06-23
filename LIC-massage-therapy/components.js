@@ -3,8 +3,8 @@
   /* ── Configuración de navegación ──────────────────────────────────────── */
   const NAV_LINKS = [
     { href: 'index.html',      key: 'nav.home',         page: 'index'      },
-    { href: 'sobre-mi.html',   key: 'nav.about',        page: 'Sobre Raul'   },
-    { href: 'masajes.html',    key: 'nav.masajes',      page: 'masajes'  },
+   
+   { href: 'masajes.html',    key: 'nav.masajes',      page: 'masajes'  },
     { href: 'stretch.html',    key: 'nav.terapia',      page: 'terapia'  },
     { href: 'testimonios.html',key: 'nav.testimonials', page: 'testimonios'},
     { href: 'reservas.html',   key: 'nav.book',         page: 'reserva'   },
@@ -24,7 +24,6 @@
     { href: 'index.html',       key: 'nav.home'         },
     { href: 'masajes.html',    key: 'nav.masajes',     },
     { href: 'stretch.html',    key: 'nav.terapia',     },
-    { href: 'sobre-mi.html',    key: 'nav.about'        },
     { href: 'testimonios.html', key: 'nav.testimonials' },
     { href: 'reservas.html',    key: 'nav.book'      },
 

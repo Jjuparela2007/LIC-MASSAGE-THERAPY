@@ -6,13 +6,375 @@
 <title>LIC Massage Therapy | Deep Tissue & Therapeutic Massage in Long Island City, NY</title>
 <meta name="description" content="Centro de terapia muscular y masajes premium. Recuperación, bienestar y rendimiento deportivo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 
 <!-- Favicon / ícono de pestaña -->
 <link rel="icon" type="image/png" href="img/logo.png">
 <link rel="shortcut icon" type="image/png" href="img/logo.png">
 <link rel="apple-touch-icon" href="img/logo.png">
+
+<!-- ─── HERO CARRUSEL (estilos autocontenidos) ───────────────────────────── -->
+<style>
+:root{
+  --hero-teal:#1F606F;
+  --hero-teal-light:#3a8a9c;
+}
+
+.hero-carousel{
+  position:relative;
+  width:100%;
+  height:92vh;
+  min-height:560px;
+  max-height:880px;
+  overflow:hidden;
+  background:#0a1a1e;
+}
+
+/* ── Slides ── */
+.hc-slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  visibility:hidden;
+  transition:opacity 1.1s ease, transform 6s ease;
+  transform:scale(1.08);
+  z-index:1;
+}
+.hc-slide.active{
+  opacity:1;
+  visibility:visible;
+  transform:scale(1);
+  z-index:2;
+}
+.hc-slide-bg{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+}
+
+/* ── Overlay para contraste (clave del problema anterior) ── */
+.hc-slide::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(105deg, rgba(8,24,28,.82) 0%, rgba(8,24,28,.55) 42%, rgba(8,24,28,.25) 100%),
+    linear-gradient(to top, rgba(8,24,28,.65) 0%, transparent 45%);
+  z-index:1;
+}
+
+/* ── Contenido ── */
+.hc-content{
+  position:absolute;
+  inset:0;
+  z-index:10;
+  display:flex;
+  align-items:center;
+  padding:0 clamp(1.5rem,8vw,9rem);
+  pointer-events:none;
+}
+.hc-text{
+  max-width:680px;
+  pointer-events:auto;
+}
+
+.hc-eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:.7rem;
+  font-family:'DM Sans',sans-serif;
+  font-size:.72rem;
+  font-weight:500;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:#bfe3ec;
+  margin-bottom:1.6rem;
+  opacity:0;
+  transform:translateY(20px);
+}
+.hc-eyebrow::before{
+  content:'';
+  width:42px;
+  height:1px;
+  background:var(--hero-teal-light);
+}
+
+.hc-title{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:300;
+  font-size:clamp(2.6rem,6.2vw,5.4rem);
+  line-height:1.02;
+  color:#fff;
+  margin:0 0 .4rem;
+  text-shadow:0 4px 30px rgba(0,0,0,.55);
+  opacity:0;
+  transform:translateY(28px);
+}
+.hc-title em{
+  font-style:italic;
+  font-weight:400;
+  color:#9fd4e0;
+}
+.hc-title .light{
+  display:block;
+  font-size:.92em;
+  color:rgba(255,255,255,.95);
+}
+
+.hc-divider{
+  width:64px;
+  height:2px;
+  background:linear-gradient(90deg,var(--hero-teal-light),transparent);
+  margin:1.8rem 0;
+  opacity:0;
+  transform:scaleX(0);
+  transform-origin:left;
+}
+
+.hc-desc{
+  font-family:'DM Sans',sans-serif;
+  font-weight:300;
+  font-size:clamp(1rem,1.4vw,1.15rem);
+  line-height:1.8;
+  color:rgba(255,255,255,.82);
+  max-width:480px;
+  margin:0 0 2.4rem;
+  text-shadow:0 2px 14px rgba(0,0,0,.4);
+  opacity:0;
+  transform:translateY(20px);
+}
+
+.hc-ctas{
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  opacity:0;
+  transform:translateY(20px);
+}
+
+.hc-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:.6rem;
+  font-family:'DM Sans',sans-serif;
+  font-size:.82rem;
+  font-weight:500;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  text-decoration:none;
+  padding:1.05rem 2.4rem;
+  border-radius:2px;
+  transition:all .35s ease;
+  cursor:pointer;
+}
+.hc-btn-primary{
+  background:var(--hero-teal);
+  color:#fff;
+  border:1px solid var(--hero-teal);
+}
+.hc-btn-primary:hover{
+  background:var(--hero-teal-light);
+  border-color:var(--hero-teal-light);
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px rgba(31,96,111,.45);
+}
+.hc-btn-ghost{
+  background:transparent;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.35);
+}
+.hc-btn-ghost:hover{
+  border-color:#fff;
+  background:rgba(255,255,255,.08);
+  transform:translateY(-2px);
+}
+
+/* ── Animación de entrada del slide activo ── */
+.hc-slide.active .hc-eyebrow{ animation:hcUp .8s .25s forwards; }
+.hc-slide.active .hc-title{   animation:hcUp .9s .4s forwards; }
+.hc-slide.active .hc-divider{ animation:hcLine .8s .7s forwards; }
+.hc-slide.active .hc-desc{    animation:hcUp .9s .85s forwards; }
+.hc-slide.active .hc-ctas{    animation:hcUp .9s 1s forwards; }
+
+@keyframes hcUp{ to{ opacity:1; transform:translateY(0);} }
+@keyframes hcLine{ to{ opacity:1; transform:scaleX(1);} }
+
+/* ── Flechas ── */
+.hc-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:20;
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(8,24,28,.3);
+  backdrop-filter:blur(6px);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:all .3s ease;
+}
+.hc-arrow:hover{
+  background:var(--hero-teal);
+  border-color:var(--hero-teal);
+  transform:translateY(-50%) scale(1.08);
+}
+.hc-arrow svg{ width:20px; height:20px; }
+.hc-arrow.prev{ left:clamp(1rem,3vw,2.4rem); }
+.hc-arrow.next{ right:clamp(1rem,3vw,2.4rem); }
+
+/* ── Dots ── */
+.hc-dots{
+  position:absolute;
+  bottom:2.4rem;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:20;
+  display:flex;
+  gap:.8rem;
+}
+.hc-dot{
+  width:36px;
+  height:3px;
+  border-radius:2px;
+  border:none;
+  background:rgba(255,255,255,.3);
+  cursor:pointer;
+  padding:0;
+  overflow:hidden;
+  position:relative;
+  transition:background .3s;
+}
+.hc-dot.active{ background:rgba(255,255,255,.4); }
+.hc-dot.active::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:#fff;
+  transform:translateX(-100%);
+}
+.hc-dot.active.run::after{
+  animation:hcDot 6s linear forwards;
+}
+@keyframes hcDot{ to{ transform:translateX(0);} }
+
+/* ── Contador de slide ── */
+.hc-counter{
+  position:absolute;
+  bottom:2.2rem;
+  right:clamp(1.5rem,5vw,4rem);
+  z-index:20;
+  font-family:'DM Sans',sans-serif;
+  font-size:.8rem;
+  letter-spacing:.15em;
+  color:rgba(255,255,255,.7);
+}
+.hc-counter b{ color:#fff; font-weight:600; }
+
+/* ── Responsive ── */
+@media (max-width:768px){
+  .hero-carousel{ height:88vh; min-height:520px; }
+  .hc-content{ padding:0 1.5rem; align-items:flex-end; padding-bottom:6rem; }
+  .hc-arrow{ width:44px; height:44px; }
+  .hc-arrow.prev{ left:.8rem; }
+  .hc-arrow.next{ right:.8rem; }
+  .hc-counter{ display:none; }
+  .hc-desc{ max-width:100%; }
+}
+@media (max-width:480px){
+  .hc-ctas{ flex-direction:column; }
+  .hc-btn{ justify-content:center; width:100%; }
+}
+
+/* ── Slide centrado (estilo banner de referencia) ── */
+.hc-centered .hc-content{
+  justify-content:center;
+  text-align:center;
+}
+.hc-centered .hc-text{
+  max-width:none;
+}
+/* Overlay más suave: la imagen ya viene oscurecida en teal */
+.hc-centered::after{
+  background:linear-gradient(to right, rgba(10,30,33,.25), rgba(10,30,33,.1) 50%, rgba(10,30,33,.25));
+}
+.hc-title-center{
+  font-family:'DM Sans',sans-serif;
+  margin:0;
+  color:#e9d9b8;
+  text-shadow:0 2px 24px rgba(0,0,0,.5);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.3rem;
+}
+.hc-line-top{
+  font-weight:400;
+  font-size:clamp(1rem,2.2vw,1.7rem);
+  letter-spacing:.42em;
+  text-transform:uppercase;
+  padding-left:.42em; /* compensar el letter-spacing para centrar óptico */
+  opacity:.9;
+}
+.hc-line-bottom{
+  font-weight:800;
+  font-size:clamp(1.9rem,5.4vw,4.4rem);
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  line-height:1.05;
+  padding-left:.1em;
+}
+.hc-plus{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:1.1rem;
+  margin-top:1.6rem;
+  opacity:0;
+  transform:translateY(16px);
+}
+.hc-slide.active .hc-plus{ animation:hcUp .9s .6s forwards; }
+.hc-plus-line{
+  width:clamp(60px,12vw,150px);
+  height:1px;
+  background:rgba(233,217,184,.55);
+}
+.hc-plus-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:26px;
+  height:26px;
+  border:1px solid rgba(233,217,184,.55);
+  border-radius:50%;
+  color:#e9d9b8;
+  font-size:1rem;
+  line-height:1;
+}
+/* animación del título centrado */
+.hc-slide.active .hc-title-center{ animation:hcUp .9s .35s forwards; opacity:0; transform:translateY(24px); }
+
+@media (max-width:768px){
+  .hc-centered .hc-content{ align-items:center; padding-bottom:0; }
+}
+</style>
+<!-- ─── Override: descripción About más grande ──────────────────────────── -->
+<style>
+.about-bio{
+  font-size:clamp(1.15rem, 1.4vw, 1.6rem) !important;
+  line-height:1.7 !important;
+}
+.about-role{
+  font-size:clamp(1rem, 1.2vw, 1.2rem) !important;
+  line-height:1.6 !important;
+}
+</style>
 </head>
 <body>
 
@@ -83,125 +445,263 @@
 })();
 </script>
 
-<!-- ─── HERO ─────────────────────────────────────────────────────────────── -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-bg" style="background-image: url('img/hero.png');"></div>
-  <div class="hero-muscles"></div>
-  <div class="hero-content">
-    <div class="hero-text">
-      <div class="hero-tag" data-i18n="hero.tag"></div>
-      <div class="hero-title"><em data-i18n="hero.title1"></em></div>
-      <div class="hero-title-line2" data-i18n="hero.title2"></div>
-      <div class="hero-divider"></div>
-      <p class="hero-desc" data-i18n="hero.desc"> </p>
-      <div class="hero-ctas">
-        <a href="https://www.massagebook.com" class="btn-primary" data-i18n="hero.cta1"></a>
-      
+<!-- ─── HERO CARRUSEL ─────────────────────────────────────────────────────── -->
+<section class="hero-carousel" id="heroCarousel" aria-label="Hero">
+
+  <!-- Slide 1 -->
+  <div class="hc-slide active hc-centered">
+    <div class="hc-slide-bg" style="background-image:url('img/hero.png');"></div>
+    <div class="hc-content">
+      <div class="hc-text">
+        <h1 class="hc-title-center">
+          <span class="hc-line-top" data-i18n="hero.title1">Bienvenido a</span>
+          <span class="hc-line-bottom" data-i18n="hero.title2">LIC Massage Therapy</span>
+        </h1>
+        <div class="hc-plus">
+          <span class="hc-plus-line"></span>
+          <span class="hc-plus-icon">+</span>
+          <span class="hc-plus-line"></span>
+        </div>
       </div>
+    </div>
+  </div>
+
+
+
+  <!-- Slide 3 -->
+  <div class="hc-slide">
+    <div class="hc-slide-bg" style="background-image:url('img/hero3.png');"></div>
+    <div class="hc-content">
+      <div class="hc-text">
+        <span class="hc-eyebrow" data-i18n="hero3.tag">NYS Licensed · Lic#016175</span>
+        <h1 class="hc-title">
+          <em data-i18n="hero3.title1">Restore</em>
+          <span class="light" data-i18n="hero3.title2">Your Body</span>
+        </h1>
+        <div class="hc-divider"></div>
+        <p class="hc-desc" data-i18n="hero3.desc">A systematic method of muscle lengthening and fascial release that redefines what it means to stretch.</p>
+        <div class="hc-ctas">
+          <a href="https://www.massagebook.com" class="hc-btn hc-btn-primary" data-i18n="hero3.cta1">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flechas -->
+  <button class="hc-arrow prev" id="hcPrev" aria-label="Previous">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="hc-arrow next" id="hcNext" aria-label="Next">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+
+  <!-- Dots -->
+  <div class="hc-dots" id="hcDots" role="tablist"></div>
+
+  <!-- Contador -->
+  <div class="hc-counter"><b id="hcCur">01</b> / <span id="hcTotal">03</span></div>
+</section>
+
+<!-- ─── SCRIPT HERO CARRUSEL ──────────────────────────────────────────────── -->
+<script>
+(function(){
+  var root   = document.getElementById('heroCarousel');
+  if(!root) return;
+  var slides = Array.prototype.slice.call(root.querySelectorAll('.hc-slide'));
+  var dotsEl = document.getElementById('hcDots');
+  var curEl  = document.getElementById('hcCur');
+  var total  = slides.length;
+  var idx    = 0;
+  var timer  = null;
+  var DELAY  = 6000;
+
+  document.getElementById('hcTotal').textContent = ('0'+total).slice(-2);
+
+  /* Crear dots */
+  slides.forEach(function(_,i){
+    var d = document.createElement('button');
+    d.className = 'hc-dot' + (i===0?' active':'');
+    d.setAttribute('role','tab');
+    d.setAttribute('aria-label','Slide '+(i+1));
+    d.addEventListener('click', function(){ go(i); });
+    dotsEl.appendChild(d);
+  });
+  var dots = Array.prototype.slice.call(dotsEl.children);
+
+  function go(n){
+    idx = (n + total) % total;
+    slides.forEach(function(s,i){ s.classList.toggle('active', i===idx); });
+    dots.forEach(function(d,i){
+      d.classList.toggle('active', i===idx);
+      d.classList.remove('run');
+    });
+    curEl.textContent = ('0'+(idx+1)).slice(-2);
+    /* reiniciar barra de progreso del dot activo */
+    void dots[idx].offsetWidth;
+    dots[idx].classList.add('run');
+    restart();
+  }
+  function next(){ go(idx+1); }
+  function prev(){ go(idx-1); }
+
+  function restart(){
+    clearTimeout(timer);
+    timer = setTimeout(next, DELAY);
+  }
+
+  document.getElementById('hcNext').addEventListener('click', next);
+  document.getElementById('hcPrev').addEventListener('click', prev);
+
+  /* Pausar al pasar el mouse */
+  root.addEventListener('mouseenter', function(){ clearTimeout(timer); });
+  root.addEventListener('mouseleave', restart);
+
+  /* Teclado */
+  document.addEventListener('keydown', function(e){
+    if(e.key==='ArrowRight') next();
+    if(e.key==='ArrowLeft')  prev();
+  });
+
+  /* Swipe táctil */
+  var x0=null;
+  root.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+  root.addEventListener('touchend', function(e){
+    if(x0===null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if(Math.abs(dx) > 50){ dx<0 ? next() : prev(); }
+    x0=null;
+  }, {passive:true});
+
+  /* Iniciar */
+  dots[0].classList.add('run');
+  restart();
+})();
+</script>
+
+
+
+<!-- ═══════════ CONTENIDO SOBRE MÍ (migrado desde sobre-mi.html) ═══════════ -->
+
+<style>
+/* ── Encabezado de sección "Sobre el Terapeuta" (antes page-hero) ── */
+.about-section-header{
+  text-align:center;
+  max-width:1200px;
+  margin:0 auto;
+  padding:80px clamp(16px,3vw,40px) 0;
+}
+.about-section-header .section-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:#2d6b63;
+  margin-bottom:16px;
+}
+.about-section-header .section-tag::before{
+  content:"";
+  width:32px;
+  height:1px;
+  background:#2d6b63;
+}
+.about-section-title{
+  font-size:clamp(2rem,4.4vw,3.2rem);
+  line-height:1.12;
+  color:#1a3830;
+  margin:0;
+  font-family:'Cormorant Garamond',serif;
+}
+.about-section-title em{
+  font-style:italic;
+  font-weight:400;
+  color:#2d6b63;
+}
+.about-section-title strong{
+  font-weight:800;
+  color:#1a3830;
+}
+</style>
+
+ 
+<!-- ─── SOBRE MÍ: encabezado de sección ──────────────────────────────────── -->
+<div class="about-section-header">
+  <div class="section-tag reveal" data-i18n="about.tag">Sobre el Terapeuta</div>
+  <h2 class="about-section-title reveal delay-1"><em data-i18n="about.title1">Ciencia</em> <strong data-i18n="about.title2">&amp; Precisión</strong></h2>
+</div>
+ 
+
+<section class="about-page">
+  <div class="section-container">
+    <div class="about-inner">
+ 
+      <!-- FOTO (LEFT) -->
+      <div class="about-visual reveal">
+ 
+        <div class="about-accent-line"></div>
+ 
+        <div class="about-img-wrap">
+          <div class="about-img-placeholder">
+            <img src="img/rr.png" alt="Masaje terapéutico" class="about-img">
+            <div class="about-overlay"></div>
+          </div>
+        </div>
+ 
+ 
+      </div>
+ 
+      <!-- TEXTO (RIGHT) -->
+      <div class="about-text">
+ 
+        <div class="about-name reveal" data-i18n="about.name">
+          Raul Araque
+        </div>
+ 
+        <div class="about-role reveal delay-1" data-i18n="about.role">
+          terapeuta de masaje con licencia del estado de Nueva York. Me especializo en masaje terapéutico y estiramiento aislado activo (AIS).
+        </div>
+ 
+        <div class="gold-line reveal delay-1"></div>
+ 
+        <p class="about-bio reveal delay-2" data-i18n="about.bio">
+          Con más de 12 años de práctica clínica en terapia muscular y deportiva, he atendido a atletas profesionales, equipos nacionales y miles de pacientes que buscan recuperación óptima. Mi enfoque combina la anatomía funcional con técnicas avanzadas de manipulación tisular para resultados duraderos.
+        </p>
+ 
+        <p class="about-bio reveal delay-2" data-i18n="about.bio2">
+          Mi filosofía se basa en entender el cuerpo como un sistema integrado. Cada sesión comienza con una evaluación exhaustiva para diseñar un protocolo personalizado que aborde la causa raíz, no solo los síntomas.
+        </p>
+ 
+        <div class="about-certs reveal delay-3">
+        </div>
+      </div>
+ 
     </div>
   </div>
 </section>
 
-
-
-<!-- ─── PRICING SECTION ───────────────────────────────────────────────────── -->
-
-
-
-<!-- ─── PREVIEW SERVICES ──────────────────────────────────────────────────── -->
-
-
-<!-- ─── TERAPIAS SECTION ───────────────────────────────────────────────────── -->
-
-
-
-
-
-
-
-<!-- ─── VIDEO SECTION ─────────────────────────────────────────────────────── -->
-
-
-<style>
-/* ── VIDEO SECTION ─────────────────────────────────── */
-.video-section {
-  background: #0d2e2e;
-  padding: 6rem 1.5rem;
-  position: relative;
-}
-
-.video-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(252, 252, 252, 0.148) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.video-section-inner {
-  max-width: 860px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-}
-.vid-title2 {
-  color: #dde5e8;
-}
-
-.vid-subtitle {
-  color: rgba(255,255,255,0.55);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 1rem;
-  max-width: 520px;
-  margin: 0.75rem auto 0;
-  line-height: 1.7;
-  text-align: center;
-}
-
-.vid-frame-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-}
-
-.vid-frame {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 */
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 24px 64px rgba(0,0,0,0.55);
-}
-
-.vid-frame iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Corners dorados igual que ts-corner */
-.vid-corner {
-  position: absolute;
-  width: 28px;
-  height: 28px;
-  border-color: rgba(180,145,90,0.7);
-  border-style: solid;
-  pointer-events: none;
-  z-index: 2;
-}
-.vid-corner.tl { top: -8px;  left: -8px;  border-width: 2px 0 0 2px; }
-.vid-corner.br { bottom: -8px; right: -8px; border-width: 0 2px 2px 0; }
-
-@media (max-width: 600px) {
-  .video-section { padding: 4rem 1rem; }
-}
-</style>
-
-<!-- ─── TABS CAROUSEL ─────────────────────────────────────────────────────── -->
+ 
+<!-- ── Script de animaciones scroll para las nuevas secciones ── -->
+<script>
+(function () {
+  var animated = document.querySelectorAll('.slide-left, .slide-right, .slide-up');
+  if (!animated.length) return;
+ 
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+ 
+  animated.forEach(function (el) { io.observe(el); });
+})();
+</script>
+ 
+ 
 
 
 <!-- ─── SCRIPTS: Video + Tabs ─────────────────────────────────────────────── -->
@@ -210,6 +710,7 @@
 var tabBtns   = document.querySelectorAll('.tab-btn');
 var tabInd    = document.getElementById('tabIndicator');
 function switchTab(idx) {
+  if (!tabBtns.length || !tabInd) return; /* guard: sección de tabs ausente */
   tabBtns.forEach(function(b,i){
     b.classList.toggle('active', i === idx);
     b.setAttribute('aria-selected', i === idx);
@@ -218,6 +719,7 @@ function switchTab(idx) {
     p.classList.toggle('active', i === idx);
   });
   var active = tabBtns[idx];
+  if (!active) return;
   tabInd.style.left  = active.offsetLeft + 'px';
   tabInd.style.width = active.offsetWidth + 'px';
   if (idx === 0) bcInit();
@@ -254,6 +756,7 @@ function bcT(key, fallback) {
 function bcInit() {
   bcVisible = bcGetVisible();
   var dotsEl = document.getElementById('bcDots');
+  if (!dotsEl) return; /* guard: sección de beneficios ausente */
   var pages  = Math.ceil(bcTotal / bcVisible);
   dotsEl.innerHTML = '';
   for (var i = 0; i < pages; i++) {
@@ -316,110 +819,6 @@ document.addEventListener('langChange', function() {
 });
 </script>
 
-
-
-<!-- ─── SCRIPT DE SERVICIOS ───────────────────────────────────────────────── -->
-<script>
-(function () {
-  /* ── Definición de servicios (solo claves, sin texto hardcodeado) ─── */
-  var SERVICE_KEYS = [
-    {
-      num: "01",
-      img: "https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      nameKey: "s1.name", tagKey: "s1.tag", shortKey: "s1.short",
-      descKey: "s1.desc", durationKey: "s1.duration",
-      featureKeys: ["s1.feat1","s1.feat2","s1.feat3","s1.feat4"]
-    },
-    {
-      num: "02",
-      img: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80&fit=crop",
-      nameKey: "s2.name", tagKey: "s2.tag", shortKey: "s2.short",
-      descKey: "s2.desc", durationKey: "s2.duration",
-      featureKeys: ["s2.feat1","s2.feat2","s2.feat3","s2.feat4"]
-    },
-    
-  ];
-
-  var currentOpen = -1;
-
-  /* ── Helper: leer traducción del sistema i18n de shared.js ──────── */
-  function t(key) {
-    if (typeof i18n !== 'undefined' && typeof currentLang !== 'undefined') {
-      var dict = i18n[currentLang];
-      if (dict && dict[key] !== undefined) return dict[key];
-    }
-    return key;
-  }
-
-  /* ── Renderizar tarjetas ────────────────────────────────────────── */
-  var grid = document.getElementById('servicesGrid');
-
-  function renderCards() {
-    grid.innerHTML = '';
-    SERVICE_KEYS.forEach(function (s, i) {
-      var card = document.createElement('div');
-      card.className = 'preview-card reveal';
-      card.style.cursor = 'pointer';
-      card.innerHTML =
-        '<img class="sp-card-img" src="' + s.img + '" alt="' + t(s.nameKey) + '" loading="lazy">' +
-        '<div style="padding:1rem 0 0">' +
-          '<div class="preview-num">' + s.num + '</div>' +
-          '<div class="preview-name">' + t(s.nameKey) + '</div>' +
-          '<p class="preview-desc">' + t(s.shortKey) + '</p>' +
-          '<div class="sp-card-more">' + t('sp.moreInfo') + '</div>' +
-        '</div>';
-      card.addEventListener('click', function () { openModal(i); });
-      grid.appendChild(card);
-    });
-    // Re-observar los nuevos elementos para el scroll reveal
-    if (typeof initScrollReveal === 'function') initScrollReveal();
-  }
-
-  /* ── Modal ──────────────────────────────────────────────────────── */
-  var overlay  = document.getElementById('modalOverlay');
-  var modalX   = document.getElementById('modalX');
-  var closeBtn = document.getElementById('modalCloseBtn');
-
-  function openModal(i) {
-    currentOpen = i;
-    var s = SERVICE_KEYS[i];
-    document.getElementById('modalImg').src               = s.img;
-    document.getElementById('modalImg').alt               = t(s.nameKey);
-    document.getElementById('modalTag').textContent       = t(s.tagKey);
-    document.getElementById('modalName').textContent      = t(s.nameKey);
-    document.getElementById('modalDuration').textContent  = '⏱ ' + t(s.durationKey);
-    document.getElementById('modalDesc').textContent      = t(s.descKey);
-    document.getElementById('modalFeatures').innerHTML    =
-      s.featureKeys.map(function (k) { return '<div class="modal-feat">' + t(k) + '</div>'; }).join('');
-    var bookBtn = document.querySelector('.modal-book');
-    if (bookBtn) bookBtn.textContent = t('sp.book');
-    if (closeBtn) closeBtn.textContent = t('sp.close');
-    overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal() {
-    overlay.classList.remove('open');
-    document.body.style.overflow = '';
-    currentOpen = -1;
-  }
-
-  modalX.addEventListener('click', closeModal);
-  closeBtn.addEventListener('click', closeModal);
-  overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
-
-  /* ── Re-renderizar cuando shared.js cambia el idioma ───────────── */
-  document.addEventListener('langChange', function () {
-    renderCards();
-    // Si el modal estaba abierto, actualizarlo también
-    if (currentOpen >= 0) openModal(currentOpen);
-  });
-
-  /* ── Render inicial ─────────────────────────────────────────────── */
-  renderCards();
-})();
-</script>
 
 <script src="shared.js"></script>
 <script src="components.js"></script>
