@@ -82,7 +82,7 @@ const i18n = {
     "contact.formTitle":"Envíanos un Mensaje","contact.send":"Enviar Mensaje →","contact.subject":"Asunto","contact.subjectPh":"¿En qué podemos ayudarte?",
     "book.tag":"Reservar Cita","book.title1":"Tu bienestar","book.title2":"comienza hoy",
     "book.desc":"Agenda tu consulta inicial y recibe una evaluación postural y muscular completa sin costo adicional.",
-    "book.location":"10-44 Jackson Ave Long Island City, NY  11101 United States Estados Unidos","book.hours":"Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: Cerrado",
+    "book.location":"10-44 Jackson Ave Long Island City, NY  11101 United States Estados Unidos","book.hours":"Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: 10am - 5pm",
     "book.infoTag":"Información","book.infoTitle1":"¿Qué esperar","book.infoTitle2":"en tu primera visita?",
     "step1.name":"Evaluación Inicial","step1.desc":"Análisis postural y muscular completo para identificar áreas de tensión y patrones de movimiento.",
     "step2.name":"Protocolo Personalizado","step2.desc":"Diseño de un plan de tratamiento específico basado en tus objetivos y condición actual.",
@@ -117,7 +117,7 @@ const i18n = {
     // Horarios detallados (card de contacto)
     "contact.hours.lv":"Lun–Vie: 10:00 am – 7:00 pm",
     "contact.hours.sat":"Sábado: 10:00 am – 6:00 pm",
-    "contact.hours.sun":"Domingo: cerrado",
+    "contact.hours.sun":"Domingo: 10:00 am - 5:00 pm",
 
     // Email card
     "contact.email":"Email",
@@ -264,7 +264,7 @@ const i18n = {
     "pp.s10.li3val":"+1 718-478-1951",
     "pp.s10.li4bold":"Email:",
     "pp.s10.li5bold":"Horario de atención:",
-    "pp.s10.li5val":"Lun–Vie 10 am–7 pm · Sáb 10 am–6 pm · Dom cerrado",
+    "pp.s10.li5val":"Lun–Vie 10 am–7 pm · Sáb 10 am–6 pm · Dom 10 am - 5 pm",
 
     // Botón volver y footer
     "pp.backBtn":"Volver",
@@ -640,7 +640,7 @@ const i18n = {
     'svc5.feat4': 'Ideal para trabajadores de oficina',
     'svc5.feat5': 'Liberación miofascial y presión profunda',
 
-    "book.cta.heading":"Reserva tu sesión","book.cta.sub":"Te respondo en menos de 24 h","book.cta.btn":"Reservar Ahora","book.chip.hours":"Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: Cerrado","book.chip.location": "10-44 Jackson Ave, Long Island City, NY 11101, Estados Unidos",
+    "book.cta.heading":"Reserva tu sesión","book.cta.sub":"Te respondo en menos de 24 h","book.cta.btn":"Reservar Ahora","book.chip.hours":"Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: 10am - 5pm","book.chip.location": "10-44 Jackson Ave, Long Island City, NY 11101, Estados Unidos",
 
     "gal-tag":"Masajes","gal-title-line":"cada masaje","gal-title-line1":"una obra",
     "vid.title1":"Raúl te explica","vid.title2":"cómo funciona la terapia","vid.desc":"Descubre el proceso, la técnica y lo que puedes esperar en tu primera sesión.",
@@ -760,7 +760,7 @@ const i18n = {
 "testi.title1": "Real experiences",
 "testi.title2": "from our clients",
 
-"book.cta.heading":"Book your session","book.cta.sub":"I’ll respond within 24 hours.","book.cta.btn":"Book Now","book.chip.hours":"Mon–Fri: 10am–7pm · Sáb: 10am–6pm · Dom: Cerrado","book.chip.location": "10-44 Jackson Ave, Long Island City, NY 11101, Estados Unidos",
+"book.cta.heading":"Book your session","book.cta.sub":"I’ll respond within 24 hours.","book.cta.btn":"Book Now","book.chip.hours":"Mon–Fri: 10am–7pm · Sáb: 10am–6pm · Dom: 10am - 5pm","book.chip.location": "10-44 Jackson Ave, Long Island City, NY 11101, Estados Unidos",
  
 
      "nav.home":"Home","nav.masajes":"Massage","nav.terapia":"Stretch therapy",
@@ -776,11 +776,11 @@ const i18n = {
     "hero3.tag":"NYS Licensed · Lic#016175","hero3.title1":"Restore","hero3.title2":"Your Body.",
     "hero3.desc":"A systematic method of muscle lengthening and fascial release that redefines what it means to stretch.","hero3.cta1":"Book Appointment",
     "badge.specialty":"Specialty","badge.specialtyVal":"Sports","badge.sessions":"Sessions",
-    "services.tag":"Our Massage","services.title1":"Massage in ","services.title2":"LIC",
+    "services.tag":"Our Massage","services.title1":"Massage in ","services.title2":" in L.I.C",
     "terapia.tag":"Active Isolated Stretching And Strengthening, the method mattes","terapia.title1":" Stretch Therapy",
     "services.subtitle":"Each treatment is designed based on scientific evidence and advanced body therapy techniques.",
     "md.title":"MASSAGE",
-    "md.subtitle":"Massage in L.I.C",
+    "md.subtitle":" in L.I.C",
     "md.intro1":"Experts estimate that the main causes of injuries are fatigue, excess muscle tension and lack of flexibility.  Upwards of ninety percent of disease is stress-related. And perhaps nothing ages us faster, internally and externally, than high stress.  Bodywork and Active Isolated Stretching can help you support general health and well-being and/or facilitate the healing process of some injuries, such as muscle tears or sprains. Massage can increase circulation, promote relaxation, reduce stress, and reduce pain by stimulating the release of endorphins- the body's natural painkillers.",
     "md.intro2":"Swedish/Deep tissue massage can help alleviate low-back pain and improve range of motion, reduce pain associated with tension headache, temporomandibular joint (TMJ) dysfunction, poor posture or scoliosis, and repetitive stress injuries to muscles and tendons (such as tennis or golf elbow) and massage can enhance immunity by stimulating lymph flow—the body's natural defense system.",
     "md.b1.head":"Relaxation Massage / session  (1/2 hr. $80 – 1 hr. $130 – 1.5 hr $165)",
