@@ -16,74 +16,202 @@
   <div class="page-hero-bg"></div>
   <div class="page-hero-content">
     <div class="section-tag reveal" data-i18n="services.tag"></div>
-    <h1 class="page-hero-title reveal delay-1"><em data-i18n="services.title1"></em> <strong data-i18n="services.title2"></strong></h1>
-    <p class="page-hero-sub reveal delay-2" data-i18n="services.subtitle"></p>
+    <h2 class="md-title" data-i18n="md.title">MASSAGE</h2>
+    
+      <p class="md-subtitle" data-i18n="md.subtitle">Massage in L.I.C</p>
   </div>
 </section>
 
-<!-- ══════════════════ SERVICIOS ══════════════════ -->
+<!-- ══════════════════ MASSAGE (texto plano) ══════════════════ -->
+<section class="massage-doc">
+  <div class="massage-doc-inner">
 
+   
 
-
-
-<!-- ══════════════════ WHY BODYWORK ══════════════════ -->
-<section class="why-section">
-  <div class="why-container">
-
-    <div class="why-header reveal">
-      <div class="section-tag" data-i18n="why.tag"></div>
-      <h2 class="why-title reveal delay-1">
-        <em data-i18n="why.title1"></em> <strong data-i18n="why.title2"></strong>
-      </h2>
+    <!-- Intro -->
+    <div class="md-intro reveal delay-1">
+      <p data-i18n="md.intro1"></p>
+      <p data-i18n="md.intro2"></p>
     </div>
 
-    <div class="why-body">
-
-      <!-- Left: lead paragraph -->
-      <div class="why-lead reveal delay-1">
-        <p data-i18n="why.lead"></p>
-        <div class="why-divider"></div>
-        <p data-i18n="why.sub"></p>
-      </div>
-
-      <!-- Right: benefit cards -->
-      <div class="why-cards">
-
-        <div class="why-card reveal delay-1">
-          <div class="why-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3 class="why-card-title" data-i18n="why.card1.title"></h3>
-          <p class="why-card-desc" data-i18n="why.card1.desc"></p>
-        </div>
-
-        <div class="why-card reveal delay-2">
-          <div class="why-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-          </div>
-          <h3 class="why-card-title" data-i18n="why.card2.title"></h3>
-          <p class="why-card-desc" data-i18n="why.card2.desc"></p>
-        </div>
-
-        <div class="why-card reveal delay-3">
-          <div class="why-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <h3 class="why-card-title" data-i18n="why.card3.title"></h3>
-          <p class="why-card-desc" data-i18n="why.card3.desc"></p>
-        </div>
-
-      </div>
+    <!-- Relaxation Massage -->
+    <div class="md-block reveal">
+      <h3 class="md-block-head" data-i18n="md.b1.head"></h3>
+      <p class="md-block-body" data-i18n="md.b1.body"></p>
     </div>
 
-    <!-- Bottom: full-width quote -->
-    <blockquote class="why-quote reveal">
-      <span class="why-quote-mark">"</span>
-      <p data-i18n="why.quote"></p>
-    </blockquote>
+    <!-- BOOK NOW -->
+    <div class="md-booknow reveal">
+      <a href="https://www.massagebook.com" target="_blank" rel="noopener" class="md-booknow-link" data-i18n="md.booknow">BOOK NOW</a>
+    </div>
+
+    <!-- Deep Pressure Massage -->
+    <div class="md-block reveal">
+      <h3 class="md-block-head" data-i18n="md.b2.head"></h3>
+      <p class="md-block-body" data-i18n="md.b2.body"></p>
+    </div>
+
+    <!-- How To Massage Your Partner -->
+    <div class="md-block reveal">
+      <h3 class="md-block-head" data-i18n="md.b3.head"></h3>
+      <p class="md-block-body" data-i18n="md.b3.body"></p>
+    </div>
+
+    <!-- Guided Relaxation Session -->
+    <div class="md-block reveal">
+      <h3 class="md-block-head" data-i18n="md.b4.head"></h3>
+      <p class="md-block-body" data-i18n="md.b4.body"></p>
+    </div>
+
+  
 
   </div>
 </section>
+
+<style>
+/* ══════════════════════════════════════
+   MASSAGE — documento de texto plano
+   (jerarquía de la imagen, paleta del sitio)
+══════════════════════════════════════ */
+.massage-doc {
+  background: var(--bg-primary);
+  padding: 5.5rem 2rem 5rem;
+}
+
+.massage-doc-inner {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+/* ── Encabezado ── */
+.md-head {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.md-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.05;
+}
+
+.md-plus {
+  width: 30px;
+  height: 30px;
+  margin: 1.1rem auto 0.6rem;
+  border-radius: 7px;
+  background: var(--gold);
+  color: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.md-plus svg { width: 16px; height: 16px; }
+
+.md-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.15rem, 2.4vw, 1.6rem);
+  color: var(--gold-light);
+  margin: 0;
+}
+
+/* ── Intro ── */
+.md-intro p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.95;
+  color: var(--text-secondary);
+  font-weight: 300;
+  margin: 0 0 1.5rem;
+}
+
+/* ── Bloques de servicio ── */
+.md-block {
+  margin: 2.4rem 0;
+}
+
+.md-block-head {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.02rem;
+  letter-spacing: 0.01em;
+  color: var(--text-primary);
+  margin: 0 0 0.9rem;
+  line-height: 1.5;
+}
+
+.md-block-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.9;
+  color: var(--text-secondary);
+  font-weight: 300;
+  margin: 0;
+}
+
+/* ── BOOK NOW ── */
+.md-booknow {
+  text-align: center;
+  margin: 2.8rem 0;
+}
+
+.md-booknow-link {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.md-booknow-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold-light);
+  transition: width 0.4s ease, left 0.4s ease;
+}
+.md-booknow-link:hover { color: var(--gold-light); }
+.md-booknow-link:hover::after { width: 100%; left: 0; }
+
+/* ── Gift certificates ── */
+.md-gift {
+  text-align: center;
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border-card);
+}
+.md-gift span {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .massage-doc { padding: 4rem 1.25rem 3.5rem; }
+  .md-intro p,
+  .md-block-body { font-size: 0.94rem; line-height: 1.85; }
+}
+</style>
+
+
 
 <style>
 /* ══════════════════════════════════════
@@ -243,140 +371,9 @@
 }
 </style>
 
-<!-- ══════════════════ GALERÍA BENTO 3D ══════════════════ -->
 
 
-<section class="pricing-section" id="precios">
-  <div class="pricing-inner">
 
-    <div class="pricing-header reveal">
-      <h2 class="pricing-title" data-i18n="pr.title"></h2>
-      <p class="pricing-sub" data-i18n="pr.sub">El precio se basa en la duración de la sesión, no en el tipo de sesión. Elige la duración y Raúl adaptará el trabajo (estiramientos, masaje o una combinación) a las necesidades de tu cuerpo ese día.</p>
-    </div>
-
-    <div class="pricing-grid">
-
-      <!-- 30 min -->
-      <article class="pricing-card reveal">
-        <div class="pricing-card-top">
-         
-          <div class="pricing-meta">
-            <h2 class="pricing-duration" data-i18n="pr.c1.title">30 minutos</h2>
-            <span class="pricing-label" data-i18n="pr.c1.label">Sesión express</span>
-          </div>
-        </div>
-
-        <div class="pricing-price-row">
-          <div class="pricing-price-item">
-            <span class="pricing-price-amount">$80</span>
-            <span class="pricing-price-sep">·</span>
-            <span class="pricing-price-time">30 min</span>
-          </div>
-          <div class="pricing-price-item">
-            <span class="pricing-price-amount">$130</span>
-            <span class="pricing-price-sep">·</span>
-            <span class="pricing-price-time">60 min</span>
-          </div>
-          <div class="pricing-price-item">
-            <span class="pricing-price-amount">$165</span>
-            <span class="pricing-price-sep">·</span>
-            <span class="pricing-price-time">90 min</span>
-          </div>
-        </div>
-
-        <p class="pricing-desc" data-i18n="pr.c1.desc">Alivio localizado en una zona específica: cuello, zona lumbar o cadera tensa. Ideal para usar entre sesiones completas.</p>
-        <div class="pricing-divider"></div>
-        <a href="https://www.massagebook.com" class="pricing-btn" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <span data-i18n="pr.c1.cta">Reserva&nbsp;30 min</span>
-        </a>
-      </article>
-
-      <!-- 60 min (destacado) -->
-      <article class="pricing-card featured reveal delay-1">
-        <span class="pricing-badge" data-i18n="pr.badge">Más popular</span>
-        <div class="pricing-card-top">
-         
-          <div class="pricing-meta">
-            <h3 class="pricing-duration" data-i18n="pr.c2.title">60 minutos</h3>
-            <span class="pricing-label" data-i18n="pr.c2.label"></span>
-          </div>
-        </div>
-
-        <div class="pricing-price-row">
-          <div class="pricing-price-item">
-            <span class="pricing-price-amount">$90</span>
-            <span class="pricing-price-sep">·</span>
-            <span class="pricing-price-time">30 min</span>
-          </div>
-          <div class="pricing-price-item">
-            <span class="pricing-price-amount">$140</span>
-            <span class="pricing-price-sep">·</span>
-            <span class="pricing-price-time">60 min</span>
-          </div>
-          <div class="pricing-price-item">
-            <span class="pricing-price-amount">$190</span>
-            <span class="pricing-price-sep">·</span>
-            <span class="pricing-price-time">90 min</span>
-          </div>
-        </div>
-
-        <p class="pricing-desc" data-i18n="pr.c2.desc">Nuestra sesión más solicitada. Trabajo de cuerpo completo con atención específica a las zonas que usted traiga.</p>
-        <div class="pricing-divider"></div>
-        <a href="https://www.massagebook.com" class="pricing-btn solid" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <span data-i18n="pr.c2.cta">Reserva&nbsp;60 min</span>
-        </a>
-      </article>
-
-      <!-- 90 min -->
-      <article class="pricing-card reveal delay-2">
-        <div class="pricing-card-top">
-          
-          <div class="pricing-meta">
-            <h3 class="pricing-duration" data-i18n="pr.c3.title">90 minutos</h3>
-            <span class="pricing-label" data-i18n="pr.c3.label">Trabajo profundo</span>
-          </div>
-        </div>
-
-        <div class="pricing-price-row">
-          <div class="pricing-price-item single">
-            <span class="pricing-price-amount">$205</span>
-            <span class="pricing-price-sep">·</span>
-            <span class="pricing-price-time">90 min</span>
-          </div>
-        </div>
-
-        <p class="pricing-desc" data-i18n="pr.c3.desc">Evaluación corporal completa y seguimiento detallado de la tensión crónica, los objetivos de movilidad o la recuperación posterior a una lesión.</p>
-        <div class="pricing-divider"></div>
-        <a href="https://www.massagebook.com" class="pricing-btn" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <span data-i18n="pr.c3.cta">Reservar&nbsp;90 min</span>
-        </a>
-      </article>
-
-    </div>
-
-    <!-- Sesiones especializadas -->
-    <div class="pricing-special reveal">
-      <h3 class="pricing-special-title" data-i18n="pr.sp.title">Sesiones especializadas</h3>
-
-      <div class="pricing-special-row">
-        <div class="pricing-special-info">
-          <div class="pricing-special-name" data-i18n="pr.sp2.name">Sesión de relajación guiada</div>
-          <div class="pricing-special-time" data-i18n="pr.sp2.time">45 minutos</div>
-        </div>
-        <div class="pricing-special-action">
-          <span class="pricing-special-price">$70</span>
-          <a href="https://www.massagebook.com" class="pricing-special-btn" target="_blank" rel="noopener" data-i18n="pr.sp.cta2">Libro</a>
-        </div>
-      </div>
-    </div>
-
-   
-
-  </div>
-</section>
 
 <style>
 /* ── PRICING SECTION ───────────────────────────────── */

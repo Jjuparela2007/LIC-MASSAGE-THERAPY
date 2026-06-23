@@ -815,108 +815,167 @@
 <section class="page-hero">
   <div class="page-hero-bg"></div>
   <div class="page-hero-content">
-    <div class="section-tag reveal" data-i18n="terapia.tag"></div>
+ 
     <h1 class="page-hero-title reveal delay-1"><em data-i18n="terapia.title1"></em> <strong data-i18n="terapia.title2"></strong></h1>
+    <div class="section-tag reveal" data-i18n="terapia.tag"></div>
     <p class="page-hero-sub reveal delay-2" data-i18n="terapia.subtitle"></p>
   </div>
 </section>
 
-<!-- ══════════════════ SERVICIOS ══════════════════ -->
+
 <section class="ais-section">
-  <div class="ais-inner">
 
-    <!-- LEFT: Image -->
-    <div class="ais-visual">
-      <div class="ais-img-wrap">
-        <img src="img/AIS.png" alt="Estiramiento Activo Aislado" class="ais-img">
-        <div class="ais-badge">
-          <svg viewBox="0 0 16 16" fill="none" width="13" height="13">
-            <polyline points="2,8 6,12 14,4"
-              stroke="currentColor"
-              stroke-width="2.2"
-              stroke-linecap="round"
-              stroke-linejoin="round"/>
-          </svg>
-          <span data-i18n="ais.badge"></span>
-        </div>
+  <!-- Encabezado -->
+  
+
+  <!-- Panel con textura -->
+  <div class="ais-panel">
+
+    <!-- Bloque superior: imagen izq + texto der -->
+    <div class="ais-grid">
+
+      <figure class="ais-fig ais-fig-left">
+        <img src="img/Raul-AIS.jpg" alt="Terapia de Estiramiento Activo Aislado">
+      </figure>
+
+      <div class="ais-body">
+        <p class="ais-para" data-i18n-html="ais.paragraph1"></p>
+        <p class="ais-para" data-i18n="ais.paragraph2"></p>
+        <p class="ais-para" data-i18n="ais.paragraph3"></p>
+        <p class="ais-para" data-i18n-html="ais.paragraph4"></p>
       </div>
+
     </div>
 
-    <!-- RIGHT: Text -->
-    <div class="ais-text">
-      <div class="ais-eyebrow" data-i18n="ais.eyebrow"></div>
+    <!-- Párrafo ancho -->
+    <p class="ais-para ais-wide" data-i18n="ais.paragraph5"></p>
 
-      <h2 class="ais-heading" data-i18n="ais.heading"></h2>
+  
 
-      <p class="ais-para" data-i18n="ais.paragraph1"></p>
-
-      <p class="ais-para" data-i18n="ais.paragraph2"></p>
-
-      <ul class="ais-list">
-        <li class="ais-item">
-          <span class="ais-check">
-            <svg viewBox="0 0 16 16" fill="none" width="13" height="13">
-              <polyline points="2,8 6,12 14,4"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <span data-i18n="ais.list1"></span>
-        </li>
-
-        <li class="ais-item">
-          <span class="ais-check">
-            <svg viewBox="0 0 16 16" fill="none" width="13" height="13">
-              <polyline points="2,8 6,12 14,4"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <span data-i18n="ais.list2"></span>
-        </li>
-
-        <li class="ais-item">
-          <span class="ais-check">
-            <svg viewBox="0 0 16 16" fill="none" width="13" height="13">
-              <polyline points="2,8 6,12 14,4"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <span data-i18n="ais.list3"></span>
-        </li>
-
-        <li class="ais-item">
-          <span class="ais-check">
-            <svg viewBox="0 0 16 16" fill="none" width="13" height="13">
-              <polyline points="2,8 6,12 14,4"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <span data-i18n="ais.list4"></span>
-        </li>
-      </ul>
-
-      <a href="https://www.massagebook.com" class="ais-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17">
-          <rect x="3" y="4" width="18" height="18" rx="2"/>
-          <path d="M16 2v4M8 2v4M3 10h18"/>
-        </svg>
-        <span data-i18n="ais.button"></span>
-      </a>
-    </div>
+  
 
   </div>
 </section>
+<style>
+/* ════════════════════════════════════════════════════════════════════════════
+   SECCIÓN AIS — añadir a shared.css
+═════════════════════════════════════════════════════════════════════════════ */
+.ais-section{
+  max-width:1180px;
+  margin:0 auto;
+  padding:4rem 1.5rem 5rem;
+  font-family:'DM Sans',sans-serif;
+}
+
+/* ── Encabezado ─────────────────────────────────────── */
+.ais-head{ text-align:center; margin-bottom:1.5rem; }
+.ais-title{
+  font-family:'DM Sans',sans-serif;
+  font-weight:800;
+  font-size:clamp(1.7rem,3.4vw,2.6rem);
+  line-height:1.15;
+  text-transform:uppercase;
+  letter-spacing:0.01em;
+  color:var(--gold);                 /* teal LIC */
+  margin:0 auto;
+  max-width:18ch;
+}
+.ais-plus{
+  margin-top:1rem;
+  width:34px; height:34px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:var(--gold);
+  color:#fff;
+  border:none; border-radius:6px;
+  cursor:pointer;
+  transition:background .25s, transform .25s;
+}
+.ais-plus:hover{ background:var(--electric); transform:rotate(90deg); }
+
+/* ── Panel con textura ──────────────────────────────── */
+.ais-panel{
+  position:relative;
+  background:var(--bg-card);
+  background-image:url('img/ais-davinci.png');   /* textura Da Vinci, opcional */
+  background-size:cover;
+  background-position:center;
+  border:1px solid var(--border-card);
+  border-radius:14px;
+  box-shadow:var(--shadow-card);
+  padding:2.75rem clamp(1.25rem,3vw,2.75rem) 0;
+  overflow:hidden;
+}
+.ais-panel::before{           /* velo para legibilidad sobre la textura */
+  content:"";
+  position:absolute; inset:0;
+  background:rgba(244,250,248,0.82);
+  pointer-events:none;
+}
+.ais-panel > *{ position:relative; z-index:1; }
+
+/* ── Grid superior: imagen + texto ──────────────────── */
+.ais-grid{
+  display:grid;
+  grid-template-columns:300px 1fr;
+  gap:2rem;
+  align-items:start;
+}
+.ais-fig{ margin:0; }
+.ais-fig img{
+  width:100%; height:auto; display:block;
+  border-radius:8px;
+  box-shadow:0 6px 20px rgba(13,46,46,0.14);
+}
+.ais-fig-left img{ object-fit:cover; }
+
+/* ── Texto ──────────────────────────────────────────── */
+.ais-body .ais-para{ margin:0 0 1.15rem; }
+.ais-para{
+  font-size:1.02rem;
+  line-height:1.7;
+  color:var(--text-secondary);
+}
+.ais-para strong{ color:var(--text-primary); font-weight:700; }
+.ais-para a{ color:var(--gold); text-decoration:none; }
+.ais-para a:hover{ text-decoration:underline; }
+
+.ais-wide{ margin:2rem 0 0; }
+
+/* ── Imagen inferior derecha ────────────────────────── */
+.ais-fig-right{
+  width:320px;
+  max-width:60%;
+  margin:2.5rem 0 2.5rem auto;
+}
+
+/* ── Video ──────────────────────────────────────────── */
+.ais-video{
+  margin:0 -clamp(1.25rem,3vw,2.75rem);   /* sangra hasta los bordes del panel */
+  margin-bottom:0;
+}
+.ais-video-btn{
+  position:relative;
+  display:block; width:100%;
+  padding:0; border:none; background:#000;
+  cursor:pointer;
+  line-height:0;
+}
+.ais-video-thumb{ width:100%; height:auto; display:block; opacity:.95; }
+.ais-video-play{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+}
+.ais-yt-bg{ transition:fill .25s; }
+.ais-video-btn:hover .ais-yt-bg{ fill:#cc0000; }
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width:760px){
+  .ais-grid{ grid-template-columns:1fr; }
+  .ais-fig-left{ max-width:320px; margin:0 auto; }
+  .ais-fig-right{ width:100%; max-width:100%; }
+  .ais-video{ margin-left:-1.25rem; margin-right:-1.25rem; }
+}
+</style>
 
 
 
@@ -979,7 +1038,7 @@
 </section>
 
 
-<!-- ══════════════════ SECTION 2: WHAT IS AIS ══════════════════ -->
+
 
 
 
@@ -1079,155 +1138,284 @@
 
 
 <!-- ══════════════════ GALLERY ══════════════════ -->
+<!-- ══════════════════ GALERÍA BENTO INTERACTIVA ══════════════════ -->
 <section class="gallery-section">
   <div class="gallery-inner">
 
-    <div class="gallery-header">
+    <div class="gallery-header reveal">
       <span class="section-eyebrow" data-i18n="gallery.eyebrow">Galería</span>
       <h2 class="gallery-heading" data-i18n="gallery.heading">El Método en Práctica</h2>
       <p class="gallery-sub" data-i18n="gallery.sub">Imágenes de sesiones, técnicas y resultados reales.</p>
     </div>
 
-    <div class="gallery-grid" id="galleryGrid">
+    <div class="gallery-bento reveal delay-1" id="galleryGrid">
 
-      <div class="gallery-item" data-index="0">
-        <img src="img/m1.jpeg" alt="Sesión AIS 1" loading="lazy">
-        <span class="gallery-zoom">
+      <figure class="bento-cell bento-lg" data-index="0">
+        <img src="img/1.jpeg" alt="Sesión AIS 1" loading="lazy">
+        <div class="bento-veil"></div>
+        <figcaption class="bento-info">
+          <span class="bento-idx">01</span>
+          <span class="bento-cap" data-i18n="gallery.cap1">Estiramiento asistido</span>
+        </figcaption>
+        <span class="bento-zoom" aria-hidden="true">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
             <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
           </svg>
         </span>
-      </div>
+      </figure>
 
-      <div class="gallery-item" data-index="1">
-        <img src="img/m2.jpeg" alt="Sesión AIS 2" loading="lazy">
-        <span class="gallery-zoom">
+      <figure class="bento-cell bento-sm" data-index="1">
+        <img src="img/2.jpeg" alt="Sesión AIS 2" loading="lazy">
+        <div class="bento-veil"></div>
+        <figcaption class="bento-info">
+          <span class="bento-idx">02</span>
+          <span class="bento-cap" data-i18n="gallery.cap2">Trabajo de tejido profundo</span>
+        </figcaption>
+        <span class="bento-zoom" aria-hidden="true">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
             <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
           </svg>
         </span>
-      </div>
+      </figure>
 
-      <div class="gallery-item" data-index="2">
-        <img src="img/m3.jpeg" alt="Sesión AIS 3" loading="lazy">
-        <span class="gallery-zoom">
+      <figure class="bento-cell bento-sm" data-index="2">
+        <img src="img/3.jpeg" alt="Sesión AIS 3" loading="lazy">
+        <div class="bento-veil"></div>
+        <figcaption class="bento-info">
+          <span class="bento-idx">03</span>
+          <span class="bento-cap" data-i18n="gallery.cap3">Recuperación y movilidad</span>
+        </figcaption>
+        <span class="bento-zoom" aria-hidden="true">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
             <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
           </svg>
         </span>
-      </div>
-
-      <div class="gallery-item" data-index="3">
-        <img src="img/m4.jpeg" alt="Sesión AIS 4" loading="lazy">
-        <span class="gallery-zoom">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
-          </svg>
-        </span>
-      </div>
-
-      <div class="gallery-item" data-index="4">
-        <img src="img/m5.jpeg" alt="Sesión AIS 5" loading="lazy">
-        <span class="gallery-zoom">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
-          </svg>
-        </span>
-      </div>
-
-      <div class="gallery-item" data-index="5">
-        <img src="img/m6.jpeg" alt="Sesión AIS 6" loading="lazy">
-        <span class="gallery-zoom">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
-          </svg>
-        </span>
-      </div>
-
-      <div class="gallery-item" data-index="6">
-        <img src="img/m7.jpeg" alt="Sesión AIS 7" loading="lazy">
-        <span class="gallery-zoom">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
-          </svg>
-        </span>
-      </div>
-
-      <div class="gallery-item" data-index="7">
-        <img src="img/m9.jpeg" alt="Sesión AIS 8" loading="lazy">
-        <span class="gallery-zoom">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
-          </svg>
-        </span>
-      </div>
+      </figure>
 
     </div>
   </div>
 </section>
 
-<section class="pricing-section" id="precios">
-  <div class="pricing-inner">
+<style>
+/* ══════════════════════════════════════
+   GALERÍA BENTO INTERACTIVA
+   (sin carrusel · hover expansivo · paleta del sitio)
+══════════════════════════════════════ */
+.gallery-section {
+  background: var(--bg-primary);
+  padding: 6rem 2rem 5.5rem;
+}
 
-    <div class="pricing-header reveal">
-      <h2 class="pricing-title" data-i18n="pr.title"></h2>
-      <p class="pricing-sub" data-i18n="pr.sub">El precio se basa en la duración de la sesión, no en el tipo de sesión. Elige la duración y Raúl adaptará el trabajo (estiramientos, masaje o una combinación) a las necesidades de tu cuerpo ese día.</p>
-    </div>
+.gallery-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-    <div class="pricing-grid pricing-grid--single">
+/* ── Encabezado ── */
+.gallery-header {
+  text-align: center;
+  margin-bottom: 3.25rem;
+}
 
-      
-      <!-- Tarjeta única destacada -->
-      <article class="pricing-card featured reveal delay-1">
-        <span class="pricing-badge" data-i18n="pr.badge">Más popular</span>
-        <div class="pricing-card-top">
-          <span class="pricing-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
-          </span>
-          <div class="pricing-meta">
-            <h3 class="pricing-duration" data-i18n="pr.c2.title2"></h3>
-            <span class="pricing-label" data-i18n="pr.c2.label"></span>
-          </div>
-        </div>
+.section-eyebrow {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
 
-        <div class="pricing-price-row">
-          <div class="pricing-price-item">
-            <span class="pricing-price-amount">$140 USD</span>
-            <span class="pricing-price-time">60 min</span>
-          </div>
-          <div class="pricing-price-item pricing-price-item--highlight">
-            <span class="pricing-price-amount">$190 USD</span>
-            <span class="pricing-price-time">90 min</span>
-          </div>
-          
-        </div>
+.gallery-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  line-height: 1.12;
+  color: var(--text-primary);
+  margin: 0 0 0.9rem;
+}
 
-        <p class="pricing-desc" data-i18n="pr.c2.desc2">Nuestra sesión más solicitada. Trabajo de cuerpo completo con atención específica a las zonas que usted traiga.</p>
-        <div class="pricing-divider"></div>
-        <a href="https://www.massagebook.com" class="pricing-btn solid" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <span data-i18n="pr.c2.cta">Reservar sesión</span>
-        </a>
-      </article>
+.gallery-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto;
+  font-weight: 300;
+}
 
-   
+/* ── Bento: 1 grande (izq, doble alto) + 2 apiladas (der) ── */
+.gallery-bento {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 14px;
+  height: 560px;
+}
 
-    </div>
+.bento-lg { grid-row: 1 / 3; }
 
-  
+/* ── Celda ── */
+.bento-cell {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(13, 46, 46, 0.10);
+  transition: box-shadow 0.45s ease, transform 0.45s ease;
+}
 
-  
+.bento-cell img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 0.55s ease;
+  filter: saturate(0.92) brightness(0.97);
+}
 
-  </div>
-</section>
+/* ── Velo degradado teal ── */
+.bento-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(13, 46, 46, 0) 38%,
+    rgba(13, 46, 46, 0.30) 72%,
+    rgba(13, 46, 46, 0.70) 100%
+  );
+  opacity: 0.85;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+/* ── Línea de acento que crece ── */
+.bento-cell::after {
+  content: '';
+  position: absolute;
+  left: 1.4rem;
+  bottom: 3.4rem;
+  height: 2px;
+  width: 0;
+  background: var(--gold-light);
+  z-index: 3;
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ── Info (idx + caption) ── */
+.bento-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  padding: 1.4rem 1.4rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transform: translateY(8px);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.bento-idx {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  color: rgba(255, 255, 255, 0.65);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.45s ease 0.05s, transform 0.45s ease 0.05s;
+}
+
+.bento-cap {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  color: #fff;
+  line-height: 1.25;
+}
+
+/* ── Botón zoom (esquina) ── */
+.bento-zoom {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 3;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #fff;
+  opacity: 0;
+  transform: scale(0.8) rotate(-20deg);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.5, 0.64, 1), background 0.3s ease;
+}
+
+/* ── Hover ── */
+.bento-cell:hover {
+  box-shadow: 0 20px 50px rgba(13, 46, 46, 0.28);
+  transform: translateY(-4px);
+  z-index: 5;
+}
+.bento-cell:hover img {
+  transform: scale(1.08);
+  filter: saturate(1.05) brightness(1);
+}
+.bento-cell:hover .bento-veil { opacity: 1; }
+.bento-cell:hover::after { width: calc(100% - 2.8rem); }
+.bento-cell:hover .bento-info { transform: translateY(0); }
+.bento-cell:hover .bento-idx { opacity: 1; transform: translateY(0); }
+.bento-cell:hover .bento-zoom {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+.bento-zoom:hover { background: var(--gold); border-color: var(--gold); }
+
+/* ── Tablet ── */
+@media (max-width: 820px) {
+  .gallery-bento {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 280px 200px;
+    height: auto;
+  }
+  .bento-lg { grid-column: 1 / 3; grid-row: 1; }
+  .bento-sm { grid-row: 2; }
+}
+
+/* ── Móvil: stack vertical ── */
+@media (max-width: 540px) {
+  .gallery-section { padding: 4rem 1.25rem 4rem; }
+  .gallery-bento {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 12px;
+  }
+  .bento-cell { aspect-ratio: 4 / 3; }
+  .bento-lg { grid-column: 1; aspect-ratio: 4 / 3.4; }
+  /* En táctil mostramos info siempre */
+  .bento-veil { opacity: 1; }
+  .bento-info { transform: translateY(0); }
+  .bento-idx { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+
 
 <style>
 /* ── PRICING SECTION ───────────────────────────────── */
@@ -1680,7 +1868,7 @@
       'ais.eyebrow':    'Active Isolated Stretching',
       'ais.heading':    'Restore Movement With the Mattes Method',
       'ais.paragraph1': 'Active Isolated Stretching and Strengthening (AIS) is a systematic method of muscle lengthening and fascial release developed by kinesiologist Aaron Mattes. Unlike conventional stretching, AIS employs active movement to precisely balance the pull of soft tissue across each joint — delivering functional and physiological restoration to both the superficial and deep fascial planes.',
-      'ais.paragraph2': 'Experts estimate that the three leading causes of injury are fatigue, excess muscle tension, and lack of flexibility. AIS directly targets all three, using brief, targeted 2-second stretches that respect the body\'s natural reflexes and promote genuine tissue recovery.',
+      'ais.paragraph2': 'Experts estimate that the top three causes of injuries are fatigue, excess muscle tension and lack of flexibility.  I am a Mattes Method of Active Isolated Stretching and strengthening (AIS) Therapist, and was trained by Aaron Mattes, developer of the Mattes Method of AIS.Active Isolated Stretching and Strengthening (AIS) is a systematic method of muscle lengthening and fascial release that redefines what it means to “stretch.” AIS is a type of facilitated stretching that employs active movement on the part of the recipient to balance the pull of soft tissue across a specific joint, providing both functional and physiological restoration to both the superficial and deep fascial planes.Developed by kinesiologist Aaron Mattes, AIS helps to decrease pain, improve joint flexibility and balance, expand range of motion, increase muscle strength, and restore physical function. AIS can assist in injury prevention, improve performance or aid with recovery after workout.Mattes, father of Active Isolated Stretching and definitive educator on the topic of flexibility. Visit www.stretchingusa.com  to learn more.',
       'ais.list1':      'Decrease pain and accumulated muscle tension',
       'ais.list2':      'Improve joint flexibility, balance, and range of motion',
       'ais.list3':      'Increase muscle strength and prevent injury',
