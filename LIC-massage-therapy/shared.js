@@ -14,7 +14,7 @@ const i18n = {
     "a3d.desc":"Cada sesión parte de una comprensión profunda de la estructura corporal. La columna, el eje de tu movilidad, guía nuestro enfoque terapéutico para devolverte equilibrio y libertad de movimiento.","a3d.hint":"↳ Mueve el cursor sobre la figura para explorarla",
     "hero2.tag":"Raúl Araque · Terapeuta con Licencia (LMT)","hero2.title1":"Tejido Profundo","hero2.title2":"& Masaje Deportivo.",
     "hero2.desc":"Masaje sueco, deportivo y de tejido profundo. Estiramiento y Fortalecimiento Activo Aislado (AIS): un método sistemático de elongación muscular y liberación fascial.","hero2.cta1":"Agenda tu Cita","hero2.cta2":"Contacto",
-    "hero3.tag":"Licencia del Estado de NY · Lic#016175","hero3.title1":"Recupera","hero3.title2":"Tu Cuerpo.",
+    "hero3.tag":"Licencia del Estado de NY · Lic#016175","hero3.title1":"muevete mejor,","hero3.title2":"sientete mejor",
     "hero3.desc":"Un método sistemático de elongación muscular y liberación fascial que redefine lo que significa estirarse.","hero3.cta1":"Reservar Cita",
     "badge.specialty":"Especialidad","badge.specialtyVal":"Deportiva","badge.sessions":"Sesiones",
     "services.tag":"Nuestros Masajes","services.title1":"Massage in","services.title2":"LIC",
@@ -447,7 +447,7 @@ const i18n = {
     "ws.stat3.label":"Tratamientos especializados",
 
     // ── NUEVAS CLAVES — servicios.html · Política de Cancelación ────────────
-    "cancel.tag":"Política de Cancelación",
+    
     "cancel.title1":"Política",
     "cancel.title2":"de Cancelación",
     "cancel.intro":"Entendemos que imprevistos pueden ocurrir en la vida de todos. Las siguientes políticas están diseñadas para ser efectivas y justas con todos nuestros clientes.",
@@ -765,7 +765,7 @@ const i18n = {
 
      "nav.home":"Home","nav.masajes":"Massage","nav.terapia":"Stretch therapy",
     "nav.about":"About","nav.testimonials":"Testimonials","nav.contact":"Contact","nav.book":"Book Now",
-    "hero.tag":"Therapeutic Massage and Active Isolated Stretching · LIC","hero.title1":"Welcome to","hero.title2":"LIC Massage Therapy",
+    "hero.tag":"Therapeutic Massage and Active Isolated Stretching · LIC","hero.title1":"Welcome to","hero.title2":"L.I.C Massage Therapy",
     "hero.desc":"Welcome to Long Island City Massage Therapy, a space dedicated to relieving pain, improving mobility, and promoting health through therapeutic stretching and professional massage. I’m Raúl Araque, a licensed massage therapist in the state of New York, focused on body education and holistic wellness.",
     "hero.cta1":"Book Appointment","hero.cta2":"View Services",
     "hero.stat1":"Years of experience","hero.stat2":"Patients treated","hero.stat3":"Satisfaction",
@@ -773,7 +773,7 @@ const i18n = {
     "a3d.desc":"Every session begins with a deep understanding of the body's structure. The spine, the axis of your mobility, guides our therapeutic approach to restore your balance and freedom of movement.","a3d.hint":"↳ Move your cursor over the figure to explore it",
     "hero2.tag":"Raul Araque · Licensed Massage Therapist (LMT)","hero2.title1":"Deep Tissue","hero2.title2":"& Sports Massage.",
     "hero2.desc":"Swedish, sports and deep tissue massage. Active Isolated Stretching & Strengthening (AIS): a systematic method of muscle lengthening and fascial release.","hero2.cta1":"Make an Appointment","hero2.cta2":"Contact",
-    "hero3.tag":"NYS Licensed · Lic#016175","hero3.title1":"Restore","hero3.title2":"Your Body.",
+    "hero3.tag":"NYS Licensed · Lic#016175","hero3.title1":"move better,","hero3.title2":"feel better",
     "hero3.desc":"A systematic method of muscle lengthening and fascial release that redefines what it means to stretch.","hero3.cta1":"Book Appointment",
     "badge.specialty":"Specialty","badge.specialtyVal":"Sports","badge.sessions":"Sessions",
     "services.tag":"Our Massage","services.title1":"Massage in ","services.title2":" in L.I.C",
@@ -810,7 +810,7 @@ const i18n = {
     "cta.sub2":"Schedule your appointment online in under 2 minutes.",
     "about.tag":"Meet Your Therapist","about.title1":"THE PROFESSIONAL ","about.title2":"BEHIND YOUR CARE",
     "about.years":"years of practice","about.name":"Raul Araque, LMT","about.role":"Licensed Massage Therapist · AIS Specialist",
-    "about.bio":"Welcome to Long Island City (LIC) Massage Therapy. The place to come to be pain-free, learn how to stretch for optimum health, and relax in Long Island City. My name is Raul Araque. I am a New York State licensed massage therapist. My goal is to help and educate individuals. I specialize in therapeutic massage and Active Isolated Stretching (AIS).",
+    "about.bio":"Welcome to Long Island City (L.I.C) Massage Therapy. The place to come to be pain-free, learn how to stretch for optimum health, and relax in Long Island City. My name is Raul Araque. I am a New York State licensed massage therapist. My goal is to help and educate individuals. I specialize in therapeutic massage and Active Isolated Stretching (AIS).",
     "about.bio2":"I received an Associates Degree in Occupational Studies in 2003, from the Swedish Institute College of Health Sciences, one of the oldest massage schools in the country. I was also one of the massage therapists at The Yale Club of New York in Manhattan, where I saw people from all over the world. My practice has also allowed me to work with performers and dancers at the Mark Morris Dance Center in Downtown Brooklyn.",
     "cert.1":"Orthopedic Manual Therapy Certification – IFOMPT","cert.2":"Sports Medicine Specialist – Colombian Federation",
     "cert.3":"Advanced Myofascial Release Techniques – ART Certified","cert.4":"Therapeutic Kinesiotaping – Advanced Level",
@@ -1203,7 +1203,7 @@ const i18n = {
     "ws.stat3.label":"Specialized treatments",
 
     // ── NEW KEYS — servicios.html · Cancellation Policy ─────────────────────
-    "cancel.tag":"Cancellation Policy",
+
     "cancel.title1":"Cancellation",
     "cancel.title2":"Policy",
     "cancel.intro":"We understand that unanticipated events happen occasionally in everyone's life. The following policies are put in place to be effective and fair to all clients.",

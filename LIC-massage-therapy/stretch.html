@@ -1394,20 +1394,31 @@
     grid-template-rows: 280px 200px;
     height: auto;
   }
-  .bento-lg { grid-column: 1 / 3; grid-row: 1; }
-  .bento-sm { grid-row: 2; }
+  .bento-lg { grid-column: 1 / 3; grid-row: 1 / 2; }
+  .bento-sm { grid-row: 2 / 3; }
 }
 
 /* ── Móvil: stack vertical ── */
 @media (max-width: 540px) {
   .gallery-section { padding: 4rem 1.25rem 4rem; }
   .gallery-bento {
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: none;
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
     gap: 12px;
+    height: auto;
   }
-  .bento-cell { aspect-ratio: 4 / 3; }
-  .bento-lg { grid-column: 1; aspect-ratio: 4 / 3.4; }
+  /* Reset de spans: en una sola columna cada celda ocupa su propia fila */
+  .bento-cell,
+  .bento-lg,
+  .bento-sm {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    height: 260px;          /* altura explícita: no depende de aspect-ratio */
+    aspect-ratio: auto;
+  }
+  .bento-lg { height: 300px; }
   /* En táctil mostramos info siempre */
   .bento-veil { opacity: 1; }
   .bento-info { transform: translateY(0); }
