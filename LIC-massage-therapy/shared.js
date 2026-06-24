@@ -841,7 +841,7 @@ const i18n = {
     "contact.formTitle":"Send Us a Message","contact.send":"Send Message →","contact.subject":"Subject","contact.subjectPh":"How can we help you?",
     "book.tag":"Book Appointment","book.title1":"YOUR WELLNESS","book.title2":"STARTS TODAY",
     "book.desc":"Schedule your initial consultation and receive a complete postural and muscular assessment at no extra cost.",
-    "book.location":"10-44 Jackson Ave, Long Island City, NY 11101, United States","book.hours":"Mon–Fri: 7am–8pm · Sat: 8am–4pm",
+    "book.location":"10-44 Jackson Ave, Long Island City, NY 11101, United States","book.hours":"Mon–Fri: 7am–8pm · Sat: 8am–4pm · Dom 10am - 5pm",
     "book.infoTag":"Information","book.infoTitle1":"What to expect","book.infoTitle2":"on your first visit?",
     "step1.name":"Initial Assessment","step1.desc":"Complete postural and muscular analysis to identify tension areas and movement patterns.",
     "step2.name":"Personalized Protocol","step2.desc":"Design of a specific treatment plan based on your goals and current condition.",

@@ -452,7 +452,7 @@
       <div class="footer-contact-items">
         <div class="footer-contact-item">
           ${ICONS.location}
-          <a href="https://maps.google.com/?q=12-17+Jackson+Ave,+Long+Island+City,+NY+11101" target="_blank" rel="noopener noreferrer" class="footer-contact-link" data-i18n="book.location">12-17 Jackson Ave<br>Long Island City, NY 11101</a>
+          <a href="https://www.google.com/maps/place/10-44+Jackson+Ave,+Long+Island+City,+NY+11101,+EE.+UU./@40.7422557,-73.9554764,17z/data=!3m1!4b1!4m10!1m2!2m1!1s10-44+Jackson+Ave!3m6!1s0x89c25924bd5cd1d9:0xc622e5a1fdf3c367!8m2!3d40.7422517!4d-73.9529015!15sChExMC00NCBKYWNrc29uIEF2ZZIBCnN1YnByZW1pc2XgAQA!16s%2Fg%2F11csjzxryv?entry=ttu&g_ep=EgoyMDI2MDYyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="footer-contact-link" data-i18n="book.location">10-44 Jackson Ave<br>Long Island City, NY 11101</a>
         </div>
         <div class="footer-contact-item">
           ${ICONS.clock}
