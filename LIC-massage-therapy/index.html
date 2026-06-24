@@ -300,6 +300,20 @@
 .hc-centered .hc-text{
   max-width:none;
 }
+/* Centrar también título/divisor/descr./botones cuando el slide centrado
+   usa la estructura .hc-title (como el slide 2) */
+.hc-centered .hc-divider{
+  margin-left:auto;
+  margin-right:auto;
+  transform-origin:center;
+}
+.hc-centered .hc-desc{
+  margin-left:auto;
+  margin-right:auto;
+}
+.hc-centered .hc-ctas{
+  justify-content:center;
+}
 /* Overlay más suave: la imagen ya viene oscurecida en teal */
 .hc-centered::after{
   background:linear-gradient(to right, rgba(10,30,33,.25), rgba(10,30,33,.1) 50%, rgba(10,30,33,.25));
@@ -469,7 +483,7 @@
 
 
   <!-- Slide 3 -->
-  <div class="hc-slide">
+  <div class="hc-slide hc-centered">
     <div class="hc-slide-bg" style="background-image:url('img/hero.png');"></div>
     <div class="hc-content">
       <div class="hc-text">
