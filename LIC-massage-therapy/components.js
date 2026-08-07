@@ -203,8 +203,8 @@
       <text x="21" y="26" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="700" letter-spacing="1.5" fill="#ffffff">LMT</text>
       <defs>
         <linearGradient id="navLogoGrad" x1="0" y1="0" x2="42" y2="42" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#2c6e6a"/>
-          <stop offset="100%" stop-color="#1a4a47"/>
+          <stop offset="0%" stop-color="#75a4cd"/>
+          <stop offset="100%" stop-color="#16324a"/>
         </linearGradient>
       </defs>
     </svg>
@@ -238,7 +238,7 @@
     footer.innerHTML = `
   <style>
     #footer {
-      background: #0a2828;
+      background: #16324a;
       padding: 72px 0 0;
       color: rgba(255,255,255,0.65);
     }
@@ -420,8 +420,8 @@
           <text x="21" y="26" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="700" letter-spacing="1.5" fill="#ffffff">LMT</text>
           <defs>
             <linearGradient id="footerLogoGrad" x1="0" y1="0" x2="42" y2="42" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#2c6e6a"/>
-              <stop offset="100%" stop-color="#1a4a47"/>
+              <stop offset="0%" stop-color="#75a4cd"/>
+              <stop offset="100%" stop-color="#16324a"/>
             </linearGradient>
           </defs>
         </svg>
