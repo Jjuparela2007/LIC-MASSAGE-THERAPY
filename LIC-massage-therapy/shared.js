@@ -459,6 +459,11 @@ const i18n = {
     "cancel.c3.title":"Llegadas Tarde",
     "cancel.c3.desc":"Si llegas tarde, tu sesión podrá acortarse para no afectar a los clientes siguientes. El terapeuta determinará si hay tiempo suficiente para iniciar el tratamiento.",
     "cancel.c3.rule":"Independientemente del tiempo de tratamiento dado, se cobrará el valor completo de la sesión. Por favor, llega puntual.",
+    "cancel.help.title":"¿Tienes alguna pregunta?",
+    "cancel.help.sub":"Si necesitas cancelar, reprogramar una cita o tienes alguna duda sobre nuestras políticas, nuestro equipo estará encantado de ayudarte.",
+    "cancel.help.btn":"Contactar al equipo",
+    "cancel.help.hoursLabel":"Horario de atención",
+    "cancel.help.hoursValue":"Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: 10am - 5pm",
 
     // ── NUEVAS CLAVES — servicios.html · Sección Estudio ─────────────────────
 
@@ -1214,6 +1219,11 @@ const i18n = {
     "cancel.c3.title":"Late Arrivals",
     "cancel.c3.desc":"If you arrive late, your session may be shortened to accommodate others. Your therapist will determine whether there is enough time remaining to begin a treatment.",
     "cancel.c3.rule":"Regardless of the treatment time given, you are responsible for the full session. Out of respect for your therapist and other clients, please arrive on time.",
+    "cancel.help.title":"Have a question?",
+    "cancel.help.sub":"If you need to cancel, reschedule an appointment, or have any questions about our policies, our team will be happy to help.",
+    "cancel.help.btn":"Contact our team",
+    "cancel.help.hoursLabel":"Hours",
+    "cancel.help.hoursValue":"Mon–Fri: 10am–7pm · Sat: 10am–6pm · Sun: 10am–5pm",
 
     // ── NEW KEYS — servicios.html · Studio Section ───────────────────────────
 
