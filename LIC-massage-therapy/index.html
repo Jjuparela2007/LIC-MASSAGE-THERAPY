@@ -516,7 +516,7 @@
         <div class="hc-divider"></div>
         <p class="hc-desc" data-i18n="hero3.desc">A systematic method of muscle lengthening and fascial release that redefines what it means to stretch.</p>
         <div class="hc-ctas">
-          <a href="https://www.massagebook.com" class="hc-btn hc-btn-primary" data-i18n="hero3.cta1">Book Now</a>
+          <a href="#" class="hc-btn hc-btn-primary" id="heroBookNowBtn" data-i18n="hero3.cta1">Book Now</a>
         </div>
       </div>
     </div>
@@ -860,6 +860,128 @@ document.addEventListener('langChange', function() {
 <script>
   renderComponents('index');
   initPage('index');
+</script>
+
+<!-- ══════════════ SQUARE BOOKING MODAL ══════════════ -->
+<style>
+.sq-booking-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+.sq-booking-overlay.active {
+  display: flex;
+}
+.sq-booking-modal {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  max-width: 520px;
+  height: 90vh;
+  max-height: 780px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+.sq-booking-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.sq-booking-close:hover { background: rgba(0, 0, 0, 0.8); }
+.sq-booking-close svg { width: 18px; height: 18px; }
+.sq-booking-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.sq-booking-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary, #777);
+}
+@media (max-width: 560px) {
+  .sq-booking-modal { height: 95vh; max-height: none; border-radius: 6px; }
+}
+</style>
+
+<div class="sq-booking-overlay" id="sqBookingOverlay" role="dialog" aria-modal="true" aria-label="Reservar cita">
+  <div class="sq-booking-modal" id="sqBookingModal">
+    <button class="sq-booking-close" id="sqBookingClose" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="sq-booking-loading" id="sqBookingLoading">Cargando reservas…</div>
+    <iframe class="sq-booking-iframe" id="sqBookingIframe" title="Reservar cita" allow="payment"></iframe>
+  </div>
+</div>
+
+<script>
+  (function () {
+    // URL del widget de Square Appointments (sin el .js, para usarla como iframe)
+    var SQUARE_BOOKING_URL = 'https://square.site/appointments/buyer/widget/xtp5il4pnepb8w/LBVMBHCX8899Q';
+
+    var overlay  = document.getElementById('sqBookingOverlay');
+    var iframe   = document.getElementById('sqBookingIframe');
+    var loading  = document.getElementById('sqBookingLoading');
+    var closeBtn = document.getElementById('sqBookingClose');
+    var iframeLoaded = false;
+
+    function openSquareBooking(e) {
+      if (e) e.preventDefault();
+      if (!iframeLoaded) {
+        loading.style.display = 'flex';
+        iframe.src = SQUARE_BOOKING_URL;
+        iframe.addEventListener('load', function () {
+          loading.style.display = 'none';
+        }, { once: true });
+        iframeLoaded = true;
+      }
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSquareBooking() {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeSquareBooking);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeSquareBooking();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeSquareBooking();
+    });
+
+    window.openSquareBooking = openSquareBooking;
+
+    var heroBtn = document.getElementById('heroBookNowBtn');
+    if (heroBtn) heroBtn.addEventListener('click', openSquareBooking);
+  })();
 </script>
 </body>
 </html>
