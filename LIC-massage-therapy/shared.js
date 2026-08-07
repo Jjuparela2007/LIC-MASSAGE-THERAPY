@@ -5,7 +5,7 @@ const i18n = {
   es: {
    
     "nav.home":"Inicio","nav.masajes":"Masajes","nav.terapia":"Terapia (AIS)",
-    "nav.about":"Sobre Raul","nav.testimonials":"Testimonios","nav.book":"Reservar","nav.contact":"Contacto",
+    "nav.about":"Sobre Raul","nav.testimonials":"Testimonios","nav.cancellationpolicy":"Políticas y cancelación","nav.contact":"Contacto",
     "hero.tag":"Masaje Terapéutico y Estiramiento Activo Aislado · LIC","hero.title1":"Bienvenido a","hero.title2":"LIC Massage Therapy",
     "hero.desc":"Bienvenido a Long Island City Massage Therapy, un espacio dedicado a aliviar el dolor, mejorar la movilidad y promover la salud a través del estiramiento terapéutico y el masaje profesional.  Soy Raúl Araque, terapeuta con licencia en el estado de Nueva York, enfocado en la educación del cuerpo y el bienestar integral.",
     "hero.cta1":"Reservar Cita","hero.cta2":"Ver Servicios",
@@ -80,8 +80,8 @@ const i18n = {
     "contact.desc":"No dudes en contactarnos para cualquier consulta, información sobre tratamientos o para programar tu primera cita de evaluación.",
     "contact.address":"Dirección","contact.hours":"Horarios","contact.phone":"Teléfono",
     "contact.formTitle":"Envíanos un Mensaje","contact.send":"Enviar Mensaje →","contact.subject":"Asunto","contact.subjectPh":"¿En qué podemos ayudarte?",
-    "book.tag":"Reservar Cita","book.title1":"TU BIENESTAR","book.title2":"COMIENZA HOY",
-    "book.desc":"Agenda tu consulta inicial y recibe una evaluación postural y muscular completa sin costo adicional.",
+    "book.title1":"POLÍTICAS DE","book.title2":"CANCELACIÓN",
+    "book.desc":"Entendemos que imprevistos pueden ocurrir en la vida de todos. Las siguientes políticas están diseñadas para ser efectivas y justas con todos nuestros clientes.",
     "book.location":"10-44 Jackson Ave Long Island City, NY  11101 United States Estados Unidos","book.hours":"Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: 10am - 5pm",
     "book.infoTag":"Información","book.infoTitle1":"¿Qué esperar","book.infoTitle2":"en tu primera visita?",
     "step1.name":"Evaluación Inicial","step1.desc":"Análisis postural y muscular completo para identificar áreas de tensión y patrones de movimiento.",
@@ -448,9 +448,8 @@ const i18n = {
 
     // ── NUEVAS CLAVES — servicios.html · Política de Cancelación ────────────
     
-    "cancel.title1":"Política",
-    "cancel.title2":"de Cancelación",
-    "cancel.intro":"Entendemos que imprevistos pueden ocurrir en la vida de todos. Las siguientes políticas están diseñadas para ser efectivas y justas con todos nuestros clientes.",
+
+    "cancel.intro":"Conoce nuestras políticas de cancelación y reprogramación para garantizar una atención organizada, oportuna y de calidad para todos nuestros pacientes.",
     "cancel.c1.title":"Cancelaciones",
     "cancel.c1.desc":"Se requiere aviso con 24 horas de anticipación para cancelar una cita. Esto permite que otra persona pueda aprovechar el horario disponible.",
     "cancel.c1.rule":"Sin aviso de 24h se cobrará el valor completo de la sesión, pagadero en 24h. Recibirás una factura por correo electrónico; pago con tarjeta de crédito.",
@@ -764,7 +763,7 @@ const i18n = {
  
 
      "nav.home":"Home","nav.masajes":"Massage","nav.terapia":"Stretch therapy",
-    "nav.about":"About","nav.testimonials":"Testimonials","nav.contact":"Contact","nav.book":"Book Now",
+    "nav.about":"About","nav.testimonials":"Testimonials","nav.contact":"Contact","nav.cancellationpolicy":"Cancellation Policy",
     "hero.tag":"Therapeutic Massage and Active Isolated Stretching · LIC","hero.title1":"Welcome to","hero.title2":"L.I.C Massage Therapy",
     "hero.desc":"Welcome to Long Island City Massage Therapy, a space dedicated to relieving pain, improving mobility, and promoting health through therapeutic stretching and professional massage. I’m Raúl Araque, a licensed massage therapist in the state of New York, focused on body education and holistic wellness.",
     "hero.cta1":"Book Appointment","hero.cta2":"View Services",
@@ -839,8 +838,8 @@ const i18n = {
     "contact.desc":"Don't hesitate to contact us for any inquiry, information about treatments, or to schedule your first evaluation appointment.",
     "contact.address":"Address","contact.hours":"Hours","contact.phone":"Phone",
     "contact.formTitle":"Send Us a Message","contact.send":"Send Message →","contact.subject":"Subject","contact.subjectPh":"How can we help you?",
-    "book.tag":"Book Appointment","book.title1":"YOUR WELLNESS","book.title2":"STARTS TODAY",
-    "book.desc":"Schedule your initial consultation and receive a complete postural and muscular assessment at no extra cost.",
+   "book.title1":"CANCELLATION","book.title2":" POLICY",
+    "book.desc":"We understand that unanticipated events happen occasionally in everyone's life. The following policies are put in place to be effective and fair to all clients.",
     "book.location":"10-44 Jackson Ave, Long Island City, NY 11101, United States","book.hours":"Mon–Fri: 7am–8pm · Sat: 8am–4pm · Dom 10am - 5pm",
     "book.infoTag":"Information","book.infoTitle1":"What to expect","book.infoTitle2":"on your first visit?",
     "step1.name":"Initial Assessment","step1.desc":"Complete postural and muscular analysis to identify tension areas and movement patterns.",
@@ -1204,9 +1203,8 @@ const i18n = {
 
     // ── NEW KEYS — servicios.html · Cancellation Policy ─────────────────────
 
-    "cancel.title1":"Cancellation",
-    "cancel.title2":"Policy",
-    "cancel.intro":"We understand that unanticipated events happen occasionally in everyone's life. The following policies are put in place to be effective and fair to all clients.",
+    
+    "cancel.intro":"Please review our cancellation and rescheduling policy to help us provide timely, efficient, and high-quality care for every patient.",
     "cancel.c1.title":"Cancellations",
     "cancel.c1.desc":"24-hour advance notice is required when cancelling an appointment. This allows the opportunity for someone else to schedule an appointment.",
     "cancel.c1.rule":"Without 24h notice, the full session amount will be charged and must be paid within 24h. You will be invoiced via email and may pay by credit card.",

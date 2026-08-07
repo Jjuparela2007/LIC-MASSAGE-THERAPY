@@ -3,11 +3,10 @@
   /* ── Configuración de navegación ──────────────────────────────────────── */
   const NAV_LINKS = [
     { href: 'index.html',      key: 'nav.home',         page: 'index'      },
-   
-   { href: 'masajes.html',    key: 'nav.masajes',      page: 'masajes'  },
+   { href:  'masajes.html',    key: 'nav.masajes',      page: 'masajes'  },
     { href: 'stretch.html',    key: 'nav.terapia',      page: 'terapia'  },
     { href: 'testimonios.html',key: 'nav.testimonials', page: 'testimonios'},
-    { href: 'reservas.html',   key: 'nav.book',         page: 'reserva'   },
+    { href: 'politicas-cancelacion.html',   key: 'nav.cancellationpolicy', page: 'Politicas y Cancelación'   },
   
   ];
 
@@ -25,7 +24,7 @@
     { href: 'masajes.html',    key: 'nav.masajes',     },
     { href: 'stretch.html',    key: 'nav.terapia',     },
     { href: 'testimonios.html', key: 'nav.testimonials' },
-    { href: 'reservas.html',    key: 'nav.book'      },
+    { href: 'politicas-cancelacion.html',    key: 'nav.cancellationpolicy'      },
 
   ];
 
