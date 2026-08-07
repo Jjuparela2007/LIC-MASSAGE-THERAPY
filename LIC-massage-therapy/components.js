@@ -108,9 +108,9 @@
       .lang-btn .lang-flag svg { width: 100%; height: 100%; display: block; }
       .lang-btn:hover { color: rgba(0,0,0,0.85); }
       .lang-btn.active {
-        background: #1F606F;
+        background: #75a4cd;
         color: #fff;
-        box-shadow: 0 1px 3px rgba(31,96,111,0.35);
+        box-shadow: 0 1px 3px rgba(117,164,205,0.35);
       }
       .lang-btn.active .lang-flag { box-shadow: 0 0 0 1px rgba(255,255,255,0.4); }
 
