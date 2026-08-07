@@ -5,7 +5,7 @@ const i18n = {
   es: {
    
     "nav.home":"Inicio","nav.masajes":"Masajes","nav.terapia":"Terapia (AIS)",
-    "nav.about":"Sobre Raul","nav.testimonials":"Testimonios","nav.cancellationpolicy":"Políticas y cancelación","nav.contact":"Contacto",
+    "nav.about":"Sobre Raul","nav.testimonials":"Testimonios","nav.cancellationpolicy":"Contacto/Politicas","nav.contact":"Contacto",
     "hero.tag":"Masaje Terapéutico y Estiramiento Activo Aislado · LIC","hero.title1":"Bienvenido a","hero.title2":"LIC Massage Therapy",
     "hero.desc":"Bienvenido a Long Island City Massage Therapy, un espacio dedicado a aliviar el dolor, mejorar la movilidad y promover la salud a través del estiramiento terapéutico y el masaje profesional.  Soy Raúl Araque, terapeuta con licencia en el estado de Nueva York, enfocado en la educación del cuerpo y el bienestar integral.",
     "hero.cta1":"Reservar Cita","hero.cta2":"Ver Servicios",
@@ -62,7 +62,7 @@ const i18n = {
     "v2.name":"Evidencia Científica","v2.desc":"Todas las técnicas aplicadas están respaldadas por investigación clínica y biomecánica actual.",
     "v3.name":"Personalización Total","v3.desc":"Ningún protocolo es igual. Cada sesión se adapta a las necesidades únicas de cada cuerpo.",
     "v4.name":"Resultados Medibles","v4.desc":"Seguimiento objetivo de cada tratamiento con métricas de rango de movimiento y niveles de dolor.",
-    "test.tag":"Testimonios","test.title1":"LO QUE DICEN","test.title2":"NUESTROS CLIENTES","test.rating":"Calificación",
+    "test.tag":"Testimonios","test.title1":"LO QUE DICEN","test.title2":"LOS CLIENTES","test.rating":"Calificación",
    "t1.text":"Raúl es uno de los mejores masajistas que he tenido. Aborda tus inquietudes de forma integral y te brinda las herramientas para llevar una vida más tranquila y sin dolor mediante estiramientos específicos y efectivos que puedes hacer regularmente en casa. Es increíblemente amable, cálido y profesional. He vuelto muchas veces y seguiré haciéndolo durante años. ¡Lo recomiendo ampliamente!",
     "t1.name":"Laura",
     "t2.text":"Raúl es un excelente masajista. Su espacio es increíblemente limpio y meditativo, creando una atmósfera relajante desde el momento en que entras. No solo trata los síntomas, sino que ofrece una perspectiva real sobre la posible causa de tu tensión y te enseña estiramientos específicos para que puedas controlar el dolor o la rigidez de forma segura en casa. Su trabajo de tejido profundo es efectivo y alivia, y se comunica con mucha facilidad durante toda la sesión para asegurarse de que te sientas cómodo. En general, un ambiente genial y un alivio real.",
@@ -768,7 +768,7 @@ const i18n = {
  
 
      "nav.home":"Home","nav.masajes":"Massage","nav.terapia":"Stretch therapy",
-    "nav.about":"About","nav.testimonials":"Testimonials","nav.contact":"Contact","nav.cancellationpolicy":"Cancellation Policy",
+    "nav.about":"About","nav.testimonials":"Testimonials","nav.contact":"Contact","nav.cancellationpolicy":"Contact/Policies",
     "hero.tag":"Therapeutic Massage and Active Isolated Stretching · LIC","hero.title1":"Welcome to","hero.title2":"L.I.C Massage Therapy",
     "hero.desc":"Welcome to Long Island City Massage Therapy, a space dedicated to relieving pain, improving mobility, and promoting health through therapeutic stretching and professional massage. I’m Raúl Araque, a licensed massage therapist in the state of New York, focused on body education and holistic wellness.",
     "hero.cta1":"Book Appointment","hero.cta2":"View Services",
@@ -825,7 +825,7 @@ const i18n = {
     "v2.name":"Scientific Evidence","v2.desc":"All techniques applied are backed by current clinical and biomechanical research.",
     "v3.name":"Full Personalization","v3.desc":"No protocol is the same. Each session adapts to the unique needs of every body.",
     "v4.name":"Measurable Results","v4.desc":"Objective tracking of each treatment with metrics on range of motion and pain levels.",
-    "test.tag":"Testimonials","test.title1":"WHAT OUR","test.title2":"CLIENTS SAY","test.rating":"Rating",
+    "test.tag":"Testimonials","test.title1":"WHAT CLIENTS","test.title2":"ARE SAYING","test.rating":"Rating",
     "t1.text":"Raul is one of the best masseuses I have ever been to. He addresses your concerns holistically and gives you the tools to lead a more pain free and peaceful life via specific and effective stretches you can do regularly at home. He is incredibly kind, warm, and professional. I have gone back many times and will continue to go back for years to come. Highly recommend working with him!",
     "t1.name":"Laura",
     "t2.text":"Raul is an excellent massage therapist. His space is incredibly clean and meditative, creating a calming atmosphere from the moment you walk in. He doesn’t just treat symptoms, he offers real insight into what may be causing your tension and teaches you specific stretches so you can safely manage pain or tightness at home. His deep tissue work is both effective and relieving, and he’s very open to communicating throughout the session to make sure you’re comfortable. Overall, great vibes and real relief.",
