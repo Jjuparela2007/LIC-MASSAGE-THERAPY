@@ -6,7 +6,7 @@ const i18n = {
    
     "nav.home":"Inicio","nav.masajes":"Masajes","nav.terapia":"Terapia (AIS)",
     "nav.about":"Sobre Raul","nav.testimonials":"Testimonios","nav.cancellationpolicy":"Contacto/Politicas","nav.contact":"Contacto",
-    "hero.tag":"Masaje Terapéutico y Estiramiento Activo Aislado · LIC","hero.title1":"Bienvenido a","hero.title2":"LIC Massage Therapy",
+    "hero.tag":"Masaje Terapéutico y Estiramiento Activo Aislado · LIC","hero.title1":"Bienvenido a","hero.title2":"LIC Massage Therapy And Stretching",
     "hero.desc":"Bienvenido a Long Island City Massage Therapy, un espacio dedicado a aliviar el dolor, mejorar la movilidad y promover la salud a través del estiramiento terapéutico y el masaje profesional.  Soy Raúl Araque, terapeuta con licencia en el estado de Nueva York, enfocado en la educación del cuerpo y el bienestar integral.",
     "hero.cta1":"Reservar Cita","hero.cta2":"Ver Servicios",
     "hero.stat1":"Años de experiencia","hero.stat2":"Pacientes tratados","hero.stat3":"Satisfacción",
@@ -579,7 +579,7 @@ const i18n = {
     "sp.close":"Cerrar",
 
     // ── Títulos de página (para <title> dinámico) ─────────────────────────────
-    "page.title.index":"LIC Massage Therapy",
+    "page.title.index":"Bienvenido a LIC Massage Therapy and Stretching",
     "page.title.servicios":"LIC Massage Therapy | Servicios",
     "page.title.sobre-mi":"LIC Massage Therapy | Sobre Mí",
     "page.title.reservas":"LIC Massage Therapy | Reservar",
@@ -769,7 +769,7 @@ const i18n = {
 
      "nav.home":"Home","nav.masajes":"Massage","nav.terapia":"Stretch therapy",
     "nav.about":"About","nav.testimonials":"Testimonials","nav.contact":"Contact","nav.cancellationpolicy":"Contact/Policies",
-    "hero.tag":"Therapeutic Massage and Active Isolated Stretching · LIC","hero.title1":"Welcome to","hero.title2":"L.I.C Massage Therapy",
+    "hero.tag":"Therapeutic Massage and Active Isolated Stretching · LIC","hero.title1":"Welcome to","hero.title2":"L.I.C Massage Therapy and Stretching",
     "hero.desc":"Welcome to Long Island City Massage Therapy, a space dedicated to relieving pain, improving mobility, and promoting health through therapeutic stretching and professional massage. I’m Raúl Araque, a licensed massage therapist in the state of New York, focused on body education and holistic wellness.",
     "hero.cta1":"Book Appointment","hero.cta2":"View Services",
     "hero.stat1":"Years of experience","hero.stat2":"Patients treated","hero.stat3":"Satisfaction",
@@ -1339,7 +1339,7 @@ const i18n = {
     "sp.close":"Close",
 
     // ── Page titles (for dynamic <title>) ────────────────────────────────────
-    "page.title.index":"LIC Massage Therapy",
+    "page.title.index":"Welcome to LIC Massage Therapy and Stretching",
     "page.title.servicios":"LIC Massage Therapy | Services",
     "page.title.sobre-mi":"LIC Massage Therapy | About",
     "page.title.reservas":"LIC Massage Therapy | Book",
