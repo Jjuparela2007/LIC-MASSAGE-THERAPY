@@ -18,6 +18,8 @@
   --border-focus:      rgba(117,164,205,0.60);
 
   /* ── TIPOGRAFÍA ─────────────────────────────────────── */
+  --font-display:      'Cormorant Garamond', serif;
+  --font-body:         'DM Sans', sans-serif;
   --text-primary:      #16324a;              /* azul marino / casi negro */
   --text-secondary:    #234a63;
   --text-muted:        #5a7f97;
@@ -391,7 +393,7 @@ body.light .btn-secondary { border-color: rgba(26,26,32,0.25); }
 .preview-card:hover .preview-num { color: var(--service-num-hover); }
 .preview-icon { width: 44px; height: 44px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; transition: all 0.3s; color: var(--gold); }
 .preview-card:hover .preview-icon { border-color: var(--gold); background: rgba(201,168,76,0.08); }
-.preview-name { font-family: 'Cormorant Garamond',serif; font-size: 1.4rem; margin-bottom: 0.75rem; color: var(--text-primary); transition: color 0.3s; }
+.preview-name { font-family: 'Cormorant Garamond',serif; font-size: 1.4rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--text-primary); transition: color 0.3s; }
 .preview-card:hover .preview-name { color: var(--gold-light); }
 .preview-desc { font-size: 0.83rem; color: var(--text-muted); line-height: 1.65; font-weight: 300; }
 .center-cta { text-align: center; }
@@ -409,7 +411,7 @@ body.light .btn-secondary { border-color: rgba(26,26,32,0.25); }
 .service-icon { width: 46px; height: 46px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; transition: all 0.3s; color: var(--gold); }
 .service-card:hover .service-icon { border-color: var(--gold); background: rgba(201,168,76,0.08); }
 .service-icon svg { width: 18px; height: 18px; }
-.service-name { font-family: 'Cormorant Garamond',serif; font-size: 1.45rem; font-weight: 400; margin-bottom: 0.9rem; line-height: 1.2; transition: color 0.3s; color: var(--text-primary); }
+.service-name { font-family: 'Cormorant Garamond',serif; font-size: 1.45rem; font-weight: 600; margin-bottom: 0.9rem; line-height: 1.2; transition: color 0.3s; color: var(--text-primary); }
 .service-card:hover .service-name { color: var(--gold-light); }
 .service-desc { font-size: 0.83rem; color: var(--text-muted); line-height: 1.65; font-weight: 300; margin-bottom: 1.5rem; }
 .service-features { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.75rem; }
@@ -478,7 +480,7 @@ body.light .about-overlay { background: linear-gradient(to bottom, transparent 6
 .value-card { background: var(--bg-card); padding: 2.5rem 2rem; transition: background 0.35s; }
 .value-card:hover { background: var(--bg-card-hover); }
 .value-icon { font-family: 'Cormorant Garamond',serif; font-size: 2.8rem; font-weight: 300; color: var(--service-num-color); line-height: 1; margin-bottom: 1.25rem; }
-.value-name { font-family: 'Cormorant Garamond',serif; font-size: 1.3rem; color: var(--text-primary); margin-bottom: 0.75rem; }
+.value-name { font-family: 'Cormorant Garamond',serif; font-size: 1.3rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
 .value-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.65; }
 
 /* ─── TESTIMONIALS PAGE ─────────────────────────────────────────────────── */
@@ -673,7 +675,7 @@ body.light .about-overlay { background: linear-gradient(to bottom, transparent 6
 .cta-strip { padding: 5rem 0; background: var(--bg-cta); border-top: 1px solid var(--border); }
 body.light .cta-strip { border-top-color: rgba(26,26,32,0.12); }
 .cta-strip-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
-.cta-strip-title { font-family: 'Cormorant Garamond',serif; font-size: 2rem; font-weight: 400; color: #f0ede8; margin-bottom: 0.5rem; }
+.cta-strip-title { font-family: 'Cormorant Garamond',serif; font-size: 2rem; font-weight: 300; color: #f0ede8; margin-bottom: 0.5rem; }
 .cta-strip-sub { font-size: 0.85rem; color: rgba(240,237,232,0.6); font-weight: 300; }
 
 /* ─── FOOTER ─────────────────────────────────────────────────────────────── */
