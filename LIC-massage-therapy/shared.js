@@ -1,3 +1,5 @@
+
+
 /* ─── KINESYS SHARED JS ────────────────────────────────────────────────────── */
  
 // ─── i18n ────────────────────────────────────────────────────────────────────
@@ -21,7 +23,7 @@ const i18n = {
    "terapia.tag":"Estiramiento y fortalecimiento activo aislado, el método Mattes.","terapia.title1":" TERAPIA DE ESTIRAMIENTO",
     "services.subtitle":"Cada tratamiento está diseñado con base en evidencia científica y técnicas avanzadas de terapia corporal.",
     "md.title":"MASAJE",
-    "md.subtitle":"Relajación para el cuerpo y la mente",
+    "md.subtitle":"Relaxation for Body & Mind",
     "md.intro1":"Los expertos estiman que las principales causas de lesiones son la fatiga, el exceso de tensión muscular y la falta de flexibilidad. Más del noventa por ciento de las enfermedades están relacionadas con el estrés. Y quizás nada nos envejece más rápido, interna y externamente, que el estrés elevado. El trabajo corporal y el Estiramiento Activo Aislado pueden ayudarte a mantener la salud y el bienestar general, y/o facilitar el proceso de recuperación de algunas lesiones, como desgarros musculares o esguinces. El masaje puede aumentar la circulación, promover la relajación, reducir el estrés y aliviar el dolor estimulando la liberación de endorfinas — los analgésicos naturales del cuerpo.",
     "md.intro2":"El masaje sueco / de tejido profundo puede aliviar el dolor lumbar y mejorar el rango de movimiento, reducir el dolor asociado con la cefalea tensional, la disfunción de la articulación temporomandibular (ATM), la mala postura o la escoliosis, y las lesiones por esfuerzo repetitivo en músculos y tendones (como el codo de tenista o de golfista); además, el masaje puede mejorar la inmunidad estimulando el flujo linfático — el sistema de defensa natural del cuerpo.",
     "md.b1.head":"Masaje de Relajación / sesión  (1/2 hr. $80 – 1 hr. $130 – 1.5 hr $165)",
@@ -80,7 +82,7 @@ const i18n = {
     "contact.desc":"No dudes en contactarnos para cualquier consulta, información sobre tratamientos o para programar tu primera cita de evaluación.",
     "contact.address":"Dirección","contact.hours":"Horarios","contact.phone":"Teléfono",
     "contact.formTitle":"Envíanos un Mensaje","contact.send":"Enviar Mensaje →","contact.subject":"Asunto","contact.subjectPh":"¿En qué podemos ayudarte?",
-    "book.title1":"POLÍTICAS DE","book.title2":"CANCELACIÓN",
+    "book.title1":"CONTACTO","book.title2":"/POLÍTICAS",
     "book.desc":"Entendemos que imprevistos pueden ocurrir en la vida de todos. Las siguientes políticas están diseñadas para ser efectivas y justas con todos nuestros clientes.",
     "book.location":"10-44 Jackson Ave Long Island City, NY  11101 United States Estados Unidos","book.hours":"Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: 10am - 5pm",
     "book.infoTag":"Información","book.infoTitle1":"¿Qué esperar","book.infoTitle2":"en tu primera visita?",
@@ -784,7 +786,7 @@ const i18n = {
     "terapia.tag":"Active Isolated Stretching And Strengthening, the method mattes","terapia.title1":" STRETCH THERAPY",
     "services.subtitle":"Each treatment is designed based on scientific evidence and advanced body therapy techniques.",
     "md.title":"MASSAGE",
-    "md.subtitle":" Relaxation for Body & Mind",
+    "md.subtitle":" in L.I.C",
     "md.intro1":"Experts estimate that the main causes of injuries are fatigue, excess muscle tension and lack of flexibility.  Upwards of ninety percent of disease is stress-related. And perhaps nothing ages us faster, internally and externally, than high stress.  Bodywork and Active Isolated Stretching can help you support general health and well-being and/or facilitate the healing process of some injuries, such as muscle tears or sprains. Massage can increase circulation, promote relaxation, reduce stress, and reduce pain by stimulating the release of endorphins- the body's natural painkillers.",
     "md.intro2":"Swedish/Deep tissue massage can help alleviate low-back pain and improve range of motion, reduce pain associated with tension headache, temporomandibular joint (TMJ) dysfunction, poor posture or scoliosis, and repetitive stress injuries to muscles and tendons (such as tennis or golf elbow) and massage can enhance immunity by stimulating lymph flow—the body's natural defense system.",
     "md.b1.head":"Relaxation Massage / session  (1/2 hr. $80 – 1 hr. $130 – 1.5 hr $165)",
@@ -843,7 +845,7 @@ const i18n = {
     "contact.desc":"Don't hesitate to contact us for any inquiry, information about treatments, or to schedule your first evaluation appointment.",
     "contact.address":"Address","contact.hours":"Hours","contact.phone":"Phone",
     "contact.formTitle":"Send Us a Message","contact.send":"Send Message →","contact.subject":"Subject","contact.subjectPh":"How can we help you?",
-   "book.title1":"CANCELLATION","book.title2":" POLICY",
+   "book.title1":"CONTACT","book.title2":"/POLICIES",
     "book.desc":"We understand that unanticipated events happen occasionally in everyone's life. The following policies are put in place to be effective and fair to all clients.",
     "book.location":"10-44 Jackson Ave, Long Island City, NY 11101, United States","book.hours":"Mon–Fri: 7am–8pm · Sat: 8am–4pm · Dom 10am - 5pm",
     "book.infoTag":"Information","book.infoTitle1":"What to expect","book.infoTitle2":"on your first visit?",
