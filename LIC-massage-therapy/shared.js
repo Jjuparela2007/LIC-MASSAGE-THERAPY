@@ -1,5 +1,3 @@
-
-
 /* ─── KINESYS SHARED JS ────────────────────────────────────────────────────── */
  
 // ─── i18n ────────────────────────────────────────────────────────────────────
@@ -466,6 +464,8 @@ const i18n = {
     "cancel.help.btn":"Contactar al equipo",
     "cancel.help.hoursLabel":"Horario de atención",
     "cancel.help.hoursValue":"Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: 10am - 5pm",
+    "cancel.help.mailSubject":"Pregunta sobre políticas de cancelación",
+    "cancel.help.mailBody":"Hola equipo,\n\nTengo una pregunta sobre las políticas de cancelación / reprogramación de citas.\n\n[Escribe aquí tu mensaje]\n\nGracias.",
 
     // ── NUEVAS CLAVES — servicios.html · Sección Estudio ─────────────────────
 
@@ -1226,6 +1226,8 @@ const i18n = {
     "cancel.help.btn":"Contact our team",
     "cancel.help.hoursLabel":"Hours",
     "cancel.help.hoursValue":"Mon–Fri: 10am–7pm · Sat: 10am–6pm · Sun: 10am–5pm",
+    "cancel.help.mailSubject":"Question about cancellation policy",
+    "cancel.help.mailBody":"Hello team,\n\nI have a question about the cancellation / rescheduling policy.\n\n[Write your message here]\n\nThank you.",
 
     // ── NEW KEYS — servicios.html · Studio Section ───────────────────────────
 
@@ -1462,9 +1464,23 @@ function applyLang(lang) {
 
   // Notificar a scripts dinámicos que el idioma cambió
   document.dispatchEvent(new CustomEvent('langChange', { detail: { lang: lang } }));
+
+  updateContactMailto(lang);
 }
  
 function setLang(lang) { applyLang(lang); }
+
+// ─── CONTACT MAILTO (asunto/cuerpo según idioma) ──────────────────────────────
+function updateContactMailto(lang) {
+  document.querySelectorAll('[data-mailto]').forEach(el => {
+    const email = el.getAttribute('data-mailto');
+    const subject = i18n[lang]['cancel.help.mailSubject'] || '';
+    const body = i18n[lang]['cancel.help.mailBody'] || '';
+    // encodeURIComponent (no URLSearchParams) porque mailto: requiere %20 para
+    // espacios, mientras que URLSearchParams los codifica como "+".
+    el.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+}
  
  
 // ─── THEME ────────────────────────────────────────────────────────────────────

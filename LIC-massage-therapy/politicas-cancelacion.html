@@ -52,10 +52,12 @@
       <p class="cancel-help-sub" data-i18n="cancel.help.sub">Si necesitas cancelar, reprogramar una cita o tienes alguna duda sobre nuestras políticas, nuestro equipo estará encantado de ayudarte.</p>
 
       <!--
-        Se cambió el enlace del botón de WhatsApp a mailto:, usando el correo
-        del sitio (contact.emailVal en shared.js: ra@licmassagetherapy.com).
+        Enlace mailto: el asunto y cuerpo del correo se generan dinámicamente
+        según el idioma activo (ver updateContactMailto en shared.js). El href
+        de abajo es solo un fallback estático por si el JS no llega a correr.
       -->
       <a href="mailto:ra@licmassagetherapy.com?subject=Pregunta%20sobre%20pol%C3%ADticas%20de%20cancelaci%C3%B3n"
+         data-mailto="ra@licmassagetherapy.com"
          class="cancel-help-btn">
         <svg class="cancel-help-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>
         <span data-i18n="cancel.help.btn">Contactar al equipo</span>
