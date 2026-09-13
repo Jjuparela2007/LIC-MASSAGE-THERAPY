@@ -1212,6 +1212,87 @@
   </div>
 </section>
 
+<!-- ══════════════════ RESERVAR TERAPIA — CTA FINAL ══════════════════ -->
+<section class="terapia-cta-section">
+  <div class="terapia-cta-inner">
+    <h2 class="terapia-cta-heading" data-i18n="book.cta.heading">Reserva tu sesión</h2>
+    <p class="terapia-cta-sub" data-i18n="book.cta.sub">Te respondo en menos de 24 h</p>
+    <a href="#" class="terapia-cta-btn" onclick="openSquareBooking(event)">
+      <span data-i18n="terapia.cta">Reservar Terapia</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+    <div class="terapia-cta-chips">
+      <span data-i18n="book.chip.hours">Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: 10am - 5pm</span>
+      <span class="terapia-cta-dot">·</span>
+      <span data-i18n="book.chip.location">10-44 Jackson Ave, Long Island City, NY 11101, Estados Unidos</span>
+    </div>
+  </div>
+</section>
+<style>
+.terapia-cta-section {
+  background: var(--bg-cta, #0d2e2e);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.terapia-cta-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.terapia-cta-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: #f0ede8;
+  margin: 0 0 0.6rem;
+}
+.terapia-cta-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.92rem;
+  color: rgba(240,237,232,0.55);
+  margin: 0 0 2rem;
+  font-weight: 300;
+}
+.terapia-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 2.4rem;
+  background: var(--gold, #1F606F);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+.terapia-cta-btn:hover {
+  background: var(--gold-light, #2c7a8c);
+  transform: translateY(-2px);
+}
+.terapia-cta-btn svg { flex-shrink: 0; transition: transform 0.2s ease; }
+.terapia-cta-btn:hover svg { transform: translateX(3px); }
+.terapia-cta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(240,237,232,0.4);
+}
+.terapia-cta-dot { opacity: 0.6; }
+@media (max-width: 640px) {
+  .terapia-cta-section { padding: 4rem 1.5rem; }
+  .terapia-cta-chips { flex-direction: column; gap: 0.35rem; }
+  .terapia-cta-dot { display: none; }
+}
+</style>
+
 <style>
 /* ══════════════════════════════════════
    GALERÍA BENTO INTERACTIVA
@@ -1953,7 +2034,7 @@
       'ais.eyebrow':    'Estiramiento Activo Aislado',
       'ais.heading':    'Restaura tu Movilidad con el Método Mattes',
       'ais.paragraph1': 'El Estiramiento Activo Aislado (AIS) es un método sistemático de elongación muscular y liberación fascial desarrollado por el kinesiólogo Aaron Mattes. A diferencia del estiramiento convencional, el AIS utiliza movimiento activo para equilibrar con precisión la tensión del tejido blando en cada articulación, logrando restauración funcional y fisiológica en los planos fasciales superficiales y profundos.',
-      'ais.paragraph2': 'Los expertos señalan que las tres principales causas de lesión son la fatiga, el exceso de tensión muscular y la falta de flexibilidad. El AIS aborda los tres directamente con estiramientos breves de 2 segundos que respetan los reflejos naturales del cuerpo.',
+      'ais.paragraph2': 'Los expertos señalan que las tres principales causas de las lesiones son la fatiga, el exceso de tensión muscular y la falta de flexibilidad. Soy terapeuta certificado en el Método Mattes de Estiramiento Activo Aislado y Fortalecimiento (AIS), formado directamente por Aaron Mattes, creador del Método Mattes de AIS. El Estiramiento Activo Aislado y Fortalecimiento (AIS) es un método sistemático de elongación muscular y liberación fascial que redefine lo que significa "estirarse". El AIS es un tipo de estiramiento facilitado que emplea movimiento activo por parte del paciente para equilibrar la tracción del tejido blando en una articulación específica, logrando una restauración tanto funcional como fisiológica en los planos fasciales superficiales y profundos. Desarrollado por el kinesiólogo Aaron Mattes, el AIS ayuda a disminuir el dolor, mejorar la flexibilidad y el equilibrio articular, ampliar el rango de movimiento, aumentar la fuerza muscular y restaurar la función física. El AIS puede colaborar en la prevención de lesiones, mejorar el rendimiento o facilitar la recuperación después del entrenamiento. Mattes, padre del Estiramiento Activo Aislado y educador definitivo en el tema de la flexibilidad. Visita www.stretchingusa.com para más información.',
       'ais.list1':      'Reduce el dolor y la tensión muscular acumulada',
       'ais.list2':      'Mejora la flexibilidad articular, el equilibrio y el rango de movimiento',
       'ais.list3':      'Incrementa la fuerza muscular y previene lesiones',
@@ -2134,6 +2215,125 @@
   document.addEventListener('langChange', function() {
     if (currentModalKey) openModal(currentModalKey);
   });
+</script>
+
+<!-- ══════════════ SQUARE BOOKING MODAL ══════════════ -->
+<style>
+.sq-booking-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+.sq-booking-overlay.active {
+  display: flex;
+}
+.sq-booking-modal {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  max-width: 520px;
+  height: 90vh;
+  max-height: 780px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+.sq-booking-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.sq-booking-close:hover { background: rgba(0, 0, 0, 0.8); }
+.sq-booking-close svg { width: 18px; height: 18px; }
+.sq-booking-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.sq-booking-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary, #777);
+}
+@media (max-width: 560px) {
+  .sq-booking-modal { height: 95vh; max-height: none; border-radius: 6px; }
+}
+</style>
+
+<div class="sq-booking-overlay" id="sqBookingOverlay" role="dialog" aria-modal="true" aria-label="Reservar cita">
+  <div class="sq-booking-modal" id="sqBookingModal">
+    <button class="sq-booking-close" id="sqBookingClose" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="sq-booking-loading" id="sqBookingLoading">Cargando reservas…</div>
+    <iframe class="sq-booking-iframe" id="sqBookingIframe" title="Reservar cita" allow="payment"></iframe>
+  </div>
+</div>
+
+<script>
+  (function () {
+    // URL del widget de Square Appointments (sin el .js, para usarla como iframe)
+    var SQUARE_BOOKING_URL = 'https://square.site/appointments/buyer/widget/xtp5il4pnepb8w/LBVMBHCX8899Q';
+
+    var overlay  = document.getElementById('sqBookingOverlay');
+    var iframe   = document.getElementById('sqBookingIframe');
+    var loading  = document.getElementById('sqBookingLoading');
+    var closeBtn = document.getElementById('sqBookingClose');
+    var iframeLoaded = false;
+
+    function openSquareBooking(e) {
+      if (e) e.preventDefault();
+      if (!iframeLoaded) {
+        loading.style.display = 'flex';
+        iframe.src = SQUARE_BOOKING_URL;
+        iframe.addEventListener('load', function () {
+          loading.style.display = 'none';
+        }, { once: true });
+        iframeLoaded = true;
+      }
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSquareBooking() {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeSquareBooking);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeSquareBooking();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeSquareBooking();
+    });
+
+    window.openSquareBooking = openSquareBooking;
+  })();
 </script>
 </body>
 </html>
