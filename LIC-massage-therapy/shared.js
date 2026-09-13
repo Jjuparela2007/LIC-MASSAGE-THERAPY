@@ -1470,15 +1470,11 @@ function applyLang(lang) {
  
 function setLang(lang) { applyLang(lang); }
 
-// ─── CONTACT MAILTO (asunto/cuerpo según idioma) ──────────────────────────────
+// ─── CONTACT MAILTO (sin asunto/cuerpo predeterminado) ────────────────────────
 function updateContactMailto(lang) {
   document.querySelectorAll('[data-mailto]').forEach(el => {
     const email = el.getAttribute('data-mailto');
-    const subject = i18n[lang]['cancel.help.mailSubject'] || '';
-    const body = i18n[lang]['cancel.help.mailBody'] || '';
-    // encodeURIComponent (no URLSearchParams) porque mailto: requiere %20 para
-    // espacios, mientras que URLSearchParams los codifica como "+".
-    el.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    el.href = `mailto:${email}`;
   });
 }
  
