@@ -83,7 +83,7 @@ const i18n = {
     "contact.formTitle":"Envíanos un Mensaje","contact.send":"Enviar Mensaje →","contact.subject":"Asunto","contact.subjectPh":"¿En qué podemos ayudarte?",
     "book.title1":"CONTACTO","book.title2":"/POLÍTICAS",
     "book.desc":"Entendemos que imprevistos pueden ocurrir en la vida de todos. Las siguientes políticas están diseñadas para ser efectivas y justas con todos nuestros clientes.",
-    "book.location":"10-44 Jackson Ave Long Island City, NY  11101 United States Estados Unidos","book.hours":"Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: 10am - 5pm",
+    "book.location":"10-44 Jackson Ave Long Island City, NY  11101 United States Estados Unidos","book.hours":"Lunes–Viernes: 10am–7pm · Sábado: 10am–6pm · Domingo: 10am - 5pm",
     "book.infoTag":"Información","book.infoTitle1":"¿Qué esperar","book.infoTitle2":"en tu primera visita?",
     "step1.name":"Evaluación Inicial","step1.desc":"Análisis postural y muscular completo para identificar áreas de tensión y patrones de movimiento.",
     "step2.name":"Protocolo Personalizado","step2.desc":"Diseño de un plan de tratamiento específico basado en tus objetivos y condición actual.",
@@ -116,7 +116,7 @@ const i18n = {
     // ── NUEVAS CLAVES — contacto.html ────────────────────────────────────────
 
     // Horarios detallados (card de contacto)
-    "contact.hours.lv":"Lun–Vie: 10:00 am – 7:00 pm",
+    "contact.hours.lv":"Lunes–Viernes: 10:00 am – 7:00 pm",
     "contact.hours.sat":"Sábado: 10:00 am – 6:00 pm",
     "contact.hours.sun":"Domingo: 10:00 am - 5:00 pm",
 
@@ -849,7 +849,7 @@ const i18n = {
     "contact.formTitle":"Send Us a Message","contact.send":"Send Message →","contact.subject":"Subject","contact.subjectPh":"How can we help you?",
    "book.title1":"CONTACT","book.title2":"/POLICIES",
     "book.desc":"We understand that unanticipated events happen occasionally in everyone's life. The following policies are put in place to be effective and fair to all clients.",
-    "book.location":"10-44 Jackson Ave, Long Island City, NY 11101, United States","book.hours":"Mon–Fri: 7am–8pm · Sat: 8am–4pm · Dom 10am - 5pm",
+    "book.location":"10-44 Jackson Ave, Long Island City, NY 11101, United States","book.hours":"Monday–Friday: 7am–8pm · Saturday: 8am–4pm · Sunday: 10am - 5pm",
     "book.infoTag":"Information","book.infoTitle1":"What to expect","book.infoTitle2":"on your first visit?",
     "step1.name":"Initial Assessment","step1.desc":"Complete postural and muscular analysis to identify tension areas and movement patterns.",
     "step2.name":"Personalized Protocol","step2.desc":"Design of a specific treatment plan based on your goals and current condition.",
@@ -879,7 +879,7 @@ const i18n = {
     // ── NEW KEYS — contacto.html ──────────────────────────────────────────────
 
     // Detailed hours
-    "contact.hours.lv":"Mon–Fri: 10:00 am – 7:00 pm",
+    "contact.hours.lv":"Monday–Friday: 10:00 am – 7:00 pm",
     "contact.hours.sat":"Saturday: 10:00 am – 6:00 pm",
     "contact.hours.sun":"Sunday: closed",
 
