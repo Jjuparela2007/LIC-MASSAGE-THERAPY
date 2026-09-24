@@ -1574,7 +1574,7 @@ function initPageTransition() {
 function initPage(page) {
   // Restore preferences immediately (before paint)
   applyTheme(localStorage.getItem('kinesys-theme') || 'dark');
-  applyLang(localStorage.getItem('kinesys-lang') || 'es');
+  applyLang(localStorage.getItem('kinesys-lang') || 'en');
  
   document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
