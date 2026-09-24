@@ -1414,12 +1414,12 @@ const i18n = {
   }
 };
  
-let currentLang = localStorage.getItem('kinesys-lang') || 'es';
+let currentLang = localStorage.getItem('kinesys-lang-v2') || 'en';
  
 function applyLang(lang) {
   currentLang = lang;
   document.documentElement.lang = lang;
-  localStorage.setItem('kinesys-lang', lang);
+  localStorage.setItem('kinesys-lang-v2', lang);
  
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
@@ -1574,7 +1574,7 @@ function initPageTransition() {
 function initPage(page) {
   // Restore preferences immediately (before paint)
   applyTheme(localStorage.getItem('kinesys-theme') || 'dark');
-  applyLang(localStorage.getItem('kinesys-lang') || 'en');
+  applyLang(localStorage.getItem('kinesys-lang-v2') || 'en');
  
   document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
