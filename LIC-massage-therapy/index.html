@@ -29,7 +29,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Imagen del hero: se pide de primero, con prioridad alta (clave para el LCP) -->
-<link rel="preload" as="image" href="img/hero.webp" fetchpriority="high">
+<!-- Móvil descarga un recorte vertical liviano; escritorio la imagen completa -->
+<link rel="preload" as="image" href="img/hero-mobile.webp" fetchpriority="high" media="(max-width: 768px)">
+<link rel="preload" as="image" href="img/hero.webp" fetchpriority="high" media="(min-width: 769px)">
 <!-- Fuentes sin bloquear el renderizado: se aplican cuando llegan (display=swap) -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;700;800&display=swap"></noscript>
@@ -521,7 +523,10 @@
 
   <!-- Slide 1 -->
   <div class="hc-slide active hc-centered">
-    <img class="hc-slide-bg" src="img/hero.webp" alt="" fetchpriority="high" decoding="async" width="1920" height="1080">
+    <picture>
+      <source media="(max-width: 768px)" srcset="img/hero-mobile.webp" width="600" height="688">
+      <img class="hc-slide-bg" src="img/hero.webp" alt="" fetchpriority="high" decoding="async" width="1542" height="688">
+    </picture>
     <div class="hc-content">
       <div class="hc-text">
         <h1 class="hc-title-center">
@@ -541,7 +546,10 @@
 
   <!-- Slide 3 -->
   <div class="hc-slide hc-centered">
-    <img class="hc-slide-bg" src="img/hero.webp" alt="" loading="lazy" decoding="async" width="1920" height="1080">
+    <picture>
+      <source media="(max-width: 768px)" srcset="img/hero-mobile.webp" width="600" height="688">
+      <img class="hc-slide-bg" src="img/hero.webp" alt="" loading="lazy" decoding="async" width="1542" height="688">
+    </picture>
     <div class="hc-content">
       <div class="hc-text">
        
