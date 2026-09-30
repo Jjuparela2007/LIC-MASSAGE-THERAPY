@@ -716,6 +716,48 @@
 </section>
 
  
+<!-- ─── CTA CONTACTO / RESERVAS ──────────────────────────────────────────── -->
+<style>
+.home-cta{
+  padding:5rem clamp(16px,3vw,40px) 6rem;
+  text-align:center;
+}
+.home-cta-inner{
+  max-width:900px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:1rem;
+}
+.home-cta-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,5vw,3.2rem);
+  font-weight:300;
+  line-height:1.2;
+  color:var(--text-primary,#16324a);
+  margin:0 0 .5rem;
+}
+.home-cta-link{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;
+  font-size:clamp(1.8rem,4.5vw,3rem);
+  color:var(--gold,#75a4cd);
+  text-decoration:none;
+  transition:color .2s ease;
+}
+.home-cta-link:hover{ color:var(--gold-light,#16324a); }
+.home-cta-email{ word-break:break-all; }
+</style>
+
+<section class="home-cta">
+  <div class="home-cta-inner reveal">
+    <h2 class="home-cta-title" data-i18n="cancel.top.title">Any questions? or if you would like to book an appointment please call me or email me.</h2>
+    <a href="tel:+17184781951" class="home-cta-link">718 478 1951</a>
+    <a href="mailto:ra@licmassagetherapy.com" class="home-cta-link home-cta-email">ra@licmassagetherapy.com</a>
+  </div>
+</section>
+
 <!-- ── Script de animaciones scroll para las nuevas secciones ── -->
 <script>
 (function () {
