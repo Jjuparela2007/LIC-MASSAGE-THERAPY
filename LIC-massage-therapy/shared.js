@@ -466,6 +466,7 @@ const i18n = {
     "cancel.help.hoursLabel":"Horario de atención",
     "cancel.help.hoursValue":"Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: 10am - 5pm",
     "cancel.help.mailSubject":"Pregunta sobre políticas de cancelación",
+    "cancel.top.title":"¿Tienes alguna pregunta? O si deseas agendar una cita, por favor llámame o escríbeme.",
     "cancel.help.mailBody":"Hola equipo,\n\nTengo una pregunta sobre las políticas de cancelación / reprogramación de citas.\n\n[Escribe aquí tu mensaje]\n\nGracias.",
 
     // ── NUEVAS CLAVES — servicios.html · Sección Estudio ─────────────────────
@@ -1229,6 +1230,7 @@ const i18n = {
     "cancel.help.hoursLabel":"Hours",
     "cancel.help.hoursValue":"Mon–Fri: 10am–7pm · Sat: 10am–6pm · Sun: 10am–5pm",
     "cancel.help.mailSubject":"Question about cancellation policy",
+    "cancel.top.title":"Any questions? or if you would like to book an appointment please call me or email me.",
     "cancel.help.mailBody":"Hello team,\n\nI have a question about the cancellation / rescheduling policy.\n\n[Write your message here]\n\nThank you.",
 
     // ── NEW KEYS — servicios.html · Studio Section ───────────────────────────
