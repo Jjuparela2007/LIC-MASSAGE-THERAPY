@@ -7,8 +7,53 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
+<style>
+/* ── Top contact banner ── */
+.top-contact {
+  background: var(--bg-primary);
+  padding: 7rem 0 3rem;
+  text-align: center;
+}
+.top-contact-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.top-contact-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin: 0 0 1rem;
+}
+.top-contact-link {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.top-contact-link:hover { color: var(--gold-light); }
+.top-contact-email { word-break: break-all; }
+</style>
 </head>
 <body>
+
+<!-- ══════════════════ CONTACT BANNER (top) ══════════════════ -->
+<section class="top-contact">
+  <div class="top-contact-inner">
+    <h2 class="top-contact-title">Any questions? or if you would like to book an appointment please call me or email me.</h2>
+    <a href="tel:+17184781951" class="top-contact-link top-contact-phone">718 478 1951</a>
+    <a href="mailto:ra@licmassagetherapy.com" class="top-contact-link top-contact-email">ra@licmassagetherapy.com</a>
+  </div>
+</section>
+
 
 <!-- ══════════════════ HERO ══════════════════ -->
 <section class="page-hero">
