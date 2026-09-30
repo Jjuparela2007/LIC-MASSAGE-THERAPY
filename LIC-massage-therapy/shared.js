@@ -466,6 +466,10 @@ const i18n = {
     "cancel.help.hoursLabel":"Horario de atención",
     "cancel.help.hoursValue":"Lun–Vie: 10am–7pm · Sáb: 10am–6pm · Dom: 10am - 5pm",
     "cancel.help.mailSubject":"Pregunta sobre políticas de cancelación",
+    "gift.title":"Certificados de regalo disponibles",
+    "gift.cta":"Haz clic y pide el tuyo",
+    "gift.mail.subject":"Quiero un certificado de regalo 🎁",
+    "gift.mail.body":"¡Hola Raul!\n\nQuiero regalar una experiencia de bienestar y recuperación: me interesa un certificado de regalo de LIC Massage Therapy.\n\nEs el regalo perfecto para cumpleaños, aniversarios, fiestas o simplemente para decir \"gracias\". Por favor envíame los detalles para tener el mío listo lo antes posible.\n\nNombre de quien recibirá el regalo:\nSesión o monto que me interesa:\n\n¡Muchas gracias!",
     "cancel.top.title":"¿Tienes alguna pregunta? O si deseas agendar una cita, por favor llámame o escríbeme.",
     "cancel.help.mailBody":"Hola equipo,\n\nTengo una pregunta sobre las políticas de cancelación / reprogramación de citas.\n\n[Escribe aquí tu mensaje]\n\nGracias.",
 
@@ -1230,6 +1234,10 @@ const i18n = {
     "cancel.help.hoursLabel":"Hours",
     "cancel.help.hoursValue":"Mon–Fri: 10am–7pm · Sat: 10am–6pm · Sun: 10am–5pm",
     "cancel.help.mailSubject":"Question about cancellation policy",
+    "gift.title":"Gift certificates available",
+    "gift.cta":"Click and order yours",
+    "gift.mail.subject":"I'd like a gift certificate 🎁",
+    "gift.mail.body":"Hi Raul!\n\nI'd love to give the gift of relaxation and recovery — I'm interested in a LIC Massage Therapy gift certificate.\n\nIt's the perfect gift for birthdays, anniversaries, holidays, or just to say \"thank you\". Please send me the details so I can get mine ready as soon as possible.\n\nRecipient's name:\nSession or amount I'm interested in:\n\nThank you!",
     "cancel.top.title":"Any questions? or if you would like to book an appointment please call me or email me.",
     "cancel.help.mailBody":"Hello team,\n\nI have a question about the cancellation / rescheduling policy.\n\n[Write your message here]\n\nThank you.",
 
@@ -1553,13 +1561,12 @@ function toggleMenu() {
 }
  
 // ─── PAGE TRANSITION ─────────────────────────────────────────────────────────
-let pageTransitionReady = false;
 function initPageTransition() {
-  /* Se quitó el fade-in inicial (body en opacity:0): ocultaba la página ya
-     pintada y retrasaba el LCP. Se conserva el fade-out al navegar. */
-  if (pageTransitionReady) return;
-  pageTransitionReady = true;
+  document.body.style.opacity = '0';
   document.body.style.transition = 'opacity 0.35s ease';
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => { document.body.style.opacity = '1'; });
+  });
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
     if (!href || href.startsWith('#') || href.startsWith('mailto') || href.startsWith('tel') || link.target === '_blank') return;
