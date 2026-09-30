@@ -30,7 +30,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Imagen del hero: se pide de primero, con prioridad alta (clave para el LCP) -->
 <link rel="preload" as="image" href="img/hero.webp" fetchpriority="high">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<!-- Fuentes sin bloquear el renderizado: se aplican cuando llegan (display=swap) -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;700;800&display=swap"></noscript>
 <link rel="stylesheet" href="shared.css">
 
 <!-- Favicon / ícono de pestaña -->
@@ -417,6 +419,19 @@
   transform:none;
   transition:none;
 }
+
+/* ── Móvil: título completo dentro de la pantalla, sin flechas encima ── */
+@media (max-width:480px){
+  .hc-line-bottom{ font-size:1.55rem; letter-spacing:.04em; padding-left:.04em; }
+  .hc-line-top{ letter-spacing:.3em; padding-left:.3em; }
+  .hc-content{ padding:0 1.25rem; }
+  .hc-arrow{ display:none; } /* en móvil funciona el swipe */
+}
+
+/* ── Móvil: sin splash (tapaba el hero y retrasaba el primer pintado) ── */
+@media (max-width:768px){
+  #splashScreen{ display:none !important; }
+}
 </style>
 <!-- ─── Override: descripción About más grande ──────────────────────────── -->
 <style>
@@ -700,7 +715,7 @@
  
         <div class="about-img-wrap">
           <div class="about-img-placeholder">
-            <img src="img/rr.png" alt="Masaje terapéutico" class="about-img">
+            <img src="img/rr.png" alt="Masaje terapéutico" class="about-img" loading="lazy" decoding="async">
             <div class="about-overlay"></div>
           </div>
         </div>
