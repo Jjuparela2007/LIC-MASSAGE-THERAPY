@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +27,9 @@
 <meta name="twitter:image" content="https://licmassagetherapy.com/img/og-image.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Imagen del hero: se pide de primero, con prioridad alta (clave para el LCP) -->
+<link rel="preload" as="image" href="img/hero.png" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 
@@ -71,8 +74,12 @@
 .hc-slide-bg{
   position:absolute;
   inset:0;
-  background-size:cover;
-  background-position:center;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:center;
+  display:block;
 }
 
 /* ── Overlay para contraste (clave del problema anterior) ── */
@@ -398,6 +405,18 @@
 @media (max-width:768px){
   .hc-centered .hc-content{ align-items:center; padding-bottom:0; }
 }
+
+/* ── Rendimiento (LCP): el primer slide se pinta completo desde el primer frame.
+   Las animaciones de entrada solo corren cuando el carrusel ya avanzó
+   (la clase .hc-started la agrega el script en go()). ── */
+.hero-carousel:not(.hc-started) .hc-slide:first-child,
+.hero-carousel:not(.hc-started) .hc-slide:first-child .hc-title-center,
+.hero-carousel:not(.hc-started) .hc-slide:first-child .hc-plus{
+  animation:none;
+  opacity:1;
+  transform:none;
+  transition:none;
+}
 </style>
 <!-- ─── Override: descripción About más grande ──────────────────────────── -->
 <style>
@@ -435,8 +454,8 @@
 (function () {
   var splash   = document.getElementById('splashScreen');
   var bar      = document.getElementById('splashBar');
-  var duration = 500; // ms total visible
-  var fadeTime = 750;  // ms fade-out (matches CSS)
+  var duration = 400; // ms total visible
+  var fadeTime = 350;  // ms fade-out (matches CSS)
 
   /* Progreso animado */
   var start = null;
@@ -469,10 +488,12 @@
     tryHide();
   }, duration);
 
-  if (document.readyState === 'complete') {
+  /* Antes esperaba a window 'load' (todas las imágenes, incluido el hero).
+     Ahora basta con que el HTML esté listo: el hero ya se ve debajo. */
+  if (document.readyState !== 'loading') {
     loaded = true;
   } else {
-    window.addEventListener('load', function () {
+    document.addEventListener('DOMContentLoaded', function () {
       loaded = true;
       tryHide();
     });
@@ -485,12 +506,12 @@
 
   <!-- Slide 1 -->
   <div class="hc-slide active hc-centered">
-    <div class="hc-slide-bg" style="background-image:url('img/hero.png');"></div>
+    <img class="hc-slide-bg" src="img/hero.png" alt="" fetchpriority="high" decoding="async" width="1920" height="1080">
     <div class="hc-content">
       <div class="hc-text">
         <h1 class="hc-title-center">
-          <span class="hc-line-top" data-i18n="hero.title1">Bienvenido a</span>
-          <span class="hc-line-bottom" data-i18n="hero.title2">LIC Massage Therapy</span>
+          <span class="hc-line-top" data-i18n="hero.title1">Welcome to</span>
+          <span class="hc-line-bottom" data-i18n="hero.title2">L.I.C MASSAGE AND STRETCH THERAPY</span>
         </h1>
         <div class="hc-plus">
           <span class="hc-plus-line"></span>
@@ -505,18 +526,18 @@
 
   <!-- Slide 3 -->
   <div class="hc-slide hc-centered">
-    <div class="hc-slide-bg" style="background-image:url('img/hero.png');"></div>
+    <img class="hc-slide-bg" src="img/hero.png" alt="" loading="lazy" decoding="async" width="1920" height="1080">
     <div class="hc-content">
       <div class="hc-text">
        
         <h1 class="hc-title">
-          <em data-i18n="hero3.title1">muevete mejor,</em>
-          <span class="light" data-i18n="hero3.title2">sientete mejor</span>
+          <em data-i18n="hero3.title1">MOVE BETTER,</em>
+          <span class="light" data-i18n="hero3.title2">FEEL BETTER</span>
         </h1>
         <div class="hc-divider"></div>
         <p class="hc-desc" data-i18n="hero3.desc">A systematic method of muscle lengthening and fascial release that redefines what it means to stretch.</p>
         <div class="hc-ctas">
-          <a href="#" class="hc-btn hc-btn-primary" id="heroBookNowBtn" data-i18n="hero3.cta1">Book Now</a>
+          <a href="#" class="hc-btn hc-btn-primary" id="heroBookNowBtn" data-i18n="hero3.cta1">Book Appointment</a>
         </div>
       </div>
     </div>
@@ -564,6 +585,7 @@
   var dots = Array.prototype.slice.call(dotsEl.children);
 
   function go(n){
+    root.classList.add('hc-started');
     idx = (n + total) % total;
     slides.forEach(function(s,i){ s.classList.toggle('active', i===idx); });
     dots.forEach(function(d,i){

@@ -2027,7 +2027,7 @@ body.modal-open { overflow: hidden; }
   justify-content: center;
   background: linear-gradient(160deg, #0a1f30 0%, #16324a 50%, #0a1c2c 100%);
   opacity: 1;
-  transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: all;
 }
 #splashScreen.fade-out {
@@ -2581,4 +2581,26 @@ p, h1, h2, h3, h4, h5, h6, span, div, li {
   .section-container {
     padding: 0 1rem;
   }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   NAV — evitar que los enlaces se partan a media palabra
+   (la regla global de word-break más arriba afectaba al menú)
+══════════════════════════════════════════════════════════════ */
+.nav-links a,
+.nav-logo,
+.btn-nav,
+.lang-btn {
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+.nav-links li { word-break: normal; overflow-wrap: normal; }
+
+/* Entre 1101px y 1400px no cabe todo con el espaciado de escritorio */
+@media (min-width: 1101px) and (max-width: 1400px) {
+  nav, nav.scrolled, nav.scrolled-static { padding-left: 2rem; padding-right: 2rem; }
+  .nav-links { gap: 1.4rem; }
+  .nav-links a { letter-spacing: 0.08em; font-size: 0.74rem; }
+  .nav-logo { font-size: 1.35rem; letter-spacing: 0.2em; }
 }

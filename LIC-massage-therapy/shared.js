@@ -1553,12 +1553,13 @@ function toggleMenu() {
 }
  
 // ─── PAGE TRANSITION ─────────────────────────────────────────────────────────
+let pageTransitionReady = false;
 function initPageTransition() {
-  document.body.style.opacity = '0';
+  /* Se quitó el fade-in inicial (body en opacity:0): ocultaba la página ya
+     pintada y retrasaba el LCP. Se conserva el fade-out al navegar. */
+  if (pageTransitionReady) return;
+  pageTransitionReady = true;
   document.body.style.transition = 'opacity 0.35s ease';
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => { document.body.style.opacity = '1'; });
-  });
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
     if (!href || href.startsWith('#') || href.startsWith('mailto') || href.startsWith('tel') || link.target === '_blank') return;
