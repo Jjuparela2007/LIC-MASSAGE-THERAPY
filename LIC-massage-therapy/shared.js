@@ -470,6 +470,8 @@ const i18n = {
     "gift.cta":"Haz clic y pide el tuyo",
     "gift.mail.subject":"Quiero un certificado de regalo 🎁",
     "gift.mail.body":"¡Hola Raul!\n\nQuiero regalar una experiencia de bienestar y recuperación: me interesa un certificado de regalo de LIC Massage Therapy.\n\nEs el regalo perfecto para cumpleaños, aniversarios, fiestas o simplemente para decir \"gracias\". Por favor envíame los detalles para tener el mío listo lo antes posible.\n\nNombre de quien recibirá el regalo:\nSesión o monto que me interesa:\n\n¡Muchas gracias!",
+    "call.cta.heading":"¿Tienes dudas? Llámame",
+    "call.cta.sub":"Toca el número para llamar y con gusto te oriento",
     "cancel.top.title":"¿Tienes alguna pregunta? O si deseas agendar una cita, por favor llámame o escríbeme.",
     "cancel.help.mailBody":"Hola equipo,\n\nTengo una pregunta sobre las políticas de cancelación / reprogramación de citas.\n\n[Escribe aquí tu mensaje]\n\nGracias.",
 
@@ -1238,6 +1240,8 @@ const i18n = {
     "gift.cta":"Click and order yours",
     "gift.mail.subject":"I'd like a gift certificate 🎁",
     "gift.mail.body":"Hi Raul!\n\nI'd love to give the gift of relaxation and recovery — I'm interested in a LIC Massage Therapy gift certificate.\n\nIt's the perfect gift for birthdays, anniversaries, holidays, or just to say \"thank you\". Please send me the details so I can get mine ready as soon as possible.\n\nRecipient's name:\nSession or amount I'm interested in:\n\nThank you!",
+    "call.cta.heading":"Have questions? Call me",
+    "call.cta.sub":"Tap the number to call — I'm happy to help",
     "cancel.top.title":"Any questions? or if you would like to book an appointment please call me or email me.",
     "cancel.help.mailBody":"Hello team,\n\nI have a question about the cancellation / rescheduling policy.\n\n[Write your message here]\n\nThank you.",
 
