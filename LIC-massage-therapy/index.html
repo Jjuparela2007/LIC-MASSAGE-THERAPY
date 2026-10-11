@@ -1176,7 +1176,7 @@ document.addEventListener('langChange', function() {
   })();
 </script>
 
-<!-- ══════════════ POP-UP DE DESCUENTOS (NYU / Civil Servants) ══════════════ -->
+<!-- ══════════════ POP-UP: NYC MARATHON + DESCUENTOS (NYU / Civil Servants) ══════════════ -->
 <style>
 .promo-overlay{
   position:fixed; inset:0; z-index:9000;
@@ -1227,6 +1227,14 @@ document.addEventListener('langChange', function() {
 }
 .promo-badge b{ font-size:2.1rem; margin-top:14px; margin-right:12px; }
 .promo-badge span{ font-size:.7rem; letter-spacing:.2em; margin-right:12px; }
+.promo-badge.is-marathon b{ font-size:1.65rem; letter-spacing:-.01em; }
+.promo-badge.is-marathon span{ font-size:.62rem; letter-spacing:.22em; margin-top:.25rem; }
+.promo-also{
+  font-family:'DM Sans',sans-serif; font-size:.68rem; font-weight:500;
+  letter-spacing:.24em; text-transform:uppercase;
+  color:rgba(191,227,236,.8);
+  margin:0 0 .7rem;
+}
 @keyframes promoPulse{
   0%,100%{ transform:rotate(14deg) scale(1); }
   50%    { transform:rotate(14deg) scale(1.07); }
@@ -1328,6 +1336,7 @@ document.addEventListener('langChange', function() {
   .promo-card{ padding:2.8rem 1.4rem 1.8rem; }
   .promo-badge{ width:96px; height:96px; }
   .promo-badge b{ font-size:1.7rem; }
+  .promo-badge.is-marathon b{ font-size:1.35rem; }
 }
 @media (prefers-reduced-motion:reduce){
   .promo-card,.promo-overlay{ transition:none; }
@@ -1342,17 +1351,19 @@ document.addEventListener('langChange', function() {
     <span class="promo-spark" style="top:75%;left:20%;--dx:-30px;--dy:40px;animation-delay:.4s"></span>
     <span class="promo-spark" style="top:20%;left:60%;--dx:20px;--dy:-70px;animation-delay:.1s"></span>
 
-    <div class="promo-badge" aria-hidden="true"><b>%</b><span>OFF</span></div>
+    <div class="promo-badge is-marathon" aria-hidden="true"><b>26.2</b><span>MILES</span></div>
 
     <button class="promo-close" id="promoClose" aria-label="Close">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
 
-    <div class="promo-eyebrow" data-promo="eyebrow">Special Offer</div>
+    <div class="promo-eyebrow" data-promo="eyebrow">NYC Marathon · November</div>
     <h2 class="promo-title" id="promoTitle">
-      <span data-promo="title1">Exclusive</span> <em data-promo="title2">Discounts</em>
+      <span data-promo="title1">Race</span> <em data-promo="title2">ready?</em>
     </h2>
-    <p class="promo-text" data-promo="text">I offer discounts to NYU students and Civil Servants.</p>
+    <p class="promo-text" data-promo="text">Doing the NYC Marathon or know someone who is? Book a session with Raúl (9-time marathon finisher, plus many half marathons and smaller races).</p>
+
+    <p class="promo-also" data-promo="also">Also: discounts for</p>
 
     <div class="promo-tags">
       <span class="promo-tag">
@@ -1365,7 +1376,7 @@ document.addEventListener('langChange', function() {
       </span>
     </div>
 
-    <button class="promo-cta" id="promoBook" data-promo="cta">Book Appointment</button>
+    <button class="promo-cta" id="promoBook" data-promo="cta">Book Now</button>
     <button class="promo-later" id="promoLater" data-promo="later">Maybe later</button>
 
     <p class="promo-terms" data-promo="terms">*Discount valid upon presentation of a valid NYU student ID or official Civil Servant identification at the time of the appointment.</p>
@@ -1379,17 +1390,19 @@ document.addEventListener('langChange', function() {
 
   var TXT = {
     en: {
-      eyebrow:'Special Offer', title1:'Exclusive', title2:'Discounts',
-      text:'I offer discounts to NYU students and Civil Servants.',
+      eyebrow:'NYC Marathon · November', title1:'Race', title2:'ready?',
+      text:'Doing the NYC Marathon or know someone who is? Book a session with Raúl (9-time marathon finisher, plus many half marathons and smaller races).',
+      also:'Also: discounts for',
       tag1:'NYU Students', tag2:'Civil Servants',
-      cta:'Book Appointment', later:'Maybe later', close:'Close',
+      cta:'Book Now', later:'Maybe later', close:'Close',
       terms:'*Discount valid upon presentation of a valid NYU student ID or official Civil Servant identification at the time of the appointment.'
     },
     es: {
-      eyebrow:'Oferta especial', title1:'Descuentos', title2:'exclusivos',
-      text:'Ofrezco descuentos a estudiantes de NYU y servidores públicos.',
+      eyebrow:'Maratón de NY · Noviembre', title1:'¿Listo para la', title2:'carrera?',
+      text:'¿Vas a correr la Maratón de Nueva York o conoces a alguien que la va a correr? Reserva una sesión con Raúl (ha terminado 9 maratones, además de muchas medias maratones y carreras más cortas).',
+      also:'También: descuentos para',
       tag1:'Estudiantes NYU', tag2:'Servidores públicos',
-      cta:'Reservar cita', later:'Quizás después', close:'Cerrar',
+      cta:'Reservar ahora', later:'Quizás después', close:'Cerrar',
       terms:'*Descuento válido al presentar el carné estudiantil vigente de NYU o una identificación oficial que acredite ser servidor público, al momento de la cita.'
     }
   };
@@ -1415,7 +1428,7 @@ document.addEventListener('langChange', function() {
   function closePromo() {
     overlay.classList.remove('show');
     document.body.style.overflow = '';
-    try { sessionStorage.setItem('licPromoSeen', '1'); } catch (e) {}
+    try { sessionStorage.setItem('licPromoSeenMarathon', '1'); } catch (e) {}
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
 
@@ -1433,7 +1446,7 @@ document.addEventListener('langChange', function() {
 
   /* Se muestra una vez por visita (sesión), poco después de que pasa el splash */
   var seen = false;
-  try { seen = sessionStorage.getItem('licPromoSeen') === '1'; } catch (e) {}
+  try { seen = sessionStorage.getItem('licPromoSeenMarathon') === '1'; } catch (e) {}
   if (!seen) setTimeout(openPromo, 1200);
 })();
 </script>
