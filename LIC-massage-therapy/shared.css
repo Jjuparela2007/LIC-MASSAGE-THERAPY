@@ -2604,3 +2604,16 @@ p, h1, h2, h3, h4, h5, h6, span, div, li {
   .nav-links a { letter-spacing: 0.08em; font-size: 0.74rem; }
   .nav-logo { font-size: 1.35rem; letter-spacing: 0.2em; }
 }
+/* ── FIX móvil: el logo era más ancho que la pantalla y empujaba la
+   hamburguesa (y con ella el cambio de idioma) fuera de la vista ── */
+#navbar .hamburger { flex-shrink: 0; margin-left: auto; }
+@media (max-width: 768px) {
+  #navbar .nav-logo { min-width: 0; gap: 0.6rem; letter-spacing: 0; }
+  #navbar .nav-logo-svg { width: 36px; height: 36px; flex-shrink: 0; }
+  #navbar .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; min-width: 0; }
+  #navbar .nav-logo-title { font-size: 1.05rem; letter-spacing: 0.16em; white-space: nowrap; }
+  #navbar .nav-logo-sub { font-size: 0.62rem; letter-spacing: 0.32em; opacity: 0.8; }
+}
+@media (max-width: 340px) {
+  #navbar .nav-logo-title { font-size: 0.92rem; letter-spacing: 0.1em; }
+}
