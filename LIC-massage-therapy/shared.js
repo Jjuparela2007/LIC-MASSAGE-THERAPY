@@ -792,7 +792,7 @@ const i18n = {
     "badge.specialty":"Specialty","badge.specialtyVal":"Sports","badge.sessions":"Sessions",
     "services.tag":"Our Massage","services.title1":"Massage in ","services.title2":" in L.I.C",
     "terapia.tag":"Active Isolated Stretching And Strengthening, the method mattes","terapia.title1":" STRETCH THERAPY",
-    "terapia.cta":"Book Therapy",
+    "terapia.cta":"Book Now",
     "services.subtitle":"Each treatment is designed based on scientific evidence and advanced body therapy techniques.",
     "md.title":"MASSAGE",
     "md.subtitle":"Relaxation for Body & Mind",
